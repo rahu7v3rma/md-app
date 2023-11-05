@@ -1,0 +1,365 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TimePickerModal /> Time picker modal Snapshot Testing with Jest 1`] = `
+<Modal
+  animationType="none"
+  deviceHeight={null}
+  deviceWidth={null}
+  hardwareAccelerated={false}
+  hideModalContentWhileAnimating={false}
+  onBackdropPress={[Function]}
+  onModalHide={[Function]}
+  onModalWillHide={[Function]}
+  onModalWillShow={[Function]}
+  onRequestClose={[Function]}
+  onSwipeComplete={[Function]}
+  panResponderThreshold={4}
+  scrollHorizontal={false}
+  scrollOffset={0}
+  scrollOffsetMax={0}
+  scrollTo={null}
+  statusBarTranslucent={false}
+  supportedOrientations={
+    [
+      "portrait",
+      "landscape",
+    ]
+  }
+  swipeDirection="down"
+  swipeThreshold={100}
+  testID="timePickerModal"
+  transparent={true}
+  visible={true}
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "backgroundColor": "black",
+        "bottom": 0,
+        "height": 1334,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+        "width": 750,
+      }
+    }
+  />
+  <View
+    collapsable={false}
+    deviceHeight={null}
+    deviceWidth={null}
+    hideModalContentWhileAnimating={false}
+    onBackdropPress={[Function]}
+    onModalHide={[Function]}
+    onModalWillHide={[Function]}
+    onModalWillShow={[Function]}
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    onSwipeComplete={[Function]}
+    panResponderThreshold={4}
+    pointerEvents="box-none"
+    scrollHorizontal={false}
+    scrollOffset={0}
+    scrollOffsetMax={0}
+    scrollTo={null}
+    statusBarTranslucent={false}
+    style={
+      {
+        "flex": 1,
+        "justifyContent": "center",
+        "left": 0,
+        "margin": 0,
+        "top": 0,
+        "transform": [
+          {
+            "translateY": 1334,
+          },
+        ],
+      }
+    }
+    supportedOrientations={
+      [
+        "portrait",
+        "landscape",
+      ]
+    }
+    swipeDirection="down"
+    swipeThreshold={100}
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+          "height": 1334,
+          "justifyContent": "flex-end",
+          "position": "absolute",
+          "transform": [
+            {
+              "translateY": 0,
+            },
+          ],
+          "width": 750,
+          "zIndex": 1000,
+        }
+      }
+      testID="timerPickerContainer"
+    >
+      <View
+        onTouchEnd={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "flex-end",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "backgroundColor": "#F5F8FB",
+              "borderRadius": 3,
+              "height": 6,
+              "marginBottom": 12,
+              "opacity": 1,
+              "width": 60,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 48,
+            "marginBottom": 32,
+            "marginHorizontal": 8,
+            "overflow": "scroll",
+            "paddingBottom": 48,
+            "paddingHorizontal": 20,
+            "paddingTop": 48,
+            "width": "94%",
+          }
+        }
+      >
+        <Text
+          adjustsFontSizeToFit={true}
+          style={
+            [
+              {
+                "fontFamily": "Poppins",
+              },
+              {
+                "height": 56,
+                "textAlign": "center",
+              },
+              {
+                "color": "#271A51",
+                "fontSize": 14,
+                "fontWeight": "700",
+                "lineHeight": 22,
+              },
+            ]
+          }
+          testID="title"
+        >
+          Select Start Time
+        </Text>
+        <View
+          style={
+            {
+              "alignItems": "center",
+              "marginBottom": 30,
+            }
+          }
+        >
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "bottom": 0,
+                "justifyContent": "center",
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              }
+            }
+          >
+            <Text
+              adjustsFontSizeToFit={true}
+              style={
+                [
+                  {
+                    "fontFamily": "Poppins",
+                  },
+                  {
+                    "marginRight": 72,
+                  },
+                  {
+                    "color": "#271A51",
+                    "fontSize": undefined,
+                    "fontWeight": undefined,
+                    "lineHeight": undefined,
+                  },
+                ]
+              }
+            >
+              :
+            </Text>
+          </View>
+          <RNDatePicker
+            androidVariant="iosClone"
+            cancelText="Cancel"
+            confirmText="Confirm"
+            date={1696118400000}
+            is24hourSource="locale"
+            minuteInterval={1}
+            mode="time"
+            onChange={[Function]}
+            onDateChange={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              [
+                {
+                  "height": 216,
+                  "width": 310,
+                },
+                undefined,
+              ]
+            }
+            textColor="#271A51"
+            theme="light"
+            title="Select time"
+          />
+        </View>
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#72996B",
+              "borderColor": "#72996B",
+              "borderRadius": 16,
+              "justifyContent": "center",
+              "margin": 0,
+              "opacity": 1,
+              "paddingHorizontal": 15.5,
+              "paddingVertical": 14,
+              "width": "100%",
+            }
+          }
+          testID="saveBtn"
+        >
+          <Text
+            adjustsFontSizeToFit={true}
+            style={
+              [
+                {
+                  "fontFamily": "Poppins",
+                },
+                undefined,
+                {
+                  "color": "#FFFFFF",
+                  "fontSize": 14,
+                  "fontWeight": "600",
+                  "lineHeight": 22,
+                },
+              ]
+            }
+          >
+            Save
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</Modal>
+`;

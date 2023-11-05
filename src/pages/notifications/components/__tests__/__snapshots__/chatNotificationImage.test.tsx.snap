@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing with Jest 1`] = `
+<View
+  style={
+    [
+      {
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <Image
+    source={
+      {
+        "testUri": "../../../src/assets/images/default_avatar.jpg",
+      }
+    }
+    style={
+      {
+        "borderRadius": 16,
+        "height": 32,
+        "width": 32,
+      }
+    }
+  />
+</View>
+`;

@@ -1,0 +1,384 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`trackFastTimer Snapshot Testing with Jest 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "display": "flex",
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        {
+          "backgroundColor": "#EDF0DA",
+          "borderRadius": 150,
+          "height": 300,
+          "width": 300,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+          },
+          {
+            "height": 300,
+            "width": 150,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "borderBottomRightRadius": 0,
+              "borderTopRightRadius": 0,
+              "left": 0,
+              "overflow": "hidden",
+              "position": "absolute",
+              "top": 0,
+            },
+            {
+              "backgroundColor": "#72996B",
+              "borderRadius": 150,
+              "height": 300,
+              "transform": [
+                {
+                  "translateX": 75,
+                },
+                {
+                  "rotate": "6.25deg",
+                },
+                {
+                  "translateX": -75,
+                },
+              ],
+              "width": 150,
+            },
+            false,
+            {},
+          ]
+        }
+        testID="firstHalfCircle"
+      />
+    </View>
+    <View
+      style={
+        [
+          {
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+          },
+          {
+            "height": 300,
+            "width": 150,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          [
+            {
+              "borderBottomRightRadius": 0,
+              "borderTopRightRadius": 0,
+              "left": 0,
+              "overflow": "hidden",
+              "position": "absolute",
+              "top": 0,
+            },
+            {
+              "backgroundColor": "#72996B",
+              "borderRadius": 150,
+              "height": 300,
+              "transform": [
+                {
+                  "translateX": 75,
+                },
+                {
+                  "rotate": "0deg",
+                },
+                {
+                  "translateX": -75,
+                },
+              ],
+              "width": 150,
+            },
+            false,
+            {
+              "backgroundColor": "#EDF0DA",
+            },
+          ]
+        }
+        testID="secondHalfCircle"
+      />
+    </View>
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "overflow": "hidden",
+          },
+          {
+            "backgroundColor": "#F5F5F5",
+            "borderRadius": 95,
+            "height": 190,
+            "width": 190,
+          },
+          undefined,
+        ]
+      }
+      testID="innerCircleContainer"
+    />
+    <View
+      style={
+        [
+          {
+            "position": "absolute",
+            "top": 0,
+          },
+          {
+            "backgroundColor": "#72996B",
+            "borderRadius": 55,
+            "height": 55,
+            "width": 55,
+          },
+        ]
+      }
+      testID="internalCircleContainer"
+    />
+    <View
+      style={
+        [
+          {
+            "alignItems": "center",
+            "justifyContent": "center",
+          },
+          {
+            "position": "absolute",
+          },
+          {
+            "borderRadius": 150,
+            "height": 300,
+            "transform": [
+              {
+                "rotate": "6.25deg",
+              },
+            ],
+            "width": 300,
+          },
+        ]
+      }
+      testID="internalCircleWrapper"
+    >
+      <View
+        style={
+          [
+            {
+              "position": "absolute",
+              "top": 0,
+            },
+            {
+              "backgroundColor": "#72996B",
+              "borderRadius": 55,
+              "height": 55,
+              "width": 55,
+            },
+          ]
+        }
+        testID="internalCircleBackground"
+      />
+      <View
+        style={
+          [
+            {
+              "backgroundColor": "#FFFFFF",
+              "borderWidth": 4,
+              "marginTop": 2,
+              "position": "absolute",
+              "top": 0,
+            },
+            {
+              "borderColor": "#72996B",
+              "borderRadius": 55,
+              "height": 51,
+              "width": 51,
+            },
+          ]
+        }
+        testID="internalCircle"
+      />
+    </View>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "opacity": 1,
+        "position": "absolute",
+      }
+    }
+    testID="trackFastTimerButton"
+  >
+    <Text
+      adjustsFontSizeToFit={true}
+      style={
+        [
+          {
+            "fontFamily": "Poppins",
+          },
+          undefined,
+          {
+            "color": "#4D4F4D",
+            "fontSize": 40,
+            "fontWeight": "700",
+            "lineHeight": 48,
+          },
+        ]
+      }
+      testID="trackFastTimeText"
+    >
+      15:43:20
+    </Text>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "display": "flex",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+      testID="trackState"
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={10}
+        bbWidth={10}
+        fill="none"
+        focusable={false}
+        height={10}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 10,
+              "width": 10,
+            },
+          ]
+        }
+        vbHeight={12}
+        vbWidth={11}
+        width={10}
+      >
+        <RNSVGGroup
+          fill={null}
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            d="M0.776001 6.76999C0.776001 4.16599 2.896 2.04599 5.5 2.04599C8.104 2.04599 10.224 4.171 10.224 6.776C10.224 9.38 8.104 11.5 5.5 11.5C2.896 11.5 0.776001 9.37499 0.776001 6.76999ZM5.5 7.354C5.923 7.354 6.271 7.00601 6.271 6.58301V3.66699C6.271 3.24299 5.923 2.896 5.5 2.896C5.077 2.896 4.729 3.24299 4.729 3.66699V6.58301C4.729 7.00601 5.077 7.354 5.5 7.354Z"
+            fill={4285700459}
+            propList={
+              [
+                "fill",
+                "stroke",
+              ]
+            }
+            stroke={4285700459}
+          />
+          <RNSVGPath
+            d="M7.18597 0.678986H3.81403C3.76503 0.678986 3.72699 0.64201 3.72699 0.59201C3.72699 0.53701 3.77103 0.5 3.81403 0.5H7.18597C7.23497 0.5 7.27197 0.537006 7.27197 0.587006C7.27197 0.642006 7.22897 0.678986 7.18597 0.678986Z"
+            fill={4285700459}
+            propList={
+              [
+                "fill",
+                "stroke",
+              ]
+            }
+            stroke={4285700459}
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+      <Text
+        adjustsFontSizeToFit={true}
+        style={
+          [
+            {
+              "fontFamily": "Poppins",
+            },
+            {
+              "marginLeft": 5,
+            },
+            {
+              "color": "#4D4F4D",
+              "fontSize": 15,
+              "fontWeight": undefined,
+              "lineHeight": 23,
+            },
+          ]
+        }
+      >
+        0:16:40
+      </Text>
+    </View>
+  </View>
+</View>
+`;

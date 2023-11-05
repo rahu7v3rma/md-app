@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`progressCircle Snapshot Testing with Jest 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      {
+        "backgroundColor": "#999",
+        "borderRadius": 15,
+        "height": 30,
+        "width": 30,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+        },
+        {
+          "height": 30,
+          "width": 15,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "borderBottomRightRadius": 0,
+            "borderTopRightRadius": 0,
+            "left": 0,
+            "overflow": "hidden",
+            "position": "absolute",
+            "top": 0,
+          },
+          {
+            "backgroundColor": "#f00",
+            "borderRadius": 15,
+            "height": 30,
+            "transform": [
+              {
+                "translateX": 7.5,
+              },
+              {
+                "rotate": "0deg",
+              },
+              {
+                "translateX": -7.5,
+              },
+            ],
+            "width": 15,
+          },
+          {
+            "opacity": 0,
+          },
+          {},
+        ]
+      }
+      testID="firstHalfCircle"
+    />
+  </View>
+  <View
+    style={
+      [
+        {
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+        },
+        {
+          "height": 30,
+          "width": 15,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        [
+          {
+            "borderBottomRightRadius": 0,
+            "borderTopRightRadius": 0,
+            "left": 0,
+            "overflow": "hidden",
+            "position": "absolute",
+            "top": 0,
+          },
+          {
+            "backgroundColor": "#f00",
+            "borderRadius": 15,
+            "height": 30,
+            "transform": [
+              {
+                "translateX": 7.5,
+              },
+              {
+                "rotate": "0deg",
+              },
+              {
+                "translateX": -7.5,
+              },
+            ],
+            "width": 15,
+          },
+          {
+            "opacity": 0,
+          },
+          {
+            "backgroundColor": "#999",
+          },
+        ]
+      }
+      testID="secondHalfCircle"
+    />
+  </View>
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "overflow": "hidden",
+        },
+        {
+          "backgroundColor": "#e9e9ef",
+          "borderRadius": 13,
+          "height": 26,
+          "width": 26,
+        },
+        undefined,
+      ]
+    }
+    testID="innerCircleContainer"
+  />
+  <View
+    style={
+      [
+        {
+          "position": "absolute",
+          "top": 0,
+        },
+        {
+          "backgroundColor": "#72996B",
+          "borderRadius": 2,
+          "height": 2,
+          "width": 2,
+        },
+      ]
+    }
+    testID="internalCircleContainer"
+  />
+  <View
+    style={
+      [
+        {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        {
+          "position": "absolute",
+        },
+        {
+          "borderRadius": 15,
+          "height": 30,
+          "transform": [
+            {
+              "rotate": "0deg",
+            },
+          ],
+          "width": 30,
+        },
+      ]
+    }
+    testID="internalCircleWrapper"
+  >
+    <View
+      style={
+        [
+          {
+            "position": "absolute",
+            "top": 0,
+          },
+          {
+            "backgroundColor": "#f00",
+            "borderRadius": 2,
+            "height": 2,
+            "width": 2,
+          },
+        ]
+      }
+      testID="internalCircleBackground"
+    />
+    <View
+      style={
+        [
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderWidth": 4,
+            "marginTop": 2,
+            "position": "absolute",
+            "top": 0,
+          },
+          {
+            "borderColor": "#72996B",
+            "borderRadius": 2,
+            "height": -2,
+            "width": -2,
+          },
+        ]
+      }
+      testID="internalCircle"
+    />
+  </View>
+</View>
+`;

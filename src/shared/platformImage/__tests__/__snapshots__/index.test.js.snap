@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot / renders without crashing 1`] = `
+<Image
+  resizeMode="contain"
+  source={
+    {
+      "headers": {
+        "X-Authorization": "Token ",
+      },
+      "uri": "http://127.0.0.1:8000/image/imageId",
+    }
+  }
+/>
+`;

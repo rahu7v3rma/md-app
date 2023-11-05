@@ -1,0 +1,825 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`changePassword snapshot 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#F5F5F5",
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "height": 1334,
+      }
+    }
+  >
+    <View>
+      <View>
+        <View
+          accessibilityState={
+            Object {
+              "disabled": true,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "flexDirection": "row",
+              "justifyContent": "center",
+              "opacity": 1,
+              "paddingBottom": 22,
+              "paddingHorizontal": 19,
+              "paddingTop": 10,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "flex-start",
+                "width": "20%",
+              }
+            }
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 100,
+                  "height": 48,
+                  "justifyContent": "center",
+                  "margin": 0,
+                  "opacity": 1,
+                  "paddingHorizontal": 15.5,
+                  "paddingVertical": 24,
+                  "shadowColor": "rgba(0, 0, 0, 0.3)",
+                  "shadowOffset": Object {
+                    "height": 4,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "width": 48,
+                }
+              }
+              testID="leftButton"
+            >
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight={14}
+                bbWidth={8}
+                fill="none"
+                focusable={false}
+                height={14}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    Object {
+                      "height": "auto",
+                      "width": "auto",
+                    },
+                    Object {
+                      "flex": 0,
+                      "height": 14,
+                      "width": 8,
+                    },
+                  ]
+                }
+                vbHeight={14}
+                vbWidth={8}
+                width={8}
+              >
+                <RNSVGGroup
+                  fill={null}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                >
+                  <RNSVGPath
+                    d="M5.97999 0.319993L2.76999 3.52999L0.79999 5.48999C-0.0300097 6.31999 -0.0300097 7.66999 0.79999 8.49999L5.97999 13.68C6.65999 14.36 7.81999 13.87 7.81999 12.92V7.30999V1.07999C7.81999 0.119992 6.65999 -0.360007 5.97999 0.319993Z"
+                    fill={4280752721}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "width": "60%",
+              }
+            }
+          >
+            <Text
+              adjustsFontSizeToFit={true}
+              style={
+                Array [
+                  Object {
+                    "fontFamily": "Poppins",
+                  },
+                  undefined,
+                  Object {
+                    "color": "#72996B",
+                    "fontSize": 16,
+                    "fontWeight": "600",
+                    "lineHeight": 24,
+                  },
+                ]
+              }
+              testID="title"
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "flex-end",
+                "width": "20%",
+              }
+            }
+          />
+        </View>
+        <View
+          style={false}
+        >
+          <View
+            style={false}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "marginHorizontal": 20,
+          }
+        }
+      >
+        <Text
+          adjustsFontSizeToFit={true}
+          style={
+            Array [
+              Object {
+                "fontFamily": "Poppins",
+              },
+              Object {
+                "marginTop": 40,
+                "width": 157.5,
+              },
+              Object {
+                "color": "#4D4F4D",
+                "fontSize": 24,
+                "fontWeight": "700",
+                "lineHeight": 32,
+              },
+            ]
+          }
+        >
+          Please change your password
+        </Text>
+        <View
+          style={
+            Object {
+              "marginTop": 22,
+            }
+          }
+        >
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "transparent",
+                  "borderRadius": 20,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 61,
+                  "justifyContent": "space-between",
+                  "paddingHorizontal": 10,
+                  "shadowColor": "rgba(0, 0, 0, 0.3)",
+                  "shadowOffset": Object {
+                    "height": 0,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 0.5,
+                  "shadowRadius": 1,
+                },
+                Object {},
+                false,
+                Object {
+                  "marginVertical": 5,
+                },
+              ]
+            }
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "flex": 1,
+                    "flexDirection": "column",
+                    "justifyContent": "center",
+                    "paddingHorizontal": 10,
+                    "position": "relative",
+                  },
+                ]
+              }
+            >
+              <TextInput
+                autoCapitalize="none"
+                autoCorrect={true}
+                autoFocus={false}
+                editable={true}
+                keyboardType="default"
+                multiline={false}
+                numberOfLines={1}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onChangeText={[Function]}
+                onFocus={[Function]}
+                onSubmitEditing={[Function]}
+                placeholder="Enter old password*"
+                placeholderTextColor="#4D4F4D"
+                returnKeyType="done"
+                secureTextEntry={true}
+                selectionColor="#72996B"
+                style={
+                  Array [
+                    Object {
+                      "color": "#4D4F4D",
+                      "flex": 1,
+                      "fontFamily": "Poppins",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {
+                      "fontFamily": "Poppins",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "lineHeight": 20,
+                    },
+                  ]
+                }
+                value=""
+              />
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginRight": 5,
+                  "opacity": 1,
+                }
+              }
+            >
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight={24}
+                bbWidth={24}
+                fill="none"
+                focusable={false}
+                height={24}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    Object {
+                      "height": "auto",
+                      "width": "auto",
+                    },
+                    Object {
+                      "flex": 0,
+                      "height": 24,
+                      "width": 24,
+                    },
+                  ]
+                }
+                vbHeight={24}
+                vbWidth={24}
+                width={24}
+              >
+                <RNSVGGroup
+                  fill={null}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                >
+                  <RNSVGPath
+                    d="M3.90744 8.65134C7.53767 2.44955 16.4624 2.44955 20.0926 8.65134C21.3025 10.7182 21.3025 13.2818 20.0926 15.3487C16.4624 21.5504 7.53766 21.5504 3.90744 15.3487C2.69758 13.2818 2.69758 10.7182 3.90744 8.65134Z"
+                    fill={4285700459}
+                    fillOpacity={0.24}
+                    propList={
+                      Array [
+                        "fill",
+                        "fillOpacity",
+                      ]
+                    }
+                  />
+                  <RNSVGPath
+                    d="M3.90744 8.65134L3.26018 8.27246L3.26018 8.27246L3.90744 8.65134ZM20.0926 8.65134L20.7399 8.27246V8.27246L20.0926 8.65134ZM20.0926 15.3487L19.4454 14.9698L20.0926 15.3487ZM3.90744 15.3487L4.55471 14.9698L3.90744 15.3487ZM4.55471 9.03021C7.89528 3.32326 16.1048 3.32326 19.4454 9.03021L20.7399 8.27246C16.82 1.57585 7.18005 1.57585 3.26018 8.27246L4.55471 9.03021ZM19.4454 9.03021C20.5183 10.8631 20.5183 13.1369 19.4454 14.9698L20.7399 15.7275C22.0868 13.4266 22.0868 10.5734 20.7399 8.27246L19.4454 9.03021ZM19.4454 14.9698C16.1048 20.6767 7.89528 20.6767 4.55471 14.9698L3.26018 15.7275C7.18005 22.4242 16.82 22.4242 20.7399 15.7275L19.4454 14.9698ZM4.55471 14.9698C3.48182 13.1369 3.48182 10.8631 4.55471 9.03021L3.26018 8.27246C1.91333 10.5734 1.91333 13.4266 3.26018 15.7275L4.55471 14.9698ZM14.8067 12.0607C14.8067 13.6528 13.5387 14.9233 11.9995 14.9233V16.4233C14.3887 16.4233 16.3067 14.4595 16.3067 12.0607H14.8067ZM11.9995 14.9233C10.4605 14.9233 9.19336 13.6531 9.19336 12.0607H7.69336C7.69336 14.4592 9.60993 16.4233 11.9995 16.4233V14.9233ZM9.19336 12.0607C9.19336 10.467 10.4607 9.19699 11.9995 9.19699V7.69699C9.60978 7.69699 7.69336 9.66125 7.69336 12.0607H9.19336ZM11.9995 9.19699C13.5386 9.19699 14.8067 10.4673 14.8067 12.0607H16.3067C16.3067 9.66094 14.3889 7.69699 11.9995 7.69699V9.19699Z"
+                    fill={4285700459}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "transparent",
+                  "borderRadius": 20,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 61,
+                  "justifyContent": "space-between",
+                  "paddingHorizontal": 10,
+                  "shadowColor": "rgba(0, 0, 0, 0.3)",
+                  "shadowOffset": Object {
+                    "height": 0,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 0.5,
+                  "shadowRadius": 1,
+                },
+                Object {},
+                false,
+                Object {
+                  "marginVertical": 5,
+                },
+              ]
+            }
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "flex": 1,
+                    "flexDirection": "column",
+                    "justifyContent": "center",
+                    "paddingHorizontal": 10,
+                    "position": "relative",
+                  },
+                ]
+              }
+            >
+              <TextInput
+                autoCapitalize="none"
+                autoCorrect={true}
+                autoFocus={false}
+                editable={true}
+                keyboardType="default"
+                multiline={false}
+                numberOfLines={1}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onChangeText={[Function]}
+                onFocus={[Function]}
+                onSubmitEditing={[Function]}
+                placeholder="Set up new password*"
+                placeholderTextColor="#4D4F4D"
+                returnKeyType="done"
+                secureTextEntry={true}
+                selectionColor="#72996B"
+                style={
+                  Array [
+                    Object {
+                      "color": "#4D4F4D",
+                      "flex": 1,
+                      "fontFamily": "Poppins",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {
+                      "fontFamily": "Poppins",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "lineHeight": 20,
+                    },
+                  ]
+                }
+                value=""
+              />
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginRight": 5,
+                  "opacity": 1,
+                }
+              }
+            >
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight={24}
+                bbWidth={24}
+                fill="none"
+                focusable={false}
+                height={24}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    Object {
+                      "height": "auto",
+                      "width": "auto",
+                    },
+                    Object {
+                      "flex": 0,
+                      "height": 24,
+                      "width": 24,
+                    },
+                  ]
+                }
+                vbHeight={24}
+                vbWidth={24}
+                width={24}
+              >
+                <RNSVGGroup
+                  fill={null}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                >
+                  <RNSVGPath
+                    d="M3.90744 8.65134C7.53767 2.44955 16.4624 2.44955 20.0926 8.65134C21.3025 10.7182 21.3025 13.2818 20.0926 15.3487C16.4624 21.5504 7.53766 21.5504 3.90744 15.3487C2.69758 13.2818 2.69758 10.7182 3.90744 8.65134Z"
+                    fill={4285700459}
+                    fillOpacity={0.24}
+                    propList={
+                      Array [
+                        "fill",
+                        "fillOpacity",
+                      ]
+                    }
+                  />
+                  <RNSVGPath
+                    d="M3.90744 8.65134L3.26018 8.27246L3.26018 8.27246L3.90744 8.65134ZM20.0926 8.65134L20.7399 8.27246V8.27246L20.0926 8.65134ZM20.0926 15.3487L19.4454 14.9698L20.0926 15.3487ZM3.90744 15.3487L4.55471 14.9698L3.90744 15.3487ZM4.55471 9.03021C7.89528 3.32326 16.1048 3.32326 19.4454 9.03021L20.7399 8.27246C16.82 1.57585 7.18005 1.57585 3.26018 8.27246L4.55471 9.03021ZM19.4454 9.03021C20.5183 10.8631 20.5183 13.1369 19.4454 14.9698L20.7399 15.7275C22.0868 13.4266 22.0868 10.5734 20.7399 8.27246L19.4454 9.03021ZM19.4454 14.9698C16.1048 20.6767 7.89528 20.6767 4.55471 14.9698L3.26018 15.7275C7.18005 22.4242 16.82 22.4242 20.7399 15.7275L19.4454 14.9698ZM4.55471 14.9698C3.48182 13.1369 3.48182 10.8631 4.55471 9.03021L3.26018 8.27246C1.91333 10.5734 1.91333 13.4266 3.26018 15.7275L4.55471 14.9698ZM14.8067 12.0607C14.8067 13.6528 13.5387 14.9233 11.9995 14.9233V16.4233C14.3887 16.4233 16.3067 14.4595 16.3067 12.0607H14.8067ZM11.9995 14.9233C10.4605 14.9233 9.19336 13.6531 9.19336 12.0607H7.69336C7.69336 14.4592 9.60993 16.4233 11.9995 16.4233V14.9233ZM9.19336 12.0607C9.19336 10.467 10.4607 9.19699 11.9995 9.19699V7.69699C9.60978 7.69699 7.69336 9.66125 7.69336 12.0607H9.19336ZM11.9995 9.19699C13.5386 9.19699 14.8067 10.4673 14.8067 12.0607H16.3067C16.3067 9.66094 14.3889 7.69699 11.9995 7.69699V9.19699Z"
+                    fill={4285700459}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
+            </View>
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "transparent",
+                  "borderRadius": 20,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 61,
+                  "justifyContent": "space-between",
+                  "paddingHorizontal": 10,
+                  "shadowColor": "rgba(0, 0, 0, 0.3)",
+                  "shadowOffset": Object {
+                    "height": 0,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 0.5,
+                  "shadowRadius": 1,
+                },
+                Object {},
+                false,
+                Object {
+                  "marginVertical": 5,
+                },
+              ]
+            }
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "flex": 1,
+                    "flexDirection": "column",
+                    "justifyContent": "center",
+                    "paddingHorizontal": 10,
+                    "position": "relative",
+                  },
+                ]
+              }
+            >
+              <TextInput
+                autoCapitalize="none"
+                autoCorrect={true}
+                autoFocus={false}
+                editable={true}
+                keyboardType="default"
+                multiline={false}
+                numberOfLines={1}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onChangeText={[Function]}
+                onFocus={[Function]}
+                onSubmitEditing={[Function]}
+                placeholder="Repeat password*"
+                placeholderTextColor="#4D4F4D"
+                returnKeyType="done"
+                secureTextEntry={true}
+                selectionColor="#72996B"
+                style={
+                  Array [
+                    Object {
+                      "color": "#4D4F4D",
+                      "flex": 1,
+                      "fontFamily": "Poppins",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {
+                      "fontFamily": "Poppins",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                      "lineHeight": 20,
+                    },
+                  ]
+                }
+                value=""
+              />
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginRight": 5,
+                  "opacity": 1,
+                }
+              }
+            >
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight={24}
+                bbWidth={24}
+                fill="none"
+                focusable={false}
+                height={24}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    Object {
+                      "height": "auto",
+                      "width": "auto",
+                    },
+                    Object {
+                      "flex": 0,
+                      "height": 24,
+                      "width": 24,
+                    },
+                  ]
+                }
+                vbHeight={24}
+                vbWidth={24}
+                width={24}
+              >
+                <RNSVGGroup
+                  fill={null}
+                  propList={
+                    Array [
+                      "fill",
+                    ]
+                  }
+                >
+                  <RNSVGPath
+                    d="M3.90744 8.65134C7.53767 2.44955 16.4624 2.44955 20.0926 8.65134C21.3025 10.7182 21.3025 13.2818 20.0926 15.3487C16.4624 21.5504 7.53766 21.5504 3.90744 15.3487C2.69758 13.2818 2.69758 10.7182 3.90744 8.65134Z"
+                    fill={4285700459}
+                    fillOpacity={0.24}
+                    propList={
+                      Array [
+                        "fill",
+                        "fillOpacity",
+                      ]
+                    }
+                  />
+                  <RNSVGPath
+                    d="M3.90744 8.65134L3.26018 8.27246L3.26018 8.27246L3.90744 8.65134ZM20.0926 8.65134L20.7399 8.27246V8.27246L20.0926 8.65134ZM20.0926 15.3487L19.4454 14.9698L20.0926 15.3487ZM3.90744 15.3487L4.55471 14.9698L3.90744 15.3487ZM4.55471 9.03021C7.89528 3.32326 16.1048 3.32326 19.4454 9.03021L20.7399 8.27246C16.82 1.57585 7.18005 1.57585 3.26018 8.27246L4.55471 9.03021ZM19.4454 9.03021C20.5183 10.8631 20.5183 13.1369 19.4454 14.9698L20.7399 15.7275C22.0868 13.4266 22.0868 10.5734 20.7399 8.27246L19.4454 9.03021ZM19.4454 14.9698C16.1048 20.6767 7.89528 20.6767 4.55471 14.9698L3.26018 15.7275C7.18005 22.4242 16.82 22.4242 20.7399 15.7275L19.4454 14.9698ZM4.55471 14.9698C3.48182 13.1369 3.48182 10.8631 4.55471 9.03021L3.26018 8.27246C1.91333 10.5734 1.91333 13.4266 3.26018 15.7275L4.55471 14.9698ZM14.8067 12.0607C14.8067 13.6528 13.5387 14.9233 11.9995 14.9233V16.4233C14.3887 16.4233 16.3067 14.4595 16.3067 12.0607H14.8067ZM11.9995 14.9233C10.4605 14.9233 9.19336 13.6531 9.19336 12.0607H7.69336C7.69336 14.4592 9.60993 16.4233 11.9995 16.4233V14.9233ZM9.19336 12.0607C9.19336 10.467 10.4607 9.19699 11.9995 9.19699V7.69699C9.60978 7.69699 7.69336 9.66125 7.69336 12.0607H9.19336ZM11.9995 9.19699C13.5386 9.19699 14.8067 10.4673 14.8067 12.0607H16.3067C16.3067 9.66094 14.3889 7.69699 11.9995 7.69699V9.19699Z"
+                    fill={4285700459}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
+            </View>
+          </View>
+        </View>
+        <View
+          accessibilityState={
+            Object {
+              "disabled": true,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#72996B",
+              "borderColor": "#D6D6D6",
+              "borderRadius": 20,
+              "bottom": 0,
+              "justifyContent": "center",
+              "margin": 0,
+              "marginBottom": 100,
+              "opacity": 1,
+              "paddingHorizontal": 15.5,
+              "paddingVertical": 24,
+              "position": "absolute",
+              "width": "100%",
+            }
+          }
+          testID="changePasswordButton"
+        >
+          <Text
+            adjustsFontSizeToFit={true}
+            style={
+              Array [
+                Object {
+                  "fontFamily": "Poppins",
+                },
+                undefined,
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": 14,
+                  "fontWeight": "600",
+                  "lineHeight": 22,
+                },
+              ]
+            }
+          >
+            Change Password
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</RCTSafeAreaView>
+`;

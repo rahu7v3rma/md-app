@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Match Snapshot - Check 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight={8}
+  bbWidth={9}
+  fill="none"
+  focusable={false}
+  height={8}
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  style={
+    [
+      {
+        "backgroundColor": "transparent",
+        "borderWidth": 0,
+      },
+      {
+        "flex": 0,
+        "height": 8,
+        "width": 9,
+      },
+    ]
+  }
+  vbHeight={8}
+  vbWidth={9}
+  width={9}
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <RNSVGGroup
+    fill={null}
+    propList={
+      [
+        "fill",
+      ]
+    }
+  >
+    <RNSVGPath
+      d="M8.247 1.173a.601.601 0 00-.849-.007L2.963 5.549 1.035 3.553a.601.601 0 10-.868.833l.004.003 2.35 2.436c.113.115.267.18.427.18h.007a.601.601 0 00.42-.173l4.866-4.81a.601.601 0 00.006-.85z"
+      fill={4286873440}
+      propList={
+        [
+          "fill",
+        ]
+      }
+    />
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;
+
+exports[`Match Snapshot - DoubleCheck 1`] = `
+<RNSVGSvgView
+  align="xMidYMid"
+  bbHeight={12}
+  bbWidth={12}
+  fill="none"
+  focusable={false}
+  height={12}
+  meetOrSlice={0}
+  minX={0}
+  minY={0}
+  style={
+    [
+      {
+        "backgroundColor": "transparent",
+        "borderWidth": 0,
+      },
+      {
+        "flex": 0,
+        "height": 12,
+        "width": 12,
+      },
+    ]
+  }
+  vbHeight={12}
+  vbWidth={12}
+  width={12}
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <RNSVGGroup
+    fill={null}
+    propList={
+      [
+        "fill",
+      ]
+    }
+  >
+    <RNSVGGroup
+      clipPath="clip0_9_258"
+      fill={4286873440}
+      propList={
+        [
+          "fill",
+        ]
+      }
+    >
+      <RNSVGPath
+        d="M8.247 3.173a.601.601 0 00-.849-.007L2.963 7.55 1.035 5.553a.601.601 0 10-.868.833l.004.003 2.35 2.436c.113.115.267.18.427.18h.007a.601.601 0 00.42-.173l4.866-4.81a.601.601 0 00.006-.85zM6.13 8.825c.112.115.265.18.425.18h.007a.601.601 0 00.42-.173l4.866-4.81a.601.601 0 00-.842-.856L6.573 7.55l-.158-.164a.601.601 0 10-.868.833l.003.003.58.604z"
+      />
+    </RNSVGGroup>
+    <RNSVGDefs>
+      <RNSVGClipPath
+        name="clip0_9_258"
+      >
+        <RNSVGPath
+          d="M0 0H12V12H0z"
+          fill={4294967295}
+          propList={
+            [
+              "fill",
+            ]
+          }
+        />
+      </RNSVGClipPath>
+    </RNSVGDefs>
+  </RNSVGGroup>
+</RNSVGSvgView>
+`;

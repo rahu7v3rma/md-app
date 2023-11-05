@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`logTab snapshot 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "borderColor": "#FFFFFF",
+      "borderRadius": 20,
+      "borderWidth": 1.5,
+      "elevation": 3,
+      "flexDirection": "row",
+      "height": 90,
+      "opacity": 1,
+      "shadowColor": "rgba(0,0,0,0.5)",
+      "width": "44%",
+    }
+  }
+  testID="logTab"
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "marginHorizontal": 16,
+      }
+    }
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight={21}
+      bbWidth={18}
+      fill="none"
+      focusable={false}
+      height={21}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          {
+            "flex": 0,
+            "height": 21,
+            "width": 18,
+          },
+        ]
+      }
+      testID="logTabIcon"
+      vbHeight={21}
+      vbWidth={18}
+      width={18}
+      xml="<svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M11.4513 18.621C9.9292 19.477 8.0708 19.477 6.5487 18.621L3.5487 16.934C1.9743 16.048 1 14.382 1 12.576V9.424C1 7.618 1.9743 5.952 3.5487 5.066L6.5487 3.379C8.0708 2.523 9.9292 2.523 11.4513 3.379L14.4513 5.066C16.0257 5.952 17 7.618 17 9.424V11" stroke="#FF9330" stroke-width="1.5" stroke-linecap="round"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.931 2.738C7.6814 1.754 9.8186 1.754 11.569 2.738L14.569 4.42599C16.3795 5.44399 17.5 7.36 17.5 9.438V11.013C17.5 11.356 17.2698 11.645 16.9556 11.735C16.9484 11.745 16.941 11.754 16.9334 11.763C16.7306 11.763 16.5159 11.765 16.2775 11.768C15.7127 11.773 15.0155 11.779 14.0312 11.763C12.7007 11.741 12.012 12.183 12.012 13.513V17.21C12.012 17.939 12.0037 18.393 11.9499 18.681C11.9343 18.926 11.7989 19.159 11.569 19.288C9.8186 20.273 7.6814 20.273 5.931 19.288L2.931 17.601C1.1205 16.582 0 14.666 0 12.589V9.43699C0 7.35999 1.1205 5.44399 2.931 4.42599L5.931 2.738ZM9 6.24999C9.4142 6.24999 9.75 6.58599 9.75 6.99999V10.701C10.1984 10.96 10.5 11.445 10.5 12C10.5 12.828 9.8284 13.5 9 13.5C8.1716 13.5 7.5 12.828 7.5 12C7.5 11.445 7.8016 10.96 8.25 10.701V6.99999C8.25 6.58599 8.5858 6.24999 9 6.24999Z" fill="#FF9330"/>
+  <path d="M3 3L6 1" stroke="#FF9330" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M15 3L12 1" stroke="#FF9330" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M13 14.996V14.16C13 13.128 13.7861 12.702 14.7418 13.222L15.5125 13.64L16.2832 14.059C17.2389 14.578 17.2389 15.422 16.2832 15.941L15.5125 16.36L14.7418 16.778C13.7861 17.298 13 16.872 13 15.84V14.996Z" stroke="#FF9330" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={null}
+        propList={
+          [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          d="M11.4513 18.621C9.9292 19.477 8.0708 19.477 6.5487 18.621L3.5487 16.934C1.9743 16.048 1 14.382 1 12.576V9.424C1 7.618 1.9743 5.952 3.5487 5.066L6.5487 3.379C8.0708 2.523 9.9292 2.523 11.4513 3.379L14.4513 5.066C16.0257 5.952 17 7.618 17 9.424V11"
+          propList={
+            [
+              "stroke",
+              "strokeWidth",
+              "strokeLinecap",
+            ]
+          }
+          stroke={4294939440}
+          strokeLinecap={1}
+          strokeWidth={1.5}
+        />
+        <RNSVGPath
+          clipRule={0}
+          d="M5.931 2.738C7.6814 1.754 9.8186 1.754 11.569 2.738L14.569 4.42599C16.3795 5.44399 17.5 7.36 17.5 9.438V11.013C17.5 11.356 17.2698 11.645 16.9556 11.735C16.9484 11.745 16.941 11.754 16.9334 11.763C16.7306 11.763 16.5159 11.765 16.2775 11.768C15.7127 11.773 15.0155 11.779 14.0312 11.763C12.7007 11.741 12.012 12.183 12.012 13.513V17.21C12.012 17.939 12.0037 18.393 11.9499 18.681C11.9343 18.926 11.7989 19.159 11.569 19.288C9.8186 20.273 7.6814 20.273 5.931 19.288L2.931 17.601C1.1205 16.582 0 14.666 0 12.589V9.43699C0 7.35999 1.1205 5.44399 2.931 4.42599L5.931 2.738ZM9 6.24999C9.4142 6.24999 9.75 6.58599 9.75 6.99999V10.701C10.1984 10.96 10.5 11.445 10.5 12C10.5 12.828 9.8284 13.5 9 13.5C8.1716 13.5 7.5 12.828 7.5 12C7.5 11.445 7.8016 10.96 8.25 10.701V6.99999C8.25 6.58599 8.5858 6.24999 9 6.24999Z"
+          fill={4294939440}
+          fillRule={0}
+          propList={
+            [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+        <RNSVGPath
+          d="M3 3L6 1"
+          propList={
+            [
+              "stroke",
+              "strokeWidth",
+              "strokeLinecap",
+            ]
+          }
+          stroke={4294939440}
+          strokeLinecap={1}
+          strokeWidth={1.5}
+        />
+        <RNSVGPath
+          d="M15 3L12 1"
+          propList={
+            [
+              "stroke",
+              "strokeWidth",
+              "strokeLinecap",
+            ]
+          }
+          stroke={4294939440}
+          strokeLinecap={1}
+          strokeWidth={1.5}
+        />
+        <RNSVGPath
+          d="M13 14.996V14.16C13 13.128 13.7861 12.702 14.7418 13.222L15.5125 13.64L16.2832 14.059C17.2389 14.578 17.2389 15.422 16.2832 15.941L15.5125 16.36L14.7418 16.778C13.7861 17.298 13 16.872 13 15.84V14.996Z"
+          propList={
+            [
+              "stroke",
+              "strokeWidth",
+              "strokeLinecap",
+              "strokeLinejoin",
+              "strokeMiterlimit",
+            ]
+          }
+          stroke={4294939440}
+          strokeLinecap={1}
+          strokeLinejoin={1}
+          strokeMiterlimit={10}
+          strokeWidth={1.5}
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+  <View
+    style={{}}
+    testID="logTabTitleContainer"
+  >
+    <Text
+      adjustsFontSizeToFit={true}
+      style={
+        [
+          {
+            "fontFamily": "Poppins",
+          },
+          {
+            "flexWrap": "wrap",
+            "width": "95%",
+          },
+          {
+            "color": "#72996B",
+            "fontSize": 14,
+            "fontWeight": "600",
+            "lineHeight": 22,
+          },
+        ]
+      }
+      testID="logTabTitle"
+    >
+      Fasting Timer
+    </Text>
+  </View>
+</View>
+`;

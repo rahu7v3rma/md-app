@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`logBookListItem snapshot 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 20,
+      "marginBottom": 14,
+      "opacity": 1,
+      "paddingBottom": 10,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "display": "flex",
+        "flexDirection": "row",
+        "marginTop": 18,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "marginLeft": 20,
+          "width": "10%",
+        }
+      }
+    >
+      <RNSVGSvgView
+        bbHeight="100%"
+        bbWidth="100%"
+        focusable={false}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": "100%",
+              "width": "100%",
+            },
+          ]
+        }
+        xml="<svg></svg>"
+      >
+        <RNSVGGroup />
+      </RNSVGSvgView>
+    </View>
+    <View
+      style={
+        {
+          "alignSelf": "center",
+          "width": "65%",
+        }
+      }
+    >
+      <Text
+        adjustsFontSizeToFit={true}
+        style={
+          [
+            {
+              "fontFamily": "Poppins",
+            },
+            {
+              "lineHeight": 20,
+            },
+            {
+              "color": "#72996B",
+              "fontSize": 14,
+              "fontWeight": "600",
+              "lineHeight": 22,
+            },
+          ]
+        }
+      >
+        title
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "width": "25%",
+        }
+      }
+    >
+      <Text
+        adjustsFontSizeToFit={true}
+        style={
+          [
+            {
+              "fontFamily": "Poppins",
+            },
+            undefined,
+            {
+              "color": "#58595A",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 22,
+            },
+          ]
+        }
+      />
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={24}
+        bbWidth={24}
+        fill="none"
+        focusable={false}
+        height={24}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 24,
+              "width": 24,
+            },
+          ]
+        }
+        vbHeight={24}
+        vbWidth={24}
+        width={24}
+      >
+        <RNSVGGroup
+          fill={null}
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            d="M9.5 7L14.5 12L9.5 17"
+            propList={
+              [
+                "stroke",
+                "strokeWidth",
+                "strokeLinecap",
+                "strokeLinejoin",
+              ]
+            }
+            stroke={4288981679}
+            strokeLinecap={1}
+            strokeLinejoin={1}
+            strokeWidth={2}
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "marginLeft": 6,
+        "marginTop": 6,
+      }
+    }
+  />
+</View>
+`;

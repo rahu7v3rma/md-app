@@ -1,0 +1,434 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<RNCSafeAreaView
+  edges={
+    {
+      "bottom": "additive",
+      "left": "additive",
+      "right": "additive",
+      "top": "additive",
+    }
+  }
+  style={
+    {
+      "backgroundColor": "#FAFAFF",
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": true,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "flexDirection": "row",
+          "height": 80,
+          "justifyContent": "center",
+          "opacity": 1,
+          "paddingBottom": 22,
+          "paddingHorizontal": 19,
+          "paddingTop": 10,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "flex-start",
+            "width": "20%",
+          }
+        }
+      >
+        <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "backgroundColor": "#D3E29F40",
+              "borderRadius": 100,
+              "elevation": 5,
+              "height": 48,
+              "justifyContent": "center",
+              "margin": 0,
+              "opacity": 1,
+              "paddingHorizontal": 15.5,
+              "paddingVertical": 24,
+              "shadowColor": "",
+              "shadowOffset": {
+                "height": 0,
+                "width": 0,
+              },
+              "shadowOpacity": 0,
+              "shadowRadius": 10,
+              "width": 48,
+            }
+          }
+          testID="leftButton"
+        >
+          <RNSVGSvgView
+            align="xMidYMid"
+            bbHeight={14}
+            bbWidth={8}
+            fill="none"
+            focusable={false}
+            height={14}
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              [
+                {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                {
+                  "height": "auto",
+                  "width": "auto",
+                },
+                {
+                  "flex": 0,
+                  "height": 14,
+                  "width": 8,
+                },
+              ]
+            }
+            vbHeight={14}
+            vbWidth={8}
+            width={8}
+          >
+            <RNSVGGroup
+              fill={null}
+              propList={
+                [
+                  "fill",
+                ]
+              }
+            >
+              <RNSVGPath
+                d="M5.97999 0.319993L2.76999 3.52999L0.79999 5.48999C-0.0300097 6.31999 -0.0300097 7.66999 0.79999 8.49999L5.97999 13.68C6.65999 14.36 7.81999 13.87 7.81999 12.92V7.30999V1.07999C7.81999 0.119992 6.65999 -0.360007 5.97999 0.319993Z"
+                fill={4280752721}
+                propList={
+                  [
+                    "fill",
+                  ]
+                }
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "width": "60%",
+          }
+        }
+      >
+        <Text
+          adjustsFontSizeToFit={true}
+          style={
+            [
+              {
+                "fontFamily": "Poppins",
+              },
+              undefined,
+              {
+                "color": "#72996B",
+                "fontSize": 16,
+                "fontWeight": "600",
+                "lineHeight": 24,
+              },
+            ]
+          }
+          testID="title"
+        />
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "flex-end",
+            "width": "20%",
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "flex": 1,
+        "justifyContent": "space-between",
+        "paddingBottom": 15,
+        "paddingHorizontal": 20,
+      }
+    }
+  >
+    <View>
+      <Text
+        adjustsFontSizeToFit={true}
+        style={
+          [
+            {
+              "fontFamily": "Poppins",
+            },
+            {
+              "marginTop": 20,
+            },
+            {
+              "color": "#4D4F4D",
+              "fontSize": 24,
+              "fontWeight": "700",
+              "lineHeight": 32,
+            },
+          ]
+        }
+        testID="pageTitle"
+      >
+        Delete Account
+      </Text>
+      <Text
+        adjustsFontSizeToFit={true}
+        style={
+          [
+            {
+              "fontFamily": "Poppins",
+            },
+            {
+              "marginRight": 20,
+              "marginTop": 30,
+            },
+            {
+              "color": "#4D4F4D",
+              "fontSize": 16,
+              "fontWeight": undefined,
+              "lineHeight": 24,
+            },
+          ]
+        }
+        testID="pageSubtitle"
+      >
+        Deleting your account is an irreversible action that will permanently remove all your data from our system.
+      </Text>
+      <Text
+        adjustsFontSizeToFit={true}
+        style={
+          [
+            {
+              "fontFamily": "Poppins",
+            },
+            {
+              "marginTop": 40,
+            },
+            {
+              "color": "#4D4F4D",
+              "fontSize": 16,
+              "fontWeight": "800",
+              "lineHeight": 24,
+            },
+          ]
+        }
+      >
+        Are you sure you want to proceed with deleting your account?
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "paddingHorizontal": 10,
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#72996B",
+            "borderColor": "#72996B",
+            "borderRadius": 16,
+            "height": 56,
+            "justifyContent": "center",
+            "margin": 0,
+            "opacity": 1,
+            "paddingHorizontal": 15.5,
+            "paddingVertical": 0,
+            "width": "47.5%",
+          }
+        }
+        testID="cancelButton"
+      >
+        <Text
+          adjustsFontSizeToFit={true}
+          style={
+            [
+              {
+                "fontFamily": "Poppins",
+              },
+              undefined,
+              {
+                "color": "#FFFFFF",
+                "fontSize": 14,
+                "fontWeight": "600",
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          Cancel
+        </Text>
+      </View>
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": undefined,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onClick={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#CD4049",
+            "borderColor": "#72996B",
+            "borderRadius": 16,
+            "height": 56,
+            "justifyContent": "center",
+            "margin": 0,
+            "opacity": 1,
+            "paddingHorizontal": 15.5,
+            "paddingVertical": 0,
+            "width": "47.5%",
+          }
+        }
+        testID="proceedButton"
+      >
+        <Text
+          adjustsFontSizeToFit={true}
+          style={
+            [
+              {
+                "fontFamily": "Poppins",
+              },
+              undefined,
+              {
+                "color": "#FFFFFF",
+                "fontSize": 14,
+                "fontWeight": "600",
+                "lineHeight": 22,
+              },
+            ]
+          }
+        >
+          Proceed
+        </Text>
+      </View>
+    </View>
+  </View>
+</RNCSafeAreaView>
+`;

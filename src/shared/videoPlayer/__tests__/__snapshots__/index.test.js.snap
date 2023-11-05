@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "borderRadius": 8,
+        "overflow": "hidden",
+        "width": "100%",
+      },
+      undefined,
+      {
+        "height": undefined,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      [
+        {
+          "flex": 1,
+          "overflow": "hidden",
+        },
+        undefined,
+      ]
+    }
+  >
+    <RNCWebView
+      allowsFullscreenVideo={true}
+      allowsInlineMediaPlayback={true}
+      cacheEnabled={true}
+      contentMode="mobile"
+      injectedJavaScriptBeforeContentLoadedForMainFrameOnly={true}
+      injectedJavaScriptForMainFrameOnly={true}
+      javaScriptEnabled={true}
+      messagingEnabled={false}
+      onContentProcessDidTerminate={[Function]}
+      onHttpError={[Function]}
+      onLoadingError={[Function]}
+      onLoadingFinish={[Function]}
+      onLoadingProgress={[Function]}
+      onLoadingStart={[Function]}
+      onMessage={[Function]}
+      onShouldStartLoadWithRequest={[Function]}
+      scrollEnabled={false}
+      source={
+        {
+          "uri": "https://player.vimeo.com/video/undefined?api=1&autoplay=0&byline=0&portrait=0&title=0&playsinline=1&autopause=true",
+        }
+      }
+      style={
+        [
+          {
+            "flex": 1,
+            "overflow": "hidden",
+          },
+          {
+            "backgroundColor": "#ffffff",
+          },
+          [
+            {
+              "height": "100%",
+              "resizeMode": "cover",
+              "width": "100%",
+            },
+            undefined,
+          ],
+        ]
+      }
+      textInteractionEnabled={true}
+      useSharedProcessPool={true}
+    />
+  </View>
+</View>
+`;

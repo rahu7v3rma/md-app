@@ -1,0 +1,427 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot 1`] = `
+<View
+  accessible={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#F5F5F5",
+      "flex": 1,
+    }
+  }
+>
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
+    style={
+      Object {
+        "flex": 1,
+        "position": "relative",
+      }
+    }
+  >
+    <RCTScrollView
+      contentContainerStyle={
+        Object {
+          "height": 1334,
+        }
+      }
+    >
+      <View>
+        <View>
+          <View
+            accessibilityState={
+              Object {
+                "disabled": true,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "flexDirection": "row",
+                "justifyContent": "center",
+                "opacity": 1,
+                "paddingBottom": 22,
+                "paddingHorizontal": 19,
+                "paddingTop": 10,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "flex-start",
+                  "width": "20%",
+                }
+              }
+            >
+              <View
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "#FFFFFF",
+                    "borderRadius": 100,
+                    "height": 48,
+                    "justifyContent": "center",
+                    "margin": 0,
+                    "opacity": 1,
+                    "paddingHorizontal": 15.5,
+                    "paddingVertical": 24,
+                    "shadowColor": "rgba(0, 0, 0, 0.3)",
+                    "shadowOffset": Object {
+                      "height": 4,
+                      "width": 0,
+                    },
+                    "shadowOpacity": 1,
+                    "width": 48,
+                  }
+                }
+                testID="leftButton"
+              >
+                <RNSVGSvgView
+                  align="xMidYMid"
+                  bbHeight={14}
+                  bbWidth={8}
+                  fill="none"
+                  focusable={false}
+                  height={14}
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  style={
+                    Array [
+                      Object {
+                        "backgroundColor": "transparent",
+                        "borderWidth": 0,
+                      },
+                      Object {
+                        "height": "auto",
+                        "width": "auto",
+                      },
+                      Object {
+                        "flex": 0,
+                        "height": 14,
+                        "width": 8,
+                      },
+                    ]
+                  }
+                  vbHeight={14}
+                  vbWidth={8}
+                  width={8}
+                >
+                  <RNSVGGroup
+                    fill={null}
+                    propList={
+                      Array [
+                        "fill",
+                      ]
+                    }
+                  >
+                    <RNSVGPath
+                      d="M5.97999 0.319993L2.76999 3.52999L0.79999 5.48999C-0.0300097 6.31999 -0.0300097 7.66999 0.79999 8.49999L5.97999 13.68C6.65999 14.36 7.81999 13.87 7.81999 12.92V7.30999V1.07999C7.81999 0.119992 6.65999 -0.360007 5.97999 0.319993Z"
+                      fill={4280752721}
+                      propList={
+                        Array [
+                          "fill",
+                        ]
+                      }
+                    />
+                  </RNSVGGroup>
+                </RNSVGSvgView>
+              </View>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "width": "60%",
+                }
+              }
+            >
+              <Text
+                adjustsFontSizeToFit={true}
+                style={
+                  Array [
+                    Object {
+                      "fontFamily": "Poppins",
+                    },
+                    undefined,
+                    Object {
+                      "color": "#72996B",
+                      "fontSize": 16,
+                      "fontWeight": "600",
+                      "lineHeight": 24,
+                    },
+                  ]
+                }
+                testID="title"
+              />
+            </View>
+            <View
+              style={
+                Object {
+                  "alignItems": "flex-end",
+                  "width": "20%",
+                }
+              }
+            />
+          </View>
+          <View
+            style={false}
+          >
+            <View
+              style={false}
+            />
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "marginHorizontal": 20,
+            }
+          }
+        >
+          <Text
+            adjustsFontSizeToFit={true}
+            style={
+              Array [
+                Object {
+                  "fontFamily": "Poppins",
+                },
+                Object {
+                  "marginTop": 40,
+                  "width": 157.5,
+                },
+                Object {
+                  "color": "#4D4F4D",
+                  "fontSize": 24,
+                  "fontWeight": "700",
+                  "lineHeight": 32,
+                },
+              ]
+            }
+          >
+            Reset Password
+          </Text>
+          <Text
+            adjustsFontSizeToFit={true}
+            style={
+              Array [
+                Object {
+                  "fontFamily": "Poppins",
+                },
+                Object {
+                  "marginBottom": 30,
+                  "marginTop": 10,
+                },
+                Object {
+                  "color": "#4D4F4D",
+                  "fontSize": 16,
+                  "fontWeight": "400",
+                  "lineHeight": 24,
+                },
+              ]
+            }
+          >
+            Please enter the email address you used when creating your account and we'll send you an email with instructions on how to reset your password.
+          </Text>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "transparent",
+                  "borderRadius": 20,
+                  "borderWidth": 2,
+                  "elevation": 2,
+                  "flexDirection": "row",
+                  "height": 61,
+                  "justifyContent": "space-between",
+                  "paddingHorizontal": 10,
+                  "shadowColor": "rgba(0, 0, 0, 0.3)",
+                  "shadowOffset": Object {
+                    "height": 0,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 0.5,
+                  "shadowRadius": 1,
+                },
+                Object {},
+                false,
+                undefined,
+              ]
+            }
+          >
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            />
+            <View
+              style={
+                Array [
+                  Object {
+                    "flex": 1,
+                    "flexDirection": "column",
+                    "justifyContent": "center",
+                    "paddingHorizontal": 10,
+                    "position": "relative",
+                  },
+                ]
+              }
+            >
+              <TextInput
+                autoCapitalize="none"
+                autoCorrect={false}
+                autoFocus={false}
+                editable={true}
+                keyboardType="email-address"
+                multiline={false}
+                numberOfLines={1}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onChangeText={[Function]}
+                onFocus={[Function]}
+                onSubmitEditing={[Function]}
+                placeholder="Email*"
+                placeholderTextColor="#4D4F4D"
+                returnKeyType="done"
+                secureTextEntry={false}
+                selectionColor="#72996B"
+                style={
+                  Array [
+                    Object {
+                      "color": "#4D4F4D",
+                      "flex": 1,
+                      "fontFamily": "Poppins",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                    },
+                    Object {},
+                    Object {
+                      "color": "#271A51",
+                      "fontFamily": "Poppins",
+                      "fontSize": 16,
+                      "fontWeight": "500",
+                    },
+                  ]
+                }
+                value=""
+              />
+            </View>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginRight": 5,
+                  "opacity": 1,
+                }
+              }
+            />
+          </View>
+          <View
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#72996B",
+                "borderColor": "#72996B",
+                "borderRadius": 20,
+                "bottom": 10,
+                "justifyContent": "center",
+                "margin": 0,
+                "marginBottom": 100,
+                "opacity": 1,
+                "paddingHorizontal": 15.5,
+                "paddingVertical": 24,
+                "position": "absolute",
+                "width": "100%",
+              }
+            }
+          >
+            <Text
+              adjustsFontSizeToFit={true}
+              style={
+                Array [
+                  Object {
+                    "fontFamily": "Poppins",
+                  },
+                  undefined,
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontSize": undefined,
+                    "fontWeight": "600",
+                    "lineHeight": undefined,
+                  },
+                ]
+              }
+            >
+              Reset Password
+            </Text>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </RCTSafeAreaView>
+</View>
+`;

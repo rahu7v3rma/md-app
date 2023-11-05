@@ -1,0 +1,793 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Journey snapshot journey 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "backgroundColor": "#FFFFFF",
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": true,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "flexDirection": "row",
+          "height": 80,
+          "justifyContent": "center",
+          "opacity": 1,
+          "paddingBottom": 22,
+          "paddingHorizontal": 19,
+          "paddingTop": 10,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "flex-start",
+            "width": "80%",
+          }
+        }
+      >
+        <Text
+          adjustsFontSizeToFit={true}
+          style={
+            [
+              {
+                "fontFamily": "Poppins",
+              },
+              undefined,
+              {
+                "color": "#4D4F4D",
+                "fontSize": 24,
+                "fontWeight": "700",
+                "lineHeight": 32,
+              },
+            ]
+          }
+          testID="title"
+        >
+          My Journey
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "flex-end",
+            "width": "20%",
+          }
+        }
+      />
+    </View>
+    <View
+      style={
+        {
+          "backgroundColor": "rgba(0, 0, 0, 0.03)",
+          "borderColor": "#D3E6F8",
+          "elevation": 8,
+          "shadowColor": "rgba(0, 0, 0, 0.03)",
+          "shadowOffset": {
+            "height": 6,
+            "width": 2,
+          },
+          "shadowRadius": 17,
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "borderBottomColor": "rgba(0, 0, 0, 0.03)",
+            "borderBottomWidth": 3,
+          }
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "backgroundColor": "#F5F8FB",
+        "flex": 1,
+      }
+    }
+  >
+    <View
+      style={
+        {
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "width": "20%",
+        }
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source=""
+      />
+    </View>
+    <View
+      style={
+        {
+          "height": "100%",
+          "position": "absolute",
+          "right": -6,
+          "top": 0,
+          "width": "20%",
+        }
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source=""
+      />
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+        }
+      }
+    >
+      <RCTScrollView
+        contentContainerStyle={
+          {
+            "justifyContent": "flex-end",
+            "minHeight": "100%",
+            "paddingTop": 20,
+          }
+        }
+        onContentSizeChange={[Function]}
+        showsVerticalScrollIndicator={false}
+        style={
+          {
+            "width": "65%",
+          }
+        }
+      >
+        <View>
+          <View>
+            <View
+              style={
+                [
+                  {
+                    "flexDirection": "row",
+                    "justifyContent": "space-around",
+                  },
+                  false,
+                ]
+              }
+            >
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": false,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  {
+                    "alignItems": "center",
+                    "backgroundColor": "#72996B",
+                    "borderRadius": 50,
+                    "height": 100,
+                    "justifyContent": "center",
+                    "opacity": 1,
+                    "width": 100,
+                  }
+                }
+                testID="block0"
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#FFFFFF",
+                      "borderColor": "#FFFFFF",
+                      "borderRadius": 44,
+                      "borderWidth": 4,
+                      "height": 88,
+                      "justifyContent": "center",
+                      "overflow": "hidden",
+                      "width": 88,
+                    }
+                  }
+                >
+                  <Image
+                    blurRadius={0}
+                    resizeMode="contain"
+                    source={
+                      {
+                        "uri": "file://mockCachesDirectoryPath/123",
+                      }
+                    }
+                    style={
+                      {
+                        "backgroundColor": "#FFFFFF",
+                        "height": 60,
+                        "width": 60,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    [
+                      {
+                        "alignItems": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 15,
+                        "bottom": 0,
+                        "height": 30,
+                        "justifyContent": "center",
+                        "position": "absolute",
+                        "right": 6,
+                        "width": 30,
+                        "zIndex": 1,
+                      },
+                      {
+                        "shadowColor": "#ccc",
+                        "shadowOffset": {
+                          "height": 6,
+                          "width": 4,
+                        },
+                        "shadowOpacity": 0.4,
+                        "shadowRadius": 3,
+                      },
+                      false,
+                      {
+                        "backgroundColor": "#72996B",
+                      },
+                    ]
+                  }
+                >
+                  <RNSVGSvgView
+                    align="xMidYMid"
+                    bbHeight={16}
+                    bbWidth={16}
+                    fill="none"
+                    focusable={false}
+                    height={16}
+                    meetOrSlice={0}
+                    minX={0}
+                    minY={0}
+                    style={
+                      [
+                        {
+                          "backgroundColor": "transparent",
+                          "borderWidth": 0,
+                        },
+                        {
+                          "flex": 0,
+                          "height": 16,
+                          "width": 16,
+                        },
+                      ]
+                    }
+                    vbHeight={16}
+                    vbWidth={16}
+                    width={16}
+                    xml="<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.1684 7.75754C11.9878 8.52526 11.5731 9.1956 11.0047 9.6929L11.618 12.1748C11.9266 13.4232 10.6404 14.3831 9.55965 13.8486L8.40441 13.2773C8.15 13.1515 7.84999 13.1515 7.59558 13.2773L6.44035 13.8486C5.35962 14.3831 4.07344 13.4232 4.38197 12.1748L4.99529 9.6929C4.42695 9.1956 4.01216 8.52526 3.83159 7.75754C3.61169 6.8226 3.61169 5.8494 3.83159 4.91446C4.15435 3.54217 5.22548 2.48102 6.58427 2.16314C7.51551 1.94529 8.48449 1.94529 9.41573 2.16314C10.7745 2.48102 11.8456 3.54217 12.1684 4.91446C12.3883 5.8494 12.3883 6.8226 12.1684 7.75754ZM9.41572 10.5089C9.45819 10.4989 9.50037 10.4883 9.54225 10.4769C9.77506 10.4137 9.99868 10.3285 10.2107 10.2236L10.7492 12.4024C10.8523 12.8196 10.4081 13.2441 9.94778 13.0164L8.79255 12.4451C8.2928 12.1979 7.7072 12.1979 7.20745 12.4451L6.05221 13.0164C5.59187 13.2441 5.14773 12.8196 5.25083 12.4024L5.78926 10.2236C5.98881 10.3223 6.1986 10.4036 6.41665 10.4655C6.472 10.4812 6.52789 10.4957 6.58427 10.5089C7.51551 10.7267 8.48449 10.7267 9.41572 10.5089Z" fill="white"/>
+</svg>
+"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <RNSVGGroup
+                      fill={null}
+                      propList={
+                        [
+                          "fill",
+                        ]
+                      }
+                    >
+                      <RNSVGPath
+                        clipRule={0}
+                        d="M12.1684 7.75754C11.9878 8.52526 11.5731 9.1956 11.0047 9.6929L11.618 12.1748C11.9266 13.4232 10.6404 14.3831 9.55965 13.8486L8.40441 13.2773C8.15 13.1515 7.84999 13.1515 7.59558 13.2773L6.44035 13.8486C5.35962 14.3831 4.07344 13.4232 4.38197 12.1748L4.99529 9.6929C4.42695 9.1956 4.01216 8.52526 3.83159 7.75754C3.61169 6.8226 3.61169 5.8494 3.83159 4.91446C4.15435 3.54217 5.22548 2.48102 6.58427 2.16314C7.51551 1.94529 8.48449 1.94529 9.41573 2.16314C10.7745 2.48102 11.8456 3.54217 12.1684 4.91446C12.3883 5.8494 12.3883 6.8226 12.1684 7.75754ZM9.41572 10.5089C9.45819 10.4989 9.50037 10.4883 9.54225 10.4769C9.77506 10.4137 9.99868 10.3285 10.2107 10.2236L10.7492 12.4024C10.8523 12.8196 10.4081 13.2441 9.94778 13.0164L8.79255 12.4451C8.2928 12.1979 7.7072 12.1979 7.20745 12.4451L6.05221 13.0164C5.59187 13.2441 5.14773 12.8196 5.25083 12.4024L5.78926 10.2236C5.98881 10.3223 6.1986 10.4036 6.41665 10.4655C6.472 10.4812 6.52789 10.4957 6.58427 10.5089C7.51551 10.7267 8.48449 10.7267 9.41572 10.5089Z"
+                        fill={4294967295}
+                        fillRule={0}
+                        propList={
+                          [
+                            "fill",
+                            "fillRule",
+                          ]
+                        }
+                      />
+                    </RNSVGGroup>
+                  </RNSVGSvgView>
+                </View>
+              </View>
+              <View
+                style={
+                  [
+                    {
+                      "borderColor": "#D3E29F",
+                      "borderTopWidth": 8,
+                      "height": 0,
+                      "marginHorizontal": "-2%",
+                      "top": "20%",
+                      "width": "20%",
+                      "zIndex": -999,
+                    },
+                    false,
+                    false,
+                  ]
+                }
+              />
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": false,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  {
+                    "alignItems": "center",
+                    "backgroundColor": "#D3E29F",
+                    "borderRadius": 50,
+                    "height": 100,
+                    "justifyContent": "center",
+                    "opacity": 1,
+                    "width": 100,
+                  }
+                }
+                testID="lockedBlock"
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#FFFFFF",
+                      "borderColor": "#FFFFFF",
+                      "borderRadius": 44,
+                      "borderWidth": 4,
+                      "height": 88,
+                      "justifyContent": "center",
+                      "overflow": "hidden",
+                      "width": 88,
+                    }
+                  }
+                >
+                  <Image
+                    blurRadius={2}
+                    resizeMode="contain"
+                    source={
+                      {
+                        "uri": "file://mockCachesDirectoryPath/123",
+                      }
+                    }
+                    style={
+                      {
+                        "backgroundColor": "#FFFFFF",
+                        "height": 60,
+                        "width": 60,
+                      }
+                    }
+                  />
+                  <View
+                    style={
+                      {
+                        "backgroundColor": "rgba(255, 255, 255, 0.6)",
+                        "borderRadius": 44,
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    [
+                      {
+                        "alignItems": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 15,
+                        "bottom": 0,
+                        "height": 30,
+                        "justifyContent": "center",
+                        "position": "absolute",
+                        "right": 6,
+                        "width": 30,
+                        "zIndex": 1,
+                      },
+                      {
+                        "shadowColor": "#ccc",
+                        "shadowOffset": {
+                          "height": 6,
+                          "width": 4,
+                        },
+                        "shadowOpacity": 0.4,
+                        "shadowRadius": 3,
+                      },
+                      false,
+                      false,
+                    ]
+                  }
+                >
+                  <RNSVGSvgView
+                    align="xMidYMid"
+                    bbHeight={24}
+                    bbWidth={24}
+                    fill="none"
+                    focusable={false}
+                    height={24}
+                    meetOrSlice={0}
+                    minX={0}
+                    minY={0}
+                    style={
+                      [
+                        {
+                          "backgroundColor": "transparent",
+                          "borderWidth": 0,
+                        },
+                        {
+                          "flex": 0,
+                          "height": 24,
+                          "width": 24,
+                        },
+                      ]
+                    }
+                    vbHeight={24}
+                    vbWidth={24}
+                    width={24}
+                    xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 17.35C12.9002 17.35 13.63 16.6202 13.63 15.72C13.63 14.8198 12.9002 14.09 12 14.09C11.0998 14.09 10.37 14.8198 10.37 15.72C10.37 16.6202 11.0998 17.35 12 17.35Z" fill="#A4AAAF"/>
+<path d="M18.28 9.53V8.28C18.28 5.58 17.63 2 12 2C6.37 2 5.72 5.58 5.72 8.28V9.53C2.92 9.88 2 11.3 2 14.79V16.65C2 20.75 3.25 22 7.35 22H16.65C20.75 22 22 20.75 22 16.65V14.79C22 11.3 21.08 9.88 18.28 9.53ZM12 18.74C10.33 18.74 8.98 17.38 8.98 15.72C8.98 14.05 10.34 12.7 12 12.7C13.66 12.7 15.02 14.06 15.02 15.72C15.02 17.39 13.67 18.74 12 18.74ZM7.35 9.44C7.27 9.44 7.2 9.44 7.12 9.44V8.28C7.12 5.35 7.95 3.4 12 3.4C16.05 3.4 16.88 5.35 16.88 8.28V9.45C16.8 9.45 16.73 9.45 16.65 9.45H7.35V9.44Z" fill="#A4AAAF"/>
+</svg>
+"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <RNSVGGroup
+                      fill={null}
+                      propList={
+                        [
+                          "fill",
+                        ]
+                      }
+                    >
+                      <RNSVGPath
+                        d="M12 17.35C12.9002 17.35 13.63 16.6202 13.63 15.72C13.63 14.8198 12.9002 14.09 12 14.09C11.0998 14.09 10.37 14.8198 10.37 15.72C10.37 16.6202 11.0998 17.35 12 17.35Z"
+                        fill={4288981679}
+                        propList={
+                          [
+                            "fill",
+                          ]
+                        }
+                      />
+                      <RNSVGPath
+                        d="M18.28 9.53V8.28C18.28 5.58 17.63 2 12 2C6.37 2 5.72 5.58 5.72 8.28V9.53C2.92 9.88 2 11.3 2 14.79V16.65C2 20.75 3.25 22 7.35 22H16.65C20.75 22 22 20.75 22 16.65V14.79C22 11.3 21.08 9.88 18.28 9.53ZM12 18.74C10.33 18.74 8.98 17.38 8.98 15.72C8.98 14.05 10.34 12.7 12 12.7C13.66 12.7 15.02 14.06 15.02 15.72C15.02 17.39 13.67 18.74 12 18.74ZM7.35 9.44C7.27 9.44 7.2 9.44 7.12 9.44V8.28C7.12 5.35 7.95 3.4 12 3.4C16.05 3.4 16.88 5.35 16.88 8.28V9.45C16.8 9.45 16.73 9.45 16.65 9.45H7.35V9.44Z"
+                        fill={4288981679}
+                        propList={
+                          [
+                            "fill",
+                          ]
+                        }
+                      />
+                    </RNSVGGroup>
+                  </RNSVGSvgView>
+                </View>
+              </View>
+            </View>
+            <View
+              style={
+                [
+                  {
+                    "borderColor": "#D3E29F",
+                    "borderLeftWidth": 8,
+                    "height": 28,
+                    "marginLeft": "20%",
+                    "marginVertical": "-1%",
+                    "width": 0,
+                    "zIndex": -999,
+                  },
+                  false,
+                  false,
+                  false,
+                  {
+                    "borderColor": "#72996B",
+                  },
+                ]
+              }
+            />
+          </View>
+          <View>
+            <View
+              style={
+                [
+                  {
+                    "flexDirection": "row",
+                    "justifyContent": "space-around",
+                  },
+                  false,
+                ]
+              }
+            >
+              <View
+                style={
+                  [
+                    {
+                      "borderBottomLeftRadius": 20,
+                      "borderBottomWidth": 8,
+                      "borderColor": "#D3E29F",
+                      "borderLeftWidth": 8,
+                      "height": 76,
+                      "left": "20%",
+                      "position": "absolute",
+                      "top": "-15%",
+                      "width": "20%",
+                      "zIndex": -999,
+                    },
+                    false,
+                    {
+                      "borderColor": "#72996B",
+                    },
+                  ]
+                }
+              />
+              <View
+                accessibilityState={
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": false,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
+                  }
+                }
+                accessible={true}
+                collapsable={false}
+                focusable={true}
+                onClick={[Function]}
+                onResponderGrant={[Function]}
+                onResponderMove={[Function]}
+                onResponderRelease={[Function]}
+                onResponderTerminate={[Function]}
+                onResponderTerminationRequest={[Function]}
+                onStartShouldSetResponder={[Function]}
+                style={
+                  {
+                    "alignItems": "center",
+                    "backgroundColor": "#D3E29F",
+                    "borderRadius": 50,
+                    "height": 100,
+                    "justifyContent": "center",
+                    "opacity": 1,
+                    "width": 100,
+                  }
+                }
+                testID="block1"
+              >
+                <View
+                  style={
+                    {
+                      "alignItems": "center",
+                      "backgroundColor": "#FFFFFF",
+                      "borderColor": "#FFFFFF",
+                      "borderRadius": 44,
+                      "borderWidth": 4,
+                      "height": 88,
+                      "justifyContent": "center",
+                      "overflow": "hidden",
+                      "width": 88,
+                    }
+                  }
+                >
+                  <Image
+                    blurRadius={0}
+                    resizeMode="contain"
+                    source={
+                      {
+                        "uri": "file://mockCachesDirectoryPath/123",
+                      }
+                    }
+                    style={
+                      {
+                        "backgroundColor": "#FFFFFF",
+                        "height": 60,
+                        "width": 60,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    [
+                      {
+                        "alignItems": "center",
+                        "backgroundColor": "#fff",
+                        "borderRadius": 15,
+                        "bottom": 0,
+                        "height": 30,
+                        "justifyContent": "center",
+                        "position": "absolute",
+                        "right": 6,
+                        "width": 30,
+                        "zIndex": 1,
+                      },
+                      {
+                        "shadowColor": "#ccc",
+                        "shadowOffset": {
+                          "height": 6,
+                          "width": 4,
+                        },
+                        "shadowOpacity": 0.4,
+                        "shadowRadius": 3,
+                      },
+                      {
+                        "backgroundColor": "#72996B",
+                      },
+                      false,
+                    ]
+                  }
+                >
+                  <RNSVGSvgView
+                    align="xMidYMid"
+                    bbHeight={12}
+                    bbWidth={10}
+                    fill="none"
+                    focusable={false}
+                    height={12}
+                    meetOrSlice={0}
+                    minX={0}
+                    minY={0}
+                    style={
+                      [
+                        {
+                          "backgroundColor": "transparent",
+                          "borderWidth": 0,
+                        },
+                        {
+                          "flex": 0,
+                          "height": 12,
+                          "width": 10,
+                        },
+                      ]
+                    }
+                    vbHeight={12}
+                    vbWidth={10}
+                    width={10}
+                    xml="<svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.86846 8.22431H1.45333V11.4545C1.45333 11.7558 1.20261 12 0.893332 12C0.584053 12 0.333332 11.7558 0.333332 11.4545V0.545455C0.333332 0.244209 0.584053 0 0.893332 0H7.86846C8.60246 0 9.16705 0.439506 9.44928 0.988047C9.73098 1.53556 9.76092 2.23787 9.40821 2.85347L9.07309 3.43837C8.83797 3.84875 8.83797 4.37557 9.07309 4.78594L9.40821 5.37084C9.76092 5.98644 9.73098 6.68875 9.44928 7.23626C9.16705 7.78481 8.60246 8.22431 7.86846 8.22431Z" fill="white"/>
+</svg>
+"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <RNSVGGroup
+                      fill={null}
+                      propList={
+                        [
+                          "fill",
+                        ]
+                      }
+                    >
+                      <RNSVGPath
+                        d="M7.86846 8.22431H1.45333V11.4545C1.45333 11.7558 1.20261 12 0.893332 12C0.584053 12 0.333332 11.7558 0.333332 11.4545V0.545455C0.333332 0.244209 0.584053 0 0.893332 0H7.86846C8.60246 0 9.16705 0.439506 9.44928 0.988047C9.73098 1.53556 9.76092 2.23787 9.40821 2.85347L9.07309 3.43837C8.83797 3.84875 8.83797 4.37557 9.07309 4.78594L9.40821 5.37084C9.76092 5.98644 9.73098 6.68875 9.44928 7.23626C9.16705 7.78481 8.60246 8.22431 7.86846 8.22431Z"
+                        fill={4294967295}
+                        propList={
+                          [
+                            "fill",
+                          ]
+                        }
+                      />
+                    </RNSVGGroup>
+                  </RNSVGSvgView>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            style={
+              {
+                "alignItems": "center",
+                "marginTop": 20,
+              }
+            }
+          >
+            <Image
+              source=""
+            />
+          </View>
+        </View>
+      </RCTScrollView>
+    </View>
+  </View>
+  <Modal
+    animated={true}
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    testID="lockBlockModal"
+    transparent={true}
+    visible={false}
+  />
+</RCTSafeAreaView>
+`;

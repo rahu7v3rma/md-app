@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test chatAvatar snapshot test 1`] = `
+<View
+  style={
+    [
+      {
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <Image
+    source={
+      {
+        "testUri": "../../../src/assets/images/default_avatar.jpg",
+      }
+    }
+    style={
+      {
+        "borderRadius": 0,
+        "height": undefined,
+        "width": undefined,
+      }
+    }
+  />
+</View>
+`;

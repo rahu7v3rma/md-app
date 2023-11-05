@@ -1,0 +1,1802 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`logMenu log menu snapshot 1`] = `
+<RNCSafeAreaView
+  edges={
+    {
+      "bottom": "additive",
+      "left": "additive",
+      "right": "additive",
+      "top": "additive",
+    }
+  }
+  style={
+    {
+      "backgroundColor": "#72996B",
+      "flex": 1,
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <View
+    style={
+      {
+        "marginTop": 16,
+      }
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 20,
+          "borderWidth": 1.5,
+          "elevation": 3,
+          "flexDirection": "row",
+          "height": 90,
+          "opacity": 1,
+          "shadowColor": "rgba(0,0,0,0.5)",
+          "width": "90%",
+        }
+      }
+      testID="logTab"
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "marginHorizontal": 16,
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={21}
+          bbWidth={18}
+          fill="none"
+          focusable={false}
+          height={21}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "flex": 0,
+                "height": 21,
+                "width": 18,
+              },
+            ]
+          }
+          testID="logTabIcon"
+          vbHeight={21}
+          vbWidth={18}
+          width={18}
+          xml="<svg width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M11.4513 18.621C9.9292 19.477 8.0708 19.477 6.5487 18.621L3.5487 16.934C1.9743 16.048 1 14.382 1 12.576V9.424C1 7.618 1.9743 5.952 3.5487 5.066L6.5487 3.379C8.0708 2.523 9.9292 2.523 11.4513 3.379L14.4513 5.066C16.0257 5.952 17 7.618 17 9.424V11" stroke="#FF9330" stroke-width="1.5" stroke-linecap="round"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.931 2.738C7.6814 1.754 9.8186 1.754 11.569 2.738L14.569 4.42599C16.3795 5.44399 17.5 7.36 17.5 9.438V11.013C17.5 11.356 17.2698 11.645 16.9556 11.735C16.9484 11.745 16.941 11.754 16.9334 11.763C16.7306 11.763 16.5159 11.765 16.2775 11.768C15.7127 11.773 15.0155 11.779 14.0312 11.763C12.7007 11.741 12.012 12.183 12.012 13.513V17.21C12.012 17.939 12.0037 18.393 11.9499 18.681C11.9343 18.926 11.7989 19.159 11.569 19.288C9.8186 20.273 7.6814 20.273 5.931 19.288L2.931 17.601C1.1205 16.582 0 14.666 0 12.589V9.43699C0 7.35999 1.1205 5.44399 2.931 4.42599L5.931 2.738ZM9 6.24999C9.4142 6.24999 9.75 6.58599 9.75 6.99999V10.701C10.1984 10.96 10.5 11.445 10.5 12C10.5 12.828 9.8284 13.5 9 13.5C8.1716 13.5 7.5 12.828 7.5 12C7.5 11.445 7.8016 10.96 8.25 10.701V6.99999C8.25 6.58599 8.5858 6.24999 9 6.24999Z" fill="#FF9330"/>
+  <path d="M3 3L6 1" stroke="#FF9330" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M15 3L12 1" stroke="#FF9330" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M13 14.996V14.16C13 13.128 13.7861 12.702 14.7418 13.222L15.5125 13.64L16.2832 14.059C17.2389 14.578 17.2389 15.422 16.2832 15.941L15.5125 16.36L14.7418 16.778C13.7861 17.298 13 16.872 13 15.84V14.996Z" stroke="#FF9330" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={null}
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              d="M11.4513 18.621C9.9292 19.477 8.0708 19.477 6.5487 18.621L3.5487 16.934C1.9743 16.048 1 14.382 1 12.576V9.424C1 7.618 1.9743 5.952 3.5487 5.066L6.5487 3.379C8.0708 2.523 9.9292 2.523 11.4513 3.379L14.4513 5.066C16.0257 5.952 17 7.618 17 9.424V11"
+              propList={
+                [
+                  "stroke",
+                  "strokeWidth",
+                  "strokeLinecap",
+                ]
+              }
+              stroke={4294939440}
+              strokeLinecap={1}
+              strokeWidth={1.5}
+            />
+            <RNSVGPath
+              clipRule={0}
+              d="M5.931 2.738C7.6814 1.754 9.8186 1.754 11.569 2.738L14.569 4.42599C16.3795 5.44399 17.5 7.36 17.5 9.438V11.013C17.5 11.356 17.2698 11.645 16.9556 11.735C16.9484 11.745 16.941 11.754 16.9334 11.763C16.7306 11.763 16.5159 11.765 16.2775 11.768C15.7127 11.773 15.0155 11.779 14.0312 11.763C12.7007 11.741 12.012 12.183 12.012 13.513V17.21C12.012 17.939 12.0037 18.393 11.9499 18.681C11.9343 18.926 11.7989 19.159 11.569 19.288C9.8186 20.273 7.6814 20.273 5.931 19.288L2.931 17.601C1.1205 16.582 0 14.666 0 12.589V9.43699C0 7.35999 1.1205 5.44399 2.931 4.42599L5.931 2.738ZM9 6.24999C9.4142 6.24999 9.75 6.58599 9.75 6.99999V10.701C10.1984 10.96 10.5 11.445 10.5 12C10.5 12.828 9.8284 13.5 9 13.5C8.1716 13.5 7.5 12.828 7.5 12C7.5 11.445 7.8016 10.96 8.25 10.701V6.99999C8.25 6.58599 8.5858 6.24999 9 6.24999Z"
+              fill={4294939440}
+              fillRule={0}
+              propList={
+                [
+                  "fill",
+                  "fillRule",
+                ]
+              }
+            />
+            <RNSVGPath
+              d="M3 3L6 1"
+              propList={
+                [
+                  "stroke",
+                  "strokeWidth",
+                  "strokeLinecap",
+                ]
+              }
+              stroke={4294939440}
+              strokeLinecap={1}
+              strokeWidth={1.5}
+            />
+            <RNSVGPath
+              d="M15 3L12 1"
+              propList={
+                [
+                  "stroke",
+                  "strokeWidth",
+                  "strokeLinecap",
+                ]
+              }
+              stroke={4294939440}
+              strokeLinecap={1}
+              strokeWidth={1.5}
+            />
+            <RNSVGPath
+              d="M13 14.996V14.16C13 13.128 13.7861 12.702 14.7418 13.222L15.5125 13.64L16.2832 14.059C17.2389 14.578 17.2389 15.422 16.2832 15.941L15.5125 16.36L14.7418 16.778C13.7861 17.298 13 16.872 13 15.84V14.996Z"
+              propList={
+                [
+                  "stroke",
+                  "strokeWidth",
+                  "strokeLinecap",
+                  "strokeLinejoin",
+                  "strokeMiterlimit",
+                ]
+              }
+              stroke={4294939440}
+              strokeLinecap={1}
+              strokeLinejoin={1}
+              strokeMiterlimit={10}
+              strokeWidth={1.5}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+      <View
+        style={
+          {
+            "width": "100%",
+          }
+        }
+        testID="logTabTitleContainer"
+      >
+        <Text
+          adjustsFontSizeToFit={true}
+          style={
+            [
+              {
+                "fontFamily": "Poppins",
+              },
+              {
+                "flexWrap": "wrap",
+                "width": "95%",
+              },
+              {
+                "color": "#72996B",
+                "fontSize": 14,
+                "fontWeight": "600",
+                "lineHeight": 22,
+              },
+            ]
+          }
+          testID="logTabTitle"
+        >
+          Fasting Timer
+        </Text>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "flexShrink": 1,
+        "margin": 16,
+      }
+    }
+  >
+    <RCTScrollView
+      collapsable={false}
+      data={
+        [
+          {
+            "icon": "<svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.5904 5.41L3.31038 15.69C2.83038 16.17 2.01039 16.06 1.72039 15.45C1.20039 14.38 0.900383 13.17 0.900383 11.9C0.880383 6.38 6.48039 1.66 8.38039 0.21C8.75039 -0.07 9.25039 -0.07 9.61039 0.21C10.4804 0.87 12.1104 2.24 13.6404 4.04C13.9804 4.44 13.9604 5.04 13.5904 5.41Z" fill="#D05151"/>
+  <path d="M17.1 11.91C17.1 16.37 13.47 20 9 20C7.21 20 5.53999 19.42 4.18999 18.42C3.69999 18.06 3.66 17.34 4.09 16.91L14.16 6.84C14.63 6.37 15.42 6.47 15.74 7.05C16.56 8.56 17.11 10.2 17.1 11.91Z" fill="#D05151"/>
+</svg>
+",
+            "id": 1,
+            "screen": "LogBlood",
+            "title": "Log Blood Glucose",
+            "type": "UserGlucose",
+          },
+          {
+            "icon": "<svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.5904 5.41L3.31044 15.69C2.83044 16.17 2.01044 16.06 1.72044 15.45C1.20044 14.38 0.900444 13.17 0.900444 11.9C0.880444 6.38 6.48044 1.66 8.38045 0.21C8.75044 -0.07 9.25045 -0.07 9.61045 0.21C10.4804 0.87 12.1104 2.24 13.6404 4.04C13.9804 4.44 13.9604 5.04 13.5904 5.41Z" fill="#5A78FF"/>
+  <path d="M17.1 11.9103C17.1 16.3703 13.47 20.0003 8.99996 20.0003C7.20996 20.0003 5.53996 19.4203 4.18996 18.4203C3.69996 18.0603 3.65996 17.3403 4.08996 16.9103L14.16 6.84026C14.63 6.37026 15.42 6.47026 15.74 7.05026C16.56 8.56026 17.11 10.2003 17.1 11.9103Z" fill="#5A78FF"/>
+</svg>
+",
+            "id": 2,
+            "screen": "LogWaterIntake",
+            "title": "Log Hydration",
+            "type": "UserDrink",
+          },
+          {
+            "icon": "<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.7433 13.2795V12.9461H12.4099H9.31994C8.61912 12.9461 8.23727 12.1153 8.70105 11.5787C8.70131 11.5784 8.70157 11.5781 8.70183 11.5778L16.2702 2.97972L16.2708 2.97898C16.767 2.41187 17.7066 2.7656 17.7066 3.51948V10.7195V11.0528H18.0399H21.1299C21.844 11.0528 22.2196 11.8852 21.7497 12.4192C21.7497 12.4193 21.7497 12.4193 21.7497 12.4193L14.1797 21.0192L14.1791 21.02C13.6829 21.5871 12.7433 21.2334 12.7433 20.4795V13.2795Z" fill="#FFD44F" stroke="#FFD44F" stroke-width="0.666667"/>
+  <path d="M8.5 4.41667H1.5C1.27409 4.41667 1.08333 4.22591 1.08333 4C1.08333 3.77409 1.27409 3.58333 1.5 3.58333H8.5C8.72591 3.58333 8.91667 3.77409 8.91667 4C8.91667 4.22591 8.72591 4.41667 8.5 4.41667Z" fill="#FFD44F" stroke="#FFD44F" stroke-width="0.666667"/>
+  <path d="M7.5 20.4167H1.5C1.27409 20.4167 1.08333 20.2259 1.08333 20C1.08333 19.7741 1.27409 19.5833 1.5 19.5833H7.5C7.7259 19.5833 7.91667 19.7741 7.91667 20C7.91667 20.2259 7.7259 20.4167 7.5 20.4167Z" fill="#FFD44F" stroke="#FFD44F" stroke-width="0.666667"/>
+  <path d="M4.5 12.75H1.5C1.09 12.75 0.75 12.41 0.75 12C0.75 11.59 1.09 11.25 1.5 11.25H4.5C4.91 11.25 5.25 11.59 5.25 12C5.25 12.41 4.91 12.75 4.5 12.75Z" fill="#FFD44F"/>
+</svg>
+",
+            "id": 3,
+            "screen": "LogActivity",
+            "title": "Log Activity",
+            "type": "UserExercise",
+          },
+          {
+            "icon": "<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 14C3 18 5.99982 23 8.99991 23C10.0418 23 11.0837 22.3969 11.9999 21.4422C12.9161 22.3969 13.958 23 14.9999 23C18 23 21 18 21 14C21 10 19 7 14.9999 7C13.8283 7 12.8283 7.25735 11.9999 7.7218C11.1715 7.25735 10.1715 7 8.99991 7C4.99982 7 3 10 3 14ZM8 13.5C8 13.2239 8.22386 13 8.5 13C9.32843 13 10 13.6716 10 14.5V15.5C10 15.7761 9.77614 16 9.5 16C8.67157 16 8 15.3284 8 14.5V13.5ZM15.5 13C15.7761 13 16 13.2239 16 13.5V14.5C16 15.3284 15.3284 16 14.5 16C14.2239 16 14 15.7761 14 15.5V14.5C14 13.6716 14.6716 13 15.5 13Z" fill="#D05151"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M9 5C10.1046 5 11 5.89543 11 7V8C11 8.55229 11.4477 9 12 9C12.5523 9 13 8.55229 13 8V7C13 4.79086 11.2091 3 9 3H8C7.44772 3 7 3.44772 7 4C7 4.55228 7.44772 5 8 5H9Z" fill="#4DBA0B"/>
+  <path d="M17.3333 1H19.3333C19.7015 1 20 1.29848 20 1.66667C20 3.50762 18.5076 5 16.6667 5H14.6667C14.2985 5 14 4.70152 14 4.33333C14 2.49238 15.4924 1 17.3333 1Z" fill="#4DBA0B"/>
+</svg>
+",
+            "id": 4,
+            "screen": "LogMeal",
+            "title": "Log a Meal",
+            "type": "UserFood",
+          },
+          {
+            "icon": "<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 15C6 15.1501 5.84419 15.2518 5.71176 15.1812C3.50323 14.0038 2 11.6775 2 9C2 5.13401 5.13401 2 9 2C11.6775 2 14.0038 3.50323 15.1812 5.71176C15.2518 5.84419 15.1501 6 15 6C10.0294 6 6 10.0294 6 15Z" fill="#FF66A9"/>
+  <path d="M15 22C18.866 22 22 18.866 22 15C22 13.4277 21.4816 11.9764 20.6064 10.8078L10.8078 20.6064C11.9764 21.4816 13.4277 22 15 22Z" fill="#FF66A9"/>
+  <path d="M9.39361 19.1922L19.1922 9.39361C18.0236 8.5184 16.5723 8 15 8C11.134 8 8 11.134 8 15C8 16.5723 8.5184 18.0236 9.39361 19.1922Z" fill="#FF66A9"/>
+</svg>
+",
+            "id": 5,
+            "screen": "LogMedication",
+            "title": "Log Medication",
+            "type": "UserMedication",
+          },
+          {
+            "icon": "<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M17.8506 8.65992C18.0464 8.36087 17.9728 7.98412 17.7268 7.75574L17.7269 7.75568L17.7214 7.75082C14.4553 4.8488 9.53481 4.84832 6.2782 7.75117L6.27815 7.75112L6.27318 7.75574C6.02972 7.98181 5.9478 8.3667 6.1759 8.67041L8.34349 12.1505C8.45491 12.3438 8.65198 12.4455 8.83037 12.478C9.05782 12.5193 9.26755 12.4351 9.4095 12.3109L9.40951 12.3109L9.41136 12.3092C10.8951 10.9914 13.1249 10.9914 14.6086 12.3092L14.6086 12.3093L14.6131 12.3131C14.7488 12.4294 14.9177 12.4833 15.08 12.4833H15.0801H15.0801H15.0802H15.0802H15.0803H15.0804H15.0804H15.0805H15.0805H15.0806H15.0807H15.0807H15.0808H15.0808H15.0809H15.081H15.081H15.0811H15.0812H15.0812H15.0813H15.0813H15.0814H15.0815H15.0815H15.0816H15.0817H15.0817H15.0818H15.0819H15.0819H15.082H15.0821H15.0821H15.0822H15.0823H15.0823H15.0824H15.0825H15.0825H15.0826H15.0827H15.0827H15.0828H15.0829H15.0829H15.083H15.0831H15.0831H15.0832H15.0833H15.0833H15.0834H15.0835H15.0836H15.0836H15.0837H15.0838H15.0838H15.0839H15.084H15.0841H15.0841H15.0842H15.0843H15.0843H15.0844H15.0845H15.0846H15.0846H15.0847H15.0848H15.0849H15.0849H15.085H15.0851H15.0852H15.0852H15.0853H15.0854H15.0855H15.0855H15.0856H15.0857H15.0858H15.0858H15.0859H15.086H15.0861H15.0861H15.0862H15.0863H15.0864H15.0865H15.0865H15.0866H15.0867H15.0868H15.0869H15.0869H15.087H15.0871H15.0872H15.0872H15.0873H15.0874H15.0875H15.0876H15.0877H15.0877H15.0878H15.0879H15.088H15.0881H15.0881H15.0882H15.0883H15.0884H15.0885H15.0886H15.0886H15.0887H15.0888H15.0889H15.089H15.0891H15.0891H15.0892H15.0893H15.0894H15.0895H15.0896H15.0896H15.0897H15.0898H15.0899H15.09H15.0901H15.0902H15.0902H15.0903H15.0904H15.0905H15.0906H15.0907H15.0908H15.0909H15.0909H15.091H15.0911H15.0912H15.0913H15.0914H15.0915H15.0916H15.0916H15.0917H15.0918H15.0919H15.092H15.0921H15.0922H15.0923H15.0924H15.0925H15.0925H15.0926H15.0927H15.0928H15.0929H15.093H15.0931H15.0932H15.0933H15.0934H15.0935H15.0935H15.0936H15.0937H15.0938H15.0939H15.094H15.0941H15.0942H15.0943H15.0944H15.0945H15.0946H15.0947H15.0948H15.0948H15.0949H15.095H15.0951H15.0952H15.0953H15.0954H15.0955H15.0956H15.0957H15.0958H15.0959H15.096H15.0961H15.0962H15.0963H15.0964H15.0965H15.0966H15.0967H15.0968H15.0969H15.097H15.0971H15.0971H15.0972H15.0973H15.0974H15.0975H15.0976H15.0977H15.0978H15.0979H15.098H15.0981H15.0982H15.0983H15.0984H15.0985H15.0986H15.0987H15.0988H15.0989H15.099H15.0991H15.0992H15.0993H15.0994H15.0995H15.0996H15.0997H15.0998H15.0999H15.1H15.1001H15.1002H15.1003H15.1004H15.1005H15.1006H15.1007H15.1008H15.1009H15.101H15.1011H15.1013H15.1014H15.1015H15.1016H15.1017H15.1018H15.1019H15.102H15.1021H15.1022H15.1023H15.1024H15.1025H15.1026H15.1027H15.1028H15.1029H15.103H15.1031H15.1032H15.1033H15.1034H15.1035H15.1036H15.1037H15.1038H15.104H15.1041H15.1042H15.1043H15.1044H15.1045H15.1046H15.1047H15.1048H15.1049H15.105H15.1051H15.1052H15.1053H15.1054H15.1055H15.1057H15.1058H15.1059H15.106H15.1061H15.1062H15.1063H15.1064H15.1065H15.1066H15.1067H15.1068H15.1069H15.1071H15.1072H15.1073H15.1074H15.1075H15.1076H15.1077H15.1078H15.1079H15.108H15.1081H15.1082H15.1084H15.1085H15.1086H15.1087H15.1088H15.1089H15.109H15.1091H15.1092H15.1093H15.1095H15.1096H15.1097H15.1098H15.1099H15.11H15.1101H15.1102H15.1103H15.1104H15.1106H15.1107H15.1108H15.1109H15.111H15.1111H15.1112H15.1113H15.1114H15.1116H15.1117H15.1118H15.1119H15.112H15.1121H15.1122H15.1123H15.1125H15.1126H15.1127H15.1128H15.1129H15.113H15.1131H15.1132H15.1133H15.1135H15.1136H15.1137H15.1138H15.1139H15.114H15.1141H15.1143H15.1144H15.1145H15.1146H15.1147H15.1148H15.1149H15.115H15.1152H15.1153H15.1154H15.1155H15.1156H15.1157H15.1158H15.116H15.1161H15.1162H15.1163H15.1164H15.1165H15.1166H15.1168H15.1169H15.117H15.1171H15.1172H15.1173H15.1174H15.1176H15.1177H15.1178H15.1179H15.118H15.1181H15.1182H15.1184H15.1185H15.1186H15.1187H15.1188H15.1189H15.119H15.1192H15.1193H15.1194H15.1195H15.1196H15.1197H15.1199H15.12H15.1201H15.1202H15.1203H15.1204H15.1205H15.1207H15.1208H15.1209H15.121H15.1211H15.1212H15.1214H15.1215H15.1216H15.1217H15.1218H15.1219H15.1221H15.1222H15.1223H15.1224H15.1225H15.1226H15.1228H15.1229H15.123H15.1231H15.1232H15.1233H15.1235H15.1236H15.1237H15.1238H15.1239H15.124H15.1242H15.1243H15.1244H15.1245H15.1246H15.1247H15.1249H15.125H15.1251H15.1252H15.1253H15.1254H15.1256H15.1257H15.1258H15.1259H15.126H15.1261H15.1263H15.1264H15.1265H15.1266H15.1267H15.1268H15.127H15.1271H15.1272H15.1273H15.1274H15.1275H15.1277H15.1278H15.1279H15.128H15.1281H15.1282H15.1284H15.1285H15.1286H15.1287H15.1288H15.1289H15.1291H15.1292H15.1293H15.1294H15.1295H15.1297H15.1298H15.1299H15.13H15.1466L15.1632 12.4817C15.3842 12.4596 15.5654 12.3178 15.6674 12.1649L15.6675 12.165L15.6729 12.1562L17.8506 8.65992ZM8 2.33333H16C17.4243 2.33333 18.5852 2.80663 19.3893 3.6107C20.1934 4.41478 20.6667 5.57575 20.6667 7V17C20.6667 18.4243 20.1934 19.5852 19.3893 20.3893C18.5852 21.1934 17.4243 21.6667 16 21.6667H8C6.57575 21.6667 5.41478 21.1934 4.6107 20.3893C3.80663 19.5852 3.33333 18.4243 3.33333 17V7C3.33333 5.57575 3.80663 4.41478 4.6107 3.6107C5.41478 2.80663 6.57575 2.33333 8 2.33333Z" fill="#FF9330" stroke="#FF9330" stroke-width="0.666667"/>
+</svg>
+",
+            "id": 6,
+            "screen": "LogWeight",
+            "title": "Log Weight",
+            "type": "UserWeight",
+          },
+          {
+            "icon": "<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.66335 13.32C3.66335 8.72408 7.40411 4.98332 12 4.98332C16.5954 4.98332 20.3367 8.73358 20.3367 13.33C20.3367 17.9259 16.5959 21.6667 12 21.6667C7.40461 21.6667 3.66335 17.9164 3.66335 13.32ZM12 14.0833C12.5941 14.0833 13.0834 13.5941 13.0834 13V7.99999C13.0834 7.40589 12.5941 6.91665 12 6.91665C11.4059 6.91665 10.9167 7.40589 10.9167 7.99999V13C10.9167 13.5941 11.4059 14.0833 12 14.0833Z" fill="#72996B" stroke="#72996B" stroke-width="0.666667"/>
+<path d="M14.8896 3.11667H9.10965C8.89374 3.11667 8.72298 2.94591 8.72298 2.73C8.72298 2.50808 8.8997 2.33333 9.10965 2.33333H14.8896C15.1056 2.33333 15.2763 2.50409 15.2763 2.72C15.2763 2.94192 15.0996 3.11667 14.8896 3.11667Z" fill="#72996B" stroke="#72996B" stroke-width="0.666667"/>
+</svg>
+",
+            "id": 7,
+            "screen": "LogFast",
+            "title": "Log a Fast",
+            "type": "UserFast",
+          },
+          {
+            "icon": "<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.7069 3.29289C12.3163 2.90237 11.6832 2.90237 11.2927 3.29289C10.9021 3.68342 10.9021 4.31658 11.2927 4.70711L12.2926 5.70708L5.51343 12.4863C4.56774 13.432 4.15725 14.7877 4.41954 16.0992L4.99971 19L7.90054 19.5802C9.21198 19.8425 10.5677 19.432 11.5134 18.4863L12.2926 17.7071L10.2926 15.7071C9.90213 15.3166 9.90213 14.6834 10.2926 14.2929C10.6832 13.9024 11.3163 13.9024 11.7069 14.2929L13.7068 16.2929L15.2926 14.7071L13.2927 12.7071C12.9021 12.3166 12.9021 11.6834 13.2927 11.2929C13.6832 10.9024 14.3163 10.9024 14.7069 11.2929L16.7068 13.2929L18.2926 11.7071L19.2927 12.7071C19.6832 13.0976 20.3163 13.0976 20.7069 12.7071C21.0974 12.3166 21.0974 11.6834 20.7069 11.2929L12.7069 3.29289Z" fill="#FF66A9"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M7 16.9999C7.39052 17.3904 7.39052 18.0236 7 18.4141L3.70711 21.707C3.31658 22.0976 2.68342 22.0976 2.29289 21.707C1.90237 21.3165 1.90237 20.6833 2.29289 20.2928L5.58579 16.9999C5.97631 16.6094 6.60948 16.6094 7 16.9999Z" fill="#FF66A9"/>
+  <path d="M17.707 2.29289C17.3164 1.90237 16.6833 1.90237 16.2927 2.29289C15.9022 2.68342 15.9022 3.31658 16.2927 3.70711L17.5857 5.00005L15.9999 6.5858C15.6094 6.97633 15.6094 7.60949 15.9999 8.00002C16.3904 8.39054 17.0236 8.39054 17.4141 8.00002L18.9999 6.41426L20.2927 7.70711C20.6833 8.09763 21.3164 8.09763 21.707 7.70711C22.0975 7.31658 22.0975 6.68342 21.707 6.29289L17.707 2.29289Z" fill="#FF66A9"/>
+</svg>
+",
+            "id": 8,
+            "screen": "LogInsulin",
+            "title": "Log Insulin",
+            "type": "UserInsulin",
+          },
+        ]
+      }
+      getItem={[Function]}
+      getItemCount={[Function]}
+      handlerTag={1}
+      handlerType="NativeViewGestureHandler"
+      horizontal={false}
+      keyExtractor={[Function]}
+      onContentSizeChange={[Function]}
+      onGestureHandlerEvent={[Function]}
+      onGestureHandlerStateChange={[Function]}
+      onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      renderScrollComponent={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={[]}
+      viewabilityConfigCallbackPairs={[]}
+      waitFor={
+        [
+          {
+            "current": null,
+          },
+          {
+            "current": null,
+          },
+        ]
+      }
+    >
+      <View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              [
+                {
+                  "flexDirection": "row",
+                },
+                {
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "flexWrap": "wrap",
+                  "justifyContent": "space-between",
+                  "marginBottom": 14,
+                },
+              ]
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "#FFFFFF",
+                  "borderRadius": 20,
+                  "borderWidth": 1.5,
+                  "elevation": 3,
+                  "flexDirection": "row",
+                  "height": 90,
+                  "marginRight": 4,
+                  "opacity": 1,
+                  "shadowColor": "rgba(0,0,0,0.5)",
+                  "width": "48%",
+                }
+              }
+              testID="logTab"
+            >
+              <View
+                style={
+                  {
+                    "alignItems": "center",
+                    "marginHorizontal": 16,
+                  }
+                }
+              >
+                <RNSVGSvgView
+                  align="xMidYMid"
+                  bbHeight={20}
+                  bbWidth={18}
+                  fill="none"
+                  focusable={false}
+                  height={20}
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  style={
+                    [
+                      {
+                        "backgroundColor": "transparent",
+                        "borderWidth": 0,
+                      },
+                      {
+                        "flex": 0,
+                        "height": 20,
+                        "width": 18,
+                      },
+                    ]
+                  }
+                  testID="logTabIcon"
+                  vbHeight={20}
+                  vbWidth={18}
+                  width={18}
+                  xml="<svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.5904 5.41L3.31038 15.69C2.83038 16.17 2.01039 16.06 1.72039 15.45C1.20039 14.38 0.900383 13.17 0.900383 11.9C0.880383 6.38 6.48039 1.66 8.38039 0.21C8.75039 -0.07 9.25039 -0.07 9.61039 0.21C10.4804 0.87 12.1104 2.24 13.6404 4.04C13.9804 4.44 13.9604 5.04 13.5904 5.41Z" fill="#D05151"/>
+  <path d="M17.1 11.91C17.1 16.37 13.47 20 9 20C7.21 20 5.53999 19.42 4.18999 18.42C3.69999 18.06 3.66 17.34 4.09 16.91L14.16 6.84C14.63 6.37 15.42 6.47 15.74 7.05C16.56 8.56 17.11 10.2 17.1 11.91Z" fill="#D05151"/>
+</svg>
+"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <RNSVGGroup
+                    fill={null}
+                    propList={
+                      [
+                        "fill",
+                      ]
+                    }
+                  >
+                    <RNSVGPath
+                      d="M13.5904 5.41L3.31038 15.69C2.83038 16.17 2.01039 16.06 1.72039 15.45C1.20039 14.38 0.900383 13.17 0.900383 11.9C0.880383 6.38 6.48039 1.66 8.38039 0.21C8.75039 -0.07 9.25039 -0.07 9.61039 0.21C10.4804 0.87 12.1104 2.24 13.6404 4.04C13.9804 4.44 13.9604 5.04 13.5904 5.41Z"
+                      fill={4291842385}
+                      propList={
+                        [
+                          "fill",
+                        ]
+                      }
+                    />
+                    <RNSVGPath
+                      d="M17.1 11.91C17.1 16.37 13.47 20 9 20C7.21 20 5.53999 19.42 4.18999 18.42C3.69999 18.06 3.66 17.34 4.09 16.91L14.16 6.84C14.63 6.37 15.42 6.47 15.74 7.05C16.56 8.56 17.11 10.2 17.1 11.91Z"
+                      fill={4291842385}
+                      propList={
+                        [
+                          "fill",
+                        ]
+                      }
+                    />
+                  </RNSVGGroup>
+                </RNSVGSvgView>
+              </View>
+              <View
+                style={{}}
+                testID="logTabTitleContainer"
+              >
+                <Text
+                  adjustsFontSizeToFit={true}
+                  style={
+                    [
+                      {
+                        "fontFamily": "Poppins",
+                      },
+                      {
+                        "flexWrap": "wrap",
+                        "width": "95%",
+                      },
+                      {
+                        "color": "#72996B",
+                        "fontSize": 14,
+                        "fontWeight": "600",
+                        "lineHeight": 22,
+                      },
+                    ]
+                  }
+                  testID="logTabTitle"
+                >
+                  Log Blood Glucose
+                </Text>
+              </View>
+            </View>
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "#FFFFFF",
+                  "borderRadius": 20,
+                  "borderWidth": 1.5,
+                  "elevation": 3,
+                  "flexDirection": "row",
+                  "height": 90,
+                  "marginRight": 4,
+                  "opacity": 1,
+                  "shadowColor": "rgba(0,0,0,0.5)",
+                  "width": "48%",
+                }
+              }
+              testID="logTab"
+            >
+              <View
+                style={
+                  {
+                    "alignItems": "center",
+                    "marginHorizontal": 16,
+                  }
+                }
+              >
+                <RNSVGSvgView
+                  align="xMidYMid"
+                  bbHeight={20}
+                  bbWidth={18}
+                  fill="none"
+                  focusable={false}
+                  height={20}
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  style={
+                    [
+                      {
+                        "backgroundColor": "transparent",
+                        "borderWidth": 0,
+                      },
+                      {
+                        "flex": 0,
+                        "height": 20,
+                        "width": 18,
+                      },
+                    ]
+                  }
+                  testID="logTabIcon"
+                  vbHeight={20}
+                  vbWidth={18}
+                  width={18}
+                  xml="<svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.5904 5.41L3.31044 15.69C2.83044 16.17 2.01044 16.06 1.72044 15.45C1.20044 14.38 0.900444 13.17 0.900444 11.9C0.880444 6.38 6.48044 1.66 8.38045 0.21C8.75044 -0.07 9.25045 -0.07 9.61045 0.21C10.4804 0.87 12.1104 2.24 13.6404 4.04C13.9804 4.44 13.9604 5.04 13.5904 5.41Z" fill="#5A78FF"/>
+  <path d="M17.1 11.9103C17.1 16.3703 13.47 20.0003 8.99996 20.0003C7.20996 20.0003 5.53996 19.4203 4.18996 18.4203C3.69996 18.0603 3.65996 17.3403 4.08996 16.9103L14.16 6.84026C14.63 6.37026 15.42 6.47026 15.74 7.05026C16.56 8.56026 17.11 10.2003 17.1 11.9103Z" fill="#5A78FF"/>
+</svg>
+"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <RNSVGGroup
+                    fill={null}
+                    propList={
+                      [
+                        "fill",
+                      ]
+                    }
+                  >
+                    <RNSVGPath
+                      d="M13.5904 5.41L3.31044 15.69C2.83044 16.17 2.01044 16.06 1.72044 15.45C1.20044 14.38 0.900444 13.17 0.900444 11.9C0.880444 6.38 6.48044 1.66 8.38045 0.21C8.75044 -0.07 9.25045 -0.07 9.61045 0.21C10.4804 0.87 12.1104 2.24 13.6404 4.04C13.9804 4.44 13.9604 5.04 13.5904 5.41Z"
+                      fill={4284119295}
+                      propList={
+                        [
+                          "fill",
+                        ]
+                      }
+                    />
+                    <RNSVGPath
+                      d="M17.1 11.9103C17.1 16.3703 13.47 20.0003 8.99996 20.0003C7.20996 20.0003 5.53996 19.4203 4.18996 18.4203C3.69996 18.0603 3.65996 17.3403 4.08996 16.9103L14.16 6.84026C14.63 6.37026 15.42 6.47026 15.74 7.05026C16.56 8.56026 17.11 10.2003 17.1 11.9103Z"
+                      fill={4284119295}
+                      propList={
+                        [
+                          "fill",
+                        ]
+                      }
+                    />
+                  </RNSVGGroup>
+                </RNSVGSvgView>
+              </View>
+              <View
+                style={{}}
+                testID="logTabTitleContainer"
+              >
+                <Text
+                  adjustsFontSizeToFit={true}
+                  style={
+                    [
+                      {
+                        "fontFamily": "Poppins",
+                      },
+                      {
+                        "flexWrap": "wrap",
+                        "width": "95%",
+                      },
+                      {
+                        "color": "#72996B",
+                        "fontSize": 14,
+                        "fontWeight": "600",
+                        "lineHeight": 22,
+                      },
+                    ]
+                  }
+                  testID="logTabTitle"
+                >
+                  Log Hydration
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              [
+                {
+                  "flexDirection": "row",
+                },
+                {
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "flexWrap": "wrap",
+                  "justifyContent": "space-between",
+                  "marginBottom": 14,
+                },
+              ]
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "#FFFFFF",
+                  "borderRadius": 20,
+                  "borderWidth": 1.5,
+                  "elevation": 3,
+                  "flexDirection": "row",
+                  "height": 90,
+                  "marginRight": 4,
+                  "opacity": 1,
+                  "shadowColor": "rgba(0,0,0,0.5)",
+                  "width": "48%",
+                }
+              }
+              testID="logTab"
+            >
+              <View
+                style={
+                  {
+                    "alignItems": "center",
+                    "marginHorizontal": 16,
+                  }
+                }
+              >
+                <RNSVGSvgView
+                  align="xMidYMid"
+                  bbHeight={24}
+                  bbWidth={24}
+                  fill="none"
+                  focusable={false}
+                  height={24}
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  style={
+                    [
+                      {
+                        "backgroundColor": "transparent",
+                        "borderWidth": 0,
+                      },
+                      {
+                        "flex": 0,
+                        "height": 24,
+                        "width": 24,
+                      },
+                    ]
+                  }
+                  testID="logTabIcon"
+                  vbHeight={24}
+                  vbWidth={24}
+                  width={24}
+                  xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.7433 13.2795V12.9461H12.4099H9.31994C8.61912 12.9461 8.23727 12.1153 8.70105 11.5787C8.70131 11.5784 8.70157 11.5781 8.70183 11.5778L16.2702 2.97972L16.2708 2.97898C16.767 2.41187 17.7066 2.7656 17.7066 3.51948V10.7195V11.0528H18.0399H21.1299C21.844 11.0528 22.2196 11.8852 21.7497 12.4192C21.7497 12.4193 21.7497 12.4193 21.7497 12.4193L14.1797 21.0192L14.1791 21.02C13.6829 21.5871 12.7433 21.2334 12.7433 20.4795V13.2795Z" fill="#FFD44F" stroke="#FFD44F" stroke-width="0.666667"/>
+  <path d="M8.5 4.41667H1.5C1.27409 4.41667 1.08333 4.22591 1.08333 4C1.08333 3.77409 1.27409 3.58333 1.5 3.58333H8.5C8.72591 3.58333 8.91667 3.77409 8.91667 4C8.91667 4.22591 8.72591 4.41667 8.5 4.41667Z" fill="#FFD44F" stroke="#FFD44F" stroke-width="0.666667"/>
+  <path d="M7.5 20.4167H1.5C1.27409 20.4167 1.08333 20.2259 1.08333 20C1.08333 19.7741 1.27409 19.5833 1.5 19.5833H7.5C7.7259 19.5833 7.91667 19.7741 7.91667 20C7.91667 20.2259 7.7259 20.4167 7.5 20.4167Z" fill="#FFD44F" stroke="#FFD44F" stroke-width="0.666667"/>
+  <path d="M4.5 12.75H1.5C1.09 12.75 0.75 12.41 0.75 12C0.75 11.59 1.09 11.25 1.5 11.25H4.5C4.91 11.25 5.25 11.59 5.25 12C5.25 12.41 4.91 12.75 4.5 12.75Z" fill="#FFD44F"/>
+</svg>
+"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <RNSVGGroup
+                    fill={null}
+                    propList={
+                      [
+                        "fill",
+                      ]
+                    }
+                  >
+                    <RNSVGPath
+                      d="M12.7433 13.2795V12.9461H12.4099H9.31994C8.61912 12.9461 8.23727 12.1153 8.70105 11.5787C8.70131 11.5784 8.70157 11.5781 8.70183 11.5778L16.2702 2.97972L16.2708 2.97898C16.767 2.41187 17.7066 2.7656 17.7066 3.51948V10.7195V11.0528H18.0399H21.1299C21.844 11.0528 22.2196 11.8852 21.7497 12.4192C21.7497 12.4193 21.7497 12.4193 21.7497 12.4193L14.1797 21.0192L14.1791 21.02C13.6829 21.5871 12.7433 21.2334 12.7433 20.4795V13.2795Z"
+                      fill={4294956111}
+                      propList={
+                        [
+                          "fill",
+                          "stroke",
+                          "strokeWidth",
+                        ]
+                      }
+                      stroke={4294956111}
+                      strokeWidth={0.666667}
+                    />
+                    <RNSVGPath
+                      d="M8.5 4.41667H1.5C1.27409 4.41667 1.08333 4.22591 1.08333 4C1.08333 3.77409 1.27409 3.58333 1.5 3.58333H8.5C8.72591 3.58333 8.91667 3.77409 8.91667 4C8.91667 4.22591 8.72591 4.41667 8.5 4.41667Z"
+                      fill={4294956111}
+                      propList={
+                        [
+                          "fill",
+                          "stroke",
+                          "strokeWidth",
+                        ]
+                      }
+                      stroke={4294956111}
+                      strokeWidth={0.666667}
+                    />
+                    <RNSVGPath
+                      d="M7.5 20.4167H1.5C1.27409 20.4167 1.08333 20.2259 1.08333 20C1.08333 19.7741 1.27409 19.5833 1.5 19.5833H7.5C7.7259 19.5833 7.91667 19.7741 7.91667 20C7.91667 20.2259 7.7259 20.4167 7.5 20.4167Z"
+                      fill={4294956111}
+                      propList={
+                        [
+                          "fill",
+                          "stroke",
+                          "strokeWidth",
+                        ]
+                      }
+                      stroke={4294956111}
+                      strokeWidth={0.666667}
+                    />
+                    <RNSVGPath
+                      d="M4.5 12.75H1.5C1.09 12.75 0.75 12.41 0.75 12C0.75 11.59 1.09 11.25 1.5 11.25H4.5C4.91 11.25 5.25 11.59 5.25 12C5.25 12.41 4.91 12.75 4.5 12.75Z"
+                      fill={4294956111}
+                      propList={
+                        [
+                          "fill",
+                        ]
+                      }
+                    />
+                  </RNSVGGroup>
+                </RNSVGSvgView>
+              </View>
+              <View
+                style={{}}
+                testID="logTabTitleContainer"
+              >
+                <Text
+                  adjustsFontSizeToFit={true}
+                  style={
+                    [
+                      {
+                        "fontFamily": "Poppins",
+                      },
+                      {
+                        "flexWrap": "wrap",
+                        "width": "95%",
+                      },
+                      {
+                        "color": "#72996B",
+                        "fontSize": 14,
+                        "fontWeight": "600",
+                        "lineHeight": 22,
+                      },
+                    ]
+                  }
+                  testID="logTabTitle"
+                >
+                  Log Activity
+                </Text>
+              </View>
+            </View>
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "#FFFFFF",
+                  "borderRadius": 20,
+                  "borderWidth": 1.5,
+                  "elevation": 3,
+                  "flexDirection": "row",
+                  "height": 90,
+                  "marginRight": 4,
+                  "opacity": 1,
+                  "shadowColor": "rgba(0,0,0,0.5)",
+                  "width": "48%",
+                }
+              }
+              testID="logTab"
+            >
+              <View
+                style={
+                  {
+                    "alignItems": "center",
+                    "marginHorizontal": 16,
+                  }
+                }
+              >
+                <RNSVGSvgView
+                  align="xMidYMid"
+                  bbHeight={24}
+                  bbWidth={24}
+                  fill="none"
+                  focusable={false}
+                  height={24}
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  style={
+                    [
+                      {
+                        "backgroundColor": "transparent",
+                        "borderWidth": 0,
+                      },
+                      {
+                        "flex": 0,
+                        "height": 24,
+                        "width": 24,
+                      },
+                    ]
+                  }
+                  testID="logTabIcon"
+                  vbHeight={24}
+                  vbWidth={24}
+                  width={24}
+                  xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M3 14C3 18 5.99982 23 8.99991 23C10.0418 23 11.0837 22.3969 11.9999 21.4422C12.9161 22.3969 13.958 23 14.9999 23C18 23 21 18 21 14C21 10 19 7 14.9999 7C13.8283 7 12.8283 7.25735 11.9999 7.7218C11.1715 7.25735 10.1715 7 8.99991 7C4.99982 7 3 10 3 14ZM8 13.5C8 13.2239 8.22386 13 8.5 13C9.32843 13 10 13.6716 10 14.5V15.5C10 15.7761 9.77614 16 9.5 16C8.67157 16 8 15.3284 8 14.5V13.5ZM15.5 13C15.7761 13 16 13.2239 16 13.5V14.5C16 15.3284 15.3284 16 14.5 16C14.2239 16 14 15.7761 14 15.5V14.5C14 13.6716 14.6716 13 15.5 13Z" fill="#D05151"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M9 5C10.1046 5 11 5.89543 11 7V8C11 8.55229 11.4477 9 12 9C12.5523 9 13 8.55229 13 8V7C13 4.79086 11.2091 3 9 3H8C7.44772 3 7 3.44772 7 4C7 4.55228 7.44772 5 8 5H9Z" fill="#4DBA0B"/>
+  <path d="M17.3333 1H19.3333C19.7015 1 20 1.29848 20 1.66667C20 3.50762 18.5076 5 16.6667 5H14.6667C14.2985 5 14 4.70152 14 4.33333C14 2.49238 15.4924 1 17.3333 1Z" fill="#4DBA0B"/>
+</svg>
+"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <RNSVGGroup
+                    fill={null}
+                    propList={
+                      [
+                        "fill",
+                      ]
+                    }
+                  >
+                    <RNSVGPath
+                      clipRule={0}
+                      d="M3 14C3 18 5.99982 23 8.99991 23C10.0418 23 11.0837 22.3969 11.9999 21.4422C12.9161 22.3969 13.958 23 14.9999 23C18 23 21 18 21 14C21 10 19 7 14.9999 7C13.8283 7 12.8283 7.25735 11.9999 7.7218C11.1715 7.25735 10.1715 7 8.99991 7C4.99982 7 3 10 3 14ZM8 13.5C8 13.2239 8.22386 13 8.5 13C9.32843 13 10 13.6716 10 14.5V15.5C10 15.7761 9.77614 16 9.5 16C8.67157 16 8 15.3284 8 14.5V13.5ZM15.5 13C15.7761 13 16 13.2239 16 13.5V14.5C16 15.3284 15.3284 16 14.5 16C14.2239 16 14 15.7761 14 15.5V14.5C14 13.6716 14.6716 13 15.5 13Z"
+                      fill={4291842385}
+                      fillRule={0}
+                      propList={
+                        [
+                          "fill",
+                          "fillRule",
+                        ]
+                      }
+                    />
+                    <RNSVGPath
+                      clipRule={0}
+                      d="M9 5C10.1046 5 11 5.89543 11 7V8C11 8.55229 11.4477 9 12 9C12.5523 9 13 8.55229 13 8V7C13 4.79086 11.2091 3 9 3H8C7.44772 3 7 3.44772 7 4C7 4.55228 7.44772 5 8 5H9Z"
+                      fill={4283283979}
+                      fillRule={0}
+                      propList={
+                        [
+                          "fill",
+                          "fillRule",
+                        ]
+                      }
+                    />
+                    <RNSVGPath
+                      d="M17.3333 1H19.3333C19.7015 1 20 1.29848 20 1.66667C20 3.50762 18.5076 5 16.6667 5H14.6667C14.2985 5 14 4.70152 14 4.33333C14 2.49238 15.4924 1 17.3333 1Z"
+                      fill={4283283979}
+                      propList={
+                        [
+                          "fill",
+                        ]
+                      }
+                    />
+                  </RNSVGGroup>
+                </RNSVGSvgView>
+              </View>
+              <View
+                style={{}}
+                testID="logTabTitleContainer"
+              >
+                <Text
+                  adjustsFontSizeToFit={true}
+                  style={
+                    [
+                      {
+                        "fontFamily": "Poppins",
+                      },
+                      {
+                        "flexWrap": "wrap",
+                        "width": "95%",
+                      },
+                      {
+                        "color": "#72996B",
+                        "fontSize": 14,
+                        "fontWeight": "600",
+                        "lineHeight": 22,
+                      },
+                    ]
+                  }
+                  testID="logTabTitle"
+                >
+                  Log a Meal
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              [
+                {
+                  "flexDirection": "row",
+                },
+                {
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "flexWrap": "wrap",
+                  "justifyContent": "space-between",
+                  "marginBottom": 14,
+                },
+              ]
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "#FFFFFF",
+                  "borderRadius": 20,
+                  "borderWidth": 1.5,
+                  "elevation": 3,
+                  "flexDirection": "row",
+                  "height": 90,
+                  "marginRight": 4,
+                  "opacity": 1,
+                  "shadowColor": "rgba(0,0,0,0.5)",
+                  "width": "48%",
+                }
+              }
+              testID="logTab"
+            >
+              <View
+                style={
+                  {
+                    "alignItems": "center",
+                    "marginHorizontal": 16,
+                  }
+                }
+              >
+                <RNSVGSvgView
+                  align="xMidYMid"
+                  bbHeight={24}
+                  bbWidth={24}
+                  fill="none"
+                  focusable={false}
+                  height={24}
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  style={
+                    [
+                      {
+                        "backgroundColor": "transparent",
+                        "borderWidth": 0,
+                      },
+                      {
+                        "flex": 0,
+                        "height": 24,
+                        "width": 24,
+                      },
+                    ]
+                  }
+                  testID="logTabIcon"
+                  vbHeight={24}
+                  vbWidth={24}
+                  width={24}
+                  xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M6 15C6 15.1501 5.84419 15.2518 5.71176 15.1812C3.50323 14.0038 2 11.6775 2 9C2 5.13401 5.13401 2 9 2C11.6775 2 14.0038 3.50323 15.1812 5.71176C15.2518 5.84419 15.1501 6 15 6C10.0294 6 6 10.0294 6 15Z" fill="#FF66A9"/>
+  <path d="M15 22C18.866 22 22 18.866 22 15C22 13.4277 21.4816 11.9764 20.6064 10.8078L10.8078 20.6064C11.9764 21.4816 13.4277 22 15 22Z" fill="#FF66A9"/>
+  <path d="M9.39361 19.1922L19.1922 9.39361C18.0236 8.5184 16.5723 8 15 8C11.134 8 8 11.134 8 15C8 16.5723 8.5184 18.0236 9.39361 19.1922Z" fill="#FF66A9"/>
+</svg>
+"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <RNSVGGroup
+                    fill={null}
+                    propList={
+                      [
+                        "fill",
+                      ]
+                    }
+                  >
+                    <RNSVGPath
+                      d="M6 15C6 15.1501 5.84419 15.2518 5.71176 15.1812C3.50323 14.0038 2 11.6775 2 9C2 5.13401 5.13401 2 9 2C11.6775 2 14.0038 3.50323 15.1812 5.71176C15.2518 5.84419 15.1501 6 15 6C10.0294 6 6 10.0294 6 15Z"
+                      fill={4294928041}
+                      propList={
+                        [
+                          "fill",
+                        ]
+                      }
+                    />
+                    <RNSVGPath
+                      d="M15 22C18.866 22 22 18.866 22 15C22 13.4277 21.4816 11.9764 20.6064 10.8078L10.8078 20.6064C11.9764 21.4816 13.4277 22 15 22Z"
+                      fill={4294928041}
+                      propList={
+                        [
+                          "fill",
+                        ]
+                      }
+                    />
+                    <RNSVGPath
+                      d="M9.39361 19.1922L19.1922 9.39361C18.0236 8.5184 16.5723 8 15 8C11.134 8 8 11.134 8 15C8 16.5723 8.5184 18.0236 9.39361 19.1922Z"
+                      fill={4294928041}
+                      propList={
+                        [
+                          "fill",
+                        ]
+                      }
+                    />
+                  </RNSVGGroup>
+                </RNSVGSvgView>
+              </View>
+              <View
+                style={{}}
+                testID="logTabTitleContainer"
+              >
+                <Text
+                  adjustsFontSizeToFit={true}
+                  style={
+                    [
+                      {
+                        "fontFamily": "Poppins",
+                      },
+                      {
+                        "flexWrap": "wrap",
+                        "width": "95%",
+                      },
+                      {
+                        "color": "#72996B",
+                        "fontSize": 14,
+                        "fontWeight": "600",
+                        "lineHeight": 22,
+                      },
+                    ]
+                  }
+                  testID="logTabTitle"
+                >
+                  Log Medication
+                </Text>
+              </View>
+            </View>
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "#FFFFFF",
+                  "borderRadius": 20,
+                  "borderWidth": 1.5,
+                  "elevation": 3,
+                  "flexDirection": "row",
+                  "height": 90,
+                  "marginRight": 4,
+                  "opacity": 1,
+                  "shadowColor": "rgba(0,0,0,0.5)",
+                  "width": "48%",
+                }
+              }
+              testID="logTab"
+            >
+              <View
+                style={
+                  {
+                    "alignItems": "center",
+                    "marginHorizontal": 16,
+                  }
+                }
+              >
+                <RNSVGSvgView
+                  align="xMidYMid"
+                  bbHeight={24}
+                  bbWidth={24}
+                  fill="none"
+                  focusable={false}
+                  height={24}
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  style={
+                    [
+                      {
+                        "backgroundColor": "transparent",
+                        "borderWidth": 0,
+                      },
+                      {
+                        "flex": 0,
+                        "height": 24,
+                        "width": 24,
+                      },
+                    ]
+                  }
+                  testID="logTabIcon"
+                  vbHeight={24}
+                  vbWidth={24}
+                  width={24}
+                  xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M17.8506 8.65992C18.0464 8.36087 17.9728 7.98412 17.7268 7.75574L17.7269 7.75568L17.7214 7.75082C14.4553 4.8488 9.53481 4.84832 6.2782 7.75117L6.27815 7.75112L6.27318 7.75574C6.02972 7.98181 5.9478 8.3667 6.1759 8.67041L8.34349 12.1505C8.45491 12.3438 8.65198 12.4455 8.83037 12.478C9.05782 12.5193 9.26755 12.4351 9.4095 12.3109L9.40951 12.3109L9.41136 12.3092C10.8951 10.9914 13.1249 10.9914 14.6086 12.3092L14.6086 12.3093L14.6131 12.3131C14.7488 12.4294 14.9177 12.4833 15.08 12.4833H15.0801H15.0801H15.0802H15.0802H15.0803H15.0804H15.0804H15.0805H15.0805H15.0806H15.0807H15.0807H15.0808H15.0808H15.0809H15.081H15.081H15.0811H15.0812H15.0812H15.0813H15.0813H15.0814H15.0815H15.0815H15.0816H15.0817H15.0817H15.0818H15.0819H15.0819H15.082H15.0821H15.0821H15.0822H15.0823H15.0823H15.0824H15.0825H15.0825H15.0826H15.0827H15.0827H15.0828H15.0829H15.0829H15.083H15.0831H15.0831H15.0832H15.0833H15.0833H15.0834H15.0835H15.0836H15.0836H15.0837H15.0838H15.0838H15.0839H15.084H15.0841H15.0841H15.0842H15.0843H15.0843H15.0844H15.0845H15.0846H15.0846H15.0847H15.0848H15.0849H15.0849H15.085H15.0851H15.0852H15.0852H15.0853H15.0854H15.0855H15.0855H15.0856H15.0857H15.0858H15.0858H15.0859H15.086H15.0861H15.0861H15.0862H15.0863H15.0864H15.0865H15.0865H15.0866H15.0867H15.0868H15.0869H15.0869H15.087H15.0871H15.0872H15.0872H15.0873H15.0874H15.0875H15.0876H15.0877H15.0877H15.0878H15.0879H15.088H15.0881H15.0881H15.0882H15.0883H15.0884H15.0885H15.0886H15.0886H15.0887H15.0888H15.0889H15.089H15.0891H15.0891H15.0892H15.0893H15.0894H15.0895H15.0896H15.0896H15.0897H15.0898H15.0899H15.09H15.0901H15.0902H15.0902H15.0903H15.0904H15.0905H15.0906H15.0907H15.0908H15.0909H15.0909H15.091H15.0911H15.0912H15.0913H15.0914H15.0915H15.0916H15.0916H15.0917H15.0918H15.0919H15.092H15.0921H15.0922H15.0923H15.0924H15.0925H15.0925H15.0926H15.0927H15.0928H15.0929H15.093H15.0931H15.0932H15.0933H15.0934H15.0935H15.0935H15.0936H15.0937H15.0938H15.0939H15.094H15.0941H15.0942H15.0943H15.0944H15.0945H15.0946H15.0947H15.0948H15.0948H15.0949H15.095H15.0951H15.0952H15.0953H15.0954H15.0955H15.0956H15.0957H15.0958H15.0959H15.096H15.0961H15.0962H15.0963H15.0964H15.0965H15.0966H15.0967H15.0968H15.0969H15.097H15.0971H15.0971H15.0972H15.0973H15.0974H15.0975H15.0976H15.0977H15.0978H15.0979H15.098H15.0981H15.0982H15.0983H15.0984H15.0985H15.0986H15.0987H15.0988H15.0989H15.099H15.0991H15.0992H15.0993H15.0994H15.0995H15.0996H15.0997H15.0998H15.0999H15.1H15.1001H15.1002H15.1003H15.1004H15.1005H15.1006H15.1007H15.1008H15.1009H15.101H15.1011H15.1013H15.1014H15.1015H15.1016H15.1017H15.1018H15.1019H15.102H15.1021H15.1022H15.1023H15.1024H15.1025H15.1026H15.1027H15.1028H15.1029H15.103H15.1031H15.1032H15.1033H15.1034H15.1035H15.1036H15.1037H15.1038H15.104H15.1041H15.1042H15.1043H15.1044H15.1045H15.1046H15.1047H15.1048H15.1049H15.105H15.1051H15.1052H15.1053H15.1054H15.1055H15.1057H15.1058H15.1059H15.106H15.1061H15.1062H15.1063H15.1064H15.1065H15.1066H15.1067H15.1068H15.1069H15.1071H15.1072H15.1073H15.1074H15.1075H15.1076H15.1077H15.1078H15.1079H15.108H15.1081H15.1082H15.1084H15.1085H15.1086H15.1087H15.1088H15.1089H15.109H15.1091H15.1092H15.1093H15.1095H15.1096H15.1097H15.1098H15.1099H15.11H15.1101H15.1102H15.1103H15.1104H15.1106H15.1107H15.1108H15.1109H15.111H15.1111H15.1112H15.1113H15.1114H15.1116H15.1117H15.1118H15.1119H15.112H15.1121H15.1122H15.1123H15.1125H15.1126H15.1127H15.1128H15.1129H15.113H15.1131H15.1132H15.1133H15.1135H15.1136H15.1137H15.1138H15.1139H15.114H15.1141H15.1143H15.1144H15.1145H15.1146H15.1147H15.1148H15.1149H15.115H15.1152H15.1153H15.1154H15.1155H15.1156H15.1157H15.1158H15.116H15.1161H15.1162H15.1163H15.1164H15.1165H15.1166H15.1168H15.1169H15.117H15.1171H15.1172H15.1173H15.1174H15.1176H15.1177H15.1178H15.1179H15.118H15.1181H15.1182H15.1184H15.1185H15.1186H15.1187H15.1188H15.1189H15.119H15.1192H15.1193H15.1194H15.1195H15.1196H15.1197H15.1199H15.12H15.1201H15.1202H15.1203H15.1204H15.1205H15.1207H15.1208H15.1209H15.121H15.1211H15.1212H15.1214H15.1215H15.1216H15.1217H15.1218H15.1219H15.1221H15.1222H15.1223H15.1224H15.1225H15.1226H15.1228H15.1229H15.123H15.1231H15.1232H15.1233H15.1235H15.1236H15.1237H15.1238H15.1239H15.124H15.1242H15.1243H15.1244H15.1245H15.1246H15.1247H15.1249H15.125H15.1251H15.1252H15.1253H15.1254H15.1256H15.1257H15.1258H15.1259H15.126H15.1261H15.1263H15.1264H15.1265H15.1266H15.1267H15.1268H15.127H15.1271H15.1272H15.1273H15.1274H15.1275H15.1277H15.1278H15.1279H15.128H15.1281H15.1282H15.1284H15.1285H15.1286H15.1287H15.1288H15.1289H15.1291H15.1292H15.1293H15.1294H15.1295H15.1297H15.1298H15.1299H15.13H15.1466L15.1632 12.4817C15.3842 12.4596 15.5654 12.3178 15.6674 12.1649L15.6675 12.165L15.6729 12.1562L17.8506 8.65992ZM8 2.33333H16C17.4243 2.33333 18.5852 2.80663 19.3893 3.6107C20.1934 4.41478 20.6667 5.57575 20.6667 7V17C20.6667 18.4243 20.1934 19.5852 19.3893 20.3893C18.5852 21.1934 17.4243 21.6667 16 21.6667H8C6.57575 21.6667 5.41478 21.1934 4.6107 20.3893C3.80663 19.5852 3.33333 18.4243 3.33333 17V7C3.33333 5.57575 3.80663 4.41478 4.6107 3.6107C5.41478 2.80663 6.57575 2.33333 8 2.33333Z" fill="#FF9330" stroke="#FF9330" stroke-width="0.666667"/>
+</svg>
+"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <RNSVGGroup
+                    fill={null}
+                    propList={
+                      [
+                        "fill",
+                      ]
+                    }
+                  >
+                    <RNSVGPath
+                      d="M17.8506 8.65992C18.0464 8.36087 17.9728 7.98412 17.7268 7.75574L17.7269 7.75568L17.7214 7.75082C14.4553 4.8488 9.53481 4.84832 6.2782 7.75117L6.27815 7.75112L6.27318 7.75574C6.02972 7.98181 5.9478 8.3667 6.1759 8.67041L8.34349 12.1505C8.45491 12.3438 8.65198 12.4455 8.83037 12.478C9.05782 12.5193 9.26755 12.4351 9.4095 12.3109L9.40951 12.3109L9.41136 12.3092C10.8951 10.9914 13.1249 10.9914 14.6086 12.3092L14.6086 12.3093L14.6131 12.3131C14.7488 12.4294 14.9177 12.4833 15.08 12.4833H15.0801H15.0801H15.0802H15.0802H15.0803H15.0804H15.0804H15.0805H15.0805H15.0806H15.0807H15.0807H15.0808H15.0808H15.0809H15.081H15.081H15.0811H15.0812H15.0812H15.0813H15.0813H15.0814H15.0815H15.0815H15.0816H15.0817H15.0817H15.0818H15.0819H15.0819H15.082H15.0821H15.0821H15.0822H15.0823H15.0823H15.0824H15.0825H15.0825H15.0826H15.0827H15.0827H15.0828H15.0829H15.0829H15.083H15.0831H15.0831H15.0832H15.0833H15.0833H15.0834H15.0835H15.0836H15.0836H15.0837H15.0838H15.0838H15.0839H15.084H15.0841H15.0841H15.0842H15.0843H15.0843H15.0844H15.0845H15.0846H15.0846H15.0847H15.0848H15.0849H15.0849H15.085H15.0851H15.0852H15.0852H15.0853H15.0854H15.0855H15.0855H15.0856H15.0857H15.0858H15.0858H15.0859H15.086H15.0861H15.0861H15.0862H15.0863H15.0864H15.0865H15.0865H15.0866H15.0867H15.0868H15.0869H15.0869H15.087H15.0871H15.0872H15.0872H15.0873H15.0874H15.0875H15.0876H15.0877H15.0877H15.0878H15.0879H15.088H15.0881H15.0881H15.0882H15.0883H15.0884H15.0885H15.0886H15.0886H15.0887H15.0888H15.0889H15.089H15.0891H15.0891H15.0892H15.0893H15.0894H15.0895H15.0896H15.0896H15.0897H15.0898H15.0899H15.09H15.0901H15.0902H15.0902H15.0903H15.0904H15.0905H15.0906H15.0907H15.0908H15.0909H15.0909H15.091H15.0911H15.0912H15.0913H15.0914H15.0915H15.0916H15.0916H15.0917H15.0918H15.0919H15.092H15.0921H15.0922H15.0923H15.0924H15.0925H15.0925H15.0926H15.0927H15.0928H15.0929H15.093H15.0931H15.0932H15.0933H15.0934H15.0935H15.0935H15.0936H15.0937H15.0938H15.0939H15.094H15.0941H15.0942H15.0943H15.0944H15.0945H15.0946H15.0947H15.0948H15.0948H15.0949H15.095H15.0951H15.0952H15.0953H15.0954H15.0955H15.0956H15.0957H15.0958H15.0959H15.096H15.0961H15.0962H15.0963H15.0964H15.0965H15.0966H15.0967H15.0968H15.0969H15.097H15.0971H15.0971H15.0972H15.0973H15.0974H15.0975H15.0976H15.0977H15.0978H15.0979H15.098H15.0981H15.0982H15.0983H15.0984H15.0985H15.0986H15.0987H15.0988H15.0989H15.099H15.0991H15.0992H15.0993H15.0994H15.0995H15.0996H15.0997H15.0998H15.0999H15.1H15.1001H15.1002H15.1003H15.1004H15.1005H15.1006H15.1007H15.1008H15.1009H15.101H15.1011H15.1013H15.1014H15.1015H15.1016H15.1017H15.1018H15.1019H15.102H15.1021H15.1022H15.1023H15.1024H15.1025H15.1026H15.1027H15.1028H15.1029H15.103H15.1031H15.1032H15.1033H15.1034H15.1035H15.1036H15.1037H15.1038H15.104H15.1041H15.1042H15.1043H15.1044H15.1045H15.1046H15.1047H15.1048H15.1049H15.105H15.1051H15.1052H15.1053H15.1054H15.1055H15.1057H15.1058H15.1059H15.106H15.1061H15.1062H15.1063H15.1064H15.1065H15.1066H15.1067H15.1068H15.1069H15.1071H15.1072H15.1073H15.1074H15.1075H15.1076H15.1077H15.1078H15.1079H15.108H15.1081H15.1082H15.1084H15.1085H15.1086H15.1087H15.1088H15.1089H15.109H15.1091H15.1092H15.1093H15.1095H15.1096H15.1097H15.1098H15.1099H15.11H15.1101H15.1102H15.1103H15.1104H15.1106H15.1107H15.1108H15.1109H15.111H15.1111H15.1112H15.1113H15.1114H15.1116H15.1117H15.1118H15.1119H15.112H15.1121H15.1122H15.1123H15.1125H15.1126H15.1127H15.1128H15.1129H15.113H15.1131H15.1132H15.1133H15.1135H15.1136H15.1137H15.1138H15.1139H15.114H15.1141H15.1143H15.1144H15.1145H15.1146H15.1147H15.1148H15.1149H15.115H15.1152H15.1153H15.1154H15.1155H15.1156H15.1157H15.1158H15.116H15.1161H15.1162H15.1163H15.1164H15.1165H15.1166H15.1168H15.1169H15.117H15.1171H15.1172H15.1173H15.1174H15.1176H15.1177H15.1178H15.1179H15.118H15.1181H15.1182H15.1184H15.1185H15.1186H15.1187H15.1188H15.1189H15.119H15.1192H15.1193H15.1194H15.1195H15.1196H15.1197H15.1199H15.12H15.1201H15.1202H15.1203H15.1204H15.1205H15.1207H15.1208H15.1209H15.121H15.1211H15.1212H15.1214H15.1215H15.1216H15.1217H15.1218H15.1219H15.1221H15.1222H15.1223H15.1224H15.1225H15.1226H15.1228H15.1229H15.123H15.1231H15.1232H15.1233H15.1235H15.1236H15.1237H15.1238H15.1239H15.124H15.1242H15.1243H15.1244H15.1245H15.1246H15.1247H15.1249H15.125H15.1251H15.1252H15.1253H15.1254H15.1256H15.1257H15.1258H15.1259H15.126H15.1261H15.1263H15.1264H15.1265H15.1266H15.1267H15.1268H15.127H15.1271H15.1272H15.1273H15.1274H15.1275H15.1277H15.1278H15.1279H15.128H15.1281H15.1282H15.1284H15.1285H15.1286H15.1287H15.1288H15.1289H15.1291H15.1292H15.1293H15.1294H15.1295H15.1297H15.1298H15.1299H15.13H15.1466L15.1632 12.4817C15.3842 12.4596 15.5654 12.3178 15.6674 12.1649L15.6675 12.165L15.6729 12.1562L17.8506 8.65992ZM8 2.33333H16C17.4243 2.33333 18.5852 2.80663 19.3893 3.6107C20.1934 4.41478 20.6667 5.57575 20.6667 7V17C20.6667 18.4243 20.1934 19.5852 19.3893 20.3893C18.5852 21.1934 17.4243 21.6667 16 21.6667H8C6.57575 21.6667 5.41478 21.1934 4.6107 20.3893C3.80663 19.5852 3.33333 18.4243 3.33333 17V7C3.33333 5.57575 3.80663 4.41478 4.6107 3.6107C5.41478 2.80663 6.57575 2.33333 8 2.33333Z"
+                      fill={4294939440}
+                      propList={
+                        [
+                          "fill",
+                          "stroke",
+                          "strokeWidth",
+                        ]
+                      }
+                      stroke={4294939440}
+                      strokeWidth={0.666667}
+                    />
+                  </RNSVGGroup>
+                </RNSVGSvgView>
+              </View>
+              <View
+                style={{}}
+                testID="logTabTitleContainer"
+              >
+                <Text
+                  adjustsFontSizeToFit={true}
+                  style={
+                    [
+                      {
+                        "fontFamily": "Poppins",
+                      },
+                      {
+                        "flexWrap": "wrap",
+                        "width": "95%",
+                      },
+                      {
+                        "color": "#72996B",
+                        "fontSize": 14,
+                        "fontWeight": "600",
+                        "lineHeight": 22,
+                      },
+                    ]
+                  }
+                  testID="logTabTitle"
+                >
+                  Log Weight
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            style={
+              [
+                {
+                  "flexDirection": "row",
+                },
+                {
+                  "display": "flex",
+                  "flexDirection": "row",
+                  "flexWrap": "wrap",
+                  "justifyContent": "space-between",
+                  "marginBottom": 14,
+                },
+              ]
+            }
+          >
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "#FFFFFF",
+                  "borderRadius": 20,
+                  "borderWidth": 1.5,
+                  "elevation": 3,
+                  "flexDirection": "row",
+                  "height": 90,
+                  "marginRight": 4,
+                  "opacity": 1,
+                  "shadowColor": "rgba(0,0,0,0.5)",
+                  "width": "48%",
+                }
+              }
+              testID="logTab"
+            >
+              <View
+                style={
+                  {
+                    "alignItems": "center",
+                    "marginHorizontal": 16,
+                  }
+                }
+              >
+                <RNSVGSvgView
+                  align="xMidYMid"
+                  bbHeight={24}
+                  bbWidth={24}
+                  fill="none"
+                  focusable={false}
+                  height={24}
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  style={
+                    [
+                      {
+                        "backgroundColor": "transparent",
+                        "borderWidth": 0,
+                      },
+                      {
+                        "flex": 0,
+                        "height": 24,
+                        "width": 24,
+                      },
+                    ]
+                  }
+                  testID="logTabIcon"
+                  vbHeight={24}
+                  vbWidth={24}
+                  width={24}
+                  xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.66335 13.32C3.66335 8.72408 7.40411 4.98332 12 4.98332C16.5954 4.98332 20.3367 8.73358 20.3367 13.33C20.3367 17.9259 16.5959 21.6667 12 21.6667C7.40461 21.6667 3.66335 17.9164 3.66335 13.32ZM12 14.0833C12.5941 14.0833 13.0834 13.5941 13.0834 13V7.99999C13.0834 7.40589 12.5941 6.91665 12 6.91665C11.4059 6.91665 10.9167 7.40589 10.9167 7.99999V13C10.9167 13.5941 11.4059 14.0833 12 14.0833Z" fill="#72996B" stroke="#72996B" stroke-width="0.666667"/>
+<path d="M14.8896 3.11667H9.10965C8.89374 3.11667 8.72298 2.94591 8.72298 2.73C8.72298 2.50808 8.8997 2.33333 9.10965 2.33333H14.8896C15.1056 2.33333 15.2763 2.50409 15.2763 2.72C15.2763 2.94192 15.0996 3.11667 14.8896 3.11667Z" fill="#72996B" stroke="#72996B" stroke-width="0.666667"/>
+</svg>
+"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <RNSVGGroup
+                    fill={null}
+                    propList={
+                      [
+                        "fill",
+                      ]
+                    }
+                  >
+                    <RNSVGPath
+                      d="M3.66335 13.32C3.66335 8.72408 7.40411 4.98332 12 4.98332C16.5954 4.98332 20.3367 8.73358 20.3367 13.33C20.3367 17.9259 16.5959 21.6667 12 21.6667C7.40461 21.6667 3.66335 17.9164 3.66335 13.32ZM12 14.0833C12.5941 14.0833 13.0834 13.5941 13.0834 13V7.99999C13.0834 7.40589 12.5941 6.91665 12 6.91665C11.4059 6.91665 10.9167 7.40589 10.9167 7.99999V13C10.9167 13.5941 11.4059 14.0833 12 14.0833Z"
+                      fill={4285700459}
+                      propList={
+                        [
+                          "fill",
+                          "stroke",
+                          "strokeWidth",
+                        ]
+                      }
+                      stroke={4285700459}
+                      strokeWidth={0.666667}
+                    />
+                    <RNSVGPath
+                      d="M14.8896 3.11667H9.10965C8.89374 3.11667 8.72298 2.94591 8.72298 2.73C8.72298 2.50808 8.8997 2.33333 9.10965 2.33333H14.8896C15.1056 2.33333 15.2763 2.50409 15.2763 2.72C15.2763 2.94192 15.0996 3.11667 14.8896 3.11667Z"
+                      fill={4285700459}
+                      propList={
+                        [
+                          "fill",
+                          "stroke",
+                          "strokeWidth",
+                        ]
+                      }
+                      stroke={4285700459}
+                      strokeWidth={0.666667}
+                    />
+                  </RNSVGGroup>
+                </RNSVGSvgView>
+              </View>
+              <View
+                style={{}}
+                testID="logTabTitleContainer"
+              >
+                <Text
+                  adjustsFontSizeToFit={true}
+                  style={
+                    [
+                      {
+                        "fontFamily": "Poppins",
+                      },
+                      {
+                        "flexWrap": "wrap",
+                        "width": "95%",
+                      },
+                      {
+                        "color": "#72996B",
+                        "fontSize": 14,
+                        "fontWeight": "600",
+                        "lineHeight": 22,
+                      },
+                    ]
+                  }
+                  testID="logTabTitle"
+                >
+                  Log a Fast
+                </Text>
+              </View>
+            </View>
+            <View
+              accessibilityState={
+                {
+                  "busy": undefined,
+                  "checked": undefined,
+                  "disabled": undefined,
+                  "expanded": undefined,
+                  "selected": undefined,
+                }
+              }
+              accessibilityValue={
+                {
+                  "max": undefined,
+                  "min": undefined,
+                  "now": undefined,
+                  "text": undefined,
+                }
+              }
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                {
+                  "alignItems": "center",
+                  "backgroundColor": "#FFFFFF",
+                  "borderColor": "#FFFFFF",
+                  "borderRadius": 20,
+                  "borderWidth": 1.5,
+                  "elevation": 3,
+                  "flexDirection": "row",
+                  "height": 90,
+                  "marginRight": 4,
+                  "opacity": 1,
+                  "shadowColor": "rgba(0,0,0,0.5)",
+                  "width": "48%",
+                }
+              }
+              testID="logTab"
+            >
+              <View
+                style={
+                  {
+                    "alignItems": "center",
+                    "marginHorizontal": 16,
+                  }
+                }
+              >
+                <RNSVGSvgView
+                  align="xMidYMid"
+                  bbHeight={24}
+                  bbWidth={24}
+                  fill="none"
+                  focusable={false}
+                  height={24}
+                  meetOrSlice={0}
+                  minX={0}
+                  minY={0}
+                  style={
+                    [
+                      {
+                        "backgroundColor": "transparent",
+                        "borderWidth": 0,
+                      },
+                      {
+                        "flex": 0,
+                        "height": 24,
+                        "width": 24,
+                      },
+                    ]
+                  }
+                  testID="logTabIcon"
+                  vbHeight={24}
+                  vbWidth={24}
+                  width={24}
+                  xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.7069 3.29289C12.3163 2.90237 11.6832 2.90237 11.2927 3.29289C10.9021 3.68342 10.9021 4.31658 11.2927 4.70711L12.2926 5.70708L5.51343 12.4863C4.56774 13.432 4.15725 14.7877 4.41954 16.0992L4.99971 19L7.90054 19.5802C9.21198 19.8425 10.5677 19.432 11.5134 18.4863L12.2926 17.7071L10.2926 15.7071C9.90213 15.3166 9.90213 14.6834 10.2926 14.2929C10.6832 13.9024 11.3163 13.9024 11.7069 14.2929L13.7068 16.2929L15.2926 14.7071L13.2927 12.7071C12.9021 12.3166 12.9021 11.6834 13.2927 11.2929C13.6832 10.9024 14.3163 10.9024 14.7069 11.2929L16.7068 13.2929L18.2926 11.7071L19.2927 12.7071C19.6832 13.0976 20.3163 13.0976 20.7069 12.7071C21.0974 12.3166 21.0974 11.6834 20.7069 11.2929L12.7069 3.29289Z" fill="#FF66A9"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M7 16.9999C7.39052 17.3904 7.39052 18.0236 7 18.4141L3.70711 21.707C3.31658 22.0976 2.68342 22.0976 2.29289 21.707C1.90237 21.3165 1.90237 20.6833 2.29289 20.2928L5.58579 16.9999C5.97631 16.6094 6.60948 16.6094 7 16.9999Z" fill="#FF66A9"/>
+  <path d="M17.707 2.29289C17.3164 1.90237 16.6833 1.90237 16.2927 2.29289C15.9022 2.68342 15.9022 3.31658 16.2927 3.70711L17.5857 5.00005L15.9999 6.5858C15.6094 6.97633 15.6094 7.60949 15.9999 8.00002C16.3904 8.39054 17.0236 8.39054 17.4141 8.00002L18.9999 6.41426L20.2927 7.70711C20.6833 8.09763 21.3164 8.09763 21.707 7.70711C22.0975 7.31658 22.0975 6.68342 21.707 6.29289L17.707 2.29289Z" fill="#FF66A9"/>
+</svg>
+"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <RNSVGGroup
+                    fill={null}
+                    propList={
+                      [
+                        "fill",
+                      ]
+                    }
+                  >
+                    <RNSVGPath
+                      d="M12.7069 3.29289C12.3163 2.90237 11.6832 2.90237 11.2927 3.29289C10.9021 3.68342 10.9021 4.31658 11.2927 4.70711L12.2926 5.70708L5.51343 12.4863C4.56774 13.432 4.15725 14.7877 4.41954 16.0992L4.99971 19L7.90054 19.5802C9.21198 19.8425 10.5677 19.432 11.5134 18.4863L12.2926 17.7071L10.2926 15.7071C9.90213 15.3166 9.90213 14.6834 10.2926 14.2929C10.6832 13.9024 11.3163 13.9024 11.7069 14.2929L13.7068 16.2929L15.2926 14.7071L13.2927 12.7071C12.9021 12.3166 12.9021 11.6834 13.2927 11.2929C13.6832 10.9024 14.3163 10.9024 14.7069 11.2929L16.7068 13.2929L18.2926 11.7071L19.2927 12.7071C19.6832 13.0976 20.3163 13.0976 20.7069 12.7071C21.0974 12.3166 21.0974 11.6834 20.7069 11.2929L12.7069 3.29289Z"
+                      fill={4294928041}
+                      propList={
+                        [
+                          "fill",
+                        ]
+                      }
+                    />
+                    <RNSVGPath
+                      clipRule={0}
+                      d="M7 16.9999C7.39052 17.3904 7.39052 18.0236 7 18.4141L3.70711 21.707C3.31658 22.0976 2.68342 22.0976 2.29289 21.707C1.90237 21.3165 1.90237 20.6833 2.29289 20.2928L5.58579 16.9999C5.97631 16.6094 6.60948 16.6094 7 16.9999Z"
+                      fill={4294928041}
+                      fillRule={0}
+                      propList={
+                        [
+                          "fill",
+                          "fillRule",
+                        ]
+                      }
+                    />
+                    <RNSVGPath
+                      d="M17.707 2.29289C17.3164 1.90237 16.6833 1.90237 16.2927 2.29289C15.9022 2.68342 15.9022 3.31658 16.2927 3.70711L17.5857 5.00005L15.9999 6.5858C15.6094 6.97633 15.6094 7.60949 15.9999 8.00002C16.3904 8.39054 17.0236 8.39054 17.4141 8.00002L18.9999 6.41426L20.2927 7.70711C20.6833 8.09763 21.3164 8.09763 21.707 7.70711C22.0975 7.31658 22.0975 6.68342 21.707 6.29289L17.707 2.29289Z"
+                      fill={4294928041}
+                      propList={
+                        [
+                          "fill",
+                        ]
+                      }
+                    />
+                  </RNSVGGroup>
+                </RNSVGSvgView>
+              </View>
+              <View
+                style={{}}
+                testID="logTabTitleContainer"
+              >
+                <Text
+                  adjustsFontSizeToFit={true}
+                  style={
+                    [
+                      {
+                        "fontFamily": "Poppins",
+                      },
+                      {
+                        "flexWrap": "wrap",
+                        "width": "95%",
+                      },
+                      {
+                        "color": "#72996B",
+                        "fontSize": 14,
+                        "fontWeight": "600",
+                        "lineHeight": 22,
+                      },
+                    ]
+                  }
+                  testID="logTabTitle"
+                >
+                  Log Insulin
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderRadius": 26,
+          "height": 52,
+          "justifyContent": "center",
+          "opacity": 1,
+          "textAlign": "center",
+          "width": 52,
+        }
+      }
+      testID="closeButton"
+    >
+      <RNSVGSvgView
+        align="xMidYMid"
+        bbHeight={24}
+        bbWidth={24}
+        fill="none"
+        focusable={false}
+        height={24}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "height": "auto",
+              "width": "auto",
+            },
+            {
+              "flex": 0,
+              "height": 24,
+              "width": 24,
+            },
+          ]
+        }
+        vbHeight={24}
+        vbWidth={24}
+        width={24}
+      >
+        <RNSVGGroup
+          fill={null}
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            d="M18.7071 6.70711C19.0976 6.31658 19.0976 5.68342 18.7071 5.29289C18.3166 4.90237 17.6834 4.90237 17.2929 5.29289L18.7071 6.70711ZM5.29289 17.2929C4.90237 17.6834 4.90237 18.3166 5.29289 18.7071C5.68342 19.0976 6.31658 19.0976 6.70711 18.7071L5.29289 17.2929ZM17.2929 18.7071C17.6834 19.0976 18.3166 19.0976 18.7071 18.7071C19.0976 18.3166 19.0976 17.6834 18.7071 17.2929L17.2929 18.7071ZM6.70711 5.29289C6.31658 4.90237 5.68342 4.90237 5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711L6.70711 5.29289ZM17.2929 5.29289L5.29289 17.2929L6.70711 18.7071L18.7071 6.70711L17.2929 5.29289ZM18.7071 17.2929L6.70711 5.29289L5.29289 6.70711L17.2929 18.7071L18.7071 17.2929Z"
+            fill={4280752721}
+            propList={
+              [
+                "fill",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+  </View>
+</RNCSafeAreaView>
+`;

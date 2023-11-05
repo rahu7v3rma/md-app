@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot Testing with Jest 1`] = `
+<RCTScrollView
+  bounces={true}
+  onScrollEndDrag={[MockFunction]}
+  refreshControl={
+    <RefreshControlMock
+      onRefresh={[MockFunction]}
+      refreshing={false}
+    />
+  }
+  scrollEnabled={true}
+  style={
+    {
+      "height": "100%",
+    }
+  }
+>
+  <RCTRefreshControl />
+  <View>
+    <Text>
+      mockChildren
+    </Text>
+  </View>
+</RCTScrollView>
+`;

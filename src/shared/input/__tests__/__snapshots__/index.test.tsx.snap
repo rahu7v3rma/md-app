@@ -1,0 +1,149 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`input snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "transparent",
+        "borderRadius": 20,
+        "borderWidth": 2,
+        "elevation": 2,
+        "flexDirection": "row",
+        "height": 61,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "shadowColor": "rgba(0, 0, 0, 0.3)",
+        "shadowOffset": {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 0.5,
+        "shadowRadius": 1,
+      },
+      {},
+      false,
+      undefined,
+    ]
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "opacity": 1,
+      }
+    }
+  />
+  <View
+    style={
+      [
+        {
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "paddingHorizontal": 10,
+          "position": "relative",
+        },
+      ]
+    }
+  >
+    <TextInput
+      autoCapitalize="none"
+      autoCorrect={true}
+      autoFocus={false}
+      editable={true}
+      keyboardType="default"
+      multiline={false}
+      numberOfLines={1}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onSubmitEditing={[Function]}
+      placeholder=""
+      placeholderTextColor="#4D4F4D"
+      returnKeyType="done"
+      secureTextEntry={false}
+      selectionColor="#72996B"
+      style={
+        [
+          {
+            "color": "#4D4F4D",
+            "flex": 1,
+            "fontFamily": "Poppins",
+            "fontSize": 16,
+            "fontWeight": "500",
+          },
+          {},
+          undefined,
+        ]
+      }
+      value=""
+    />
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "marginRight": 5,
+        "opacity": 1,
+      }
+    }
+  />
+</View>
+`;

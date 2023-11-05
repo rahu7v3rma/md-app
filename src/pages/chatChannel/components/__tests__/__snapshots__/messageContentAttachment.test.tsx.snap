@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`messageContentAttachment snapshot 1`] = `
+<View
+  attachment={
+    {
+      "image_url": "https://us-east.stream-io-cdn.com/1237334/images/bbc8c8f0-fd25-48b3-8967-bd256bc5eb1b.anime.png?Key-Pair-Id=APKAIHG36VEWPDULE23Q&Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiaHR0cHM6Ly91cy1lYXN0LnN0cmVhbS1pby1jZG4uY29tLzEyMzczMzQvaW1hZ2VzL2JiYzhjOGYwLWZkMjUtNDhiMy04OTY3LWJkMjU2YmM1ZWIxYi5hbmltZS5wbmc~Km9oPTIyNCpvdz0yMjQqIiwiQ29uZGl0aW9uIjp7IkRhdGVMZXNzVGhhbiI6eyJBV1M6RXBvY2hUaW1lIjoxNjk4NzQwNTg0fX19XX0_&Signature=Rdm3s~09cXNa5NxdRZH2RGk0~MByiEytIEt6~GzkQN2cuOrNr8OPTxj1kEFFpY8rQYIIVyJ6Edp-Fz4OyWepBqEAIYXURYnof~syP4sdQT84hsowJbxuh1fQUuQPB3MVq6lxL3cKIkRFemTrSdTXS~dr6Uxmoo7xT8~5h6hp9JN2i19UWUSac-8QBeObyHvCqLPpicx3NTkQHKrjDEifrhROhWfspbaGJJPQ52D168XvGE3YgIsZhsur0sXdooVJYl4Nc2kh9tIH35cbS9d6Y5oAQsFLDFZiRgh-C1zjDroAL-F1rtZ~25mxhnlgDyN6CJNCB4R5B4-Oxehps-nGTw__&oh=224&ow=224",
+      "mime_type": "image/png",
+      "originalFile": {
+        "extension": null,
+        "fileSize": 14380,
+        "filename": "anime.png",
+        "height": 225,
+        "playableDuration": null,
+        "source": "picker",
+        "uri": "ph://6F90DC2A-FCC2-4512-9B37-1BC0DB175580/L0/001",
+        "width": 225,
+      },
+      "original_height": 224,
+      "original_width": 224,
+      "type": "giphy",
+    }
+  }
+/>
+`;

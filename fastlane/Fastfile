@@ -1,0 +1,163 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+default_platform(:ios)
+
+before_all do
+  #ensure_git_branch(branch: 'main|staging|fix/prerelease-fixes')
+  #ensure_git_status_clean
+end
+
+lane :upload_sourcemap do |options|
+  UI.message "uploading mappings to bugsnag for stable version..."
+
+  projectPath = ENV["PWD"]
+
+  # https://docs.bugsnag.com/api/rn-source-map-upload/
+  sh(
+    "curl",
+    "--http1.1",
+    "https://upload.bugsnag.com/react-native-source-map",
+    "-F", "apiKey=?",
+    "-F", "appVersion=#{options[:appVersion]}",
+    "-F", "dev=false",
+    "-F", "platform=#{options[:platform]}",
+    "-F", "sourceMap=@#{projectPath}/#{options[:sourceMapPath]}",
+    "-F", "bundle=@#{projectPath}/#{options[:bundlePath]}",
+    "-F", "projectRoot=#{projectPath}"
+  )
+end
+
+lane :build_release do |options|
+  manifest_version = `jq -r .version ../package.json | tr -d '\\n'`
+  if manifest_version.empty?
+    UI.abort_with_message!("Could not read manifest version")
+  end
+
+  UI.message "cleaning #{manifest_version}..."
+
+  sh("npx", "react-native", "clean", "--include", "android,cocoapods,metro,npm")
+  sh("rm", "-rf", "node_modules")
+  sh("npm", "install")
+
+  UI.message "copying firebase configurations..."
+
+  sh("cp", "../firebase/google-services.#{options[:firebaseEnvName]}.json", "../android/app/google-services.json")
+  sh("cp", "../firebase/GoogleService-Info.#{options[:firebaseEnvName]}.plist", "../ios/MasteringDiabetes/GoogleService-Info.plist")
+
+  UI.message "building version #{manifest_version}..."
+
+  if options[:isAndroid]
+    gradle(task: "clean", project_dir: "android/")
+    gradle(task: "increaseVersionCode", project_dir: "android/")
+    gradle(
+      task: "bundleRelease",
+      project_dir: "android/",
+      properties: {
+        "appName" => options[:displayName],
+        "android.injected.version.name" => "#{manifest_version}",
+        "android.injected.signing.store.file" => "/Users/mor/dev/md/md-release.jks",
+        "android.injected.signing.store.password" => "",
+        "android.injected.signing.key.alias" => "md-release-key",
+        "android.injected.signing.key.password" => "",
+      },
+      print_command: false,
+    )
+
+    if options[:isStable]
+      upload_sourcemap(
+        appVersion: manifest_version,
+        platform: "android",
+        sourceMapPath: "android/app/build/generated/sourcemaps/react/release/index.android.bundle.map",
+        bundlePath: "android/app/build/generated/assets/react/release/index.android.bundle"
+      )
+    end
+  else
+    cocoapods(
+      clean_install: true,
+      podfile: "ios/Podfile"
+    )
+    increment_version_number(
+      xcodeproj: "ios/MasteringDiabetes.xcodeproj",
+      version_number: manifest_version,
+    )
+    increment_build_number(xcodeproj: "ios/MasteringDiabetes.xcodeproj")
+    update_info_plist(
+     xcodeproj: "ios/MasteringDiabetes.xcodeproj",
+     plist_path: "MasteringDiabetes/Info.plist",
+     display_name: options[:displayName],
+    )
+    build_app(
+      workspace: "ios/MasteringDiabetes.xcworkspace",
+      scheme: "MasteringDiabetes",
+      include_bitcode: false,
+    )
+
+    if options[:isStable]
+      upload_sourcemap(
+        appVersion: manifest_version,
+        platform: "ios",
+        sourceMapPath: "ios/output/main.jsbundle.map",
+        bundlePath: "ios/output/main.jsbundle"
+      )
+    end
+  end
+end
+
+platform :ios do
+  desc "ios build ipa and upload to testflight alpha version"
+  lane :alpha do |params|
+    ENV["ENVFILE"] = ".env.staging"
+    build_release(isAndroid: false, displayName: "Mastering Programs ALPHA", firebaseEnvName: "staging", isStable: false)
+    upload_to_testflight
+    clean_cache
+  end
+
+  desc "ios build ipa and upload to testflight beta version"
+  lane :beta do |params|
+    ENV["ENVFILE"] = ".env.staging"
+    build_release(isAndroid: false, displayName: "Mastering Programs BETA", firebaseEnvName: "staging", isStable: false)
+    upload_to_testflight
+    clean_cache
+  end
+
+  desc "ios build ipa and upload to testflight"
+  lane :stable do |params|
+    ENV["ENVFILE"] = ".env.prod"
+    build_release(isAndroid: false, displayName: "Mastering Programs", firebaseEnvName: "prod", isStable: true)
+    upload_to_testflight
+    clean_cache
+  end
+
+  desc "ios clean build files"
+  private_lane :clean_cache do
+    File.delete("../Mastering Programs.ipa") if File.exist?("../Mastering Programs.ipa")
+    File.delete("../Mastering Programs.app.dSYM.zip") if File.exist?("../Mastering Programs.app.dSYM.zip")
+  end
+end
+
+platform :android do
+  desc "android build apk and upload to play store for internal testing"
+  lane :beta do |params|
+    ENV["ENVFILE"] = ".env.staging"
+    build_release(isAndroid: true, displayName: "Mastering Programs BETA", firebaseEnvName: "staging", isStable: false)
+    upload_to_play_store(track: "internal", skip_upload_apk: true, release_status: "draft")
+  end
+
+  desc "android build apk and upload to play store for closed testing (which can be promoted to production)"
+  lane :stable do |params|
+    ENV["ENVFILE"] = ".env.prod"
+    build_release(isAndroid: true, displayName: "Mastering Programs", firebaseEnvName: "prod", isStable: true)
+    #upload_to_play_store(track: "alpha", skip_upload_apk: true, release_status: "draft")
+    upload_to_play_store(track: "internal", skip_upload_apk: true, release_status: "draft")
+  end
+end

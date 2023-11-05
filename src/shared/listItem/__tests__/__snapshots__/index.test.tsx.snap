@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`listItem Snapshot Testing with Jest 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 16,
+      "flexDirection": "row",
+      "height": 56,
+      "marginBottom": 16,
+      "opacity": 1,
+    }
+  }
+  testID="listItemButton"
+>
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "width": "15%",
+      }
+    }
+    testID="listItemIcon"
+  />
+  <View
+    style={
+      {
+        "width": "75%",
+      }
+    }
+    testID="listItemTitleContainer"
+  >
+    <Text
+      adjustsFontSizeToFit={true}
+      style={
+        [
+          {
+            "fontFamily": "Poppins",
+          },
+          undefined,
+          {
+            "color": "#271A51",
+            "fontSize": 14,
+            "fontWeight": "600",
+            "lineHeight": 22,
+          },
+        ]
+      }
+      testID="listItemTitle"
+    />
+  </View>
+  <View
+    style={
+      {
+        "width": "10%",
+      }
+    }
+    testID="listItemArrow"
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight={12}
+      bbWidth={8}
+      fill="none"
+      focusable={false}
+      height={12}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          {
+            "flex": 0,
+            "height": 12,
+            "width": 8,
+          },
+        ]
+      }
+      vbHeight={12}
+      vbWidth={8}
+      width={8}
+      xml="<svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 0.999999L6.5 6L1.5 11" stroke="#6E51D0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={null}
+        propList={
+          [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          d="M1.5 0.999999L6.5 6L1.5 11"
+          propList={
+            [
+              "stroke",
+              "strokeWidth",
+              "strokeLinecap",
+              "strokeLinejoin",
+            ]
+          }
+          stroke={4285419984}
+          strokeLinecap={1}
+          strokeLinejoin={1}
+          strokeWidth={2}
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+</View>
+`;
+
+exports[`listItem renders the provided Icon component correctly 1`] = `<BellIcon />`;

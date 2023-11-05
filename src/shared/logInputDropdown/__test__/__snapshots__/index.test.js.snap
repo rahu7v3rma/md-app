@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test log input dropdown snapshot test 1`] = `
+[
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 16,
+        "elevation": 5,
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+        "marginVertical": 8,
+        "opacity": 1,
+        "paddingHorizontal": 20,
+        "paddingVertical": 18,
+        "shadowColor": "rgba(0,0,0,0.5)",
+        "shadowOffset": {
+          "height": 2,
+          "width": 0,
+        },
+        "shadowOpacity": 0.1,
+        "shadowRadius": 16,
+      }
+    }
+    testID="logInputContainer"
+  >
+    <Text
+      adjustsFontSizeToFit={true}
+      style={
+        [
+          {
+            "fontFamily": "Poppins",
+          },
+          {
+            "flex": 1,
+            "lineHeight": 20,
+          },
+          {
+            "color": "#58595A",
+            "fontSize": 14,
+            "fontWeight": "500",
+            "lineHeight": 22,
+          },
+        ]
+      }
+      testID="fieldNameTxt"
+    >
+      DropDown Test
+    </Text>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        adjustsFontSizeToFit={true}
+        style={
+          [
+            {
+              "fontFamily": "Poppins",
+            },
+            {
+              "flex": 1,
+              "lineHeight": 20,
+              "paddingRight": 10,
+              "textAlign": "right",
+            },
+            {
+              "color": "#271A51",
+              "fontSize": 14,
+              "fontWeight": "600",
+              "lineHeight": 22,
+            },
+          ]
+        }
+        testID="valueTxt"
+      >
+        choice1
+      </Text>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "marginLeft": 12,
+          }
+        }
+      >
+        <RNSVGSvgView
+          align="xMidYMid"
+          bbHeight={10}
+          bbWidth={15}
+          fill="none"
+          focusable={false}
+          height={10}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "height": "auto",
+                "width": "auto",
+              },
+              {
+                "flex": 0,
+                "height": 10,
+                "width": 15,
+              },
+            ]
+          }
+          vbHeight={8}
+          vbWidth={12}
+          width={15}
+        >
+          <RNSVGGroup
+            fill={null}
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              d="M11 1.5L6 6.5L1 1.5"
+              propList={
+                [
+                  "stroke",
+                ]
+              }
+              stroke={4285700459}
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
+  </View>,
+  <View
+    style={
+      {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Modal
+      animationType="none"
+      hardwareAccelerated={false}
+      onRequestClose={[Function]}
+      supportedOrientations={
+        [
+          "portrait",
+          "portrait-upside-down",
+          "landscape",
+          "landscape-left",
+          "landscape-right",
+        ]
+      }
+      transparent={true}
+      visible={false}
+    />
+  </View>,
+]
+`;
