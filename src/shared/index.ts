@@ -7,6 +7,7 @@ import ConfirmationDialogue from './confirmationDialogue';
 import CustomCacheImage from './customCacheImage';
 import CustomStatusBar from './customStatusBar';
 import Header from './header';
+import ImageChooser from './imageChooser';
 import Input from './input';
 import LessonCard from './lessonCard';
 import ListItem from './listItem';
@@ -17,6 +18,7 @@ import LogTimePicker from './logTimePicker';
 import LogUnitPicker from './logUnitPicker';
 import MainTabBar from './mainTabBar';
 import NoDataAvailable from './noDataAvailable';
+import PdfViewer from './pdfViewer';
 import PlatformImage from './platformImage';
 import ProfileImage from './profileImage';
 import Progressbar from './progressBar';
@@ -36,6 +38,7 @@ export {
     CustomCacheImage,
     CustomStatusBar,
     Header,
+    ImageChooser,
     Input,
     LessonCard,
     ListItem,
@@ -53,5 +56,6 @@ export {
     Switch,
     Text,
     VideoPlayer,
-    Wrapper
+    Wrapper,
+    PdfViewer
 };

@@ -1,3 +1,4 @@
+import moment from 'moment';
 import React, { useEffect, useImperativeHandle, useState } from 'react';
 import {
     Dimensions,
@@ -23,6 +24,7 @@ type Props = {
     locale?: string;
     timeZoneOffsetInMinutes?: number;
     disMissModal?: () => void;
+    shouldAllowZeroTime?: boolean;
 };
 const TimePickerModal = React.forwardRef(
     (
@@ -31,12 +33,14 @@ const TimePickerModal = React.forwardRef(
             onSelect,
             locale,
             timeZoneOffsetInMinutes,
-            disMissModal
+            disMissModal,
+            shouldAllowZeroTime = true
         }: Props,
         ref
     ) => {
         const [showModal, setShowModal] = useState<boolean>(false);
         const [pickerTime, setPickerTime] = useState<Date>(selectedValue);
+
         useImperativeHandle(
             ref,
             () =>
@@ -66,7 +70,10 @@ const TimePickerModal = React.forwardRef(
                 <View style={styles.bottomedView} testID="timerPickerContainer">
                     <View
                         style={styles.mask}
-                        onTouchEnd={() => setShowModal(false)}
+                        onTouchEnd={() => {
+                            disMissModal && disMissModal();
+                            setShowModal(false);
+                        }}
                     >
                         <TouchableOpacity style={styles.modalHandle} />
                     </View>
@@ -83,7 +90,13 @@ const TimePickerModal = React.forwardRef(
                                 : 'Select Start Time'}
                         </Text>
                         <View style={styles.picker}>
-                            <View style={styles.textContainerStyle}>
+                            <View
+                                style={[
+                                    styles.textContainerStyle,
+                                    locale === 'en_GB' &&
+                                        styles.textContainerStyleLocal
+                                ]}
+                            >
                                 <Text style={styles.textStyle}>:</Text>
                             </View>
                             <DatePicker
@@ -101,6 +114,12 @@ const TimePickerModal = React.forwardRef(
                             />
                         </View>
                         <Button
+                            disabled={
+                                !shouldAllowZeroTime &&
+                                moment(pickerTime)
+                                    .utc(Platform.OS === 'ios')
+                                    .format('H:mm') === '0:00'
+                            }
                             block
                             primary
                             style={styles.saveBtn}
@@ -183,7 +202,6 @@ const styles = StyleSheet.create({
         marginBottom: 30
     },
     saveBtn: {
-        backgroundColor: Colors.button.app_button_green_background,
         borderRadius: 16,
         alignItems: 'center',
         justifyContent: 'center',
@@ -197,6 +215,9 @@ const styles = StyleSheet.create({
         bottom: 0,
         justifyContent: 'center',
         alignItems: 'center'
+    },
+    textContainerStyleLocal: {
+        left: '15%'
     },
     textStyle: {
         marginRight: Platform.OS === 'android' ? 52 : 72

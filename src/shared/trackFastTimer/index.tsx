@@ -1,14 +1,21 @@
 import moment from 'moment';
 import React, { FunctionComponent, useState } from 'react';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import {
+    StyleSheet,
+    TouchableOpacity,
+    View,
+    useWindowDimensions
+} from 'react-native';
 
 import { ClockIcon } from '@/assets/svgs';
+import useAccessibility from '@/hooks/useAccessibility';
 import { TrackSelectors } from '@/reducers/track';
 import { Text } from '@/shared';
 import { Colors } from '@/theme/colors';
 import { Constants } from '@/utils/constants';
 
 import ProgressCircle from '../progressCircle';
+import { Size } from '../text';
 
 type Props = {
     onPress?: () => void;
@@ -34,6 +41,10 @@ const TrackFastTimer: FunctionComponent<Props> = ({ onPress }: Props) => {
             .seconds(timeInSeconds || 0)
             .format('H:mm:ss');
     };
+
+    const { fontScale } = useAccessibility();
+
+    const { width: windowWidth } = useWindowDimensions();
 
     return (
         <View style={styles.progressCircle}>
@@ -67,7 +78,11 @@ const TrackFastTimer: FunctionComponent<Props> = ({ onPress }: Props) => {
                 }}
             >
                 <Text
-                    size={40}
+                    size={
+                        fontScale >= 1.2 && windowWidth < 700
+                            ? Size.X5Large
+                            : Size.X7Large
+                    }
                     fontWeight="700"
                     testID="trackFastTimeText"
                     color={

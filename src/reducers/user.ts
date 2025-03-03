@@ -152,6 +152,7 @@ export const getProfile = createAsyncThunk(
         }
     }
 );
+
 export const refreshProfileSession = createAsyncThunk(
     'user/refreshProfileSession',
     async (options: { fcmToken?: string }, { rejectWithValue }) => {
@@ -209,13 +210,11 @@ const userSlice = createSlice({
         searchFilterAction(state, action) {
             state.searchText = action.payload;
         },
-
         addSearchFilterData(state, { payload }: SearchFilterDataPayload) {
             if (payload) {
                 state.searchUserDataResult.push(payload);
             }
         },
-
         clearSearchText(state) {
             state.searchText = '';
         }

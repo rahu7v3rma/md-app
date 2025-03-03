@@ -12,6 +12,7 @@ import RBSheet from 'react-native-raw-bottom-sheet';
 import LogInput from '@/shared/logInput';
 import { Size } from '@/shared/text';
 import { Colors } from '@/theme/colors';
+import { Constants } from '@/utils/constants';
 
 type Props = {
     selectedDate?: string;
@@ -19,6 +20,7 @@ type Props = {
     onCalendarClosed?: () => void;
     disabled?: boolean;
     minDate?: string;
+    onPressInput?: () => void;
 };
 
 const LogInputDatePicker: FunctionComponent<Props> = ({
@@ -26,7 +28,8 @@ const LogInputDatePicker: FunctionComponent<Props> = ({
     onDateSelected,
     onCalendarClosed,
     disabled,
-    minDate
+    minDate,
+    onPressInput
 }: Props) => {
     const calendarRef = useRef(null);
     const [selectedDay, setSelectedDay] = useState(
@@ -59,6 +62,7 @@ const LogInputDatePicker: FunctionComponent<Props> = ({
     };
 
     const onPressLogInput = () => {
+        onPressInput && onPressInput();
         bottomSheetRef.current?.open();
         setTimeout(() => {
             calendarRef?.current?.scrollToDay(
@@ -96,7 +100,12 @@ const LogInputDatePicker: FunctionComponent<Props> = ({
                     testID="calendarContainer"
                 >
                     <View style={calendarStyle.calendarHeader}>
-                        <TextNative style={calendarStyle.selectDateText}>
+                        <TextNative
+                            style={calendarStyle.selectDateText}
+                            maxFontSizeMultiplier={
+                                Constants.maxFontSizeMultiplier
+                            }
+                        >
                             Select Date
                         </TextNative>
                         <TouchableOpacity
@@ -118,7 +127,12 @@ const LogInputDatePicker: FunctionComponent<Props> = ({
                             style={calendarStyle.buttonToday}
                             testID="todayButton"
                         >
-                            <TextNative style={calendarStyle.todayText}>
+                            <TextNative
+                                style={calendarStyle.todayText}
+                                maxFontSizeMultiplier={
+                                    Constants.maxFontSizeMultiplier
+                                }
+                            >
                                 Today
                             </TextNative>
                         </TouchableOpacity>
@@ -140,36 +154,22 @@ const LogInputDatePicker: FunctionComponent<Props> = ({
                             [selectedDay]: { selected: true }
                         }}
                         renderHeader={(date) => (
-                            <TouchableOpacity
-                                onPress={() => {
-                                    setSelectedDay(
-                                        moment().format('YYYY-MM-DD')
-                                    );
-                                    setValue(moment().format('DD MMM YYYY'));
-                                    onDateSelected(
-                                        new Date(moment().format('YYYY-MM-DD'))
-                                    );
-                                    calendarRef?.current?.scrollToDay(
-                                        new Date(
-                                            moment().startOf('month').toString()
-                                        ),
-                                        undefined,
-                                        true
-                                    );
-                                }}
+                            <TextNative
+                                style={calendarStyle.dateStyle}
+                                maxFontSizeMultiplier={
+                                    Constants.maxFontSizeMultiplier
+                                }
                             >
-                                <TextNative style={calendarStyle.dateStyle}>
-                                    {moment(
-                                        date.toISOString(),
-                                        'YYYY-MM-DD'
-                                    ).format('MMM')}
-                                    .{' '}
-                                    {moment(
-                                        date.toISOString(),
-                                        'YYYY-MM-DD'
-                                    ).format('YYYY')}
-                                </TextNative>
-                            </TouchableOpacity>
+                                {moment(
+                                    date.toISOString(),
+                                    'YYYY-MM-DD'
+                                ).format('MMM')}
+                                .{' '}
+                                {moment(
+                                    date.toISOString(),
+                                    'YYYY-MM-DD'
+                                ).format('YYYY')}
+                            </TextNative>
                         )}
                         onDayPress={(day) => {
                             onPressSelectDate(day.dateString);

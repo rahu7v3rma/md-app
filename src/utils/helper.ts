@@ -9,3 +9,8 @@ export const isTimerValid = (timer: number) => {
 export const isUnitValid = (unit: number) => {
     return unit > 0;
 };
+
+// Format number to restrict specified digits max after decimal point
+export const formatNumber = (num: number, digits = 2) => {
+    return +num.toFixed(digits);
+};

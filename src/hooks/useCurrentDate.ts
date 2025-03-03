@@ -1,10 +1,14 @@
+import moment from 'moment';
 import { useCallback, useEffect, useState } from 'react';
 
 const useCurrentDate = () => {
     const [currentDate, setCurrentDate] = useState<Date>();
+    const [currentDateFormatted, setCurrentDateFormatted] = useState<string>();
 
     const updateCurrentDate = useCallback(() => {
-        setCurrentDate(new Date());
+        const updatedDate = new Date();
+        setCurrentDate(updatedDate);
+        setCurrentDateFormatted(moment(new Date()).format('YYYY-MM-DD'));
     }, []);
 
     const scheduleCurrentDateUpdate = useCallback(() => {
@@ -46,7 +50,7 @@ const useCurrentDate = () => {
         };
     }, [updateCurrentDate, scheduleCurrentDateUpdate]);
 
-    return currentDate;
+    return { currentDate, currentDateFormatted };
 };
 
 export default useCurrentDate;

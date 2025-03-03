@@ -1,19 +1,14 @@
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import moment from 'moment';
 import React, { FunctionComponent, useCallback, useRef, useState } from 'react';
-import {
-    Platform,
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    View
-} from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import Toast from 'react-native-toast-message';
 
 import BackIcon from '@/assets/svgs/Back';
 import { useAppDispatch } from '@/hooks';
 import { RootNavigationProp, RootStackParamList } from '@/navigation';
+import ImagePicker from '@/pages/logMeal/components/imagePicker';
 import {
     createLogMeal,
     deleteMealLog,
@@ -30,7 +25,6 @@ import {
     LogTimePicker,
     Text
 } from '@/shared';
-import ImagePicker from '@/shared/imagePicker';
 import LogInputDatePicker from '@/shared/logInputDatePicker';
 import { Size } from '@/shared/text';
 import { Colors } from '@/theme/colors';
@@ -51,10 +45,55 @@ const LogMeal: FunctionComponent<Props> = ({}: Props) => {
             : moment().toDate()
     );
     const [image, setImage] = useState({ data: '', mime: '' });
+    const [bottomSheetActive, setBottomSheetActive] = useState<boolean>(false);
 
     const { userInfo } = UserSelectors();
 
     const [submitInProgress, setSubmitInProgress] = useState(false);
+
+    const createOrUpdateMealPlan = useCallback(
+        (uploadedImageName: string) => {
+            dispatch(
+                route?.params?.id
+                    ? updateLogMeal({
+                          id: route?.params?.id,
+                          logTime: moment(dateTime).format(
+                              'YYYY-MM-DDTHH:mm:[00]'
+                          ),
+                          image: uploadedImageName
+                      })
+                    : createLogMeal({
+                          logTime: moment(dateTime).format(
+                              'YYYY-MM-DDTHH:mm:[00]'
+                          ),
+                          image: uploadedImageName
+                      })
+            )
+                .unwrap()
+                .then(() => {
+                    dispatch(getDailyCompletedLogs({ date: new Date() }));
+
+                    Toast.show({
+                        type: 'successResponse',
+                        text1: route?.params?.id
+                            ? 'log updated successfully'
+                            : 'Logged Successfully',
+                        position: 'bottom'
+                    });
+                    navigation.navigate('Main');
+                })
+                .catch(() => {
+                    Toast.show({
+                        type: 'errorResponse',
+                        text1: 'Something went wrong!',
+                        position: 'bottom'
+                    });
+                })
+                .finally(() => setSubmitInProgress(false));
+        },
+        [route?.params?.id, dispatch, dateTime, navigation]
+    );
+
     const onSubmit = useCallback(() => {
         if (moment(dateTime).isAfter(moment())) {
             Toast.show({
@@ -66,63 +105,23 @@ const LogMeal: FunctionComponent<Props> = ({}: Props) => {
         }
 
         setSubmitInProgress(true);
-        uploadImage(image.data!, image.mime, userInfo!.username, false)
-            .then((uploadedImageName) => {
-                dispatch(
-                    route?.params?.id
-                        ? updateLogMeal({
-                              id: route?.params?.id,
-                              logTime: moment(dateTime).format(
-                                  'YYYY-MM-DDTHH:mm:[00]'
-                              ),
-                              image: uploadedImageName
-                          })
-                        : createLogMeal({
-                              logTime: moment(dateTime).format(
-                                  'YYYY-MM-DDTHH:mm:[00]'
-                              ),
-                              image: uploadedImageName
-                          })
-                )
-                    .unwrap()
-                    .then(() => {
-                        dispatch(getDailyCompletedLogs({ date: new Date() }));
-
-                        Toast.show({
-                            type: 'successResponse',
-                            text1: route?.params?.id
-                                ? 'log updated successfully'
-                                : 'Logged Successfully',
-                            position: 'bottom'
-                        });
-                        navigation.navigate('Main');
-                    })
-                    .catch(() => {
-                        Toast.show({
-                            type: 'errorResponse',
-                            text1: 'Something went wrong!',
-                            position: 'bottom'
-                        });
-                    })
-                    .finally(() => setSubmitInProgress(false));
-            })
-            .catch(() => {
-                Toast.show({
-                    type: 'errorResponse',
-                    text1: 'Image upload failed, please try again',
-                    position: 'bottom'
-                });
-            })
-            .finally(() => setSubmitInProgress(false));
-    }, [
-        dateTime,
-        dispatch,
-        route?.params?.id,
-        image.data,
-        image.mime,
-        navigation,
-        userInfo
-    ]);
+        if (!image.data) {
+            createOrUpdateMealPlan('');
+        } else {
+            uploadImage(image.data!, image.mime, userInfo!.username, false)
+                .then((uploadedImageName) => {
+                    createOrUpdateMealPlan(uploadedImageName);
+                })
+                .catch(() => {
+                    Toast.show({
+                        type: 'errorResponse',
+                        text1: 'Image upload failed, please try again',
+                        position: 'bottom'
+                    });
+                })
+                .finally(() => setSubmitInProgress(false));
+        }
+    }, [dateTime, image.data, image.mime, userInfo, createOrUpdateMealPlan]);
 
     const onDeleteMealLog = useCallback(() => {
         dispatch(
@@ -152,122 +151,117 @@ const LogMeal: FunctionComponent<Props> = ({}: Props) => {
     }, [route?.params?.id, dispatch, navigation]);
 
     return (
-        <>
-            <SafeAreaView style={styles.top} />
-            <View style={styles.root}>
-                <CustomStatusBar />
-                <Header
-                    title="Log a Meal"
-                    leftIcon={BackIcon}
-                    onLeftBtnPress={() =>
-                        route?.params
-                            ? onDiscardBottomSheetRef?.current?.open()
-                            : navigation.pop()
-                    }
-                    rightBtnText={route?.params ? 'Delete' : ''}
-                    onRightBtnPress={() =>
-                        onDeleteBottomSheetRef?.current?.open()
-                    }
-                />
-                <ScrollView style={styles.contentWrapper}>
-                    <View style={styles.content}>
-                        <View>
-                            <Text
-                                style={styles.title}
-                                fontWeight="700"
-                                size={Size.Large}
-                            >
-                                What did you eat?
-                            </Text>
-                            <ImagePicker
-                                onImagePicked={(data: string, mime: string) =>
-                                    setImage({ data, mime })
-                                }
-                                imageSource={route?.params?.image}
-                            />
-                            <LogTimePicker
-                                fieldName="Time"
-                                selectedValue={dateTime}
-                                onSelect={(selTime: Date) =>
-                                    // create a new date to avoid cases in
-                                    // which a Date object is manipulated and
-                                    // react doesn't see it as a state update
-                                    setDateTime(new Date(selTime))
-                                }
-                            />
-                            <LogInputDatePicker
-                                selectedDate={moment(dateTime).format(
-                                    'YYYY-MM-DD'
-                                )}
-                                onDateSelected={(selDate: Date) => {
-                                    const newDateTime = moment(selDate);
-                                    const oldDateTime = moment(dateTime);
-                                    newDateTime.set('hour', oldDateTime.hour());
-                                    newDateTime.set(
-                                        'minute',
-                                        oldDateTime.minute()
-                                    );
-                                    setDateTime(newDateTime.toDate());
-                                }}
-                            />
-                        </View>
-                    </View>
-                </ScrollView>
-                <View style={styles.logBtnWrapper}>
-                    <Button
-                        testID="submitButton"
-                        primary
-                        bordered={false}
-                        onPress={onSubmit}
-                        style={styles.logBtn}
-                        disabled={submitInProgress}
-                    >
-                        <Text color={Colors.text.white}>
-                            {route?.params ? 'Save' : 'Log a Meal'}
+        <SafeAreaView style={styles.root}>
+            <CustomStatusBar />
+            <Header
+                title="Log a Meal"
+                leftIcon={BackIcon}
+                onLeftBtnPress={() =>
+                    route?.params
+                        ? onDiscardBottomSheetRef?.current?.open()
+                        : navigation.pop()
+                }
+                rightBtnText={route?.params ? 'Delete' : ''}
+                onRightBtnPress={() => onDeleteBottomSheetRef?.current?.open()}
+            />
+            <ScrollView style={styles.contentWrapper}>
+                <View style={styles.content}>
+                    <View>
+                        <Text
+                            style={styles.title}
+                            fontWeight="700"
+                            size={Size.Large}
+                        >
+                            What did you eat?
                         </Text>
-                    </Button>
+                        <ImagePicker
+                            onImagePicked={(data: string, mime: string) =>
+                                setImage({ data, mime })
+                            }
+                            imageSource={route?.params?.image}
+                        />
+                        <LogTimePicker
+                            fieldName="Time"
+                            selectedValue={dateTime}
+                            onSelect={(selTime: Date) =>
+                                // create a new date to avoid cases in
+                                // which a Date object is manipulated and
+                                // react doesn't see it as a state update
+                                setDateTime(new Date(selTime))
+                            }
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onDismissBottomSheet={() =>
+                                setBottomSheetActive(false)
+                            }
+                        />
+                        <LogInputDatePicker
+                            selectedDate={moment(dateTime).format('YYYY-MM-DD')}
+                            onDateSelected={(selDate: Date) => {
+                                const newDateTime = moment(selDate);
+                                const oldDateTime = moment(dateTime);
+                                newDateTime.set('hour', oldDateTime.hour());
+                                newDateTime.set('minute', oldDateTime.minute());
+                                setDateTime(newDateTime.toDate());
+                            }}
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onCalendarClosed={() => setBottomSheetActive(false)}
+                        />
+                    </View>
                 </View>
-                <ConfirmationDialogue
-                    bottomSheetRef={onDeleteBottomSheetRef}
-                    title={Constants.confirmationDialog.title.delete}
-                    dismissBtnTitle={'No'}
-                    confirmBtnTitle={'Delete'}
-                    onDismissBtnHandler={() => {
-                        onDeleteBottomSheetRef.current?.close();
-                    }}
-                    onConfirmBtnHandler={() => {
-                        onDeleteMealLog();
-                        onDeleteBottomSheetRef.current?.close();
-                    }}
-                    confirmBtnStyles={{
-                        backgroundColor: Colors.button.app_button_red_background
-                    }}
-                />
-                <ConfirmationDialogue
-                    bottomSheetRef={onDiscardBottomSheetRef}
-                    title={Constants.confirmationDialog.title.discard}
-                    dismissBtnTitle={'No'}
-                    confirmBtnTitle={'Yes'}
-                    onDismissBtnHandler={() => {
-                        onDiscardBottomSheetRef.current?.close();
-                    }}
-                    onConfirmBtnHandler={() => {
-                        onDiscardBottomSheetRef.current?.close();
-                        navigation.pop();
-                    }}
-                />
+            </ScrollView>
+            <View style={styles.logBtnWrapper}>
+                <Button
+                    testID="submitButton"
+                    primary
+                    bordered={false}
+                    onPress={onSubmit}
+                    style={styles.logBtn}
+                    disabled={submitInProgress || !image.data}
+                >
+                    <Text color={Colors.text.white}>
+                        {route?.params ? 'Save' : 'Log a Meal'}
+                    </Text>
+                </Button>
             </View>
-        </>
+            <ConfirmationDialogue
+                bottomSheetRef={onDeleteBottomSheetRef}
+                title={Constants.confirmationDialog.title.delete}
+                dismissBtnTitle={'No'}
+                confirmBtnTitle={'Delete'}
+                onDismissBtnHandler={() => {
+                    onDeleteBottomSheetRef.current?.close();
+                }}
+                onConfirmBtnHandler={() => {
+                    onDeleteMealLog();
+                    onDeleteBottomSheetRef.current?.close();
+                }}
+                confirmBtnStyles={{
+                    backgroundColor: Colors.button.app_button_red_background
+                }}
+            />
+            <ConfirmationDialogue
+                bottomSheetRef={onDiscardBottomSheetRef}
+                title={Constants.confirmationDialog.title.discard}
+                dismissBtnTitle={'No'}
+                confirmBtnTitle={'Yes'}
+                onDismissBtnHandler={() => {
+                    onDiscardBottomSheetRef.current?.close();
+                }}
+                onConfirmBtnHandler={() => {
+                    onDiscardBottomSheetRef.current?.close();
+                    navigation.pop();
+                }}
+            />
+        </SafeAreaView>
     );
 };
 
 const styles = StyleSheet.create({
-    top: {
-        backgroundColor: Colors.extras.white
-    },
     root: {
         flex: 1,
-        backgroundColor: Colors.theme.log_page_background_color
+        backgroundColor: Colors.extras.white
     },
     contentWrapper: {
         flex: 1,
@@ -286,7 +280,7 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     logBtnWrapper: {
-        paddingBottom: Platform.OS === 'ios' ? 45 : 60,
+        paddingBottom: 20,
         paddingHorizontal: 20
     },
     logBtn: {

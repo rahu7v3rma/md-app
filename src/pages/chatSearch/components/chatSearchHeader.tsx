@@ -48,6 +48,7 @@ const ChatSearchHeader: FunctionComponent<Props> = ({ onBack }: Props) => {
                 textInputStyle={styles.textInputStyle}
                 placeholder={'Search'}
                 onChangeText={(text) => onChange(text)}
+                autoFocus={true}
             />
             <TouchableOpacity
                 onPress={onCloseClearText}

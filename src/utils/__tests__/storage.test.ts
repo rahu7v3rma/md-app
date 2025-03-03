@@ -1,22 +1,9 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import {
-    getCachedFCMPushToken,
-    hasAppLaunched,
-    setCachedFCMPushToken
-} from '../storage';
+import { getCachedFCMPushToken, setCachedFCMPushToken } from '../storage';
 
 beforeEach(() => {
     AsyncStorage.clear();
-});
-
-test('should return false for hasAppLaunched if it has not been set before', async () => {
-    expect(await hasAppLaunched()).toBe(false);
-});
-
-test('should return true for hasAppLaunched if it has been set before', async () => {
-    await AsyncStorage.setItem('hasLaunched', 'true');
-    expect(await hasAppLaunched()).toBe(true);
 });
 
 test('should return null for getCachedFCMPushToken if it has not been set before', async () => {

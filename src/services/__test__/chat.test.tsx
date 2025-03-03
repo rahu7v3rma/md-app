@@ -12,7 +12,7 @@ const user_id =
     '1ba586c0b89202f7307b61f1229330978a843afc98589ffc6a62f209225d3528';
 const apiKey = '9h8revtjvfgt';
 const chatProfile_token =
-    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWJhNTg2YzBiODkyMDJmNzMwN2I2MWYxMjI5MzMwOTc4YTg0M2FmYzk4NTg5ZmZjNmE2MmYyMDkyMjVkMzUyOCIsImV4cCI6MTY5OTAxMDM3OX0.c24e8bhf820zqRDXCKx7HCh77VlfOGG4Gxg3SbkqdPs';
+    'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWJhNTg2YzBiODkyMDJmNzMwN2I2MWYxMjI5MzMwOTc4YTg0M2FmYzk4NTg5ZmZjNmE2MmYyMDkyMjVkMzUyOCIsImV4cCI6MTcwNDQ1MzcxMX0.nVz6tlNvuULvtsUxt6UleXOjnm_dcnM-M7OZkW8KWO8';
 
 export const client = StreamChat.getInstance(apiKey);
 

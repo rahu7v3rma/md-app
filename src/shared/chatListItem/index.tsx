@@ -51,9 +51,9 @@ const ChatListItem: FunctionComponent<Props> = ({
             </View>
             <View style={styles.secondCol}>
                 <Text
-                    size={Size.XXSmall}
-                    fontWeight="bold"
-                    color={Colors.text.mainDarker}
+                    size={Size.XSmall}
+                    fontWeight="700"
+                    color={Colors.text.black}
                 >
                     {label}
                 </Text>

@@ -1,9 +1,15 @@
-import React, { FunctionComponent, useEffect, useMemo, useState } from 'react';
+import React, {
+    FunctionComponent,
+    useEffect,
+    useMemo,
+    useRef,
+    useState
+} from 'react';
 import {
     Dimensions,
-    Platform,
     StyleProp,
     StyleSheet,
+    TextInput,
     TouchableOpacity,
     View,
     ViewStyle
@@ -11,36 +17,32 @@ import {
 import {
     FileUploadPreview,
     ImageUploadPreview,
-    MessageInput,
-    useAttachmentPickerContext,
-    useMessageInputContext
+    useMessageInputContext,
+    AutoCompleteInput
 } from 'stream-chat-react-native';
 
 import Camera from '@/assets/svgs/Camera';
 import Send from '@/assets/svgs/Send';
 import { Colors } from '@/theme/colors';
+import { Constants } from '@/utils/constants';
+
+import MessageQuoted from './messageQuoted';
 
 type Props = Record<string, never>;
 
 const Input: FunctionComponent<Props> = ({}: Props) => {
     const {
         sendMessage,
-        setText,
         text,
         toggleAttachmentPicker,
         closeAttachmentPicker,
         imageUploads,
-        fileUploads
+        fileUploads,
+        quotedMessage
     } = useMessageInputContext();
-    const [height, setHeight] = useState<number>(
-        Platform.OS === 'android' ? 26 : 30
-    );
-    const { setBottomInset } = useAttachmentPickerContext();
+
     const [refreshInput, setRefreshInput] = useState(0);
 
-    useEffect(() => {
-        setBottomInset(Platform.OS === 'ios' ? 100 : 50);
-    });
     const canSend = useMemo(() => {
         return (
             imageUploads.filter(
@@ -54,11 +56,26 @@ const Input: FunctionComponent<Props> = ({}: Props) => {
         );
     }, [imageUploads, fileUploads]);
 
-    return (
-        <View style={styles.wrapper}>
-            {imageUploads.length > 0 && <ImageUploadPreview />}
-            {fileUploads.length > 0 && <FileUploadPreview />}
+    const autoCompleteInputRef = useRef<TextInput>(null);
+    useEffect(() => {
+        if (quotedMessage) {
+            setTimeout(() => {
+                autoCompleteInputRef.current?.focus();
+            }, 1000);
+        }
+    }, [quotedMessage]);
 
+    return (
+        <View style={styles.fullWidth}>
+            <ImageUploadPreview />
+            <FileUploadPreview />
+            {typeof quotedMessage !== 'boolean' && (
+                <MessageQuoted
+                    userImage={quotedMessage.user?.image}
+                    attachments={quotedMessage.attachments}
+                    text={quotedMessage.text}
+                />
+            )}
             <View style={styles.messageInputContainer}>
                 <TouchableOpacity
                     testID="cameraButton"
@@ -71,34 +88,13 @@ const Input: FunctionComponent<Props> = ({}: Props) => {
                 >
                     <Camera />
                 </TouchableOpacity>
-
                 <View style={styles.messageInputView}>
-                    <MessageInput
+                    <AutoCompleteInput
+                        setInputBoxRef={autoCompleteInputRef}
                         additionalTextInputProps={{
-                            value: text,
-                            placeholderTextColor: Colors.text.gray,
-                            onChangeText: (text1) => setText(text1),
-                            multiline: true,
-                            numberOfLines: 5,
-                            style: [styles.messageInput, { maxHeight: height }],
-                            placeholder: 'Write a message',
-                            onContentSizeChange: (event) => {
-                                if (
-                                    height >= 24 &&
-                                    event.nativeEvent.contentSize.height < 140
-                                ) {
-                                    setHeight(
-                                        event.nativeEvent.contentSize.height +
-                                            Number(5)
-                                    );
-                                }
-                            }
+                            maxFontSizeMultiplier:
+                                Constants.maxFontSizeMultiplier
                         }}
-                        key={refreshInput}
-                        showMoreOptions={false}
-                        InputButtons={() => null}
-                        ShowThreadMessageInChannelButton={() => null}
-                        SendButton={() => null}
                     />
                     <TouchableOpacity
                         disabled={!canSend}
@@ -113,11 +109,12 @@ const Input: FunctionComponent<Props> = ({}: Props) => {
                             roundedIconBtnStyles()
                         ]}
                         onPress={() => {
-                            sendMessage().then(() => {
-                                setHeight(35);
-                                setRefreshInput(refreshInput + 1);
-                                closeAttachmentPicker();
-                            });
+                            if (text.trim()) {
+                                sendMessage().then(() => {
+                                    setRefreshInput(refreshInput + 1);
+                                    closeAttachmentPicker();
+                                });
+                            }
                         }}
                     >
                         <Send />
@@ -140,7 +137,9 @@ const styles = StyleSheet.create({
     cameraIcon: {
         bottom: 6
     },
-    bottomStyle: { bottom: Platform.OS === 'ios' ? 0 : 5 },
+    bottomStyle: {
+        bottom: 0
+    },
     attachementContainer: {
         position: 'absolute',
         width: Dimensions.get('screen').width
@@ -174,7 +173,7 @@ const styles = StyleSheet.create({
         borderStyle: 'solid',
         borderRadius: 16,
         flex: 1,
-        paddingBottom: Platform.OS === 'ios' ? 5 : 0,
+        padding: 5,
         alignItems: 'center',
         justifyContent: 'center'
     },
@@ -185,5 +184,15 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: Colors.text.black,
         paddingVertical: 0
+    },
+    fullWidth: {
+        width: '100%'
+    },
+    row: {
+        flexDirection: 'row',
+        justifyContent: 'space-between'
+    },
+    inputContainer: {
+        height: 40
     }
 });

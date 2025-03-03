@@ -54,6 +54,7 @@ const LogFast: FunctionComponent<Props> = ({}: Props) => {
             : moment().toDate()
     );
     const [submitInProgress, setSubmitInProgress] = useState(false);
+    const [bottomSheetActive, setBottomSheetActive] = useState<boolean>(false);
     const onSubmit = useCallback(() => {
         if (!isTimerValid(timer)) {
             Toast.show({
@@ -164,125 +165,120 @@ const LogFast: FunctionComponent<Props> = ({}: Props) => {
     }, [route?.params?.id, dispatch, navigation]);
 
     return (
-        <>
-            <SafeAreaView style={styles.top} />
-            <View style={styles.root}>
-                <CustomStatusBar />
-                <Header
-                    leftIcon={BackIcon}
-                    onLeftBtnPress={() =>
-                        route?.params
-                            ? onDiscardBottomSheetRef?.current?.open()
-                            : navigation.pop()
-                    }
-                    title="Log a Fast"
-                    rightBtnText={route?.params ? 'Delete' : ''}
-                    onRightBtnPress={() =>
-                        onDeleteBottomSheetRef?.current?.open()
-                    }
-                />
-                <ScrollView style={styles.contentWrapper}>
-                    <View style={styles.content}>
-                        <View>
-                            <LogUnitPicker
-                                title="Tell us about your fast"
-                                value={timer}
-                                type="timer"
-                                onDecrementHandler={() =>
-                                    setTimer(timer > 0 ? timer - 30 : 0)
-                                }
-                                onIncrementHandler={() => setTimer(timer + 30)}
-                                onChangeHandler={setTimer}
-                            />
-                            <LogTimePicker
-                                fieldName="Time"
-                                selectedValue={dateTime}
-                                onSelect={(selTime: Date) =>
-                                    // create a new date to avoid cases in
-                                    // which a Date object is manipulated and
-                                    // react doesn't see it as a state update
-                                    setDateTime(new Date(selTime))
-                                }
-                                timeZoneOffsetInMinutes={
-                                    Platform.OS === 'android' ? 0 : undefined
-                                }
-                                locale="en_GB"
-                            />
-                            <LogInputDatePicker
-                                selectedDate={moment(dateTime).format(
-                                    'YYYY-MM-DD'
-                                )}
-                                onDateSelected={(selDate: Date) => {
-                                    const newDateTime = moment(selDate);
-                                    const oldDateTime = moment(dateTime);
-                                    newDateTime.set('hour', oldDateTime.hour());
-                                    newDateTime.set(
-                                        'minute',
-                                        oldDateTime.minute()
-                                    );
-                                    setDateTime(newDateTime.toDate());
-                                }}
-                            />
-                        </View>
+        <SafeAreaView style={styles.root}>
+            <CustomStatusBar />
+            <Header
+                leftIcon={BackIcon}
+                onLeftBtnPress={() =>
+                    route?.params
+                        ? onDiscardBottomSheetRef?.current?.open()
+                        : navigation.pop()
+                }
+                title="Log a Fast"
+                rightBtnText={route?.params ? 'Delete' : ''}
+                onRightBtnPress={() => onDeleteBottomSheetRef?.current?.open()}
+            />
+            <ScrollView style={styles.contentWrapper}>
+                <View style={styles.content}>
+                    <View>
+                        <LogUnitPicker
+                            title="Tell us about your fast"
+                            value={timer}
+                            type="timer"
+                            onDecrementHandler={() =>
+                                setTimer(timer > 0 ? timer - 1 : 0)
+                            }
+                            onIncrementHandler={() => setTimer(timer + 1)}
+                            onChangeHandler={setTimer}
+                        />
+                        <LogTimePicker
+                            fieldName="Time"
+                            selectedValue={dateTime}
+                            onSelect={(selTime: Date) =>
+                                // create a new date to avoid cases in
+                                // which a Date object is manipulated and
+                                // react doesn't see it as a state update
+                                setDateTime(new Date(selTime))
+                            }
+                            timeZoneOffsetInMinutes={
+                                Platform.OS === 'android' ? 0 : undefined
+                            }
+                            locale="en_GB"
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onDismissBottomSheet={() =>
+                                setBottomSheetActive(false)
+                            }
+                        />
+                        <LogInputDatePicker
+                            selectedDate={moment(dateTime).format('YYYY-MM-DD')}
+                            onDateSelected={(selDate: Date) => {
+                                const newDateTime = moment(selDate);
+                                const oldDateTime = moment(dateTime);
+                                newDateTime.set('hour', oldDateTime.hour());
+                                newDateTime.set('minute', oldDateTime.minute());
+                                setDateTime(newDateTime.toDate());
+                            }}
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onCalendarClosed={() => setBottomSheetActive(false)}
+                        />
                     </View>
-                </ScrollView>
-                <View style={styles.logBtnWrapper}>
-                    <Button
-                        testID="submitButton"
-                        primary
-                        onPress={onSubmit}
-                        style={styles.logBtn}
-                        bordered={false}
-                        disabled={submitInProgress}
-                    >
-                        <Text color={Colors.text.white} fontWeight="600">
-                            {route?.params ? 'Save' : 'Log a Fast'}
-                        </Text>
-                    </Button>
                 </View>
-                <ConfirmationDialogue
-                    bottomSheetRef={onDeleteBottomSheetRef}
-                    title={Constants.confirmationDialog.title.delete}
-                    dismissBtnTitle={'No'}
-                    confirmBtnTitle={'Delete'}
-                    onDismissBtnHandler={() => {
-                        onDeleteBottomSheetRef.current?.close();
-                    }}
-                    onConfirmBtnHandler={() => {
-                        onDeleteFastLog();
-                        onDeleteBottomSheetRef.current?.close();
-                    }}
-                    confirmBtnStyles={{
-                        backgroundColor: Colors.button.app_button_red_background
-                    }}
-                />
-                <ConfirmationDialogue
-                    bottomSheetRef={onDiscardBottomSheetRef}
-                    title={Constants.confirmationDialog.title.discard}
-                    dismissBtnTitle={'No'}
-                    confirmBtnTitle={'Yes'}
-                    onDismissBtnHandler={() => {
-                        onDiscardBottomSheetRef.current?.close();
-                    }}
-                    onConfirmBtnHandler={() => {
-                        onDiscardBottomSheetRef.current?.close();
-                        navigation.pop();
-                    }}
-                />
+            </ScrollView>
+            <View style={styles.logBtnWrapper}>
+                <Button
+                    testID="submitButton"
+                    primary
+                    onPress={onSubmit}
+                    style={styles.logBtn}
+                    bordered={false}
+                    disabled={submitInProgress}
+                >
+                    <Text color={Colors.text.white} fontWeight="600">
+                        {route?.params ? 'Save' : 'Log a Fast'}
+                    </Text>
+                </Button>
             </View>
-        </>
+            <ConfirmationDialogue
+                bottomSheetRef={onDeleteBottomSheetRef}
+                title={Constants.confirmationDialog.title.delete}
+                dismissBtnTitle={'No'}
+                confirmBtnTitle={'Delete'}
+                onDismissBtnHandler={() => {
+                    onDeleteBottomSheetRef.current?.close();
+                }}
+                onConfirmBtnHandler={() => {
+                    onDeleteFastLog();
+                    onDeleteBottomSheetRef.current?.close();
+                }}
+                confirmBtnStyles={{
+                    backgroundColor: Colors.button.app_button_red_background
+                }}
+            />
+            <ConfirmationDialogue
+                bottomSheetRef={onDiscardBottomSheetRef}
+                title={Constants.confirmationDialog.title.discard}
+                dismissBtnTitle={'No'}
+                confirmBtnTitle={'Yes'}
+                onDismissBtnHandler={() => {
+                    onDiscardBottomSheetRef.current?.close();
+                }}
+                onConfirmBtnHandler={() => {
+                    onDiscardBottomSheetRef.current?.close();
+                    navigation.pop();
+                }}
+            />
+        </SafeAreaView>
     );
 };
 
 export default LogFast;
 
 const styles = StyleSheet.create({
-    top: {
-        backgroundColor: Colors.extras.white
-    },
     root: {
         flex: 1,
-        backgroundColor: Colors.theme.log_page_background_color
+        backgroundColor: Colors.extras.white
     },
     contentWrapper: {
         flex: 1,
@@ -301,7 +297,7 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     logBtnWrapper: {
-        paddingBottom: Platform.OS === 'ios' ? 45 : 60,
+        paddingBottom: 20,
         paddingHorizontal: 20
     },
     logBtn: {

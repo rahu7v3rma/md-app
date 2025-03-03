@@ -19,10 +19,7 @@ import { MessageResponse } from 'stream-chat';
 import {
     ChannelAvatar,
     ChannelList,
-    ChannelPreviewMessage,
     ChannelPreviewMessengerProps,
-    ChannelPreviewStatus,
-    ChannelPreviewTitle,
     ChannelPreviewUnreadCount,
     Chat,
     DefaultStreamChatGenerics,
@@ -137,6 +134,12 @@ const _renderChannelPreview = ({
         channel
     });
 
+    const latestMessageCreatedAt =
+        latestMessagePreview.messageObject?.created_at;
+    const latestMessageDate = latestMessageCreatedAt
+        ? moment(latestMessageCreatedAt).format('MM/DD/YYYY')
+        : '';
+
     return (
         <TouchableOpacity
             onPress={() => {
@@ -159,23 +162,33 @@ const _renderChannelPreview = ({
             <ChannelAvatar channel={channel} />
             <View style={styles.channelPreviewInfo}>
                 <View style={styles.channelPreviewTitle}>
-                    <ChannelPreviewTitle
-                        channel={channel}
-                        displayName={displayTitle || ''}
-                    />
+                    <Text
+                        size={Size.XSmall}
+                        fontWeight="600"
+                        color={Colors.text.black}
+                        testID="displayTitle"
+                    >
+                        {displayTitle}
+                    </Text>
                     <ChannelPreviewUnreadCount
                         channel={channel}
                         maxUnreadCount={maxUnreadCount || 0}
                     />
                 </View>
                 <View style={styles.channelPreviewMessage}>
-                    <ChannelPreviewMessage
-                        latestMessagePreview={latestMessagePreview}
-                    />
-                    <ChannelPreviewStatus
-                        latestMessagePreview={latestMessagePreview}
-                        channel={channel}
-                    />
+                    <View style={styles.latestMessagePreviewView}>
+                        {latestMessagePreview.previews.map((preview, index) => (
+                            <Text key={index}>{preview.text}</Text>
+                        ))}
+                    </View>
+                    <Text
+                        size={Size.XXXSmall}
+                        fontWeight="400"
+                        color={Colors.text.gray}
+                        testID="messageDate"
+                    >
+                        {latestMessageDate}
+                    </Text>
                 </View>
             </View>
         </TouchableOpacity>
@@ -560,5 +573,8 @@ const styles = StyleSheet.create({
         marginTop: 4,
         flexDirection: 'row',
         justifyContent: 'space-between'
+    },
+    latestMessagePreviewView: {
+        flexDirection: 'row'
     }
 });

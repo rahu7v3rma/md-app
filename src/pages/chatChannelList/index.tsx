@@ -12,6 +12,7 @@ import { ChannelList, Chat, OverlayProvider } from 'stream-chat-react-native';
 import { SearchIcon } from '@/assets/svgs';
 import { useAppChat } from '@/contexts/appChat';
 import { RootNavigationProp } from '@/navigation';
+import { UserSelectors } from '@/reducers/user';
 import { CustomStatusBar, Header } from '@/shared';
 import { Colors } from '@/theme/colors';
 
@@ -23,6 +24,7 @@ const ChatChannelList: FunctionComponent<Props> = ({}: Props) => {
     const navigation = useNavigation<RootNavigationProp>();
 
     const { chatClient } = useAppChat();
+    const { coach, hasCoachChat } = UserSelectors();
 
     const goToChatSearch = () => {
         navigation.navigate('ChatSearch');
@@ -50,9 +52,51 @@ const ChatChannelList: FunctionComponent<Props> = ({}: Props) => {
                         <Chat client={chatClient}>
                             <ChannelList
                                 Preview={CustomChannelList}
-                                filters={{
-                                    members: { $in: [chatClient.userID] }
-                                }}
+                                filters={
+                                    coach && !hasCoachChat
+                                        ? {
+                                              $and: [
+                                                  {
+                                                      members: {
+                                                          $in: [
+                                                              chatClient.userID
+                                                          ]
+                                                      }
+                                                  },
+                                                  {
+                                                      $or: [
+                                                          {
+                                                              $and: [
+                                                                  {
+                                                                      member_count:
+                                                                          {
+                                                                              $eq: 2
+                                                                          }
+                                                                  },
+                                                                  {
+                                                                      members: {
+                                                                          $nin: [
+                                                                              coach.chat_id
+                                                                          ]
+                                                                      }
+                                                                  }
+                                                              ]
+                                                          },
+                                                          {
+                                                              member_count: {
+                                                                  $gt: 2
+                                                              }
+                                                          }
+                                                      ]
+                                                  }
+                                              ]
+                                          }
+                                        : {
+                                              members: {
+                                                  $in: [chatClient.userID]
+                                              }
+                                          }
+                                }
                                 additionalFlatListProps={{
                                     contentContainerStyle: {
                                         backgroundColor: Colors.extras.page_bg,

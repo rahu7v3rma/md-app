@@ -10,7 +10,6 @@ import {
     TouchableWithoutFeedback,
     View
 } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Toast from 'react-native-toast-message';
 
 import { EyeIcon, EyeOpenIcon, LoginLogoIcon } from '@/assets/svgs';
@@ -30,7 +29,6 @@ const { height: windowHeight } = Dimensions.get('window');
 const Login: FunctionComponent<Props> = ({}: Props) => {
     const navigation = useNavigation<RootNavigationProp>();
     const dispatch = useAppDispatch();
-    const insets = useSafeAreaInsets();
 
     const [isPassVisible, setIsPassVisible] = useState(false);
     const [userEmail, setUserEmail] = useState<string>('');
@@ -65,20 +63,20 @@ const Login: FunctionComponent<Props> = ({}: Props) => {
 
     return (
         <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-            <SafeAreaView style={loginStyle.root}>
+            <SafeAreaView style={styles.root}>
                 <CustomStatusBar />
                 <ScrollView
-                    contentContainerStyle={{
-                        ...loginStyle.scrollViewContentContainerStyle,
-                        paddingBottom: insets.bottom
-                    }}
+                    contentContainerStyle={
+                        styles.scrollViewContentContainerStyle
+                    }
                 >
-                    <View style={loginStyle.inputWrapper}>
+                    <View style={styles.inputWrapper}>
                         <LoginLogoIcon />
                         <Text
-                            style={loginStyle.headerText}
+                            style={styles.headerText}
                             size={Size.XLarge}
                             fontWeight="700"
+                            numberOfLines={2}
                             color={Colors.text.mainDarker}
                         >
                             {'Welcome to\nMastering Programs'}
@@ -90,7 +88,7 @@ const Login: FunctionComponent<Props> = ({}: Props) => {
                             onChangeText={(val) => {
                                 setUserEmail(val);
                             }}
-                            textInputStyle={loginStyle.textInputStyle}
+                            textInputStyle={styles.textInputStyle}
                             autoCorrect={false}
                         />
                         <Input
@@ -100,11 +98,11 @@ const Login: FunctionComponent<Props> = ({}: Props) => {
                             Icon={!isPassVisible ? EyeIcon : EyeOpenIcon}
                             secureTextEntry={!isPassVisible}
                             iconPress={() => setIsPassVisible(!isPassVisible)}
-                            style={loginStyle.passwordInput}
+                            style={styles.passwordInput}
                             onChangeText={(val) => {
                                 setUserPassword(val);
                             }}
-                            textInputStyle={loginStyle.textInputStyle}
+                            textInputStyle={styles.textInputStyle}
                         />
                         <TouchableOpacity
                             // navigation to reset password screen from here
@@ -112,11 +110,12 @@ const Login: FunctionComponent<Props> = ({}: Props) => {
                                 navigation.navigate('ResetPassword');
                             }}
                             activeOpacity={0.5}
-                            style={loginStyle.forgotPasswordButton}
+                            style={styles.forgotPasswordButton}
                         >
                             <Text
-                                style={loginStyle.forgetTxt}
+                                style={styles.forgetTxt}
                                 size={Size.XXSmall}
+                                numberOfLines={1}
                                 color={Colors.theme.primary}
                                 fontWeight="600"
                             >
@@ -125,17 +124,17 @@ const Login: FunctionComponent<Props> = ({}: Props) => {
                         </TouchableOpacity>
                     </View>
 
-                    <View style={loginStyle.footerContainer}>
+                    <View style={styles.footerContainer}>
                         <Button
                             bordered={false}
                             primary
                             onPress={loginPressed}
                             disabled={userEmail === '' || userPassword === ''}
-                            style={loginStyle.signInButton}
+                            style={styles.signInButton}
                             testID="signInButton"
                         >
                             <Text
-                                style={loginStyle.createBtnText}
+                                style={styles.createBtnText}
                                 color={Colors.text.white}
                                 fontWeight="600"
                             >
@@ -150,7 +149,7 @@ const Login: FunctionComponent<Props> = ({}: Props) => {
 };
 
 export default Login;
-export const loginStyle = StyleSheet.create({
+export const styles = StyleSheet.create({
     loginLogo: {
         width: 96,
         height: 96
@@ -164,6 +163,7 @@ export const loginStyle = StyleSheet.create({
     },
     headerText: {
         marginVertical: 32,
+        width: 'auto',
         textAlign: 'center',
         color: Colors.text.mainDarker
     },
@@ -178,10 +178,9 @@ export const loginStyle = StyleSheet.create({
         marginTop: 12
     },
     footerContainer: {
-        flex: 0.5,
         justifyContent: 'flex-end',
         marginHorizontal: 20,
-        marginBottom: 20
+        marginBottom: COMMON.isIos ? 100 : 50
     },
     createBtnText: {
         flexGrow: 1,

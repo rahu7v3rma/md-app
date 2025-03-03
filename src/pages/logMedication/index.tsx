@@ -1,13 +1,7 @@
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native';
 import moment from 'moment';
 import React, { FunctionComponent, useEffect, useRef, useState } from 'react';
-import {
-    Platform,
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    View
-} from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import Toast from 'react-native-toast-message';
 
@@ -36,6 +30,7 @@ import Text from '@/shared/text';
 import { Colors } from '@/theme/colors';
 import { LogInputValue } from '@/types/log';
 import { Constants } from '@/utils/constants';
+import { formatNumber } from '@/utils/helper';
 
 type Props = Record<string, never>;
 type LogMedicationProps = RouteProp<RootStackParamList, 'LogMedication'>;
@@ -49,7 +44,11 @@ const LogMedication: FunctionComponent<Props> = ({}: Props) => {
     const onDiscardBottomSheetRef = useRef<RBSheet>(null);
 
     const [medication, setMedication] = useState<number>(0);
-    const [dateTime, setDateTime] = useState<Date>(moment().toDate());
+    const [dateTime, setDateTime] = useState<Date>(
+        route?.params?.log_time
+            ? moment(route.params.log_time, 'YYYY-MM-DD HH:mm:s').toDate()
+            : moment().toDate()
+    );
     const [drugs, setDrugs] = useState<LogInputValue[]>([]);
     const [selectedDrug, setSelectedDrug] = useState<LogInputValue | null>(
         null
@@ -58,7 +57,7 @@ const LogMedication: FunctionComponent<Props> = ({}: Props) => {
     const [selectedDose, setSelectedDose] = useState<LogInputValue | null>(
         null
     );
-
+    const [bottomSheetActive, setBottomSheetActive] = useState<boolean>(false);
     const [submitInProgress, setSubmitInProgress] = useState(false);
 
     const { defaultLogMedicationValues, pickerValues } = LogSelectors();
@@ -262,147 +261,144 @@ const LogMedication: FunctionComponent<Props> = ({}: Props) => {
     };
 
     return (
-        <>
-            <SafeAreaView style={styles.top} />
-            <View style={styles.root}>
-                <CustomStatusBar />
-                <Header
-                    leftIcon={BackIcon}
-                    onLeftBtnPress={() =>
-                        route?.params
-                            ? onDiscardBottomSheetRef?.current?.open()
-                            : navigation.pop()
-                    }
-                    title="Log Medication"
-                    rightBtnText={route?.params ? 'Delete' : ''}
-                    onRightBtnPress={() =>
-                        onDeleteBottomSheetRef?.current?.open()
-                    }
-                />
-                <ScrollView style={styles.contentWrapper}>
-                    <View style={styles.content}>
-                        <View>
-                            <LogUnitPicker
-                                title="What medication did you take?"
-                                value={medication}
-                                onDecrementHandler={() =>
-                                    setMedication(
-                                        medication > 1 ? medication - 1 : 1
-                                    )
-                                }
-                                onIncrementHandler={() =>
-                                    setMedication(medication + 1)
-                                }
-                                onChangeHandler={(value: number) =>
-                                    setMedication(Math.max(1, Number(value)))
-                                }
-                            />
-                            <LogTimePicker
-                                fieldName="Time"
-                                selectedValue={dateTime}
-                                onSelect={(selTime: Date) =>
-                                    // create a new date to avoid cases in
-                                    // which a Date object is manipulated and
-                                    // react doesn't see it as a state update
-                                    setDateTime(new Date(selTime))
-                                }
-                            />
-                            <LogInputDatePicker
-                                selectedDate={moment(dateTime).format(
-                                    'YYYY-MM-DD'
-                                )}
-                                onDateSelected={(selDate: Date) => {
-                                    const newDateTime = moment(selDate);
-                                    const oldDateTime = moment(dateTime);
-                                    newDateTime.set('hour', oldDateTime.hour());
-                                    newDateTime.set(
-                                        'minute',
-                                        oldDateTime.minute()
-                                    );
-                                    setDateTime(newDateTime.toDate());
-                                }}
-                            />
-                            <LogInputDropdown
-                                fieldName="Select Your Dose"
-                                selectedValue={selectedDose?.id}
-                                labelKey="name"
-                                valueKey="id"
-                                onSelect={(selected) =>
-                                    setSelectedDose(selected)
-                                }
-                                options={doses}
-                            />
-                            <LogInputDropdown
-                                fieldName="Select Your Medication"
-                                selectedValue={selectedDrug?.id}
-                                labelKey="name"
-                                valueKey="id"
-                                onSelect={(selected) =>
-                                    setSelectedDrug(selected)
-                                }
-                                options={drugs}
-                            />
-                        </View>
+        <SafeAreaView style={styles.root}>
+            <CustomStatusBar />
+            <Header
+                leftIcon={BackIcon}
+                onLeftBtnPress={() =>
+                    route?.params
+                        ? onDiscardBottomSheetRef?.current?.open()
+                        : navigation.pop()
+                }
+                title="Log Medication"
+                rightBtnText={route?.params ? 'Delete' : ''}
+                onRightBtnPress={() => onDeleteBottomSheetRef?.current?.open()}
+            />
+            <ScrollView style={styles.contentWrapper}>
+                <View style={styles.content}>
+                    <View>
+                        <LogUnitPicker
+                            title="What medication did you take?"
+                            value={medication}
+                            onDecrementHandler={() => {
+                                setMedication(
+                                    Math.max(formatNumber(medication - 1), 1)
+                                );
+                            }}
+                            onIncrementHandler={() =>
+                                setMedication(formatNumber(medication + 1))
+                            }
+                            onChangeHandler={(value: number) =>
+                                setMedication(Math.max(1, Number(value)))
+                            }
+                        />
+                        <LogTimePicker
+                            fieldName="Time"
+                            selectedValue={dateTime}
+                            onSelect={(selTime: Date) =>
+                                // create a new date to avoid cases in
+                                // which a Date object is manipulated and
+                                // react doesn't see it as a state update
+                                setDateTime(new Date(selTime))
+                            }
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onDismissBottomSheet={() =>
+                                setBottomSheetActive(false)
+                            }
+                        />
+                        <LogInputDatePicker
+                            selectedDate={moment(dateTime).format('YYYY-MM-DD')}
+                            onDateSelected={(selDate: Date) => {
+                                const newDateTime = moment(selDate);
+                                const oldDateTime = moment(dateTime);
+                                newDateTime.set('hour', oldDateTime.hour());
+                                newDateTime.set('minute', oldDateTime.minute());
+                                setDateTime(newDateTime.toDate());
+                            }}
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onCalendarClosed={() => setBottomSheetActive(false)}
+                        />
+                        <LogInputDropdown
+                            fieldName="Select Your Dose"
+                            selectedValue={selectedDose?.id}
+                            labelKey="name"
+                            valueKey="id"
+                            onSelect={(selected) => setSelectedDose(selected)}
+                            options={doses}
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onClose={() => setBottomSheetActive(false)}
+                        />
+                        <LogInputDropdown
+                            fieldName="Select Your Medication"
+                            selectedValue={selectedDrug?.id}
+                            labelKey="name"
+                            valueKey="id"
+                            onSelect={(selected) => setSelectedDrug(selected)}
+                            options={drugs}
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onClose={() => setBottomSheetActive(false)}
+                        />
                     </View>
-                </ScrollView>
-                <View style={styles.logBtnWrapper}>
-                    <Button
-                        testID="submitButton"
-                        primary
-                        style={styles.logBtn}
-                        bordered={false}
-                        onPress={onSubmit}
-                        disabled={submitInProgress}
-                    >
-                        <Text color={Colors.text.white} fontWeight="600">
-                            {route?.params ? 'Save' : 'Log Medication'}
-                        </Text>
-                    </Button>
                 </View>
-                <ConfirmationDialogue
-                    bottomSheetRef={onDeleteBottomSheetRef}
-                    title={Constants.confirmationDialog.title.delete}
-                    dismissBtnTitle={'No'}
-                    confirmBtnTitle={'Delete'}
-                    onDismissBtnHandler={() => {
-                        onDeleteBottomSheetRef.current?.close();
-                    }}
-                    onConfirmBtnHandler={() => {
-                        onDeleteBottomSheetRef.current?.close();
-                        // Calling the delete api
-                        onDeleteHandler();
-                    }}
-                    confirmBtnStyles={{
-                        backgroundColor: Colors.button.app_button_red_background
-                    }}
-                />
-                <ConfirmationDialogue
-                    bottomSheetRef={onDiscardBottomSheetRef}
-                    title={Constants.confirmationDialog.title.discard}
-                    dismissBtnTitle={'No'}
-                    confirmBtnTitle={'Yes'}
-                    onDismissBtnHandler={() => {
-                        onDiscardBottomSheetRef.current?.close();
-                    }}
-                    onConfirmBtnHandler={() => {
-                        onDiscardBottomSheetRef.current?.close();
-                        navigation.pop();
-                    }}
-                />
+            </ScrollView>
+            <View style={styles.logBtnWrapper}>
+                <Button
+                    testID="submitButton"
+                    primary
+                    style={styles.logBtn}
+                    bordered={false}
+                    onPress={onSubmit}
+                    disabled={submitInProgress}
+                >
+                    <Text color={Colors.text.white} fontWeight="600">
+                        {route?.params ? 'Save' : 'Log Medication'}
+                    </Text>
+                </Button>
             </View>
-        </>
+            <ConfirmationDialogue
+                bottomSheetRef={onDeleteBottomSheetRef}
+                title={Constants.confirmationDialog.title.delete}
+                dismissBtnTitle={'No'}
+                confirmBtnTitle={'Delete'}
+                onDismissBtnHandler={() => {
+                    onDeleteBottomSheetRef.current?.close();
+                }}
+                onConfirmBtnHandler={() => {
+                    onDeleteBottomSheetRef.current?.close();
+                    // Calling the delete api
+                    onDeleteHandler();
+                }}
+                confirmBtnStyles={{
+                    backgroundColor: Colors.button.app_button_red_background
+                }}
+            />
+            <ConfirmationDialogue
+                bottomSheetRef={onDiscardBottomSheetRef}
+                title={Constants.confirmationDialog.title.discard}
+                dismissBtnTitle={'No'}
+                confirmBtnTitle={'Yes'}
+                onDismissBtnHandler={() => {
+                    onDiscardBottomSheetRef.current?.close();
+                }}
+                onConfirmBtnHandler={() => {
+                    onDiscardBottomSheetRef.current?.close();
+                    navigation.pop();
+                }}
+            />
+        </SafeAreaView>
     );
 };
 
 export default LogMedication;
 
 const styles = StyleSheet.create({
-    top: {
-        backgroundColor: Colors.extras.white
-    },
     root: {
         flex: 1,
-        backgroundColor: Colors.theme.log_page_background_color
+        backgroundColor: Colors.extras.white
     },
     contentWrapper: {
         flex: 1,
@@ -421,7 +417,7 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     logBtnWrapper: {
-        paddingBottom: Platform.OS === 'ios' ? 45 : 60,
+        paddingBottom: 20,
         paddingHorizontal: 20
     },
     logBtn: {

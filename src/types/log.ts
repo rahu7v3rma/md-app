@@ -1,5 +1,3 @@
-import moment from 'moment';
-
 export type LogActivityRequestBody = {
     log_time: string;
     duration_minutes: number;
@@ -121,39 +119,39 @@ export type recentLogs = {
 export type dailyCompletedLogs = {
     UserFast: {
         status: boolean;
-        date: moment.Moment | null;
+        date: string | null;
     } | null;
     UserWeight?: {
         status: boolean;
-        date: moment.Moment | null;
+        date: string | null;
     } | null;
     UserInsulin?: {
         status: boolean;
-        date: moment.Moment | null;
+        date: string | null;
     } | null;
     UserExercise?: {
         status: boolean;
-        date: moment.Moment | null;
+        date: string | null;
     } | null;
     UserGlucose?: {
         status: boolean;
-        date: moment.Moment | null;
+        date: string | null;
     } | null;
     UserDrink?: {
         status: boolean;
-        date: moment.Moment | null;
+        date: string | null;
     } | null;
     UserMedication: {
         status: boolean;
-        date: moment.Moment | null;
+        date: string | null;
     } | null;
     UserLesson?: {
         status: boolean;
-        date: moment.Moment | null;
+        date: string | null;
     } | null;
     UserFood?: {
         status: boolean;
-        date: moment.Moment | null;
+        date: string | null;
     } | null;
 };
 

@@ -21,6 +21,7 @@ import {
 import Text from '@/shared/text';
 import { Colors } from '@/theme/colors';
 import { COMMON } from '@/utils/common';
+import { Constants } from '@/utils/constants';
 
 import { Size } from '../text';
 
@@ -197,6 +198,7 @@ const InputComponent: FunctionComponent<Props> = ({
                     selectionColor={Colors.text.green}
                     multiline={multiline}
                     numberOfLines={numberOfLines}
+                    maxFontSizeMultiplier={Constants.maxFontSizeMultiplier}
                 />
                 {(showErrorView || showError) && (
                     <Text

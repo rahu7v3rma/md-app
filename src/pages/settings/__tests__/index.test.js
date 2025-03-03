@@ -6,10 +6,9 @@ import renderer, { act } from 'react-test-renderer';
 import { PersistGate } from 'redux-persist/integration/react';
 
 import { navigationRef } from '@/navigation';
+import AppSettings from '@/pages/settings';
+import { userLogin } from '@/reducers/user';
 import store, { persistor } from '@/store';
-
-import AppSettings from '../../../pages/settings';
-import { userLogin } from '../../../reducers/user';
 
 jest.unmock('@/reducers/user');
 

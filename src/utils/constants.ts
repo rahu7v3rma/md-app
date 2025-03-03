@@ -1,3 +1,5 @@
+import { ReactionData } from 'stream-chat-react-native';
+
 import logActivity from '@/assets/svg/logActivity.svg';
 import logBlood from '@/assets/svg/logBlood.svg';
 import logFast from '@/assets/svg/logFastIcon.svg';
@@ -6,6 +8,14 @@ import logHydration from '@/assets/svg/logHydration.svg';
 import logInsulin from '@/assets/svg/logInsulin.svg';
 import logMedication from '@/assets/svg/logMedication.svg';
 import logWeight from '@/assets/svg/logWeight.svg';
+import {
+    Heart,
+    HighFive,
+    Like,
+    Muscle,
+    SadFace,
+    SmileyFace
+} from '@/assets/svgs';
 
 export const DateTimeFormat = 'DD/MM/YYYY HH:mm';
 
@@ -243,5 +253,33 @@ export const Constants: any = {
         fastDuration: 'The logged time should be greater than 0',
         exerciseDuration: 'The exercise duration should be greater than 0',
         logValue: 'The log value should be greater than 0'
-    }
+    },
+    maxFontSizeMultiplier: 1.2
 };
+
+export const customReactionData: ReactionData[] = [
+    {
+        Icon: Like,
+        type: '+1'
+    },
+    {
+        Icon: Heart,
+        type: 'heart'
+    },
+    {
+        Icon: Muscle,
+        type: 'muscle'
+    },
+    // {
+    //     Icon: SmileyFace,
+    //     type: 'slightly_smiling_face'
+    // },
+    {
+        Icon: SadFace,
+        type: 'cry'
+    },
+    {
+        Icon: HighFive,
+        type: 'raised_hands'
+    }
+];

@@ -30,6 +30,7 @@ import {
     ChatChannelDetails,
     ChatSearch,
     Content,
+    CriticalUpdate,
     DeleteAccount,
     DeleteAccountSuccess,
     LogActivity,
@@ -51,6 +52,10 @@ import {
 } from '@/pages';
 import Block from '@/pages/block';
 import Notifications from '@/pages/notifications';
+import {
+    ClientConfigSelectors,
+    getClientConfig
+} from '@/reducers/clientConfig';
 import { trackedTimeUpdateAuto } from '@/reducers/track';
 import {
     checkInitialFirebaseNotification,
@@ -71,7 +76,6 @@ import {
     EditLogWeight
 } from '@/types/log';
 import { getAuthToken } from '@/utils/auth';
-import { hasAppLaunched } from '@/utils/storage';
 
 import MainTabNavigation from './mainTabNavigation';
 
@@ -122,6 +126,9 @@ export type RootStackParamList = {
     LogWeight: EditLogWeight | undefined;
     DeleteAccount: undefined;
     DeleteAccountSuccess: undefined;
+    CriticalUpdate: {
+        linkUrl: string;
+    };
 };
 
 type LinkParams = {
@@ -148,6 +155,10 @@ const Stack = createStackNavigator();
 type Props = Record<string, never>;
 
 const AppNavigation: FunctionComponent<Props> = ({}: Props) => {
+    const dispatch = useAppDispatch();
+
+    const { gotMinimalVersion, storeUrl } = ClientConfigSelectors();
+
     const [ready, setReady] = useState<boolean>(false);
     const [initialRouteName, setInitialRouteName] = useState<string>('SignIn');
 
@@ -203,21 +214,27 @@ const AppNavigation: FunctionComponent<Props> = ({}: Props) => {
             .then(async (token) => {
                 if (token !== null) {
                     setInitialRouteName('Main');
-                } else {
-                    const appLaunched = await hasAppLaunched();
-                    if (appLaunched) {
-                        setInitialRouteName('SignIn');
-                    }
                 }
             })
             .finally(() => {
+                // get client config after figuring out where to navigate to
+                dispatch(getClientConfig({}));
+
                 setReady(true);
 
                 // hide splash screen now that we are ready to display app
                 // screens
                 SplashScreen.hide();
             });
-    }, []);
+    }, [dispatch]);
+
+    useEffect(() => {
+        // if we don't have the minimal version navigate to the critical update
+        // page
+        if (gotMinimalVersion === false && storeUrl) {
+            navigateScreen('CriticalUpdate', { linkUrl: storeUrl });
+        }
+    }, [gotMinimalVersion, storeUrl]);
 
     useEffect(() => {
         let unsubscribeForgroundNotifications: () => void | undefined;
@@ -247,8 +264,6 @@ const AppNavigation: FunctionComponent<Props> = ({}: Props) => {
             unsubscribeFirebaseNotificationOpenedApp?.();
         };
     }, [ready]);
-
-    const dispatch = useAppDispatch();
 
     const trackFastTimerInterval = useRef<NodeJS.Timer | undefined>();
     const startTrackFastTimerInterval = () => {
@@ -336,6 +351,7 @@ const AppNavigation: FunctionComponent<Props> = ({}: Props) => {
                 component={DeleteAccountSuccess}
                 options={{ animationEnabled: false }}
             />
+            <Stack.Screen name="CriticalUpdate" component={CriticalUpdate} />
         </Stack.Navigator>
     );
 };

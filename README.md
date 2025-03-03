@@ -62,3 +62,11 @@ Available endpoints may change in the future. Check out the list of them when th
 ### Chat mocking
 
 Note that the OpenAPI spec contains several chat tokens you can use (under the `/profile/chat` endpoint's example responses). You may uncomment any one of them that you wish to use.
+
+## Lock files validation
+
+The `package-lock.json` and `ios/Podfile.lock` files should be updated and committed whenever dependency versions are updated to make sure the correct versions are installed in every environment.
+
+However, make sure you don't commit changes that are not derived from a dependency version change. To ensure this, make sure you use the same versions of node, npm and cocoapods that are used in the runner which runs the validate workflow on Github (currently node v16.20.2 and npm v8.19.4 as defined by `.nvmrc`, cocoapods v1.14.2 as defined by `Gemfile.lock`, and the current versions can be seen in the output of the lock-files action on Github).
+
+If npm with the correct version still alters the lock file make sure that the `legacy-peer-deps` flag is not enabled.

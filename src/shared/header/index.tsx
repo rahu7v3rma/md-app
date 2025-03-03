@@ -2,7 +2,9 @@ import { useNavigation } from '@react-navigation/native';
 import moment from 'moment';
 import React, { FunctionComponent, useState } from 'react';
 import {
+    Alert,
     Keyboard,
+    Linking,
     StyleProp,
     StyleSheet,
     TouchableOpacity,
@@ -17,7 +19,11 @@ import Text, { Size } from '@/shared/text';
 import { Colors } from '@/theme/colors';
 import { Constants } from '@/utils/constants';
 
+import NewAppVersionBanner from './components/newAppVersionBanner';
+
 type Props = {
+    isNewVersionAvailable?: boolean;
+    newVersionUpdateUrl?: string;
     onLeftBtnPress?: () => void;
     leftIcon?: any;
     title?: string;
@@ -35,6 +41,8 @@ type Props = {
 };
 
 const Header: FunctionComponent<Props> = ({
+    isNewVersionAvailable = false,
+    newVersionUpdateUrl = '',
     onLeftBtnPress,
     leftIcon: LeftIcon,
     title,
@@ -221,6 +229,29 @@ const Header: FunctionComponent<Props> = ({
                     >
                         <View style={style.activeTrackerBorderRightKnob} />
                     </View>
+                )}
+                {isNewVersionAvailable && (
+                    <NewAppVersionBanner
+                        onAppUpdate={() => {
+                            Alert.alert(
+                                'A new version is available!',
+                                'New features are available. Press "Update" to go to the store',
+                                [
+                                    {
+                                        text: 'Maybe Later'
+                                    },
+                                    {
+                                        text: 'Update',
+                                        onPress: () => {
+                                            Linking.openURL(
+                                                newVersionUpdateUrl
+                                            );
+                                        }
+                                    }
+                                ]
+                            );
+                        }}
+                    />
                 )}
                 {seperator && (
                     <View style={!LeftIcon && style.shadowView}>

@@ -103,10 +103,10 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     secondCol: {
-        width: '60%'
+        width: '55%'
     },
     thirdCol: {
-        width: '20%',
+        width: '25%',
         alignItems: 'center'
     }
 });

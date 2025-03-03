@@ -7,13 +7,7 @@ import React, {
     useRef,
     useState
 } from 'react';
-import {
-    Platform,
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    View
-} from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import { Toast } from 'react-native-toast-message/lib/src/Toast';
 
@@ -41,7 +35,7 @@ import Text from '@/shared/text';
 import { Colors } from '@/theme/colors';
 import { LogInputValue } from '@/types/log';
 import { Constants } from '@/utils/constants';
-import { isUnitValid } from '@/utils/helper';
+import { formatNumber, isUnitValid } from '@/utils/helper';
 
 type Props = Record<string, never>;
 type LogBloodProp = RouteProp<RootStackParamList, 'LogBlood'>;
@@ -70,6 +64,7 @@ const LogBlood: FunctionComponent<Props> = ({}: Props) => {
     const [selectedUnit, setSelectedUnit] = useState<string | undefined>(
         undefined
     );
+    const [bottomSheetActive, setBottomSheetActive] = useState<boolean>(false);
 
     const { pickerValues } = LogSelectors();
     const { userProfile } = UserSelectors();
@@ -96,7 +91,6 @@ const LogBlood: FunctionComponent<Props> = ({}: Props) => {
                 setSelectedMeasurementType(foundMeasurementType);
             }
         }
-
         if (route.params?.unit) {
             setSelectedUnit(route.params.unit);
         } else if (pickerValues.glucose.units.length > 0) {
@@ -240,141 +234,140 @@ const LogBlood: FunctionComponent<Props> = ({}: Props) => {
     }, [route?.params?.id, dispatch, navigation]);
 
     return (
-        <>
-            <SafeAreaView style={styles.top} />
-            <View style={styles.root}>
-                <CustomStatusBar />
-                <Header
-                    leftIcon={BackIcon}
-                    onLeftBtnPress={() =>
-                        route?.params
-                            ? onDiscardBottomSheetRef?.current?.open()
-                            : navigation.pop()
-                    }
-                    title="Log Blood Glucose"
-                    rightBtnText={route?.params ? 'Delete' : ''}
-                    onRightBtnPress={() =>
-                        onDeleteBottomSheetRef?.current?.open()
-                    }
-                />
-                <ScrollView style={styles.contentWrapper}>
-                    <View style={styles.content}>
-                        <View>
-                            <LogUnitPicker
-                                title="What was your blood glucose level?"
-                                value={bloodGlucose}
-                                unit={selectedUnit}
-                                onDecrementHandler={() => {
-                                    const value =
-                                        bloodGlucose > 0 ? bloodGlucose - 1 : 0;
-                                    setBloodGlucose(value);
-                                }}
-                                onIncrementHandler={() => {
-                                    const value =
-                                        bloodGlucose >= 0
-                                            ? bloodGlucose + 1
-                                            : 0;
-                                    setBloodGlucose(value);
-                                }}
-                                onChangeHandler={(value: number) =>
-                                    setBloodGlucose(Math.max(0, Number(value)))
-                                }
-                            />
-                            <LogTimePicker
-                                fieldName="Time"
-                                selectedValue={dateTime}
-                                onSelect={(selTime: Date) =>
-                                    // create a new date to avoid cases in
-                                    // which a Date object is manipulated and
-                                    // react doesn't see it as a state update
-                                    setDateTime(new Date(selTime))
-                                }
-                            />
-                            <LogInputDatePicker
-                                selectedDate={moment(dateTime).format(
-                                    'YYYY-MM-DD'
-                                )}
-                                onDateSelected={(selDate: Date) => {
-                                    const newDateTime = moment(selDate);
-                                    const oldDateTime = moment(dateTime);
-                                    newDateTime.set('hour', oldDateTime.hour());
-                                    newDateTime.set(
-                                        'minute',
-                                        oldDateTime.minute()
-                                    );
-                                    setDateTime(newDateTime.toDate());
-                                }}
-                            />
-                            <LogInputDropdown
-                                fieldName="Type"
-                                selectedValue={selectedMeasurementType?.id}
-                                labelKey="name"
-                                valueKey="id"
-                                onSelect={(selected) =>
-                                    setSelectedMeasurementType(selected)
-                                }
-                                options={measurementTypes}
-                            />
-                        </View>
+        <SafeAreaView style={styles.root}>
+            <CustomStatusBar />
+            <Header
+                leftIcon={BackIcon}
+                onLeftBtnPress={() =>
+                    route?.params
+                        ? onDiscardBottomSheetRef?.current?.open()
+                        : navigation.pop()
+                }
+                title="Log Blood Glucose"
+                rightBtnText={route?.params ? 'Delete' : ''}
+                onRightBtnPress={() => onDeleteBottomSheetRef?.current?.open()}
+            />
+            <ScrollView style={styles.contentWrapper}>
+                <View style={styles.content}>
+                    <View>
+                        <LogUnitPicker
+                            title="What was your blood glucose level?"
+                            value={bloodGlucose}
+                            unit={selectedUnit}
+                            onDecrementHandler={() => {
+                                setBloodGlucose(
+                                    Math.max(
+                                        formatNumber(bloodGlucose - 1, 1),
+                                        0
+                                    )
+                                );
+                            }}
+                            onIncrementHandler={() => {
+                                setBloodGlucose(
+                                    formatNumber(bloodGlucose + 1, 1)
+                                );
+                            }}
+                            onChangeHandler={(value: number) =>
+                                setBloodGlucose(Math.max(0, Number(value)))
+                            }
+                        />
+                        <LogTimePicker
+                            fieldName="Time"
+                            selectedValue={dateTime}
+                            onSelect={(selTime: Date) =>
+                                // create a new date to avoid cases in
+                                // which a Date object is manipulated and
+                                // react doesn't see it as a state update
+                                setDateTime(new Date(selTime))
+                            }
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onDismissBottomSheet={() =>
+                                setBottomSheetActive(false)
+                            }
+                        />
+                        <LogInputDatePicker
+                            selectedDate={moment(dateTime).format('YYYY-MM-DD')}
+                            onDateSelected={(selDate: Date) => {
+                                const newDateTime = moment(selDate);
+                                const oldDateTime = moment(dateTime);
+                                newDateTime.set('hour', oldDateTime.hour());
+                                newDateTime.set('minute', oldDateTime.minute());
+                                setDateTime(newDateTime.toDate());
+                            }}
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onCalendarClosed={() => setBottomSheetActive(false)}
+                        />
+                        <LogInputDropdown
+                            fieldName="Type"
+                            selectedValue={selectedMeasurementType?.id}
+                            labelKey="name"
+                            valueKey="id"
+                            onSelect={(selected) =>
+                                setSelectedMeasurementType(selected)
+                            }
+                            options={measurementTypes}
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onClose={() => setBottomSheetActive(false)}
+                        />
                     </View>
-                </ScrollView>
-                <View style={styles.logBtnWrapper}>
-                    <Button
-                        testID="submitButton"
-                        primary
-                        style={styles.logBtn}
-                        onPress={onSubmit}
-                        bordered={false}
-                        disabled={submitInProgress}
-                    >
-                        <Text color={Colors.text.white} fontWeight="600">
-                            {route?.params ? 'Save' : 'Log Blood Glucose'}
-                        </Text>
-                    </Button>
                 </View>
-                <ConfirmationDialogue
-                    bottomSheetRef={onDeleteBottomSheetRef}
-                    title={Constants.confirmationDialog.title.delete}
-                    dismissBtnTitle={'No'}
-                    confirmBtnTitle={'Delete'}
-                    onDismissBtnHandler={() => {
-                        onDeleteBottomSheetRef.current?.close();
-                    }}
-                    onConfirmBtnHandler={() => {
-                        onDeleteBloodLog();
-                        onDeleteBottomSheetRef.current?.close();
-                    }}
-                    confirmBtnStyles={{
-                        backgroundColor: Colors.button.app_button_red_background
-                    }}
-                />
-                <ConfirmationDialogue
-                    bottomSheetRef={onDiscardBottomSheetRef}
-                    title={Constants.confirmationDialog.title.discard}
-                    dismissBtnTitle={'No'}
-                    confirmBtnTitle={'Yes'}
-                    onDismissBtnHandler={() => {
-                        onDiscardBottomSheetRef.current?.close();
-                    }}
-                    onConfirmBtnHandler={() => {
-                        onDiscardBottomSheetRef.current?.close();
-                        navigation.pop();
-                    }}
-                />
+            </ScrollView>
+            <View style={styles.logBtnWrapper}>
+                <Button
+                    testID="submitButton"
+                    primary
+                    style={styles.logBtn}
+                    onPress={onSubmit}
+                    bordered={false}
+                    disabled={submitInProgress}
+                >
+                    <Text color={Colors.text.white} fontWeight="600">
+                        {route?.params ? 'Save' : 'Log Blood Glucose'}
+                    </Text>
+                </Button>
             </View>
-        </>
+            <ConfirmationDialogue
+                bottomSheetRef={onDeleteBottomSheetRef}
+                title={Constants.confirmationDialog.title.delete}
+                dismissBtnTitle={'No'}
+                confirmBtnTitle={'Delete'}
+                onDismissBtnHandler={() => {
+                    onDeleteBottomSheetRef.current?.close();
+                }}
+                onConfirmBtnHandler={() => {
+                    onDeleteBloodLog();
+                    onDeleteBottomSheetRef.current?.close();
+                }}
+                confirmBtnStyles={{
+                    backgroundColor: Colors.button.app_button_red_background
+                }}
+            />
+            <ConfirmationDialogue
+                bottomSheetRef={onDiscardBottomSheetRef}
+                title={Constants.confirmationDialog.title.discard}
+                dismissBtnTitle={'No'}
+                confirmBtnTitle={'Yes'}
+                onDismissBtnHandler={() => {
+                    onDiscardBottomSheetRef.current?.close();
+                }}
+                onConfirmBtnHandler={() => {
+                    onDiscardBottomSheetRef.current?.close();
+                    navigation.pop();
+                }}
+            />
+        </SafeAreaView>
     );
 };
 
 export default LogBlood;
 
 const styles = StyleSheet.create({
-    top: {
-        backgroundColor: Colors.extras.white
-    },
     root: {
         flex: 1,
-        backgroundColor: Colors.theme.log_page_background_color
+        backgroundColor: Colors.extras.white
     },
     contentWrapper: {
         flex: 1,
@@ -393,7 +386,7 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     logBtnWrapper: {
-        paddingBottom: Platform.OS === 'ios' ? 45 : 60,
+        paddingBottom: 20,
         paddingHorizontal: 20
     },
     logBtn: {

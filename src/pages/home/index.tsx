@@ -26,9 +26,6 @@ import {
 } from 'react-native';
 import { SvgXml } from 'react-native-svg';
 
-// react-native-background-timer is the reason for NativeEventEmitter warnings
-// on android
-
 import ForwordIcon from '@/assets/svg/forword.svg';
 import { BellIcon } from '@/assets/svgs';
 import { useAppChat } from '@/contexts/appChat';
@@ -38,6 +35,7 @@ import {
     RootStackParamList,
     TrackFastTimerProps
 } from '@/navigation';
+import { ClientConfigSelectors } from '@/reducers/clientConfig';
 import { ContentSelectors, loadJourney } from '@/reducers/content';
 import {
     getDailyCompletedLogs,
@@ -88,15 +86,18 @@ const Home: FunctionComponent<Props> = (props) => {
     const navigation = useNavigation<RootNavigationProp>();
 
     const { chatClient } = useAppChat();
-    const currentDate = useCurrentDate();
+    const { currentDate, currentDateFormatted } = useCurrentDate();
 
+    const { gotLatestVersion, storeUrl } = ClientConfigSelectors();
     const { activeBlock, activeLesson, loading } = ContentSelectors();
     const [logTabsData, setLogTabsData] = useState<any>([]);
     const { userProfile, coach, group, hasCoachChat } = UserSelectors();
+
     const [userLessons, setUserLessons] = useState<any>({});
     const route = useRoute<HomeRouteProp>();
     const containerRef = useRef<View>(null);
     const [ready, setReady] = useState<boolean>(false);
+
     const animation = useMemo(() => new Animated.Value(0), []);
     const {
         trackFastState,
@@ -403,13 +404,15 @@ const Home: FunctionComponent<Props> = (props) => {
                     isPressable={true}
                     isFastTrackerActive={isFastTrackerActive}
                     rightIconBadgeCount={totalUnread}
+                    isNewVersionAvailable={gotLatestVersion === false}
+                    newVersionUpdateUrl={storeUrl}
                 />
             </View>
             <Wrapper loading={loading} onRefresh={handleRefresh}>
                 <View style={styles.content}>
                     {chatClient && coach && (
                         <ChatListItem
-                            label={`Chat with Coach ${coach.first_name}`}
+                            label={`Coach ${coach.first_name} ${coach.last_name}`}
                             avatar={coach.profile_image}
                             onPress={handleCoachPress}
                         />
@@ -551,29 +554,22 @@ const Home: FunctionComponent<Props> = (props) => {
                     <View style={styles.todayTasks}>
                         {logTabsData
                             .slice(0, 4)
-                            .map((item: logItem, index: number) => {
-                                const logTime =
-                                    dailyCompletedTasks[item.type]?.date;
-                                const logTimeFormated = logTime
-                                    ? moment(logTime)?.format('DD-MM-YYYY')
-                                    : false;
-                                const todayDate = moment(new Date()).format(
-                                    'DD-MM-YYYY'
-                                );
-                                return (
-                                    <LogTab
-                                        key={`log-${index}`}
-                                        style={styles.tab}
-                                        icon={item.icon}
-                                        title={item.title}
-                                        onTabPress={() =>
-                                            item.screen &&
-                                            navigation.navigate(item?.screen)
-                                        }
-                                        active={logTimeFormated === todayDate}
-                                    />
-                                );
-                            })}
+                            .map((item: logItem, index: number) => (
+                                <LogTab
+                                    key={`log-${index}`}
+                                    style={styles.tab}
+                                    icon={item.icon}
+                                    title={item.title}
+                                    onTabPress={() =>
+                                        item.screen &&
+                                        navigation.navigate(item?.screen)
+                                    }
+                                    active={
+                                        dailyCompletedTasks[item.type]?.date ===
+                                        currentDateFormatted
+                                    }
+                                />
+                            ))}
                     </View>
                 </View>
             </Wrapper>

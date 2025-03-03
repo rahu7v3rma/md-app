@@ -1,66 +1,160 @@
-import {
-    NavigationContainer,
-    NavigationProp,
-    RouteProp
-} from '@react-navigation/native';
+import { NavigationProp, RouteProp } from '@react-navigation/native';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import moment from 'moment';
 import React from 'react';
-import 'react-native';
 import { Provider } from 'react-redux';
 import renderer, { act, ReactTestRenderer } from 'react-test-renderer';
 
 import { mockNavigate } from '@/jestSetup';
 import Home from '@/pages/home';
-import store from '@/store';
+import clientConfigReducer from '@/reducers/clientConfig';
+import contentReducer from '@/reducers/content';
+import logReducer from '@/reducers/log';
+import notificationReducer from '@/reducers/notification';
+import trackReducer from '@/reducers/track';
+import userReducer from '@/reducers/user';
+import { LogTab } from '@/shared';
 import { MockData } from '@/utils/mockData';
 
+const mockToday = moment().format('YYYY-MM-DD');
+const rootReducer = combineReducers({
+    clientConfig: clientConfigReducer,
+    content: contentReducer,
+    user: userReducer,
+    log: logReducer,
+    track: trackReducer,
+    notification: notificationReducer
+});
+jest.mock('@/store', () => null);
+const store = configureStore({
+    reducer: rootReducer
+});
 jest.unmock('@/hooks');
-jest.unmock('@/services/notification');
-jest.mock('@/hooks', () => ({
-    useAppDispatch: () =>
-        jest.fn().mockImplementation(() => {
-            return {
-                unwrap: jest.fn().mockImplementation(() => {
-                    return Promise.resolve(['UserGlucose']);
-                })
-            };
+jest.unmock('@/reducers/content');
+jest.unmock('@/reducers/user');
+jest.unmock('@/reducers/log');
+jest.unmock('@/reducers/track');
+jest.unmock('@/reducers/notification');
+jest.mock('@/services/api', () => ({
+    getCoach: () =>
+        Promise.resolve({
+            hasCoachChat: true,
+            coach: {
+                first_name: 'coach_first_name',
+                last_name: 'coach_last_name',
+                profile_image: 'coach_profile_image',
+                chat_id: 'coach_chat_id'
+            },
+            group: null
         }),
-    useCurrentDate: () =>
-        jest.fn().mockImplementation(() => {
-            return new Date();
-        })
-}));
-
-jest.mock('@/reducers/log', () => ({
-    LogSelectors: jest.fn(),
-    getDailyCompletedLogs: jest.fn(),
+    getDailyCompletedLogs: () =>
+        Promise.resolve({
+            UserFast: {
+                status: false,
+                date: null
+            },
+            UserWeight: {
+                status: false,
+                date: null
+            },
+            UserInsulin: {
+                status: false,
+                date: null
+            },
+            UserExercise: {
+                status: false,
+                date: null
+            },
+            UserGlucose: {
+                status: true,
+                date: mockToday
+            },
+            UserDrink: {
+                status: false,
+                date: null
+            },
+            UserMedication: {
+                status: false,
+                date: null
+            },
+            UserFood: {
+                status: false,
+                date: null
+            }
+        }),
+    getNotificationList: () =>
+        Promise.resolve({
+            count: 4,
+            has_next: false,
+            has_previous: false,
+            next_page_number: null,
+            total_unread: 3,
+            list: [
+                {
+                    id: 1,
+                    title: 'Did you forget?',
+                    description:
+                        "It's time to log your glucose. Tap to log now",
+                    image: null,
+                    date_time: '2023-03-08T12:12:12Z',
+                    read_flag: false,
+                    action: 'logBlood'
+                },
+                {
+                    id: 2,
+                    title: 'Yum yum',
+                    description:
+                        "You haven't logged your food today. Tap to log a meal now",
+                    image: null,
+                    date_time: '2023-04-08T12:12:12Z',
+                    read_flag: false,
+                    action: 'logMeal'
+                },
+                {
+                    id: 3,
+                    title: 'Staying active?',
+                    description:
+                        ' what did you do to stay active today? Take a minute to log it now',
+                    image: null,
+                    date_time: '2023-06-08T12:12:12Z',
+                    read_flag: true,
+                    action: 'logActivity'
+                },
+                {
+                    id: 4,
+                    title: 'Hydration is everything',
+                    description: ' how much water did you drink today?',
+                    image: null,
+                    date_time: '2023-12-08T12:12:12Z',
+                    read_flag: false,
+                    action: 'logWaterIntake'
+                }
+            ]
+        }),
+    getUserJourney: () => Promise.resolve(MockData.journey),
+    refreshProfileSession: jest.fn(),
     getLogPickerValues: jest.fn(),
-    createLogMeal: jest.fn(),
-    updateLogMeal: jest.fn(),
-    updateLogActivity: jest.fn(),
-    logActivity: jest.fn(),
-    createLogWeight: jest.fn(),
-    logMedication: jest.fn(),
-    updateLogMedication: jest.fn(),
-    deleteLogMedication: jest.fn(),
-    getDailyTasks: jest.fn(),
-    createLogFast: jest.fn(),
-    updateLogFast: jest.fn(),
-    createLogWaterIntake: jest.fn(),
-    updateLogWaterIntake: jest.fn(),
-    createLogBlood: jest.fn(),
-    updateLogBlood: jest.fn(),
-    createLogInsulin: jest.fn(),
-    updateLogInsulin: jest.fn(),
-    deleteLogInsulin: jest.fn(),
-    getRecentLogs: jest.fn(),
-    updateLogWeight: jest.fn(),
-    deleteActivityLog: jest.fn(),
-    deleteMealLog: jest.fn(),
-    deleteWaterInTakeLog: jest.fn(),
-    deleteBloodLog: jest.fn(),
-    deleteLogFast: jest.fn(),
-    deleteLogWeight: jest.fn()
+    getProfile: jest.fn(),
+    getDailyTasks: () =>
+        Promise.resolve([
+            'UserDrink',
+            'UserGlucose',
+            'UserWeight',
+            'UserInsulin',
+            'UserExercise'
+        ])
+}));
+jest.mock('@/navigation', () => ({
+    RootNavigationProp: jest.fn(),
+    RootStackParamList: jest.fn(),
+    TrackFastTimerProps: jest.fn()
+}));
+jest.mock('stream-chat-react-native', () => null);
+jest.mock('@/utils/common', () => ({
+    COMMON: {
+        isIos: false,
+        responsiveSize: jest.fn()
+    }
 }));
 
 let tree: ReactTestRenderer;
@@ -80,34 +174,11 @@ const props = {
 };
 describe('Home', () => {
     beforeAll(async () => {
-        jest.spyOn(console, 'debug').mockImplementation(() => {});
-        jest.spyOn(console, 'warn').mockImplementation(() => {});
-        jest.spyOn(console, 'error').mockImplementation(() => {});
-        jest.spyOn(
-            require('@/reducers/log'),
-            'LogSelectors'
-        ).mockImplementation(
-            () =>
-                ({
-                    loading: false,
-                    logTabData: MockData.logTabData,
-                    dailyCompletedTasks: MockData.dailyCompletedTasks,
-                    dailyTasks: {},
-                    pickerValues: MockData.pickerValues,
-                    recent: {},
-                    defaultLogMedicationValues: {},
-                    dailyCompletedLogsDate: {
-                        UserGlucose: moment(new Date()).format('DD-MM-YYYY')
-                    }
-                } as any)
-        );
-        await act(async () => {
+        await act(() => {
             tree = renderer.create(
-                <NavigationContainer>
-                    <Provider store={store}>
-                        <Home {...props} />
-                    </Provider>
-                </NavigationContainer>
+                <Provider store={store}>
+                    <Home {...props} />
+                </Provider>
             );
         });
     });
@@ -129,7 +200,7 @@ describe('Home', () => {
 
     it('coach chat item should redirect to the chatChannel page', async () => {
         const chatCoachItem = tree.root.findByProps({
-            label: 'Chat with Coach name'
+            label: 'Chat with Coach coach_first_name'
         }).props;
         await act(() => chatCoachItem.onPress());
         expect(mockNavigate).toHaveBeenCalledWith('ChatChannel', {
@@ -156,9 +227,7 @@ describe('Home', () => {
     });
 
     it('daily task section will display a maximum of four log tabs.', async () => {
-        const logTabItem = tree.root.findAllByProps({
-            icon: '<svg> </svg> '
-        });
+        const logTabItem = tree.root.findAllByType(LogTab);
         expect(logTabItem.length).toBe(4);
     });
 

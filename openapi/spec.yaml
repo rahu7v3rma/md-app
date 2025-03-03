@@ -854,34 +854,34 @@ paths:
                     status: 200
                     data:
                       # user 1
-                      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWJhNTg2YzBiODkyMDJmNzMwN2I2MWYxMjI5MzMwOTc4YTg0M2FmYzk4NTg5ZmZjNmE2MmYyMDkyMjVkMzUyOCIsImV4cCI6MTY5OTAxMDM3OX0.c24e8bhf820zqRDXCKx7HCh77VlfOGG4Gxg3SbkqdPs
+                      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMWJhNTg2YzBiODkyMDJmNzMwN2I2MWYxMjI5MzMwOTc4YTg0M2FmYzk4NTg5ZmZjNmE2MmYyMDkyMjVkMzUyOCIsImV4cCI6MTcwOTg3OTIyNX0.zS7LvNzFSL8Gux0sr9eLAQajPvrmMg_4sg_WUuS1sf8
                       userId: 1ba586c0b89202f7307b61f1229330978a843afc98589ffc6a62f209225d3528
                       ## user 2
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYWIyZTMwYmY3NTYzNmE5Yzk3ZTA1MDk5ZDljY2M5YjYyM2MxN2E0NGY2MjllN2NlNzIwNmRiYTY4MzAyOGRiMSIsImV4cCI6MTY5OTAxMDM4MH0.QbdCfN-LamFFnSStX_WGFFgnwqPuQGoE1uuF_ywlDqo
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYWIyZTMwYmY3NTYzNmE5Yzk3ZTA1MDk5ZDljY2M5YjYyM2MxN2E0NGY2MjllN2NlNzIwNmRiYTY4MzAyOGRiMSIsImV4cCI6MTcwOTg3OTIyNX0.dJZlrXWu_zzeElSq-O9lnI436TX5DDi5Nm1p6_3smRM
                       #userId: ab2e30bf75636a9c97e05099d9ccc9b623c17a44f629e7ce7206dba683028db1
                       ## user 3
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYTVkZTk2MDRkNTU2ZDZmMTkwYTIzZTVhN2RmZmI3YTQ5YzNhZGE1NjAyNThmZGMzZTQ4YzBjOThjMDUzM2VhOCIsImV4cCI6MTY5OTAxMDM4MX0.Dx4LpGx3H-EqBsMhO2bd4CBPn0jSqoJPdjEyNehNTOY
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYTVkZTk2MDRkNTU2ZDZmMTkwYTIzZTVhN2RmZmI3YTQ5YzNhZGE1NjAyNThmZGMzZTQ4YzBjOThjMDUzM2VhOCIsImV4cCI6MTcwOTg3OTIyNn0.OwxR4WtTeG0uxvvolGjZhxht-UDlkCwARCv91qnBvw4
                       #userId: a5de9604d556d6f190a23e5a7dffb7a49c3ada560258fdc3e48c0c98c0533ea8
                       ## user 4
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYWQ4ZGY2N2YzNDExMjkxMGZiOTgzNjZjNDQ4ZDRjZDg5M2Y5NmUyNTU5NDg2YzliMjVhZDNmNzM4MDc0YmYwNSIsImV4cCI6MTY5OTAxMDM4Mn0.rmOW19woTlXGrpMwbotSo8Nda2fyNzt8g8LJ9TKHRhE
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYWQ4ZGY2N2YzNDExMjkxMGZiOTgzNjZjNDQ4ZDRjZDg5M2Y5NmUyNTU5NDg2YzliMjVhZDNmNzM4MDc0YmYwNSIsImV4cCI6MTcwOTg3OTIyN30.ENfOmsuQAZr20B_X9JzUPNqXu41HUbS-NW38m14BN9Y
                       #userId: ad8df67f34112910fb98366c448d4cd893f96e2559486c9b25ad3f738074bf05
                       ## user 5
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzg5MjEyNDAyMmQ4NjI1YjUzYmJjM2U1NzMwZTBhZmM4YjQzNGU3MjZlMjkyNjE5YWM3YmJiMmYwOTBiMmJmOCIsImV4cCI6MTY5OTAxMDM4Mn0.jDLH_5PXoJLfu-YkmORhTDzwJqulU3BcM5lHwM4X4qM
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMzg5MjEyNDAyMmQ4NjI1YjUzYmJjM2U1NzMwZTBhZmM4YjQzNGU3MjZlMjkyNjE5YWM3YmJiMmYwOTBiMmJmOCIsImV4cCI6MTcwOTg3OTIyN30.AaNbP9ksD8A1YCqelXo1g3vd6fMNCOczepjRw_vJp7M
                       #userId: 3892124022d8625b53bbc3e5730e0afc8b434e726e292619ac7bbb2f090b2bf8
                       ## user 6
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTc4ZWY5ZjNlZTUxZTU1YmU3YjAyMjM2Y2I0ZmJhMWQwNzA5ODk5ZGU4ZjFiMTdmYWI3YzM1NmY5NmY0NjA3NyIsImV4cCI6MTY5OTAxMDM4M30.LfHAAenMIr_5D9Qnf0b4P_ORyLyND-OHH3chzAZGUkA
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTc4ZWY5ZjNlZTUxZTU1YmU3YjAyMjM2Y2I0ZmJhMWQwNzA5ODk5ZGU4ZjFiMTdmYWI3YzM1NmY5NmY0NjA3NyIsImV4cCI6MTcwOTg3OTIyOH0.oWqO5f-QyHEYCRkWERrN-bJJdxUk3wX8Rw7nObB_MRM
                       #userId: 178ef9f3ee51e55be7b02236cb4fba1d0709899de8f1b17fab7c356f96f46077
                       ## user 7
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjFlMzc5NDhjNWMxMjE3Mjg1NWEzN2FjN2M4MTBkYjM4OTgzYmRkM2JmYmNhNGI1MDYwM2QyZDY5OGQ5NDg2MSIsImV4cCI6MTY5OTAxMDM4NH0.zclyC06hLTP7jA2a3RmTJJ1yBEYMv5ryVWyAK0Cqmdo
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjFlMzc5NDhjNWMxMjE3Mjg1NWEzN2FjN2M4MTBkYjM4OTgzYmRkM2JmYmNhNGI1MDYwM2QyZDY5OGQ5NDg2MSIsImV4cCI6MTcwOTg3OTIyOH0.ZNeOfoxoPRG8OQQEyD81Ac0cNbPDnUHWyv70UW0nHtQ
                       #userId: 61e37948c5c12172855a37ac7c810db38983bdd3bfbca4b50603d2d698d94861
                       ## user 8
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZDU1MTg2YmM4ODlmNDY5NWVmYzJlZGU5MjA4ZjI5M2EwMmRmNjZlODU0NGM2ZTRkMTFiMzA5MjIzNjQyNmI1ZSIsImV4cCI6MTY5OTAxMDM4NX0.A31VDeSX_H91E1n_oCSj2VNrGkXzNFiTrXAk6gwvBgw
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZDU1MTg2YmM4ODlmNDY5NWVmYzJlZGU5MjA4ZjI5M2EwMmRmNjZlODU0NGM2ZTRkMTFiMzA5MjIzNjQyNmI1ZSIsImV4cCI6MTcwOTg3OTIyOX0.5sRaxxhrYmjLiIEusZ0yWF1DzQq0kDj6GpScrUZbp6g
                       #userId: d55186bc889f4695efc2ede9208f293a02df66e8544c6e4d11b3092236426b5e
                       ## user 9
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmRjNzIzNzc3NDI2OWVmMTc1YWNiODFmNzkxZGUyM2NhYjRhMzQzMWQ3YWU2YWI4Mjg0OTUxY2U4MGFlMTFiZSIsImV4cCI6MTY5OTAxMDM4Nn0.uFSKrWIBJS3R3ulotyiSxzL0jryCasAEYkciOfWlh3s
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYmRjNzIzNzc3NDI2OWVmMTc1YWNiODFmNzkxZGUyM2NhYjRhMzQzMWQ3YWU2YWI4Mjg0OTUxY2U4MGFlMTFiZSIsImV4cCI6MTcwOTg3OTIyOX0.50qWbwzDYKhv336SqLX-Vm0WNfmAMYO-9GsUoiu_qUY
                       #userId: bdc7237774269ef175acb81f791de23cab4a3431d7ae6ab8284951ce80ae11be
                       ## user 10
-                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZGFmMjI5MTVmMTJiYTU4Y2MzOWI0OWQyMzc4MGQ3NjczMjk2NmU0ZWY2OGVlZTU2YjMzYjk5NmVlZmNiZmZmMCIsImV4cCI6MTY5OTAxMDM4Nn0.5QQIdaw3fooxRA7T81RWP4GW-Y_1WgP92aBg2M6Mj50
+                      #token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZGFmMjI5MTVmMTJiYTU4Y2MzOWI0OWQyMzc4MGQ3NjczMjk2NmU0ZWY2OGVlZTU2YjMzYjk5NmVlZmNiZmZmMCIsImV4cCI6MTcwOTg3OTIzMH0.fpU3E1XCzxAOSH2A1otpuBDeTOtP7QCE63RcS3HuMWw
                       #userId: daf22915f12ba58cc39b49d23780d76732966e4ef68eee56b33b996eefcbfff0
                       apiKey: 9h8revtjvfgt
                       firebasePushProviderName: fake-provider
@@ -3987,9 +3987,9 @@ paths:
       security:
         - auth_key: [ ]
       description: Read User Notification
-  /app_version/:
+  /config/{platform}/{version}:
     get:
-      summary: read user notification
+      summary: Get client config
       tags: [ ]
       responses:
         '200':
@@ -4011,31 +4011,13 @@ paths:
                 example:
                   value:
                     success: true
-                    message: app version fetched successfully
+                    message: Client config fetched successfully.
                     status: 200
                     data:
-                      ios:
-                        latest: "1.0.1"
-                        minimum: "1.0.0"
-                        app_store: "https://www.apple.com/app-store/"
-                      android:
-                        latest: "1.0.1"
-                        minimum: "1.0.0"
-                        app_store: "https://play.google.com/store"
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/error'
-              examples:
-                example:
-                  value:
-                    success: false
-                    code: unauthorized
-                    message: Unauthorized.
-                    status: 401
-                    data: { }
+                      latest_version: 1.0.1
+                      minimal_version: 1.0.0
+                      store_url: https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox
+                      # store_url: https://apps.apple.com/us/app/google/id284815942
         '404':
           description: Not Found
           content:
@@ -4047,10 +4029,8 @@ paths:
                   value:
                     success: false
                     code: not_found
-                    message: Not found.
+                    message: Client config does not exist.
                     status: 404
-                    data: { }
+                    data: {}
       operationId: GET APP VERSION
-      security:
-        - auth_key: [ ]
       description: GET APP VERSION

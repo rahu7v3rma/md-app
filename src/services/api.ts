@@ -54,7 +54,8 @@ const API_END_POINT = {
     DELETE_LOG_INSULIN: 'log/insulin/delete/{0}/',
     DELETE_LOG_MEDICATION: '/log/medication/delete/{0}/',
     NOTIFICATION_LIST: 'user/notification?page={0}&limit={1}',
-    UPDATE_NOTIFICATION: 'user/notification/{0}'
+    UPDATE_NOTIFICATION: 'user/notification/{0}',
+    GET_CLIENT_CONFIG: 'config/{0}/{1}'
 };
 
 type API_METHOD = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
@@ -124,6 +125,12 @@ export const resetPasswordConfirm = async (code: string, password: string) => {
         token: code,
         password
     });
+};
+
+export const getClientConfig = async (platform: string, version: string) => {
+    return await _baseRequest(
+        COMMON.stringFormat(API_END_POINT.GET_CLIENT_CONFIG, platform, version)
+    );
 };
 
 export const deleteAccount = async (password: string) => {
@@ -330,6 +337,7 @@ export const deleteLogInsulin = async (id: number | string) => {
 export const getProfile = async () => {
     return await _authorizedRequest(API_END_POINT.GET_PROFILE);
 };
+
 export const refreshProfileSession = async (
     fcmToken?: string,
     deviceId?: string,

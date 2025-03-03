@@ -191,6 +191,7 @@ const LessonCard: FunctionComponent<Props> = ({
                             size={Size.XXSmall}
                             fontWeight="700"
                             color={Colors.text.mainDarker}
+                            numberOfLines={2}
                         >
                             {label}
                         </Text>
@@ -337,7 +338,7 @@ const styles = (
             backgroundColor: Colors.extras.card_inProgress
         },
         leftContainer: {
-            width: '70%',
+            width: '60%',
             flexDirection: 'row',
             alignItems: 'center'
         },
@@ -370,7 +371,7 @@ const styles = (
             marginTop: 16
         },
         progressContainer: {
-            width: '30%',
+            width: '40%',
             paddingLeft: 10,
             alignItems: 'flex-end',
             paddingRight: 10
@@ -383,7 +384,7 @@ const styles = (
             position: 'absolute',
             top: 0,
             left: 0,
-            height: 100,
+            height: LayoutContants.cardHeight,
             width: animatedWidth,
             borderRadius: 20,
             backgroundColor: complete

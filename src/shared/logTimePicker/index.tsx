@@ -11,7 +11,7 @@
 
 import moment from 'moment';
 import React, { FunctionComponent, useEffect, useState } from 'react';
-import { StyleProp, ViewStyle } from 'react-native';
+import { Platform, StyleProp, ViewStyle } from 'react-native';
 
 import { TrackSelectors } from '@/reducers/track';
 import { Constants } from '@/utils/constants';
@@ -29,6 +29,8 @@ type Props = {
     locale?: string;
     customTitle?: string;
     disabled?: boolean;
+    onPressInput?: () => void;
+    onDismissBottomSheet?: () => void;
 };
 const stateTypes = Constants.trackFast.state;
 const LogTimePicker: FunctionComponent<Props> = ({
@@ -39,7 +41,9 @@ const LogTimePicker: FunctionComponent<Props> = ({
     displayTime,
     timeZoneOffsetInMinutes,
     customTitle,
-    disabled
+    disabled,
+    onPressInput,
+    onDismissBottomSheet
 }: Props) => {
     const { trackFastState } = TrackSelectors();
 
@@ -61,13 +65,16 @@ const LogTimePicker: FunctionComponent<Props> = ({
                         ? customTitle
                         : displayTime
                         ? displayTime
-                        : moment(time).format('HH:mm')
+                        : moment(time)
+                              .utc(Platform.OS === 'ios')
+                              .format('HH:mm')
                 }
                 onPress={() => {
                     if (trackFastState === stateTypes.empty && !disabled) {
                         trackFastTimerRef.current?.openTimePickerModal();
                         setPickerTime(time);
                     }
+                    onPressInput && onPressInput();
                 }}
             />
             <TimePickerModal
@@ -76,6 +83,7 @@ const LogTimePicker: FunctionComponent<Props> = ({
                 onSelect={onSelect}
                 locale={'en_US'}
                 timeZoneOffsetInMinutes={timeZoneOffsetInMinutes}
+                disMissModal={onDismissBottomSheet}
             />
         </>
     );

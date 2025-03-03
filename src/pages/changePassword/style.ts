@@ -29,6 +29,9 @@ export const changePasswordStyles = StyleSheet.create({
         marginTop: 40,
         width: COMMON.responsiveSize(COMMON.isIos ? 225 : 245)
     },
+    titleTextAccessible: {
+        width: '100%'
+    },
     inputContainer: {
         marginTop: 22
     },

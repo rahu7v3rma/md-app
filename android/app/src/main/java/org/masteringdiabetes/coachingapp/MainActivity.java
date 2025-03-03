@@ -21,7 +21,10 @@ public class MainActivity extends ReactActivity {
   protected void onCreate(Bundle savedInstanceState) {
     SplashScreen.show(this, R.style.SplashTheme, true);
 
-    super.onCreate(savedInstanceState);
+    // pass null instead of the savedInstanceState due to an issue when app is restored from
+    // background:
+    // https://github.com/software-mansion/react-native-screens/issues/17#issuecomment-424704067
+    super.onCreate(null);
   }
 
   /**

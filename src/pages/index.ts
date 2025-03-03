@@ -1,3 +1,5 @@
+import CriticalUpdate from '@/pages/criticalUpdate';
+
 import Block from './block';
 import ChangePassword from './changePassword';
 import ChatChannel from './chatChannel';
@@ -57,5 +59,6 @@ export {
     ResetPasswordChange,
     TrackFast,
     UnitSettings,
-    WebViewScreen
+    WebViewScreen,
+    CriticalUpdate
 };

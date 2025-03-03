@@ -2,10 +2,7 @@ import { useNavigation } from '@react-navigation/native';
 import moment from 'moment';
 import React, { FunctionComponent } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
-import {
-    ChannelPreviewMessage,
-    ChannelPreviewMessengerProps
-} from 'stream-chat-react-native';
+import { ChannelPreviewMessengerProps } from 'stream-chat-react-native';
 
 import { useChannelPreviewInfo } from '@/hooks';
 import { RootNavigationProp } from '@/navigation';
@@ -49,13 +46,18 @@ const ChannelList: FunctionComponent<ChannelPreviewMessengerProps> = ({
                         fontWeight="600"
                         color={Colors.text.black}
                         testID="displayTitle"
+                        numberOfLines={1}
                     >
                         {displayTitle}
                     </Text>
                     <View style={ChannelListStyle.subTitle}>
-                        <ChannelPreviewMessage
-                            latestMessagePreview={latestMessagePreview}
-                        />
+                        <Text numberOfLines={1}>
+                            {latestMessagePreview.previews.map(
+                                (preview, index) => (
+                                    <Text key={index}>{preview.text}</Text>
+                                )
+                            )}
+                        </Text>
                     </View>
                 </View>
                 <View style={ChannelListStyle.dateAndNotificationWrapper}>
@@ -115,7 +117,8 @@ const ChannelListStyle = StyleSheet.create({
         marginLeft: 12
     },
     subTitle: {
-        marginTop: LayoutContants.gapSpacing
+        marginTop: LayoutContants.gapSpacing,
+        flexDirection: 'row'
     },
     dateAndNotificationWrapper: {
         flex: 0.7,

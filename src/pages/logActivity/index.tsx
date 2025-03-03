@@ -6,13 +6,7 @@ import React, {
     useEffect,
     useState
 } from 'react';
-import {
-    Platform,
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    View
-} from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, View } from 'react-native';
 import RBSheet from 'react-native-raw-bottom-sheet';
 import Toast from 'react-native-toast-message';
 
@@ -71,6 +65,7 @@ const LogActivity: LogActivityComponent = ({}: LogActivityComponentProps) => {
     const [selectedIntensity, setSelectedIntensity] =
         useState<LogInputValue | null>(null);
     const [submitInProgress, setSubmitInProgress] = useState(false);
+    const [bottomSheetActive, setBottomSheetActive] = useState<boolean>(false);
 
     const { pickerValues } = LogSelectors();
 
@@ -247,142 +242,143 @@ const LogActivity: LogActivityComponent = ({}: LogActivityComponentProps) => {
     }, [route?.params?.id, dispatch, navigation]);
 
     return (
-        <>
-            <SafeAreaView style={styles.top} />
-            <View style={styles.root}>
-                <CustomStatusBar />
-                <Header
-                    leftIcon={BackIcon}
-                    onLeftBtnPress={() =>
-                        route?.params
-                            ? onDiscardBottomSheetRef?.current?.open()
-                            : navigation.pop()
-                    }
-                    title="Log Activity"
-                    rightBtnText={route?.params ? 'Delete' : ''}
-                    onRightBtnPress={() =>
-                        onDeleteBottomSheetRef?.current?.open()
-                    }
-                />
-                <ScrollView style={styles.contentWrapper}>
-                    <View style={styles.content}>
-                        <View>
-                            <LogUnitPicker
-                                title="How long was your exercise?"
-                                value={timer}
-                                type="timer"
-                                onChangeHandler={setTimer}
-                                onDecrementHandler={() =>
-                                    setTimer(timer > 0 ? timer - 1 : 0)
-                                }
-                                onIncrementHandler={() => setTimer(timer + 1)}
-                            />
-                            <LogTimePicker
-                                fieldName="Start Time"
-                                selectedValue={dateTime}
-                                onSelect={(selTime: Date) =>
-                                    // create a new date to avoid cases in
-                                    // which a Date object is manipulated and
-                                    // react doesn't see it as a state update
-                                    setDateTime(new Date(selTime))
-                                }
-                                locale="en_GB"
-                            />
-                            <LogInputDatePicker
-                                selectedDate={moment(dateTime).format(
-                                    'YYYY-MM-DD'
-                                )}
-                                onDateSelected={(selDate: Date) => {
-                                    const newDateTime = moment(selDate);
-                                    const oldDateTime = moment(dateTime);
-                                    newDateTime.set('hour', oldDateTime.hour());
-                                    newDateTime.set(
-                                        'minute',
-                                        oldDateTime.minute()
-                                    );
-                                    setDateTime(newDateTime.toDate());
-                                }}
-                            />
-                            <LogInputDropdown
-                                fieldName="Select Activity"
-                                selectedValue={selectedActivityType?.id}
-                                labelKey="name"
-                                valueKey="id"
-                                onSelect={(selected) =>
-                                    setSelectedActivityType(selected)
-                                }
-                                options={activityTypes}
-                            />
-                            <LogInputDropdown
-                                fieldName="Intensity"
-                                selectedValue={selectedIntensity?.id}
-                                labelKey="name"
-                                valueKey="id"
-                                onSelect={(selected) =>
-                                    setSelectedIntensity(selected)
-                                }
-                                options={intensities}
-                            />
-                        </View>
+        <SafeAreaView style={styles.root}>
+            <CustomStatusBar />
+            <Header
+                leftIcon={BackIcon}
+                onLeftBtnPress={() =>
+                    route?.params
+                        ? onDiscardBottomSheetRef?.current?.open()
+                        : navigation.pop()
+                }
+                title="Log Activity"
+                rightBtnText={route?.params ? 'Delete' : ''}
+                onRightBtnPress={() => onDeleteBottomSheetRef?.current?.open()}
+            />
+            <ScrollView style={styles.contentWrapper}>
+                <View style={styles.content}>
+                    <View>
+                        <LogUnitPicker
+                            title="How long was your exercise?"
+                            value={timer}
+                            type="timer"
+                            onChangeHandler={setTimer}
+                            onDecrementHandler={() =>
+                                setTimer(timer > 0 ? timer - 1 : 0)
+                            }
+                            onIncrementHandler={() => setTimer(timer + 1)}
+                        />
+                        <LogTimePicker
+                            fieldName="Start Time"
+                            selectedValue={dateTime}
+                            onSelect={(selTime: Date) =>
+                                // create a new date to avoid cases in
+                                // which a Date object is manipulated and
+                                // react doesn't see it as a state update
+                                setDateTime(new Date(selTime))
+                            }
+                            locale="en_GB"
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onDismissBottomSheet={() =>
+                                setBottomSheetActive(false)
+                            }
+                        />
+                        <LogInputDatePicker
+                            selectedDate={moment(dateTime).format('YYYY-MM-DD')}
+                            onDateSelected={(selDate: Date) => {
+                                const newDateTime = moment(selDate);
+                                const oldDateTime = moment(dateTime);
+                                newDateTime.set('hour', oldDateTime.hour());
+                                newDateTime.set('minute', oldDateTime.minute());
+                                setDateTime(newDateTime.toDate());
+                            }}
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onCalendarClosed={() => setBottomSheetActive(false)}
+                        />
+                        <LogInputDropdown
+                            fieldName="Select Activity"
+                            selectedValue={selectedActivityType?.id}
+                            labelKey="name"
+                            valueKey="id"
+                            onSelect={(selected) =>
+                                setSelectedActivityType(selected)
+                            }
+                            options={activityTypes}
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onClose={() => setBottomSheetActive(false)}
+                        />
+                        <LogInputDropdown
+                            fieldName="Intensity"
+                            selectedValue={selectedIntensity?.id}
+                            labelKey="name"
+                            valueKey="id"
+                            onSelect={(selected) =>
+                                setSelectedIntensity(selected)
+                            }
+                            options={intensities}
+                            disabled={bottomSheetActive}
+                            onPressInput={() => setBottomSheetActive(true)}
+                            onClose={() => setBottomSheetActive(false)}
+                        />
                     </View>
-                </ScrollView>
-                <View style={styles.logBtnWrapper}>
-                    <Button
-                        testID="submitButton"
-                        primary
-                        style={styles.logBtn}
-                        bordered={false}
-                        onPress={submitExerciseLog}
-                        disabled={submitInProgress}
-                    >
-                        <Text color={Colors.text.white} fontWeight="600">
-                            {route?.params ? 'Save' : 'Log Activity'}
-                        </Text>
-                    </Button>
                 </View>
-                <ConfirmationDialogue
-                    bottomSheetRef={onDeleteBottomSheetRef}
-                    title={Constants.confirmationDialog.title.delete}
-                    dismissBtnTitle={'No'}
-                    confirmBtnTitle={'Delete'}
-                    onDismissBtnHandler={() => {
-                        onDeleteBottomSheetRef.current?.close();
-                    }}
-                    onConfirmBtnHandler={() => {
-                        onDeleteActivityLog();
-                        onDeleteBottomSheetRef.current?.close();
-                    }}
-                    confirmBtnStyles={{
-                        backgroundColor: Colors.button.app_button_red_background
-                    }}
-                />
-                <ConfirmationDialogue
-                    bottomSheetRef={onDiscardBottomSheetRef}
-                    title={Constants.confirmationDialog.title.discard}
-                    dismissBtnTitle={'No'}
-                    confirmBtnTitle={'Yes'}
-                    onDismissBtnHandler={() => {
-                        onDiscardBottomSheetRef.current?.close();
-                    }}
-                    onConfirmBtnHandler={() => {
-                        onDiscardBottomSheetRef.current?.close();
-                        navigation.pop();
-                    }}
-                />
+            </ScrollView>
+            <View style={styles.logBtnWrapper}>
+                <Button
+                    testID="submitButton"
+                    primary
+                    style={styles.logBtn}
+                    bordered={false}
+                    onPress={submitExerciseLog}
+                    disabled={submitInProgress}
+                >
+                    <Text color={Colors.text.white} fontWeight="600">
+                        {route?.params ? 'Save' : 'Log Activity'}
+                    </Text>
+                </Button>
             </View>
-        </>
+            <ConfirmationDialogue
+                bottomSheetRef={onDeleteBottomSheetRef}
+                title={Constants.confirmationDialog.title.delete}
+                dismissBtnTitle={'No'}
+                confirmBtnTitle={'Delete'}
+                onDismissBtnHandler={() => {
+                    onDeleteBottomSheetRef.current?.close();
+                }}
+                onConfirmBtnHandler={() => {
+                    onDeleteActivityLog();
+                    onDeleteBottomSheetRef.current?.close();
+                }}
+                confirmBtnStyles={{
+                    backgroundColor: Colors.button.app_button_red_background
+                }}
+            />
+            <ConfirmationDialogue
+                bottomSheetRef={onDiscardBottomSheetRef}
+                title={Constants.confirmationDialog.title.discard}
+                dismissBtnTitle={'No'}
+                confirmBtnTitle={'Yes'}
+                onDismissBtnHandler={() => {
+                    onDiscardBottomSheetRef.current?.close();
+                }}
+                onConfirmBtnHandler={() => {
+                    onDiscardBottomSheetRef.current?.close();
+                    navigation.pop();
+                }}
+            />
+        </SafeAreaView>
     );
 };
 
 export default LogActivity;
 
 const styles = StyleSheet.create({
-    top: {
-        backgroundColor: Colors.extras.white
-    },
     root: {
         flex: 1,
-        backgroundColor: Colors.theme.log_page_background_color
+        backgroundColor: Colors.extras.white
     },
     contentWrapper: {
         flex: 1,
@@ -401,7 +397,7 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     logBtnWrapper: {
-        paddingBottom: Platform.OS === 'ios' ? 45 : 60,
+        paddingBottom: 20,
         paddingHorizontal: 20
     },
     logBtn: {

@@ -86,18 +86,19 @@ const Me: FunctionComponent<Props> = ({}: Props) => {
                         fontSize: Size.Small,
                         ...styles.logText
                     }}
+                    maxFontSizeMultiplier={Constants.maxFontSizeMultiplier}
                 >
                     {value + ' '}
-                    <Text
-                        fontWeight="600"
-                        style={styles.unit}
-                        size={12}
-                        color={Colors.text.black}
-                    >
-                        {' ' + unit}
-                        {type ? ' ' + type : ''}
-                    </Text>
                 </TextNative>
+                <Text
+                    fontWeight="600"
+                    style={styles.unit}
+                    size={12}
+                    color={Colors.text.black}
+                >
+                    {unit}
+                    {type ? ' ' + type : ''}
+                </Text>
             </View>
         );
     };
@@ -130,7 +131,9 @@ const Me: FunctionComponent<Props> = ({}: Props) => {
         } else if (type === Constants.logs.userExercise) {
             return renderLogDetail(
                 item.activity_type,
-                formatDurationMinutes(item.duration_minutes)
+                `${item?.intensity}\n${formatDurationMinutes(
+                    item.duration_minutes
+                )}`
             );
         } else if (type === Constants.logs.userGlucose) {
             return renderLogDetail(
@@ -357,7 +360,8 @@ const styles = StyleSheet.create({
     },
     logText: {
         fontWeight: '700',
-        color: Colors.text.black
+        color: Colors.text.black,
+        maxWidth: '50%'
     }
 });
 

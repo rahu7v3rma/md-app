@@ -6,7 +6,6 @@ import React, {
     useState
 } from 'react';
 import {
-    Dimensions,
     Keyboard,
     SafeAreaView,
     ScrollView,
@@ -29,8 +28,6 @@ import { ResetFailed, ResetSuccess } from './components';
 
 type Props = Record<string, never>;
 type ContentRouteProp = RouteProp<RootStackParamList, 'ResetPasswordChange'>;
-
-const { height: windowHeight } = Dimensions.get('window');
 
 const ResetPasswordChange: FunctionComponent<Props> = ({}: Props) => {
     const navigation = useNavigation<RootNavigationProp>();
@@ -99,24 +96,23 @@ const ResetPasswordChange: FunctionComponent<Props> = ({}: Props) => {
     }, [dispatch, route.params.code, newPassword]);
 
     return (
-        <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-            <View style={createPasswordStyles.wrapper}>
-                <SafeAreaView style={createPasswordStyles.container}>
+        <SafeAreaView style={createPasswordStyles.wrapper}>
+            <TouchableWithoutFeedback
+                onPress={Keyboard.dismiss}
+                accessible={false}
+            >
+                <View style={createPasswordStyles.container}>
                     <CustomStatusBar />
-                    <ScrollView
-                        contentContainerStyle={
-                            createPasswordStyles.scrollViewContentContainerStyle
-                        }
-                    >
-                        <Header
-                            isLeftIconShadow
-                            leftIconBgColor={Colors.extras.white}
-                            styles={createPasswordStyles.header}
-                            onLeftBtnPress={onBackPress}
-                            leftIcon={BackIcon}
-                        />
-                        {!showSuccess && !showError && (
-                            <View style={createPasswordStyles.innerContainer}>
+                    <Header
+                        isLeftIconShadow
+                        leftIconBgColor={Colors.extras.white}
+                        styles={createPasswordStyles.header}
+                        onLeftBtnPress={onBackPress}
+                        leftIcon={BackIcon}
+                    />
+                    {!showSuccess && !showError && (
+                        <View style={createPasswordStyles.innerContainer}>
+                            <ScrollView style={createPasswordStyles.scrollView}>
                                 <Text
                                     style={createPasswordStyles.titleText}
                                     size={Size.Large}
@@ -166,39 +162,38 @@ const ResetPasswordChange: FunctionComponent<Props> = ({}: Props) => {
                                         }}
                                     />
                                 </View>
+                            </ScrollView>
 
-                                <Button
-                                    primary
-                                    block
-                                    bordered={false}
-                                    style={createPasswordStyles.submitBtn}
-                                    disabled={
-                                        (newPassword === '' &&
-                                            repeatPassword === '') ||
-                                        newPassword !== repeatPassword
-                                    }
-                                    onPress={handleChangePassword}
+                            <Button
+                                primary
+                                block
+                                bordered={false}
+                                style={createPasswordStyles.submitBtn}
+                                disabled={
+                                    (newPassword === '' &&
+                                        repeatPassword === '') ||
+                                    newPassword !== repeatPassword
+                                }
+                                onPress={handleChangePassword}
+                            >
+                                <Text
+                                    fontWeight="600"
+                                    color={Colors.text.white}
                                 >
-                                    <Text
-                                        fontWeight="600"
-                                        color={Colors.text.white}
-                                    >
-                                        Change Password
-                                    </Text>
-                                </Button>
-                            </View>
-                        )}
-                        {showSuccess && <ResetSuccess />}
-                        {showError && (
-                            <ResetFailed>
-                                The reset token is invalid. Please request a new
-                                one
-                            </ResetFailed>
-                        )}
-                    </ScrollView>
-                </SafeAreaView>
-            </View>
-        </TouchableWithoutFeedback>
+                                    Change Password
+                                </Text>
+                            </Button>
+                        </View>
+                    )}
+                    {showSuccess && <ResetSuccess />}
+                    {showError && (
+                        <ResetFailed>
+                            The reset token is invalid. Please request a new one
+                        </ResetFailed>
+                    )}
+                </View>
+            </TouchableWithoutFeedback>
+        </SafeAreaView>
     );
 };
 
@@ -210,11 +205,10 @@ const createPasswordStyles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        marginHorizontal: 20,
-        position: 'relative'
+        marginHorizontal: 20
     },
-    scrollViewContentContainerStyle: {
-        height: windowHeight
+    scrollView: {
+        flex: 1
     },
     innerContainer: {
         flex: 1,
@@ -226,7 +220,6 @@ const createPasswordStyles = StyleSheet.create({
     },
     submitBtn: {
         bottom: 10,
-        position: 'absolute',
         marginBottom: COMMON.isIos ? 100 : 25
     },
     inputContainer: {

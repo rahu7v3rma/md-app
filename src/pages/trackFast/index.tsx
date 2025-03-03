@@ -436,6 +436,7 @@ const TrackFast: FunctionComponent<Props> = (props) => {
                     </View>
                 </View>
                 <TimePickerModal
+                    shouldAllowZeroTime={false}
                     ref={trackFastTimerRef}
                     selectedValue={logPickerTime}
                     onSelect={onSelectTime}

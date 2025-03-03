@@ -3,18 +3,18 @@
 exports[`Home home snapshot testing 1`] = `
 <View
   style={
-    Object {
+    {
       "backgroundColor": "#F5F8FB",
     }
   }
 >
   <View
     style={
-      Array [
-        Object {
+      [
+        {
           "height": 47,
         },
-        Object {
+        {
           "backgroundColor": "white",
         },
       ]
@@ -24,8 +24,20 @@ exports[`Home home snapshot testing 1`] = `
     <View>
       <View
         accessibilityState={
-          Object {
+          {
+            "busy": undefined,
+            "checked": undefined,
             "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
           }
         }
         accessible={true}
@@ -39,7 +51,7 @@ exports[`Home home snapshot testing 1`] = `
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
         style={
-          Object {
+          {
             "alignItems": "center",
             "backgroundColor": "#FFFFFF",
             "flexDirection": "row",
@@ -53,7 +65,7 @@ exports[`Home home snapshot testing 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "alignItems": "flex-start",
               "width": "80%",
             }
@@ -62,12 +74,12 @@ exports[`Home home snapshot testing 1`] = `
           <Text
             adjustsFontSizeToFit={true}
             style={
-              Array [
-                Object {
+              [
+                {
                   "fontFamily": "Poppins",
                 },
                 undefined,
-                Object {
+                {
                   "color": "#4D4F4D",
                   "fontSize": 24,
                   "fontWeight": "700",
@@ -82,13 +94,30 @@ exports[`Home home snapshot testing 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "alignItems": "flex-end",
               "width": "20%",
             }
           }
         >
           <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
             accessible={true}
             collapsable={false}
             focusable={true}
@@ -100,7 +129,7 @@ exports[`Home home snapshot testing 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "#D3E29F40",
                 "borderRadius": 100,
@@ -109,7 +138,7 @@ exports[`Home home snapshot testing 1`] = `
                 "margin": 0,
                 "opacity": 1,
                 "paddingHorizontal": 15.5,
-                "paddingVertical": 24,
+                "paddingVertical": 17.5,
                 "width": 48,
               }
             }
@@ -122,12 +151,12 @@ exports[`Home home snapshot testing 1`] = `
               focusable={false}
               height={20}
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "backgroundColor": "transparent",
                     "borderWidth": 0,
                   },
-                  Object {
+                  {
                     "flex": 0,
                     "height": 20,
                     "width": 18,
@@ -139,7 +168,7 @@ exports[`Home home snapshot testing 1`] = `
               <RNSVGGroup
                 fill={null}
                 propList={
-                  Array [
+                  [
                     "fill",
                   ]
                 }
@@ -148,7 +177,7 @@ exports[`Home home snapshot testing 1`] = `
                   d="M7.159 2.302a6.303 6.303 0 0 0-4.131 4.33l-.045.166a9.458 9.458 0 0 0-.193 4.07l.022.13a.28.28 0 0 1-.144.291A2.243 2.243 0 0 0 1.5 13.26c0 1.067.748 1.985 1.788 2.197l.367.075a26.76 26.76 0 0 0 10.69 0l.368-.075A2.239 2.239 0 0 0 16.5 13.26c0-.842-.463-1.576-1.147-1.96a.317.317 0 0 1-.16-.326l.023-.14a9.486 9.486 0 0 0-.174-4.008l-.063-.238a6.145 6.145 0 0 0-4.012-4.28 6.143 6.143 0 0 0-3.808-.006z"
                   fill={1087627935}
                   propList={
-                    Array [
+                    [
                       "fill",
                     ]
                   }
@@ -157,7 +186,7 @@ exports[`Home home snapshot testing 1`] = `
                   d="M6.01 15.903a26.7 26.7 0 0 0 5.981 0 3.462 3.462 0 0 1-.09.574l-.083.334a2.867 2.867 0 0 1-2.114 2.106c-.463.11-.945.11-1.408 0a2.867 2.867 0 0 1-2.114-2.106l-.082-.334a3.452 3.452 0 0 1-.09-.574z"
                   fill={1087627935}
                   propList={
-                    Array [
+                    [
                       "fill",
                     ]
                   }
@@ -166,24 +195,64 @@ exports[`Home home snapshot testing 1`] = `
                   d="m3.028 6.633.724.196-.724-.196zm4.13-4.33-.23-.714.23.713zM2.984 6.797l-.724-.196.724.196zm-.193 4.07.739-.127-.74.126zm.022.13-.739.128.74-.127zm.476 4.46.15-.736-.15.735zm.367.074.15-.735-.15.735zm10.69 0-.15-.735.15.735zm.368-.075.15.735-.15-.735zm.48-4.483.739.126-.74-.126zm.023-.14-.739-.126.74.126zm-.174-4.008-.726.19.726-.19zm-.063-.238.726-.19-.726.19zm-4.012-4.28.236-.712-.236.712zm4.386 8.993-.366.654.366-.654zm-12.685-.012-.359-.658.36.658zM9.75 1a.75.75 0 1 0-1.5 0h1.5zm-1.5 1.005a.75.75 0 0 0 1.5 0h-1.5zM6.01 15.903l.083-.745-.897-.1.065.9.748-.055zm5.981 0 .748.055.066-.9-.898.1.084.745zm-.09.574.728.18-.729-.18zm-.083.334-.728-.18.728.18zm-2.114 2.106.175.73-.175-.73zm-1.408 0-.174.73.174-.73zm-2.114-2.106-.728.179.728-.18zm-.082-.334.728-.179-.728.18zM3.752 6.83A5.553 5.553 0 0 1 7.39 3.016l-.463-1.427a7.053 7.053 0 0 0-4.623 4.847l1.448.393zm-.045.165.045-.165-1.448-.393-.045.166 1.448.392zm-.178 3.747a8.709 8.709 0 0 1 .178-3.747L2.26 6.602a10.209 10.209 0 0 0-.208 4.392l1.478-.253zm.023.131-.023-.131-1.478.253.022.132 1.479-.254zM2.25 13.26c0-.567.314-1.06.777-1.312L2.31 10.63a2.992 2.992 0 0 0-1.56 2.63h1.5zm1.188 1.462A1.489 1.489 0 0 1 2.25 13.26H.75c0 1.42.996 2.649 2.388 2.932l.3-1.47zm.367.075-.367-.075-.3 1.47.368.075.3-1.47zm10.39 0a26.021 26.021 0 0 1-10.39 0l-.3 1.47c3.627.739 7.364.739 10.99 0l-.3-1.47zm.368-.075-.368.075.3 1.47.367-.075-.3-1.47zm1.187-1.462c0 .713-.499 1.322-1.187 1.462l.3 1.47a2.989 2.989 0 0 0 2.387-2.932h-1.5zm-.763-1.305c.456.255.763.744.763 1.305h1.5a2.993 2.993 0 0 0-1.53-2.614l-.733 1.31zm-.51-1.247-.024.14 1.479.252.024-.14-1.479-.252zm-.16-3.691a8.737 8.737 0 0 1 .16 3.69l1.479.254a10.237 10.237 0 0 0-.189-4.325l-1.45.38zm-.063-.238.063.238 1.45-.381-.062-.238-1.45.38zM10.732 3.02a5.396 5.396 0 0 1 3.522 3.758l1.451-.381a6.896 6.896 0 0 0-4.502-4.802l-.47 1.425zM7.39 3.016a5.393 5.393 0 0 1 3.342.005l.47-1.425a6.893 6.893 0 0 0-4.275-.007l.463 1.427zm8.33 7.63c.143.08.246.253.212.454l-1.479-.253c-.08.464.159.898.534 1.108l.732-1.309zm-13.647.48a.47.47 0 0 1 .236-.495l.718 1.317a1.03 1.03 0 0 0 .525-1.076l-1.479.254zM8.25 1v1.005h1.5V1h-1.5zM5.926 16.649c2.043.23 4.105.23 6.149 0l-.168-1.49a26.021 26.021 0 0 1-5.814 0l-.167 1.49zm6.703.007c.056-.23.093-.463.11-.698l-1.496-.109a2.709 2.709 0 0 1-.07.45l1.456.357zm-.082.334.082-.334-1.457-.358-.082.334 1.457.358zm-2.668 2.656a3.617 3.617 0 0 0 2.668-2.656l-1.457-.358a2.117 2.117 0 0 1-1.56 1.555l.349 1.46zm-1.757 0c.577.139 1.18.139 1.757 0l-.35-1.459c-.347.084-.71.084-1.058 0l-.35 1.46zM5.454 16.99a3.617 3.617 0 0 0 2.668 2.656l.349-1.459a2.117 2.117 0 0 1-1.56-1.556l-1.457.359zm-.082-.334.082.334 1.456-.358-.082-.334-1.456.358zm-.11-.698c.016.235.053.469.11.698l1.456-.358a2.703 2.703 0 0 1-.07-.449l-1.497.109z"
                   fill={4285700459}
                   propList={
-                    Array [
+                    [
                       "fill",
                     ]
                   }
                 />
               </RNSVGGroup>
             </RNSVGSvgView>
+            <View
+              style={
+                [
+                  {
+                    "alignItems": "center",
+                    "backgroundColor": "#F50157",
+                    "justifyContent": "center",
+                    "position": "absolute",
+                    "right": -10,
+                    "top": -10,
+                  },
+                  {
+                    "borderRadius": 30,
+                    "height": 30,
+                    "width": 30,
+                  },
+                ]
+              }
+              testID="rightButtonBadge"
+            >
+              <Text
+                adjustsFontSizeToFit={true}
+                style={
+                  [
+                    {
+                      "fontFamily": "Poppins",
+                    },
+                    undefined,
+                    {
+                      "color": "#FFFFFF",
+                      "fontSize": 16,
+                      "fontWeight": undefined,
+                      "lineHeight": 24,
+                    },
+                  ]
+                }
+              >
+                3
+              </Text>
+            </View>
           </View>
         </View>
       </View>
       <View
         style={
-          Object {
+          {
             "backgroundColor": "rgba(0, 0, 0, 0.03)",
             "borderColor": "#D3E6F8",
             "elevation": 8,
             "shadowColor": "rgba(0, 0, 0, 0.03)",
-            "shadowOffset": Object {
+            "shadowOffset": {
               "height": 6,
               "width": 2,
             },
@@ -194,7 +263,7 @@ exports[`Home home snapshot testing 1`] = `
       >
         <View
           style={
-            Object {
+            {
               "borderBottomColor": "rgba(0, 0, 0, 0.03)",
               "borderBottomWidth": 3,
             }
@@ -213,7 +282,7 @@ exports[`Home home snapshot testing 1`] = `
     }
     scrollEnabled={true}
     style={
-      Object {
+      {
         "height": "100%",
       }
     }
@@ -222,7 +291,7 @@ exports[`Home home snapshot testing 1`] = `
     <View>
       <View
         style={
-          Object {
+          {
             "marginBottom": 100,
             "marginHorizontal": 19,
             "marginTop": 19,
@@ -230,6 +299,23 @@ exports[`Home home snapshot testing 1`] = `
         }
       >
         <View
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
           accessible={true}
           collapsable={false}
           focusable={true}
@@ -241,7 +327,7 @@ exports[`Home home snapshot testing 1`] = `
           onResponderTerminationRequest={[Function]}
           onStartShouldSetResponder={[Function]}
           style={
-            Object {
+            {
               "alignItems": "center",
               "backgroundColor": "#FFFFFF",
               "borderColor": "#cccccc",
@@ -251,7 +337,7 @@ exports[`Home home snapshot testing 1`] = `
               "height": 90,
               "opacity": 1,
               "shadowColor": "rgba(0,0,0,0.5)",
-              "shadowOffset": Object {
+              "shadowOffset": {
                 "height": 0,
                 "width": 0,
               },
@@ -262,7 +348,7 @@ exports[`Home home snapshot testing 1`] = `
         >
           <View
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "width": "20%",
               }
@@ -270,7 +356,7 @@ exports[`Home home snapshot testing 1`] = `
           >
             <View
               style={
-                Object {
+                {
                   "borderRadius": 16,
                   "height": 32,
                   "position": "relative",
@@ -280,11 +366,11 @@ exports[`Home home snapshot testing 1`] = `
             >
               <View
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "justifyContent": "center",
                     },
-                    Object {
+                    {
                       "height": 32,
                       "width": 32,
                     },
@@ -294,15 +380,15 @@ exports[`Home home snapshot testing 1`] = `
                 <Image
                   resizeMode="contain"
                   source={
-                    Object {
-                      "headers": Object {
+                    {
+                      "headers": {
                         "X-Authorization": "Token ",
                       },
-                      "uri": "http://127.0.0.1:8000/image/profile_image/r/24/24/scale",
+                      "uri": "undefinedimage/coach_profile_image/r/24/24/scale",
                     }
                   }
                   style={
-                    Object {
+                    {
                       "borderRadius": 12,
                       "height": 24,
                       "width": 24,
@@ -314,7 +400,7 @@ exports[`Home home snapshot testing 1`] = `
           </View>
           <View
             style={
-              Object {
+              {
                 "width": "60%",
               }
             }
@@ -322,12 +408,12 @@ exports[`Home home snapshot testing 1`] = `
             <Text
               adjustsFontSizeToFit={true}
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "fontFamily": "Poppins",
                   },
                   undefined,
-                  Object {
+                  {
                     "color": "#4D4F4D",
                     "fontSize": 14,
                     "fontWeight": "bold",
@@ -336,12 +422,12 @@ exports[`Home home snapshot testing 1`] = `
                 ]
               }
             >
-              Chat with Coach name
+              Chat with Coach coach_first_name
             </Text>
           </View>
           <View
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "width": "20%",
               }
@@ -358,12 +444,12 @@ exports[`Home home snapshot testing 1`] = `
               minX={0}
               minY={0}
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "backgroundColor": "transparent",
                     "borderWidth": 0,
                   },
-                  Object {
+                  {
                     "flex": 0,
                     "height": 32,
                     "width": 32,
@@ -377,7 +463,7 @@ exports[`Home home snapshot testing 1`] = `
               <RNSVGGroup
                 fill={null}
                 propList={
-                  Array [
+                  [
                     "fill",
                   ]
                 }
@@ -385,7 +471,7 @@ exports[`Home home snapshot testing 1`] = `
                 <RNSVGPath
                   d="M9.5 7L14.5 12L9.5 17"
                   propList={
-                    Array [
+                    [
                       "stroke",
                       "strokeWidth",
                       "strokeLinecap",
@@ -403,7 +489,7 @@ exports[`Home home snapshot testing 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -415,12 +501,12 @@ exports[`Home home snapshot testing 1`] = `
           <Text
             adjustsFontSizeToFit={true}
             style={
-              Array [
-                Object {
+              [
+                {
                   "fontFamily": "Poppins",
                 },
                 undefined,
-                Object {
+                {
                   "color": "#4D4F4D",
                   "fontSize": 20,
                   "fontWeight": "600",
@@ -432,6 +518,23 @@ exports[`Home home snapshot testing 1`] = `
             My Next Lesson
           </Text>
           <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
             accessible={true}
             collapsable={false}
             focusable={true}
@@ -443,7 +546,7 @@ exports[`Home home snapshot testing 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "flexDirection": "row",
                 "opacity": 1,
@@ -454,12 +557,12 @@ exports[`Home home snapshot testing 1`] = `
             <Text
               adjustsFontSizeToFit={true}
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "fontFamily": "Poppins",
                   },
                   undefined,
-                  Object {
+                  {
                     "color": "#72996B",
                     "fontSize": 12,
                     "fontWeight": undefined,
@@ -481,12 +584,12 @@ exports[`Home home snapshot testing 1`] = `
               minX={0}
               minY={0}
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "backgroundColor": "transparent",
                     "borderWidth": 0,
                   },
-                  Object {
+                  {
                     "flex": 0,
                     "height": 14,
                     "width": 14,
@@ -496,8 +599,8 @@ exports[`Home home snapshot testing 1`] = `
               vbHeight={14}
               vbWidth={14}
               width={14}
-              xml="<svg width=\\"14\\" height=\\"14\\" viewBox=\\"0 0 14 14\\" fill=\\"none\\" xmlns=\\"http://www.w3.org/2000/svg\\">
-<path d=\\"M5.54166 4.08334L8.45833 7L5.54166 9.91667\\" stroke=\\"#6E51D0\\" stroke-width=\\"1.16667\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/>
+              xml="<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.54166 4.08334L8.45833 7L5.54166 9.91667" stroke="#6E51D0" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 "
               xmlns="http://www.w3.org/2000/svg"
@@ -505,7 +608,7 @@ exports[`Home home snapshot testing 1`] = `
               <RNSVGGroup
                 fill={null}
                 propList={
-                  Array [
+                  [
                     "fill",
                   ]
                 }
@@ -513,7 +616,7 @@ exports[`Home home snapshot testing 1`] = `
                 <RNSVGPath
                   d="M5.54166 4.08334L8.45833 7L5.54166 9.91667"
                   propList={
-                    Array [
+                    [
                       "stroke",
                       "strokeWidth",
                       "strokeLinecap",
@@ -531,7 +634,7 @@ exports[`Home home snapshot testing 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "minHeight": 110,
               "overflow": "hidden",
             }
@@ -540,10 +643,10 @@ exports[`Home home snapshot testing 1`] = `
           <View
             collapsable={false}
             style={
-              Object {
+              {
                 "flexDirection": "row-reverse",
-                "transform": Array [
-                  Object {
+                "transform": [
+                  {
                     "translateX": 0,
                   },
                 ],
@@ -553,9 +656,9 @@ exports[`Home home snapshot testing 1`] = `
             <View
               collapsable={false}
               style={
-                Object {
+                {
                   "alignItems": "center",
-                  "backgroundColor": "#FFFFFF",
+                  "backgroundColor": "#f0f4f8",
                   "borderColor": "#cccccc",
                   "borderRadius": 20,
                   "elevation": 1,
@@ -565,14 +668,14 @@ exports[`Home home snapshot testing 1`] = `
                   "marginBottom": 10,
                   "marginLeft": 10,
                   "shadowColor": "rgba(0,0,0,0.5)",
-                  "shadowOffset": Object {
+                  "shadowOffset": {
                     "height": 0,
                     "width": 0,
                   },
                   "shadowOpacity": 0.06,
                   "shadowRadius": 3,
-                  "transform": Array [
-                    Object {
+                  "transform": [
+                    {
                       "translateX": 0,
                     },
                   ],
@@ -582,8 +685,20 @@ exports[`Home home snapshot testing 1`] = `
             >
               <View
                 accessibilityState={
-                  Object {
-                    "disabled": true,
+                  {
+                    "busy": undefined,
+                    "checked": undefined,
+                    "disabled": false,
+                    "expanded": undefined,
+                    "selected": undefined,
+                  }
+                }
+                accessibilityValue={
+                  {
+                    "max": undefined,
+                    "min": undefined,
+                    "now": undefined,
+                    "text": undefined,
                   }
                 }
                 accessible={true}
@@ -597,7 +712,7 @@ exports[`Home home snapshot testing 1`] = `
                 onResponderTerminationRequest={[Function]}
                 onStartShouldSetResponder={[Function]}
                 style={
-                  Object {
+                  {
                     "alignItems": "center",
                     "backgroundColor": "#FFFFFF",
                     "borderRadius": 20,
@@ -612,7 +727,7 @@ exports[`Home home snapshot testing 1`] = `
                 <View
                   collapsable={false}
                   style={
-                    Object {
+                    {
                       "backgroundColor": "#FFFFFF",
                       "borderRadius": 20,
                       "height": 100,
@@ -625,7 +740,7 @@ exports[`Home home snapshot testing 1`] = `
                 />
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "center",
                       "flexDirection": "row",
                       "width": "70%",
@@ -634,7 +749,7 @@ exports[`Home home snapshot testing 1`] = `
                 >
                   <View
                     style={
-                      Object {
+                      {
                         "alignItems": "center",
                         "backgroundColor": "#f8f8f8",
                         "borderRadius": 15,
@@ -648,12 +763,12 @@ exports[`Home home snapshot testing 1`] = `
                     <Image
                       resizeMode="contain"
                       source={
-                        Object {
-                          "uri": undefined,
+                        {
+                          "uri": "file://mockCachesDirectoryPath/123",
                         }
                       }
                       style={
-                        Object {
+                        {
                           "height": 45,
                           "width": 45,
                         }
@@ -662,7 +777,7 @@ exports[`Home home snapshot testing 1`] = `
                   </View>
                   <View
                     style={
-                      Object {
+                      {
                         "marginStart": 10,
                         "width": "65%",
                       }
@@ -671,12 +786,12 @@ exports[`Home home snapshot testing 1`] = `
                     <Text
                       adjustsFontSizeToFit={true}
                       style={
-                        Array [
-                          Object {
+                        [
+                          {
                             "fontFamily": "Poppins",
                           },
                           undefined,
-                          Object {
+                          {
                             "color": "#4D4F4D",
                             "fontSize": 14,
                             "fontWeight": "700",
@@ -690,14 +805,14 @@ exports[`Home home snapshot testing 1`] = `
                     <Text
                       adjustsFontSizeToFit={true}
                       style={
-                        Array [
-                          Object {
+                        [
+                          {
                             "fontFamily": "Poppins",
                           },
-                          Object {
+                          {
                             "marginTop": 5,
                           },
-                          Object {
+                          {
                             "color": "#A4AAAF",
                             "fontSize": 12,
                             "fontWeight": undefined,
@@ -712,7 +827,7 @@ exports[`Home home snapshot testing 1`] = `
                 </View>
                 <View
                   style={
-                    Object {
+                    {
                       "alignItems": "flex-end",
                       "paddingLeft": 10,
                       "paddingRight": 10,
@@ -724,69 +839,60 @@ exports[`Home home snapshot testing 1`] = `
                     <View>
                       <RNSVGSvgView
                         align="xMidYMid"
-                        bbHeight={25}
-                        bbWidth={25}
+                        bbHeight={32}
+                        bbWidth={32}
                         fill="none"
                         focusable={false}
-                        height={25}
+                        height={32}
                         meetOrSlice={0}
                         minX={0}
                         minY={0}
                         style={
-                          Array [
-                            Object {
+                          [
+                            {
                               "backgroundColor": "transparent",
                               "borderWidth": 0,
                             },
-                            Object {
+                            {
                               "flex": 0,
-                              "height": 25,
-                              "width": 25,
+                              "height": 32,
+                              "width": 32,
                             },
                           ]
                         }
                         vbHeight={24}
                         vbWidth={24}
-                        width={25}
-                        xml="<svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" xmlns=\\"http://www.w3.org/2000/svg\\">
-<path d=\\"M12 17.35C12.9002 17.35 13.63 16.6202 13.63 15.72C13.63 14.8198 12.9002 14.09 12 14.09C11.0998 14.09 10.37 14.8198 10.37 15.72C10.37 16.6202 11.0998 17.35 12 17.35Z\\" fill=\\"#A4AAAF\\"/>
-<path d=\\"M18.28 9.53V8.28C18.28 5.58 17.63 2 12 2C6.37 2 5.72 5.58 5.72 8.28V9.53C2.92 9.88 2 11.3 2 14.79V16.65C2 20.75 3.25 22 7.35 22H16.65C20.75 22 22 20.75 22 16.65V14.79C22 11.3 21.08 9.88 18.28 9.53ZM12 18.74C10.33 18.74 8.98 17.38 8.98 15.72C8.98 14.05 10.34 12.7 12 12.7C13.66 12.7 15.02 14.06 15.02 15.72C15.02 17.39 13.67 18.74 12 18.74ZM7.35 9.44C7.27 9.44 7.2 9.44 7.12 9.44V8.28C7.12 5.35 7.95 3.4 12 3.4C16.05 3.4 16.88 5.35 16.88 8.28V9.45C16.8 9.45 16.73 9.45 16.65 9.45H7.35V9.44Z\\" fill=\\"#A4AAAF\\"/>
-</svg>
-"
-                        xmlns="http://www.w3.org/2000/svg"
+                        width={32}
                       >
                         <RNSVGGroup
                           fill={null}
                           propList={
-                            Array [
+                            [
                               "fill",
                             ]
                           }
                         >
                           <RNSVGPath
-                            d="M12 17.35C12.9002 17.35 13.63 16.6202 13.63 15.72C13.63 14.8198 12.9002 14.09 12 14.09C11.0998 14.09 10.37 14.8198 10.37 15.72C10.37 16.6202 11.0998 17.35 12 17.35Z"
-                            fill={4288981679}
+                            d="M9.5 7L14.5 12L9.5 17"
                             propList={
-                              Array [
-                                "fill",
+                              [
+                                "stroke",
+                                "strokeWidth",
+                                "strokeLinecap",
+                                "strokeLinejoin",
                               ]
                             }
-                          />
-                          <RNSVGPath
-                            d="M18.28 9.53V8.28C18.28 5.58 17.63 2 12 2C6.37 2 5.72 5.58 5.72 8.28V9.53C2.92 9.88 2 11.3 2 14.79V16.65C2 20.75 3.25 22 7.35 22H16.65C20.75 22 22 20.75 22 16.65V14.79C22 11.3 21.08 9.88 18.28 9.53ZM12 18.74C10.33 18.74 8.98 17.38 8.98 15.72C8.98 14.05 10.34 12.7 12 12.7C13.66 12.7 15.02 14.06 15.02 15.72C15.02 17.39 13.67 18.74 12 18.74ZM7.35 9.44C7.27 9.44 7.2 9.44 7.12 9.44V8.28C7.12 5.35 7.95 3.4 12 3.4C16.05 3.4 16.88 5.35 16.88 8.28V9.45C16.8 9.45 16.73 9.45 16.65 9.45H7.35V9.44Z"
-                            fill={4288981679}
-                            propList={
-                              Array [
-                                "fill",
-                              ]
-                            }
+                            stroke={4285700459}
+                            strokeLinecap={1}
+                            strokeLinejoin={1}
+                            strokeWidth={2}
                           />
                         </RNSVGGroup>
                       </RNSVGSvgView>
                       <View
                         collapsable={false}
                         style={
-                          Object {
+                          {
                             "opacity": 0,
                             "position": "absolute",
                           }
@@ -794,62 +900,53 @@ exports[`Home home snapshot testing 1`] = `
                       >
                         <RNSVGSvgView
                           align="xMidYMid"
-                          bbHeight={25}
-                          bbWidth={25}
+                          bbHeight={32}
+                          bbWidth={32}
                           fill="none"
                           focusable={false}
-                          height={25}
+                          height={32}
                           meetOrSlice={0}
                           minX={0}
                           minY={0}
                           style={
-                            Array [
-                              Object {
+                            [
+                              {
                                 "backgroundColor": "transparent",
                                 "borderWidth": 0,
                               },
-                              Object {
+                              {
                                 "flex": 0,
-                                "height": 25,
-                                "width": 25,
+                                "height": 32,
+                                "width": 32,
                               },
                             ]
                           }
                           vbHeight={24}
                           vbWidth={24}
-                          width={25}
-                          xml="<svg width=\\"24\\" height=\\"24\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" xmlns=\\"http://www.w3.org/2000/svg\\">
-<path d=\\"M12 17.35C12.9002 17.35 13.63 16.6202 13.63 15.72C13.63 14.8198 12.9002 14.09 12 14.09C11.0998 14.09 10.37 14.8198 10.37 15.72C10.37 16.6202 11.0998 17.35 12 17.35Z\\" fill=\\"#A4AAAF\\"/>
-<path d=\\"M18.28 9.53V8.28C18.28 5.58 17.63 2 12 2C6.37 2 5.72 5.58 5.72 8.28V9.53C2.92 9.88 2 11.3 2 14.79V16.65C2 20.75 3.25 22 7.35 22H16.65C20.75 22 22 20.75 22 16.65V14.79C22 11.3 21.08 9.88 18.28 9.53ZM12 18.74C10.33 18.74 8.98 17.38 8.98 15.72C8.98 14.05 10.34 12.7 12 12.7C13.66 12.7 15.02 14.06 15.02 15.72C15.02 17.39 13.67 18.74 12 18.74ZM7.35 9.44C7.27 9.44 7.2 9.44 7.12 9.44V8.28C7.12 5.35 7.95 3.4 12 3.4C16.05 3.4 16.88 5.35 16.88 8.28V9.45C16.8 9.45 16.73 9.45 16.65 9.45H7.35V9.44Z\\" fill=\\"#A4AAAF\\"/>
-</svg>
-"
-                          xmlns="http://www.w3.org/2000/svg"
+                          width={32}
                         >
                           <RNSVGGroup
                             fill={null}
                             propList={
-                              Array [
+                              [
                                 "fill",
                               ]
                             }
                           >
                             <RNSVGPath
-                              d="M12 17.35C12.9002 17.35 13.63 16.6202 13.63 15.72C13.63 14.8198 12.9002 14.09 12 14.09C11.0998 14.09 10.37 14.8198 10.37 15.72C10.37 16.6202 11.0998 17.35 12 17.35Z"
-                              fill={4288981679}
+                              d="M9.5 7L14.5 12L9.5 17"
                               propList={
-                                Array [
-                                  "fill",
+                                [
+                                  "stroke",
+                                  "strokeWidth",
+                                  "strokeLinecap",
+                                  "strokeLinejoin",
                                 ]
                               }
-                            />
-                            <RNSVGPath
-                              d="M18.28 9.53V8.28C18.28 5.58 17.63 2 12 2C6.37 2 5.72 5.58 5.72 8.28V9.53C2.92 9.88 2 11.3 2 14.79V16.65C2 20.75 3.25 22 7.35 22H16.65C20.75 22 22 20.75 22 16.65V14.79C22 11.3 21.08 9.88 18.28 9.53ZM12 18.74C10.33 18.74 8.98 17.38 8.98 15.72C8.98 14.05 10.34 12.7 12 12.7C13.66 12.7 15.02 14.06 15.02 15.72C15.02 17.39 13.67 18.74 12 18.74ZM7.35 9.44C7.27 9.44 7.2 9.44 7.12 9.44V8.28C7.12 5.35 7.95 3.4 12 3.4C16.05 3.4 16.88 5.35 16.88 8.28V9.45C16.8 9.45 16.73 9.45 16.65 9.45H7.35V9.44Z"
-                              fill={4288981679}
-                              propList={
-                                Array [
-                                  "fill",
-                                ]
-                              }
+                              stroke={4285700459}
+                              strokeLinecap={1}
+                              strokeLinejoin={1}
+                              strokeWidth={2}
                             />
                           </RNSVGGroup>
                         </RNSVGSvgView>
@@ -863,7 +960,7 @@ exports[`Home home snapshot testing 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "alignItems": "center",
               "flexDirection": "row",
               "justifyContent": "space-between",
@@ -875,12 +972,12 @@ exports[`Home home snapshot testing 1`] = `
           <Text
             adjustsFontSizeToFit={true}
             style={
-              Array [
-                Object {
+              [
+                {
                   "fontFamily": "Poppins",
                 },
                 undefined,
-                Object {
+                {
                   "color": "#4D4F4D",
                   "fontSize": 20,
                   "fontWeight": "600",
@@ -892,6 +989,23 @@ exports[`Home home snapshot testing 1`] = `
             My Tasks for Today
           </Text>
           <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
             accessible={true}
             collapsable={false}
             focusable={true}
@@ -903,7 +1017,7 @@ exports[`Home home snapshot testing 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "flexDirection": "row",
                 "opacity": 1,
@@ -914,12 +1028,12 @@ exports[`Home home snapshot testing 1`] = `
             <Text
               adjustsFontSizeToFit={true}
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "fontFamily": "Poppins",
                   },
                   undefined,
-                  Object {
+                  {
                     "color": "#72996B",
                     "fontSize": 12,
                     "fontWeight": undefined,
@@ -941,12 +1055,12 @@ exports[`Home home snapshot testing 1`] = `
               minX={0}
               minY={0}
               style={
-                Array [
-                  Object {
+                [
+                  {
                     "backgroundColor": "transparent",
                     "borderWidth": 0,
                   },
-                  Object {
+                  {
                     "flex": 0,
                     "height": 14,
                     "width": 14,
@@ -956,8 +1070,8 @@ exports[`Home home snapshot testing 1`] = `
               vbHeight={14}
               vbWidth={14}
               width={14}
-              xml="<svg width=\\"14\\" height=\\"14\\" viewBox=\\"0 0 14 14\\" fill=\\"none\\" xmlns=\\"http://www.w3.org/2000/svg\\">
-<path d=\\"M5.54166 4.08334L8.45833 7L5.54166 9.91667\\" stroke=\\"#6E51D0\\" stroke-width=\\"1.16667\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\"/>
+              xml="<svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.54166 4.08334L8.45833 7L5.54166 9.91667" stroke="#6E51D0" stroke-width="1.16667" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
 "
               xmlns="http://www.w3.org/2000/svg"
@@ -965,7 +1079,7 @@ exports[`Home home snapshot testing 1`] = `
               <RNSVGGroup
                 fill={null}
                 propList={
-                  Array [
+                  [
                     "fill",
                   ]
                 }
@@ -973,7 +1087,7 @@ exports[`Home home snapshot testing 1`] = `
                 <RNSVGPath
                   d="M5.54166 4.08334L8.45833 7L5.54166 9.91667"
                   propList={
-                    Array [
+                    [
                       "stroke",
                       "strokeWidth",
                       "strokeLinecap",
@@ -991,7 +1105,7 @@ exports[`Home home snapshot testing 1`] = `
         </View>
         <View
           style={
-            Object {
+            {
               "display": "flex",
               "flexDirection": "row",
               "flexWrap": "wrap",
@@ -1000,6 +1114,23 @@ exports[`Home home snapshot testing 1`] = `
           }
         >
           <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
             accessible={true}
             collapsable={false}
             focusable={true}
@@ -1011,7 +1142,153 @@ exports[`Home home snapshot testing 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
+                "alignItems": "center",
+                "backgroundColor": "#FFFFFF",
+                "borderColor": "#FFFFFF",
+                "borderRadius": 20,
+                "borderWidth": 1.5,
+                "elevation": 3,
+                "flexDirection": "row",
+                "height": 90,
+                "marginBottom": 10,
+                "opacity": 1,
+                "shadowColor": "rgba(0,0,0,0.5)",
+                "width": "48%",
+              }
+            }
+            testID="logTab"
+          >
+            <View
+              style={
+                {
+                  "alignItems": "center",
+                  "marginHorizontal": 16,
+                }
+              }
+            >
+              <RNSVGSvgView
+                align="xMidYMid"
+                bbHeight={20}
+                bbWidth={18}
+                fill="none"
+                focusable={false}
+                height={20}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
+                style={
+                  [
+                    {
+                      "backgroundColor": "transparent",
+                      "borderWidth": 0,
+                    },
+                    {
+                      "flex": 0,
+                      "height": 20,
+                      "width": 18,
+                    },
+                  ]
+                }
+                testID="logTabIcon"
+                vbHeight={20}
+                vbWidth={18}
+                width={18}
+                xml="<svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.5904 5.41L3.31044 15.69C2.83044 16.17 2.01044 16.06 1.72044 15.45C1.20044 14.38 0.900444 13.17 0.900444 11.9C0.880444 6.38 6.48044 1.66 8.38045 0.21C8.75044 -0.07 9.25045 -0.07 9.61045 0.21C10.4804 0.87 12.1104 2.24 13.6404 4.04C13.9804 4.44 13.9604 5.04 13.5904 5.41Z" fill="#5A78FF"/>
+  <path d="M17.1 11.9103C17.1 16.3703 13.47 20.0003 8.99996 20.0003C7.20996 20.0003 5.53996 19.4203 4.18996 18.4203C3.69996 18.0603 3.65996 17.3403 4.08996 16.9103L14.16 6.84026C14.63 6.37026 15.42 6.47026 15.74 7.05026C16.56 8.56026 17.11 10.2003 17.1 11.9103Z" fill="#5A78FF"/>
+</svg>
+"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <RNSVGGroup
+                  fill={null}
+                  propList={
+                    [
+                      "fill",
+                    ]
+                  }
+                >
+                  <RNSVGPath
+                    d="M13.5904 5.41L3.31044 15.69C2.83044 16.17 2.01044 16.06 1.72044 15.45C1.20044 14.38 0.900444 13.17 0.900444 11.9C0.880444 6.38 6.48044 1.66 8.38045 0.21C8.75044 -0.07 9.25045 -0.07 9.61045 0.21C10.4804 0.87 12.1104 2.24 13.6404 4.04C13.9804 4.44 13.9604 5.04 13.5904 5.41Z"
+                    fill={4284119295}
+                    propList={
+                      [
+                        "fill",
+                      ]
+                    }
+                  />
+                  <RNSVGPath
+                    d="M17.1 11.9103C17.1 16.3703 13.47 20.0003 8.99996 20.0003C7.20996 20.0003 5.53996 19.4203 4.18996 18.4203C3.69996 18.0603 3.65996 17.3403 4.08996 16.9103L14.16 6.84026C14.63 6.37026 15.42 6.47026 15.74 7.05026C16.56 8.56026 17.11 10.2003 17.1 11.9103Z"
+                    fill={4284119295}
+                    propList={
+                      [
+                        "fill",
+                      ]
+                    }
+                  />
+                </RNSVGGroup>
+              </RNSVGSvgView>
+            </View>
+            <View
+              style={{}}
+              testID="logTabTitleContainer"
+            >
+              <Text
+                adjustsFontSizeToFit={true}
+                style={
+                  [
+                    {
+                      "fontFamily": "Poppins",
+                    },
+                    {
+                      "flexWrap": "wrap",
+                      "width": "95%",
+                    },
+                    {
+                      "color": "#72996B",
+                      "fontSize": 14,
+                      "fontWeight": "600",
+                      "lineHeight": 22,
+                    },
+                  ]
+                }
+                testID="logTabTitle"
+              >
+                Log Hydration
+              </Text>
+            </View>
+          </View>
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
                 "alignItems": "center",
                 "backgroundColor": "#FFFFFF",
                 "borderColor": "#72996B",
@@ -1030,51 +1307,91 @@ exports[`Home home snapshot testing 1`] = `
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "marginHorizontal": 16,
                 }
               }
             >
               <RNSVGSvgView
-                bbHeight="100%"
-                bbWidth="100%"
+                align="xMidYMid"
+                bbHeight={20}
+                bbWidth={18}
+                fill="none"
                 focusable={false}
+                height={20}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "backgroundColor": "transparent",
                       "borderWidth": 0,
                     },
-                    Object {
+                    {
                       "flex": 0,
-                      "height": "100%",
-                      "width": "100%",
+                      "height": 20,
+                      "width": 18,
                     },
                   ]
                 }
                 testID="logTabIcon"
-                xml="<svg> </svg> "
+                vbHeight={20}
+                vbWidth={18}
+                width={18}
+                xml="<svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M13.5904 5.41L3.31038 15.69C2.83038 16.17 2.01039 16.06 1.72039 15.45C1.20039 14.38 0.900383 13.17 0.900383 11.9C0.880383 6.38 6.48039 1.66 8.38039 0.21C8.75039 -0.07 9.25039 -0.07 9.61039 0.21C10.4804 0.87 12.1104 2.24 13.6404 4.04C13.9804 4.44 13.9604 5.04 13.5904 5.41Z" fill="#D05151"/>
+  <path d="M17.1 11.91C17.1 16.37 13.47 20 9 20C7.21 20 5.53999 19.42 4.18999 18.42C3.69999 18.06 3.66 17.34 4.09 16.91L14.16 6.84C14.63 6.37 15.42 6.47 15.74 7.05C16.56 8.56 17.11 10.2 17.1 11.91Z" fill="#D05151"/>
+</svg>
+"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <RNSVGGroup />
+                <RNSVGGroup
+                  fill={null}
+                  propList={
+                    [
+                      "fill",
+                    ]
+                  }
+                >
+                  <RNSVGPath
+                    d="M13.5904 5.41L3.31038 15.69C2.83038 16.17 2.01039 16.06 1.72039 15.45C1.20039 14.38 0.900383 13.17 0.900383 11.9C0.880383 6.38 6.48039 1.66 8.38039 0.21C8.75039 -0.07 9.25039 -0.07 9.61039 0.21C10.4804 0.87 12.1104 2.24 13.6404 4.04C13.9804 4.44 13.9604 5.04 13.5904 5.41Z"
+                    fill={4291842385}
+                    propList={
+                      [
+                        "fill",
+                      ]
+                    }
+                  />
+                  <RNSVGPath
+                    d="M17.1 11.91C17.1 16.37 13.47 20 9 20C7.21 20 5.53999 19.42 4.18999 18.42C3.69999 18.06 3.66 17.34 4.09 16.91L14.16 6.84C14.63 6.37 15.42 6.47 15.74 7.05C16.56 8.56 17.11 10.2 17.1 11.91Z"
+                    fill={4291842385}
+                    propList={
+                      [
+                        "fill",
+                      ]
+                    }
+                  />
+                </RNSVGGroup>
               </RNSVGSvgView>
             </View>
             <View
-              style={Object {}}
+              style={{}}
               testID="logTabTitleContainer"
             >
               <Text
                 adjustsFontSizeToFit={true}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "fontFamily": "Poppins",
                     },
-                    Object {
+                    {
                       "flexWrap": "wrap",
                       "width": "95%",
                     },
-                    Object {
+                    {
                       "color": "#72996B",
                       "fontSize": 14,
                       "fontWeight": "600",
@@ -1089,7 +1406,7 @@ exports[`Home home snapshot testing 1`] = `
             </View>
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "backgroundColor": "#72996B",
                   "borderRadius": 9,
@@ -1113,12 +1430,12 @@ exports[`Home home snapshot testing 1`] = `
                 minX={0}
                 minY={0}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "backgroundColor": "transparent",
                       "borderWidth": 0,
                     },
-                    Object {
+                    {
                       "flex": 0,
                       "height": 18,
                       "width": 18,
@@ -1132,7 +1449,7 @@ exports[`Home home snapshot testing 1`] = `
                 <RNSVGGroup
                   fill={null}
                   propList={
-                    Array [
+                    [
                       "fill",
                     ]
                   }
@@ -1141,7 +1458,7 @@ exports[`Home home snapshot testing 1`] = `
                     fill={4285700459}
                     height={18}
                     propList={
-                      Array [
+                      [
                         "fill",
                       ]
                     }
@@ -1153,7 +1470,7 @@ exports[`Home home snapshot testing 1`] = `
                   <RNSVGPath
                     d="M62.5 38l-20 20-8-8"
                     propList={
-                      Array [
+                      [
                         "stroke",
                         "strokeWidth",
                         "strokeLinecap",
@@ -1170,6 +1487,23 @@ exports[`Home home snapshot testing 1`] = `
             </View>
           </View>
           <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
             accessible={true}
             collapsable={false}
             focusable={true}
@@ -1181,7 +1515,7 @@ exports[`Home home snapshot testing 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "#FFFFFF",
                 "borderColor": "#FFFFFF",
@@ -1200,51 +1534,85 @@ exports[`Home home snapshot testing 1`] = `
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "marginHorizontal": 16,
                 }
               }
             >
               <RNSVGSvgView
-                bbHeight="100%"
-                bbWidth="100%"
+                align="xMidYMid"
+                bbHeight={24}
+                bbWidth={24}
+                fill="none"
                 focusable={false}
+                height={24}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "backgroundColor": "transparent",
                       "borderWidth": 0,
                     },
-                    Object {
+                    {
                       "flex": 0,
-                      "height": "100%",
-                      "width": "100%",
+                      "height": 24,
+                      "width": 24,
                     },
                   ]
                 }
                 testID="logTabIcon"
-                xml="<svg> </svg> "
+                vbHeight={24}
+                vbWidth={24}
+                width={24}
+                xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M17.8506 8.65992C18.0464 8.36087 17.9728 7.98412 17.7268 7.75574L17.7269 7.75568L17.7214 7.75082C14.4553 4.8488 9.53481 4.84832 6.2782 7.75117L6.27815 7.75112L6.27318 7.75574C6.02972 7.98181 5.9478 8.3667 6.1759 8.67041L8.34349 12.1505C8.45491 12.3438 8.65198 12.4455 8.83037 12.478C9.05782 12.5193 9.26755 12.4351 9.4095 12.3109L9.40951 12.3109L9.41136 12.3092C10.8951 10.9914 13.1249 10.9914 14.6086 12.3092L14.6086 12.3093L14.6131 12.3131C14.7488 12.4294 14.9177 12.4833 15.08 12.4833H15.0801H15.0801H15.0802H15.0802H15.0803H15.0804H15.0804H15.0805H15.0805H15.0806H15.0807H15.0807H15.0808H15.0808H15.0809H15.081H15.081H15.0811H15.0812H15.0812H15.0813H15.0813H15.0814H15.0815H15.0815H15.0816H15.0817H15.0817H15.0818H15.0819H15.0819H15.082H15.0821H15.0821H15.0822H15.0823H15.0823H15.0824H15.0825H15.0825H15.0826H15.0827H15.0827H15.0828H15.0829H15.0829H15.083H15.0831H15.0831H15.0832H15.0833H15.0833H15.0834H15.0835H15.0836H15.0836H15.0837H15.0838H15.0838H15.0839H15.084H15.0841H15.0841H15.0842H15.0843H15.0843H15.0844H15.0845H15.0846H15.0846H15.0847H15.0848H15.0849H15.0849H15.085H15.0851H15.0852H15.0852H15.0853H15.0854H15.0855H15.0855H15.0856H15.0857H15.0858H15.0858H15.0859H15.086H15.0861H15.0861H15.0862H15.0863H15.0864H15.0865H15.0865H15.0866H15.0867H15.0868H15.0869H15.0869H15.087H15.0871H15.0872H15.0872H15.0873H15.0874H15.0875H15.0876H15.0877H15.0877H15.0878H15.0879H15.088H15.0881H15.0881H15.0882H15.0883H15.0884H15.0885H15.0886H15.0886H15.0887H15.0888H15.0889H15.089H15.0891H15.0891H15.0892H15.0893H15.0894H15.0895H15.0896H15.0896H15.0897H15.0898H15.0899H15.09H15.0901H15.0902H15.0902H15.0903H15.0904H15.0905H15.0906H15.0907H15.0908H15.0909H15.0909H15.091H15.0911H15.0912H15.0913H15.0914H15.0915H15.0916H15.0916H15.0917H15.0918H15.0919H15.092H15.0921H15.0922H15.0923H15.0924H15.0925H15.0925H15.0926H15.0927H15.0928H15.0929H15.093H15.0931H15.0932H15.0933H15.0934H15.0935H15.0935H15.0936H15.0937H15.0938H15.0939H15.094H15.0941H15.0942H15.0943H15.0944H15.0945H15.0946H15.0947H15.0948H15.0948H15.0949H15.095H15.0951H15.0952H15.0953H15.0954H15.0955H15.0956H15.0957H15.0958H15.0959H15.096H15.0961H15.0962H15.0963H15.0964H15.0965H15.0966H15.0967H15.0968H15.0969H15.097H15.0971H15.0971H15.0972H15.0973H15.0974H15.0975H15.0976H15.0977H15.0978H15.0979H15.098H15.0981H15.0982H15.0983H15.0984H15.0985H15.0986H15.0987H15.0988H15.0989H15.099H15.0991H15.0992H15.0993H15.0994H15.0995H15.0996H15.0997H15.0998H15.0999H15.1H15.1001H15.1002H15.1003H15.1004H15.1005H15.1006H15.1007H15.1008H15.1009H15.101H15.1011H15.1013H15.1014H15.1015H15.1016H15.1017H15.1018H15.1019H15.102H15.1021H15.1022H15.1023H15.1024H15.1025H15.1026H15.1027H15.1028H15.1029H15.103H15.1031H15.1032H15.1033H15.1034H15.1035H15.1036H15.1037H15.1038H15.104H15.1041H15.1042H15.1043H15.1044H15.1045H15.1046H15.1047H15.1048H15.1049H15.105H15.1051H15.1052H15.1053H15.1054H15.1055H15.1057H15.1058H15.1059H15.106H15.1061H15.1062H15.1063H15.1064H15.1065H15.1066H15.1067H15.1068H15.1069H15.1071H15.1072H15.1073H15.1074H15.1075H15.1076H15.1077H15.1078H15.1079H15.108H15.1081H15.1082H15.1084H15.1085H15.1086H15.1087H15.1088H15.1089H15.109H15.1091H15.1092H15.1093H15.1095H15.1096H15.1097H15.1098H15.1099H15.11H15.1101H15.1102H15.1103H15.1104H15.1106H15.1107H15.1108H15.1109H15.111H15.1111H15.1112H15.1113H15.1114H15.1116H15.1117H15.1118H15.1119H15.112H15.1121H15.1122H15.1123H15.1125H15.1126H15.1127H15.1128H15.1129H15.113H15.1131H15.1132H15.1133H15.1135H15.1136H15.1137H15.1138H15.1139H15.114H15.1141H15.1143H15.1144H15.1145H15.1146H15.1147H15.1148H15.1149H15.115H15.1152H15.1153H15.1154H15.1155H15.1156H15.1157H15.1158H15.116H15.1161H15.1162H15.1163H15.1164H15.1165H15.1166H15.1168H15.1169H15.117H15.1171H15.1172H15.1173H15.1174H15.1176H15.1177H15.1178H15.1179H15.118H15.1181H15.1182H15.1184H15.1185H15.1186H15.1187H15.1188H15.1189H15.119H15.1192H15.1193H15.1194H15.1195H15.1196H15.1197H15.1199H15.12H15.1201H15.1202H15.1203H15.1204H15.1205H15.1207H15.1208H15.1209H15.121H15.1211H15.1212H15.1214H15.1215H15.1216H15.1217H15.1218H15.1219H15.1221H15.1222H15.1223H15.1224H15.1225H15.1226H15.1228H15.1229H15.123H15.1231H15.1232H15.1233H15.1235H15.1236H15.1237H15.1238H15.1239H15.124H15.1242H15.1243H15.1244H15.1245H15.1246H15.1247H15.1249H15.125H15.1251H15.1252H15.1253H15.1254H15.1256H15.1257H15.1258H15.1259H15.126H15.1261H15.1263H15.1264H15.1265H15.1266H15.1267H15.1268H15.127H15.1271H15.1272H15.1273H15.1274H15.1275H15.1277H15.1278H15.1279H15.128H15.1281H15.1282H15.1284H15.1285H15.1286H15.1287H15.1288H15.1289H15.1291H15.1292H15.1293H15.1294H15.1295H15.1297H15.1298H15.1299H15.13H15.1466L15.1632 12.4817C15.3842 12.4596 15.5654 12.3178 15.6674 12.1649L15.6675 12.165L15.6729 12.1562L17.8506 8.65992ZM8 2.33333H16C17.4243 2.33333 18.5852 2.80663 19.3893 3.6107C20.1934 4.41478 20.6667 5.57575 20.6667 7V17C20.6667 18.4243 20.1934 19.5852 19.3893 20.3893C18.5852 21.1934 17.4243 21.6667 16 21.6667H8C6.57575 21.6667 5.41478 21.1934 4.6107 20.3893C3.80663 19.5852 3.33333 18.4243 3.33333 17V7C3.33333 5.57575 3.80663 4.41478 4.6107 3.6107C5.41478 2.80663 6.57575 2.33333 8 2.33333Z" fill="#FF9330" stroke="#FF9330" stroke-width="0.666667"/>
+</svg>
+"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <RNSVGGroup />
+                <RNSVGGroup
+                  fill={null}
+                  propList={
+                    [
+                      "fill",
+                    ]
+                  }
+                >
+                  <RNSVGPath
+                    d="M17.8506 8.65992C18.0464 8.36087 17.9728 7.98412 17.7268 7.75574L17.7269 7.75568L17.7214 7.75082C14.4553 4.8488 9.53481 4.84832 6.2782 7.75117L6.27815 7.75112L6.27318 7.75574C6.02972 7.98181 5.9478 8.3667 6.1759 8.67041L8.34349 12.1505C8.45491 12.3438 8.65198 12.4455 8.83037 12.478C9.05782 12.5193 9.26755 12.4351 9.4095 12.3109L9.40951 12.3109L9.41136 12.3092C10.8951 10.9914 13.1249 10.9914 14.6086 12.3092L14.6086 12.3093L14.6131 12.3131C14.7488 12.4294 14.9177 12.4833 15.08 12.4833H15.0801H15.0801H15.0802H15.0802H15.0803H15.0804H15.0804H15.0805H15.0805H15.0806H15.0807H15.0807H15.0808H15.0808H15.0809H15.081H15.081H15.0811H15.0812H15.0812H15.0813H15.0813H15.0814H15.0815H15.0815H15.0816H15.0817H15.0817H15.0818H15.0819H15.0819H15.082H15.0821H15.0821H15.0822H15.0823H15.0823H15.0824H15.0825H15.0825H15.0826H15.0827H15.0827H15.0828H15.0829H15.0829H15.083H15.0831H15.0831H15.0832H15.0833H15.0833H15.0834H15.0835H15.0836H15.0836H15.0837H15.0838H15.0838H15.0839H15.084H15.0841H15.0841H15.0842H15.0843H15.0843H15.0844H15.0845H15.0846H15.0846H15.0847H15.0848H15.0849H15.0849H15.085H15.0851H15.0852H15.0852H15.0853H15.0854H15.0855H15.0855H15.0856H15.0857H15.0858H15.0858H15.0859H15.086H15.0861H15.0861H15.0862H15.0863H15.0864H15.0865H15.0865H15.0866H15.0867H15.0868H15.0869H15.0869H15.087H15.0871H15.0872H15.0872H15.0873H15.0874H15.0875H15.0876H15.0877H15.0877H15.0878H15.0879H15.088H15.0881H15.0881H15.0882H15.0883H15.0884H15.0885H15.0886H15.0886H15.0887H15.0888H15.0889H15.089H15.0891H15.0891H15.0892H15.0893H15.0894H15.0895H15.0896H15.0896H15.0897H15.0898H15.0899H15.09H15.0901H15.0902H15.0902H15.0903H15.0904H15.0905H15.0906H15.0907H15.0908H15.0909H15.0909H15.091H15.0911H15.0912H15.0913H15.0914H15.0915H15.0916H15.0916H15.0917H15.0918H15.0919H15.092H15.0921H15.0922H15.0923H15.0924H15.0925H15.0925H15.0926H15.0927H15.0928H15.0929H15.093H15.0931H15.0932H15.0933H15.0934H15.0935H15.0935H15.0936H15.0937H15.0938H15.0939H15.094H15.0941H15.0942H15.0943H15.0944H15.0945H15.0946H15.0947H15.0948H15.0948H15.0949H15.095H15.0951H15.0952H15.0953H15.0954H15.0955H15.0956H15.0957H15.0958H15.0959H15.096H15.0961H15.0962H15.0963H15.0964H15.0965H15.0966H15.0967H15.0968H15.0969H15.097H15.0971H15.0971H15.0972H15.0973H15.0974H15.0975H15.0976H15.0977H15.0978H15.0979H15.098H15.0981H15.0982H15.0983H15.0984H15.0985H15.0986H15.0987H15.0988H15.0989H15.099H15.0991H15.0992H15.0993H15.0994H15.0995H15.0996H15.0997H15.0998H15.0999H15.1H15.1001H15.1002H15.1003H15.1004H15.1005H15.1006H15.1007H15.1008H15.1009H15.101H15.1011H15.1013H15.1014H15.1015H15.1016H15.1017H15.1018H15.1019H15.102H15.1021H15.1022H15.1023H15.1024H15.1025H15.1026H15.1027H15.1028H15.1029H15.103H15.1031H15.1032H15.1033H15.1034H15.1035H15.1036H15.1037H15.1038H15.104H15.1041H15.1042H15.1043H15.1044H15.1045H15.1046H15.1047H15.1048H15.1049H15.105H15.1051H15.1052H15.1053H15.1054H15.1055H15.1057H15.1058H15.1059H15.106H15.1061H15.1062H15.1063H15.1064H15.1065H15.1066H15.1067H15.1068H15.1069H15.1071H15.1072H15.1073H15.1074H15.1075H15.1076H15.1077H15.1078H15.1079H15.108H15.1081H15.1082H15.1084H15.1085H15.1086H15.1087H15.1088H15.1089H15.109H15.1091H15.1092H15.1093H15.1095H15.1096H15.1097H15.1098H15.1099H15.11H15.1101H15.1102H15.1103H15.1104H15.1106H15.1107H15.1108H15.1109H15.111H15.1111H15.1112H15.1113H15.1114H15.1116H15.1117H15.1118H15.1119H15.112H15.1121H15.1122H15.1123H15.1125H15.1126H15.1127H15.1128H15.1129H15.113H15.1131H15.1132H15.1133H15.1135H15.1136H15.1137H15.1138H15.1139H15.114H15.1141H15.1143H15.1144H15.1145H15.1146H15.1147H15.1148H15.1149H15.115H15.1152H15.1153H15.1154H15.1155H15.1156H15.1157H15.1158H15.116H15.1161H15.1162H15.1163H15.1164H15.1165H15.1166H15.1168H15.1169H15.117H15.1171H15.1172H15.1173H15.1174H15.1176H15.1177H15.1178H15.1179H15.118H15.1181H15.1182H15.1184H15.1185H15.1186H15.1187H15.1188H15.1189H15.119H15.1192H15.1193H15.1194H15.1195H15.1196H15.1197H15.1199H15.12H15.1201H15.1202H15.1203H15.1204H15.1205H15.1207H15.1208H15.1209H15.121H15.1211H15.1212H15.1214H15.1215H15.1216H15.1217H15.1218H15.1219H15.1221H15.1222H15.1223H15.1224H15.1225H15.1226H15.1228H15.1229H15.123H15.1231H15.1232H15.1233H15.1235H15.1236H15.1237H15.1238H15.1239H15.124H15.1242H15.1243H15.1244H15.1245H15.1246H15.1247H15.1249H15.125H15.1251H15.1252H15.1253H15.1254H15.1256H15.1257H15.1258H15.1259H15.126H15.1261H15.1263H15.1264H15.1265H15.1266H15.1267H15.1268H15.127H15.1271H15.1272H15.1273H15.1274H15.1275H15.1277H15.1278H15.1279H15.128H15.1281H15.1282H15.1284H15.1285H15.1286H15.1287H15.1288H15.1289H15.1291H15.1292H15.1293H15.1294H15.1295H15.1297H15.1298H15.1299H15.13H15.1466L15.1632 12.4817C15.3842 12.4596 15.5654 12.3178 15.6674 12.1649L15.6675 12.165L15.6729 12.1562L17.8506 8.65992ZM8 2.33333H16C17.4243 2.33333 18.5852 2.80663 19.3893 3.6107C20.1934 4.41478 20.6667 5.57575 20.6667 7V17C20.6667 18.4243 20.1934 19.5852 19.3893 20.3893C18.5852 21.1934 17.4243 21.6667 16 21.6667H8C6.57575 21.6667 5.41478 21.1934 4.6107 20.3893C3.80663 19.5852 3.33333 18.4243 3.33333 17V7C3.33333 5.57575 3.80663 4.41478 4.6107 3.6107C5.41478 2.80663 6.57575 2.33333 8 2.33333Z"
+                    fill={4294939440}
+                    propList={
+                      [
+                        "fill",
+                        "stroke",
+                        "strokeWidth",
+                      ]
+                    }
+                    stroke={4294939440}
+                    strokeWidth={0.666667}
+                  />
+                </RNSVGGroup>
               </RNSVGSvgView>
             </View>
             <View
-              style={Object {}}
+              style={{}}
               testID="logTabTitleContainer"
             >
               <Text
                 adjustsFontSizeToFit={true}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "fontFamily": "Poppins",
                     },
-                    Object {
+                    {
                       "flexWrap": "wrap",
                       "width": "95%",
                     },
-                    Object {
+                    {
                       "color": "#72996B",
                       "fontSize": 14,
                       "fontWeight": "600",
@@ -1254,11 +1622,28 @@ exports[`Home home snapshot testing 1`] = `
                 }
                 testID="logTabTitle"
               >
-                Log Hydration
+                Log Weight
               </Text>
             </View>
           </View>
           <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": undefined,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
             accessible={true}
             collapsable={false}
             focusable={true}
@@ -1270,7 +1655,7 @@ exports[`Home home snapshot testing 1`] = `
             onResponderTerminationRequest={[Function]}
             onStartShouldSetResponder={[Function]}
             style={
-              Object {
+              {
                 "alignItems": "center",
                 "backgroundColor": "#FFFFFF",
                 "borderColor": "#FFFFFF",
@@ -1289,51 +1674,104 @@ exports[`Home home snapshot testing 1`] = `
           >
             <View
               style={
-                Object {
+                {
                   "alignItems": "center",
                   "marginHorizontal": 16,
                 }
               }
             >
               <RNSVGSvgView
-                bbHeight="100%"
-                bbWidth="100%"
+                align="xMidYMid"
+                bbHeight={24}
+                bbWidth={24}
+                fill="none"
                 focusable={false}
+                height={24}
+                meetOrSlice={0}
+                minX={0}
+                minY={0}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "backgroundColor": "transparent",
                       "borderWidth": 0,
                     },
-                    Object {
+                    {
                       "flex": 0,
-                      "height": "100%",
-                      "width": "100%",
+                      "height": 24,
+                      "width": 24,
                     },
                   ]
                 }
                 testID="logTabIcon"
-                xml="<svg> </svg> "
+                vbHeight={24}
+                vbWidth={24}
+                width={24}
+                xml="<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12.7069 3.29289C12.3163 2.90237 11.6832 2.90237 11.2927 3.29289C10.9021 3.68342 10.9021 4.31658 11.2927 4.70711L12.2926 5.70708L5.51343 12.4863C4.56774 13.432 4.15725 14.7877 4.41954 16.0992L4.99971 19L7.90054 19.5802C9.21198 19.8425 10.5677 19.432 11.5134 18.4863L12.2926 17.7071L10.2926 15.7071C9.90213 15.3166 9.90213 14.6834 10.2926 14.2929C10.6832 13.9024 11.3163 13.9024 11.7069 14.2929L13.7068 16.2929L15.2926 14.7071L13.2927 12.7071C12.9021 12.3166 12.9021 11.6834 13.2927 11.2929C13.6832 10.9024 14.3163 10.9024 14.7069 11.2929L16.7068 13.2929L18.2926 11.7071L19.2927 12.7071C19.6832 13.0976 20.3163 13.0976 20.7069 12.7071C21.0974 12.3166 21.0974 11.6834 20.7069 11.2929L12.7069 3.29289Z" fill="#FF66A9"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M7 16.9999C7.39052 17.3904 7.39052 18.0236 7 18.4141L3.70711 21.707C3.31658 22.0976 2.68342 22.0976 2.29289 21.707C1.90237 21.3165 1.90237 20.6833 2.29289 20.2928L5.58579 16.9999C5.97631 16.6094 6.60948 16.6094 7 16.9999Z" fill="#FF66A9"/>
+  <path d="M17.707 2.29289C17.3164 1.90237 16.6833 1.90237 16.2927 2.29289C15.9022 2.68342 15.9022 3.31658 16.2927 3.70711L17.5857 5.00005L15.9999 6.5858C15.6094 6.97633 15.6094 7.60949 15.9999 8.00002C16.3904 8.39054 17.0236 8.39054 17.4141 8.00002L18.9999 6.41426L20.2927 7.70711C20.6833 8.09763 21.3164 8.09763 21.707 7.70711C22.0975 7.31658 22.0975 6.68342 21.707 6.29289L17.707 2.29289Z" fill="#FF66A9"/>
+</svg>
+"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <RNSVGGroup />
+                <RNSVGGroup
+                  fill={null}
+                  propList={
+                    [
+                      "fill",
+                    ]
+                  }
+                >
+                  <RNSVGPath
+                    d="M12.7069 3.29289C12.3163 2.90237 11.6832 2.90237 11.2927 3.29289C10.9021 3.68342 10.9021 4.31658 11.2927 4.70711L12.2926 5.70708L5.51343 12.4863C4.56774 13.432 4.15725 14.7877 4.41954 16.0992L4.99971 19L7.90054 19.5802C9.21198 19.8425 10.5677 19.432 11.5134 18.4863L12.2926 17.7071L10.2926 15.7071C9.90213 15.3166 9.90213 14.6834 10.2926 14.2929C10.6832 13.9024 11.3163 13.9024 11.7069 14.2929L13.7068 16.2929L15.2926 14.7071L13.2927 12.7071C12.9021 12.3166 12.9021 11.6834 13.2927 11.2929C13.6832 10.9024 14.3163 10.9024 14.7069 11.2929L16.7068 13.2929L18.2926 11.7071L19.2927 12.7071C19.6832 13.0976 20.3163 13.0976 20.7069 12.7071C21.0974 12.3166 21.0974 11.6834 20.7069 11.2929L12.7069 3.29289Z"
+                    fill={4294928041}
+                    propList={
+                      [
+                        "fill",
+                      ]
+                    }
+                  />
+                  <RNSVGPath
+                    clipRule={0}
+                    d="M7 16.9999C7.39052 17.3904 7.39052 18.0236 7 18.4141L3.70711 21.707C3.31658 22.0976 2.68342 22.0976 2.29289 21.707C1.90237 21.3165 1.90237 20.6833 2.29289 20.2928L5.58579 16.9999C5.97631 16.6094 6.60948 16.6094 7 16.9999Z"
+                    fill={4294928041}
+                    fillRule={0}
+                    propList={
+                      [
+                        "fill",
+                        "fillRule",
+                      ]
+                    }
+                  />
+                  <RNSVGPath
+                    d="M17.707 2.29289C17.3164 1.90237 16.6833 1.90237 16.2927 2.29289C15.9022 2.68342 15.9022 3.31658 16.2927 3.70711L17.5857 5.00005L15.9999 6.5858C15.6094 6.97633 15.6094 7.60949 15.9999 8.00002C16.3904 8.39054 17.0236 8.39054 17.4141 8.00002L18.9999 6.41426L20.2927 7.70711C20.6833 8.09763 21.3164 8.09763 21.707 7.70711C22.0975 7.31658 22.0975 6.68342 21.707 6.29289L17.707 2.29289Z"
+                    fill={4294928041}
+                    propList={
+                      [
+                        "fill",
+                      ]
+                    }
+                  />
+                </RNSVGGroup>
               </RNSVGSvgView>
             </View>
             <View
-              style={Object {}}
+              style={{}}
               testID="logTabTitleContainer"
             >
               <Text
                 adjustsFontSizeToFit={true}
                 style={
-                  Array [
-                    Object {
+                  [
+                    {
                       "fontFamily": "Poppins",
                     },
-                    Object {
+                    {
                       "flexWrap": "wrap",
                       "width": "95%",
                     },
-                    Object {
+                    {
                       "color": "#72996B",
                       "fontSize": 14,
                       "fontWeight": "600",
@@ -1343,96 +1781,7 @@ exports[`Home home snapshot testing 1`] = `
                 }
                 testID="logTabTitle"
               >
-                Log Hydration3
-              </Text>
-            </View>
-          </View>
-          <View
-            accessible={true}
-            collapsable={false}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
-            style={
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "#FFFFFF",
-                "borderColor": "#FFFFFF",
-                "borderRadius": 20,
-                "borderWidth": 1.5,
-                "elevation": 3,
-                "flexDirection": "row",
-                "height": 90,
-                "marginBottom": 10,
-                "opacity": 1,
-                "shadowColor": "rgba(0,0,0,0.5)",
-                "width": "48%",
-              }
-            }
-            testID="logTab"
-          >
-            <View
-              style={
-                Object {
-                  "alignItems": "center",
-                  "marginHorizontal": 16,
-                }
-              }
-            >
-              <RNSVGSvgView
-                bbHeight="100%"
-                bbWidth="100%"
-                focusable={false}
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "transparent",
-                      "borderWidth": 0,
-                    },
-                    Object {
-                      "flex": 0,
-                      "height": "100%",
-                      "width": "100%",
-                    },
-                  ]
-                }
-                testID="logTabIcon"
-                xml="<svg> </svg> "
-              >
-                <RNSVGGroup />
-              </RNSVGSvgView>
-            </View>
-            <View
-              style={Object {}}
-              testID="logTabTitleContainer"
-            >
-              <Text
-                adjustsFontSizeToFit={true}
-                style={
-                  Array [
-                    Object {
-                      "fontFamily": "Poppins",
-                    },
-                    Object {
-                      "flexWrap": "wrap",
-                      "width": "95%",
-                    },
-                    Object {
-                      "color": "#72996B",
-                      "fontSize": 14,
-                      "fontWeight": "600",
-                      "lineHeight": 22,
-                    },
-                  ]
-                }
-                testID="logTabTitle"
-              >
-                Log Hydration4
+                Log Insulin
               </Text>
             </View>
           </View>

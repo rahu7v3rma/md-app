@@ -13,6 +13,7 @@ import {
     REHYDRATE
 } from 'redux-persist';
 
+import clientConfigReducer from '@/reducers/clientConfig';
 import contentReducer from '@/reducers/content';
 import logReducer from '@/reducers/log';
 import notificationReducer from '@/reducers/notification';
@@ -20,6 +21,7 @@ import trackReducer from '@/reducers/track';
 import userReducer from '@/reducers/user';
 
 const rootReducer = combineReducers({
+    clientConfig: clientConfigReducer,
     content: contentReducer,
     user: userReducer,
     log: logReducer,
@@ -49,6 +51,7 @@ const persistConfig = {
     key: 'root',
     version: 2,
     storage: AsyncStorage,
+    blacklist: ['clientConfig'],
     migrate: createMigrate(migrations, { debug: false })
 };
 

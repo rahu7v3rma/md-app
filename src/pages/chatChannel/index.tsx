@@ -4,9 +4,10 @@ import React, {
     FunctionComponent,
     useCallback,
     useEffect,
+    useRef,
     useState
 } from 'react';
-import { Dimensions, Keyboard, Platform, StyleSheet, View } from 'react-native';
+import { Dimensions, Keyboard, StyleSheet, Text, View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Channel as ChannelType } from 'stream-chat';
@@ -16,14 +17,19 @@ import {
     DateHeaderProps,
     InlineDateSeparatorProps,
     MessageList,
-    OverlayProvider
+    MessageInput,
+    OverlayProvider,
+    OverlayReactions,
+    OverlayReactionsAvatar
 } from 'stream-chat-react-native';
 
 import { useAppChat } from '@/contexts/appChat';
 import { RootNavigationProp, RootStackParamList } from '@/navigation';
-import { CustomStatusBar } from '@/shared';
+import { CustomStatusBar, PdfViewer } from '@/shared';
+import { PdfViewerHandle } from '@/shared/pdfViewer';
 import { Colors } from '@/theme/colors';
 import { COMMON } from '@/utils/common';
+import { customReactionData } from '@/utils/constants';
 
 import {
     ChatHeader,
@@ -72,8 +78,6 @@ const ChannelScreen: FunctionComponent<Props> = ({}: Props) => {
         };
     }, [setActiveChatChannel, channel?.cid]);
 
-    const inputRender = useCallback(() => <CustomMessageInput />, []);
-
     const renderDateHeader = useCallback(
         ({ dateString }: DateHeaderProps) => (
             <DateHeader dateString={dateString} />
@@ -90,8 +94,10 @@ const ChannelScreen: FunctionComponent<Props> = ({}: Props) => {
 
     const renderMessageAvatar = useCallback(() => <View />, []);
 
+    const pdfViewerRef = useRef<PdfViewerHandle>(null);
+
     const renderMessageContent = useCallback(() => {
-        return <MessageContent />;
+        return <MessageContent pdfViewerRef={pdfViewerRef} />;
     }, []);
 
     const handleChatHeaderTitlePress = useCallback(() => {
@@ -103,20 +109,20 @@ const ChannelScreen: FunctionComponent<Props> = ({}: Props) => {
             <CustomStatusBar />
             <SafeAreaView>
                 <OverlayProvider
+                    OverlayReactions={()=><Text>test</Text>}
                     value={{
                         style: {
                             messageInput: {
                                 inputBoxContainer: {
                                     marginLeft: 0,
                                     borderWidth: 0,
-                                    paddingVertical:
-                                        Platform.OS === 'android' ? 8 : 5
+                                    paddingVertical: 5
                                 },
                                 sendButtonContainer: {
                                     display: 'none'
                                 },
                                 inputBox: {
-                                    paddingVertical: 0,
+                                    paddingRight: 5,
                                     paddingTop: 0,
                                     paddingBottom: 0
                                 },
@@ -126,7 +132,8 @@ const ChannelScreen: FunctionComponent<Props> = ({}: Props) => {
                                 },
                                 optionsContainer: {
                                     paddingRight: 0
-                                },
+                                }
+                                /*
                                 container: {
                                     width: Dimensions.get('window').width - 122,
                                     padding: 0
@@ -134,6 +141,7 @@ const ChannelScreen: FunctionComponent<Props> = ({}: Props) => {
                                 attachmentSelectionBar: {
                                     height: 0
                                 }
+                                */
                             },
                             messageSimple: {
                                 giphy: {
@@ -152,15 +160,9 @@ const ChannelScreen: FunctionComponent<Props> = ({}: Props) => {
                                             Dimensions.get('window').width *
                                             0.53
                                     }
-                                },
-                                gallery: {
-                                    galleryContainer: {
-                                        width:
-                                            Dimensions.get('window').width *
-                                            0.53
-                                    }
                                 }
-                            },
+                            }
+                            /*
                             attachmentSelectionBar: {
                                 container: {
                                     backgroundColor: Colors.extras.page_bg,
@@ -176,6 +178,7 @@ const ChannelScreen: FunctionComponent<Props> = ({}: Props) => {
                                     backgroundColor: Colors.extras.white
                                 }
                             }
+                            */
                         }
                     }}
                 >
@@ -195,6 +198,11 @@ const ChannelScreen: FunctionComponent<Props> = ({}: Props) => {
                                     keyboardVerticalOffset={
                                         COMMON.isIos ? 0 : undefined
                                     }
+                                    Input={CustomMessageInput}
+                                    supportedReactions={customReactionData}
+                                    messageActions={({ quotedReply }) => [
+                                        quotedReply
+                                    ]}
                                 >
                                     <View style={styles.container}>
                                         <ChatHeader
@@ -208,19 +216,23 @@ const ChannelScreen: FunctionComponent<Props> = ({}: Props) => {
                                             }
                                         />
                                         <MessageList
-                                            onListScroll={Keyboard.dismiss}
+                                            onListScroll={() =>
+                                                Keyboard.isVisible()
+                                                    ? Keyboard.dismiss()
+                                                    : null
+                                            }
                                             additionalFlatListProps={{
-                                                contentContainerStyle:
-                                                    styles.messageListContainer
+                                                style: styles.messageList
                                             }}
                                         />
-                                        {inputRender()}
+                                        <MessageInput />
                                     </View>
                                 </Channel>
                             )}
                         </Chat>
                     )}
                 </OverlayProvider>
+                <PdfViewer ref={pdfViewerRef} />
             </SafeAreaView>
         </GestureHandlerRootView>
     );
@@ -235,7 +247,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
 
-    messageListContainer: {
+    messageList: {
         backgroundColor: Colors.extras.page_bg,
         paddingHorizontal: 20
     }

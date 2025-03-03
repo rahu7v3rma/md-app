@@ -1,5 +1,12 @@
 import Moment from 'moment';
-import React, { FunctionComponent, useMemo, useRef, useState } from 'react';
+import React, {
+    FunctionComponent,
+    RefObject,
+    useCallback,
+    useMemo,
+    useRef,
+    useState
+} from 'react';
 import {
     Linking,
     ScrollView,
@@ -8,27 +15,34 @@ import {
     View
 } from 'react-native';
 import RBSheet from 'react-native-raw-bottom-sheet';
-import Tooltip from 'react-native-walkthrough-tooltip';
-import { Attachment } from 'stream-chat';
 import {
-    ThumbsUpReaction,
+    IconProps,
     useChatContext,
-    useMessageContext
+    useMessageContext,
+    ReactionList,
+    OverlayProvider,
+    MessageOverlayProvider
 } from 'stream-chat-react-native';
 
 import { ChatAvatar, Text } from '@/shared';
+import { PdfViewerHandle } from '@/shared/pdfViewer';
 import { Size } from '@/shared/text';
 import { Colors } from '@/theme/colors';
+import { customReactionData } from '@/utils/constants';
 
-import MessageContentAttachment from './messageContentAttachment';
+import MessageContentAttachmentGroup from './messageContentAttachment';
+import MessageQuoted from './messageQuoted';
 import MessageStatus from './messageStatus';
 
-type Props = Record<string, never>;
+type Props = {
+    pdfViewerRef: RefObject<PdfViewerHandle>;
+};
 
-const MessageContent: FunctionComponent<Props> = ({}: Props) => {
+const MessageContent: FunctionComponent<Props> = ({ pdfViewerRef }: Props) => {
     const { client } = useChatContext();
 
-    const { message, reactions, handleToggleReaction } = useMessageContext();
+    const { message, goToMessage, showMessageOverlay } = useMessageContext();
+    const [messageContentWidth, setmessageContentWidth] = useState<number>(100);
 
     const isSenderMe = client.userID === message.user?.id;
 
@@ -46,6 +60,7 @@ const MessageContent: FunctionComponent<Props> = ({}: Props) => {
                             onPress={() => {
                                 Linking.openURL(part);
                             }}
+                            testID="message-link"
                         >
                             {part}
                         </Text>
@@ -55,64 +70,105 @@ const MessageContent: FunctionComponent<Props> = ({}: Props) => {
             });
     }, [message]);
 
-    const [isReactionsSelectorVisible, setIsReactionsSelectorVisible] =
-        useState(false);
+    const customReactionDataMapping = useMemo(
+        () =>
+            customReactionData.reduce((a: any, b) => {
+                a[b.type] = b.Icon;
+                return a;
+            }, {}),
+        []
+    );
 
     const bottomSheetRef = useRef<RBSheet>();
 
-    const reactionUsers = message.latest_reactions?.map((r) => r.user);
+    const reactionUsers = useMemo(() => {
+        // Check if 'latest_reactions' is available and is an array
+        if (!Array.isArray(message.latest_reactions)) {
+            return {};
+        }
 
-    const didILike = !!reactions.filter((r) => r.own && r.type === 'like')
-        .length;
+        // Reduce function to accumulate reactions
+        return message.latest_reactions.reduce((acc: any, reaction) => {
+            // Ensure reaction has 'user_id' and 'type', and 'customReactionDataMapping' has the 'type'
+            if (
+                !reaction?.user_id ||
+                !reaction?.type ||
+                !customReactionDataMapping[reaction.type]
+            ) {
+                return acc;
+            }
 
-    return (
-        <>
-            <Tooltip
-                isVisible={isReactionsSelectorVisible}
-                content={
-                    <TouchableOpacity
-                        onPress={() => {
-                            setIsReactionsSelectorVisible(false);
-                            handleToggleReaction('like');
-                        }}
-                    >
-                        <ThumbsUpReaction
-                            pathFill={didILike ? 'blue' : 'gray'}
-                            width={30}
-                            height={30}
-                        />
-                    </TouchableOpacity>
-                }
-                arrowSize={styles.tooltipArrowSize}
-                onClose={() => setIsReactionsSelectorVisible(false)}
-                parentWrapperStyle={styles.container}
-                contentStyle={styles.tooltipContent}
-            >
+            // Use a temporary variable for better readability
+            let userData = acc[reaction.user_id];
+
+            // Initialize the user in the accumulator if not already present
+            if (!userData) {
+                userData = acc[reaction.user_id] = {
+                    user: reaction.user,
+                    type: []
+                };
+            }
+
+            // Add the reaction type to the user's data
+            userData.type.push(customReactionDataMapping[reaction.type]);
+
+            return acc;
+        }, {});
+    }, [customReactionDataMapping, message]);
+
+    const QuotedMessage = useCallback(() => {
+        if (message.quoted_message) {
+            return (
                 <TouchableOpacity
-                    key={message.id}
-                    style={[
-                        styles.messageContainer,
-                        isSenderMe ? styles.senderMe : styles.senderNotMe
-                    ]}
-                    onLongPress={() => {
-                        setIsReactionsSelectorVisible(true);
+                    onPress={() => {
+                        message.quoted_message?.id &&
+                            goToMessage &&
+                            goToMessage(message.quoted_message.id);
                     }}
                 >
-                    <View style={styles.avatarView}>
-                        <ChatAvatar
-                            path={message.user?.image}
-                            width={40}
-                            height={40}
-                            online={message.user?.online}
-                        />
-                    </View>
-                    <View style={styles.contentContainer}>
+                    <MessageQuoted
+                        userImage={message.quoted_message.user?.image}
+                        attachments={message.quoted_message.attachments}
+                        text={message.quoted_message.text}
+                        attachmentIconSize={20}
+                        textLength={40}
+                    />
+                </TouchableOpacity>
+            );
+        }
+        return <></>;
+    }, [message, goToMessage]);
+    return (
+        <OverlayProvider >
+            <TouchableOpacity
+                key={message.id}
+                style={[
+                    styles.messageContainer,
+                    isSenderMe ? styles.senderMe : styles.senderNotMe
+                ]}
+                onLongPress={() => {
+                    showMessageOverlay(true);
+                }}
+                onLayout={(event) => {
+                    const { width } = event.nativeEvent.layout;
+                    setmessageContentWidth(width);
+                }}
+            >
+                <View style={styles.avatarView}>
+                    <ChatAvatar
+                        path={message.user?.image}
+                        width={40}
+                        height={40}
+                        online={message.user?.online}
+                    />
+                    <View style={styles.userView}>
                         <View style={styles.user}>
                             <Text
                                 style={styles.headerText}
                                 size={Size.XSmall}
                                 fontWeight="600"
                                 color={Colors.text.text_gray_black}
+                                testID="user-name"
                             >
                                 {message.user?.name || ''}
                             </Text>
@@ -131,57 +187,50 @@ const MessageContent: FunctionComponent<Props> = ({}: Props) => {
                                 </>
                             </View>
                         </View>
-
-                        {message.attachments && message.attachments.length > 0 && (
-                            <View style={styles.attachments}>
-                                {message.attachments.map(
-                                    (attachment: Attachment, ind: number) => (
-                                        <View
-                                            key={`message-${message.id}-attachment-${ind}`}
-                                            style={styles.attachmentItem}
-                                        >
-                                            <MessageContentAttachment
-                                                messageId={message.id}
-                                                attachment={attachment}
-                                            />
-                                        </View>
-                                    )
-                                )}
-                            </View>
-                        )}
-
-                        <Text
-                            style={styles.msgText}
-                            size={Size.XXSmall}
-                            fontWeight="400"
-                            color={Colors.text.black}
-                        >
-                            {urlifiedMessageText}
-                        </Text>
                     </View>
-                </TouchableOpacity>
-                {!!message.reaction_counts?.like && (
-                    <TouchableOpacity
-                        style={styles.likeIcon}
+                </View>
+                <QuotedMessage />
+                <View style={styles.contentContainer}>
+                    {message.attachments && message.attachments.length > 0 && (
+                        <MessageContentAttachmentGroup
+                            messageId={message.id}
+                            attachments={message.attachments}
+                            pdfViewerRef={pdfViewerRef}
+                        />
+                    )}
+
+                    <Text
+                        style={styles.msgText}
+                        size={Size.XXSmall}
+                        fontWeight="400"
+                        color={Colors.text.black}
+                        testID="message-text"
+                    >
+                        {urlifiedMessageText}
+                    </Text>
+                </View>
+                <View
+                    style={[
+                        styles.reactionsContainer,
+                        {
+                            width: messageContentWidth,
+                            transform: [{ translateX: messageContentWidth / 2 }]
+                        }
+                    ]}
+                >
+                    <ReactionList
+                        alignment="right"
+                        messageContentWidth={messageContentWidth}
                         onPress={() => {
                             bottomSheetRef.current?.open();
                         }}
-                    >
-                        <ThumbsUpReaction
-                            height={15}
-                            width={15}
-                            pathFill={'blue'}
-                        />
-                        <Text
-                            style={styles.likeCount}
-                            size={12}
-                            fontWeight="500"
-                        >
-                            {message.reaction_counts.like}
-                        </Text>
-                    </TouchableOpacity>
-                )}
-            </Tooltip>
+                        onLongPress={() => {
+                            bottomSheetRef.current?.open();
+                        }}
+                        supportedReactions={customReactionData}
+                    />
+                </View>
+            </TouchableOpacity>
             <RBSheet
                 // @ts-ignore:next-line
                 ref={bottomSheetRef}
@@ -194,29 +243,56 @@ const MessageContent: FunctionComponent<Props> = ({}: Props) => {
                     container: styles.reactionsListRBSheetContainer
                 }}
             >
-                <ScrollView style={styles.reactionsListView}>
-                    {reactionUsers?.map((user, index) => (
-                        <View style={styles.reactionsListUserView} key={index}>
-                            <ChatAvatar
-                                path={user?.image}
-                                width={40}
-                                height={40}
-                                online={message.user?.online}
-                            />
-                            <Text
-                                size={Size.XSmall}
-                                fontWeight="600"
-                                color={Colors.text.text_gray_black}
-                                style={styles.reactionsListUserText}
+                <ScrollView
+                    style={styles.reactionsListView}
+                    testID="reactionsList"
+                >
+                    {reactionUsers ? (
+                        Object.keys(reactionUsers).map((user_id, index) => (
+                            <View
+                                key={`user-reaction-${index}`}
+                                style={styles.RBsheetReactionContainer}
                             >
-                                {user?.name}
-                            </Text>
-                        </View>
-                    ))}
+                                <View style={styles.reactionsListUserView}>
+                                    <ChatAvatar
+                                        path={reactionUsers[user_id].user.image}
+                                        width={40}
+                                        height={40}
+                                        online={message.user?.online}
+                                    />
+                                    <Text
+                                        size={Size.XSmall}
+                                        fontWeight="600"
+                                        color={Colors.text.text_gray_black}
+                                        style={styles.reactionsListUserText}
+                                    >
+                                        {reactionUsers[user_id].user.name}
+                                    </Text>
+                                </View>
+                                <View style={styles.RBSheetReactions}>
+                                    {reactionUsers[user_id].type.map(
+                                        (
+                                            Icon: React.FC<IconProps>,
+                                            iconIndex: number
+                                        ) => (
+                                            <Icon
+                                                key={`user-reaction-${index}-${iconIndex}`}
+                                                height={15}
+                                                width={15}
+                                                pathFill={'blue'}
+                                            />
+                                        )
+                                    )}
+                                </View>
+                            </View>
+                        ))
+                    ) : (
+                        <></>
+                    )}
                     <View style={styles.reactionsListViewBottomGap} />
                 </ScrollView>
             </RBSheet>
-        </>
+        </OverlayProvider>
     );
 };
 
@@ -224,10 +300,10 @@ export default MessageContent;
 
 const styles = StyleSheet.create({
     container: {
-        width: '83%'
+        maxWidth: '83%'
     },
     messageContainer: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         backgroundColor: Colors.extras.success_lightest,
         borderColor: Colors.extras.black,
         borderStyle: 'solid',
@@ -251,12 +327,14 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.extras.success_lightest
     },
     contentContainer: {
-        marginLeft: 10,
-        width: '80%'
+        marginLeft: 10
     },
     user: {
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        justifyContent: 'space-between',
+        width: '100%',
+        alignItems: 'center',
+        paddingLeft: 10
     },
     time: {
         marginRight: 2
@@ -269,33 +347,15 @@ const styles = StyleSheet.create({
     msgText: {
         textAlign: 'left'
     },
-    headerText: {
-        width: '80%'
-    },
+    headerText: {},
     linkText: {
         textDecorationLine: 'underline',
         textDecorationColor: '#3ED1FF'
     },
-    attachments: {
-        flexDirection: 'column',
-        marginTop: 5,
-        justifyContent: 'flex-start'
-    },
-    attachmentItem: {
-        marginVertical: 5
-    },
-    likeIcon: {
+    reactionIcon: {
         display: 'flex',
         flexDirection: 'row',
-        alignItems: 'center',
-        backgroundColor: '#ececec',
-        borderRadius: 20,
-        paddingVertical: 2,
-        paddingHorizontal: 7,
-        zIndex: 1,
-        position: 'absolute',
-        bottom: 0,
-        right: -10
+        alignItems: 'center'
     },
     likeCount: {
         marginLeft: 1,
@@ -326,10 +386,7 @@ const styles = StyleSheet.create({
     reactionsListUserView: {
         flexDirection: 'row',
         alignItems: 'center',
-        marginBottom: 10,
-        paddingBottom: 10,
-        borderBottomWidth: 1,
-        borderBottomColor: Colors.modals.divider
+        marginBottom: 10
     },
     reactionsListUserText: { marginLeft: 10 },
     tooltipArrowSize: {
@@ -337,7 +394,42 @@ const styles = StyleSheet.create({
         height: 0
     },
     avatarView: {
-        width: '15%'
+        flexDirection: 'row'
     },
-    tooltipContent: { borderRadius: 15 }
+    tooltipContent: { borderRadius: 15 },
+    tooltipContentView: { flexDirection: 'row', alignItems: 'center', gap: 5 },
+    chatAvatar: { alignSelf: 'flex-end' },
+    userView: {
+        width: '80%',
+        justifyContent: 'center'
+    },
+    bottomReactionsContainer: {
+        backgroundColor: '#ececec',
+        borderRadius: 20,
+        paddingVertical: 2,
+        paddingHorizontal: 7,
+        zIndex: 1,
+        position: 'absolute',
+        bottom: 0,
+        right: -10,
+        flex: 1,
+        flexDirection: 'row',
+        gap: 7
+    },
+    reactionsContainer: {
+        position: 'absolute',
+        top: -10,
+        right: 0
+    },
+    RBsheetReactionContainer: {
+        marginBottom: 10,
+        paddingBottom: 10,
+        borderBottomWidth: 1,
+        borderBottomColor: Colors.modals.divider
+    },
+    RBSheetReactions: {
+        flex: 1,
+        flexDirection: 'row',
+        gap: 7
+    }
 });

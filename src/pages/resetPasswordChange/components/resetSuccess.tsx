@@ -15,35 +15,33 @@ const ResetSuccess: FC<Props> = ({}: Props) => {
     const navigation = useNavigation<RootNavigationProp>();
 
     return (
-        <View style={resetSuccessStyles.wrapper}>
-            <SafeAreaView style={resetSuccessStyles.container}>
-                <View style={resetSuccessStyles.messageView}>
-                    <View style={resetSuccessStyles.checkBox}>
-                        <CheckIcon />
-                    </View>
-                    <Text
-                        style={resetSuccessStyles.titleText}
-                        size={Size.XLarge}
-                        fontWeight="700"
-                    >
-                        {'You successfully\nchanged your\npassword!'}
-                    </Text>
+        <SafeAreaView style={resetSuccessStyles.wrapper}>
+            <View style={resetSuccessStyles.messageView}>
+                <View style={resetSuccessStyles.checkBox}>
+                    <CheckIcon />
                 </View>
-                <Button
-                    primary
-                    style={resetSuccessStyles.moveToHomeBtn}
-                    onPress={() => navigation.navigate('SignIn')}
+                <Text
+                    style={resetSuccessStyles.titleText}
+                    size={Size.XLarge}
+                    fontWeight="700"
                 >
-                    <Text
-                        color={Colors.text.white}
-                        fontWeight="600"
-                        style={resetSuccessStyles.moveToHomeTxt}
-                    >
-                        Move to SignIn
-                    </Text>
-                </Button>
-            </SafeAreaView>
-        </View>
+                    {'You successfully\nchanged your\npassword!'}
+                </Text>
+            </View>
+            <Button
+                primary
+                style={resetSuccessStyles.moveToHomeBtn}
+                onPress={() => navigation.navigate('SignIn')}
+            >
+                <Text
+                    color={Colors.text.white}
+                    fontWeight="600"
+                    style={resetSuccessStyles.moveToHomeTxt}
+                >
+                    Move to Sign In
+                </Text>
+            </Button>
+        </SafeAreaView>
     );
 };
 export default ResetSuccess;
@@ -51,14 +49,11 @@ export default ResetSuccess;
 const resetSuccessStyles = StyleSheet.create({
     wrapper: {
         flex: 1,
-        backgroundColor: Colors.theme.app_background
-    },
-    container: {
-        flex: 1,
+        backgroundColor: Colors.theme.app_background,
         justifyContent: 'space-between'
     },
     messageView: {
-        height: '89%',
+        flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
     },

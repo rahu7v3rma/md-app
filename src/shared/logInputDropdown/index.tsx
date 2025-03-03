@@ -32,7 +32,6 @@ import {
     ScrollView,
     StyleProp,
     StyleSheet,
-    Text,
     TouchableOpacity,
     View,
     ViewStyle
@@ -40,6 +39,7 @@ import {
 import RBSheet from 'react-native-raw-bottom-sheet';
 
 import { CheckIcon, ChevronDown } from '@/assets/svgs';
+import { Text } from '@/shared';
 import { Colors } from '@/theme/colors';
 
 import LogInput from '../logInput';
@@ -54,6 +54,8 @@ type Props = {
     onSelect?: (data: any) => void;
     onOpen?: () => void | null;
     onClose?: () => void | null;
+    onPressInput?: () => void;
+    disabled?: boolean;
 };
 
 const dropdownItemHeight = 64;
@@ -66,7 +68,9 @@ const LogInputDropdown: FunctionComponent<Props> = ({
     valueKey,
     onSelect,
     onOpen,
-    onClose
+    onClose,
+    onPressInput,
+    disabled
 }: Props) => {
     const selectedOption =
         options?.length > 0 && selectedValue
@@ -90,7 +94,14 @@ const LogInputDropdown: FunctionComponent<Props> = ({
                 fieldName={fieldName}
                 value={selectedOption}
                 rightIcon={ChevronDown}
-                onPress={() => refRBSheet.current?.open()}
+                onPress={
+                    disabled
+                        ? () => {}
+                        : () => {
+                              onPressInput && onPressInput();
+                              refRBSheet.current?.open();
+                          }
+                }
             />
 
             <View style={styles.container}>

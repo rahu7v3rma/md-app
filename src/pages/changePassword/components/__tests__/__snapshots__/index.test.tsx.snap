@@ -1,0 +1,351 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormInput Component displays an error message when showError is true 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "transparent",
+        "borderRadius": 20,
+        "borderWidth": 2,
+        "elevation": 2,
+        "flexDirection": "row",
+        "height": 61,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "shadowColor": "rgba(0, 0, 0, 0.3)",
+        "shadowOffset": {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 0.5,
+        "shadowRadius": 1,
+      },
+      {
+        "backgroundColor": "#FFECEC",
+        "borderColor": "#F9D4D4",
+      },
+      {
+        "borderColor": "#72996B",
+      },
+      {
+        "marginVertical": 5,
+      },
+    ]
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "opacity": 1,
+      }
+    }
+  />
+  <View
+    style={
+      [
+        {
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "paddingHorizontal": 10,
+          "position": "relative",
+        },
+      ]
+    }
+  >
+    <TextInput
+      autoCapitalize="none"
+      autoCorrect={true}
+      autoFocus={false}
+      editable={true}
+      keyboardType="default"
+      multiline={false}
+      numberOfLines={1}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onSubmitEditing={[Function]}
+      placeholder="Test Placeholder"
+      placeholderTextColor="#D05151"
+      returnKeyType="done"
+      secureTextEntry={true}
+      selectionColor="#72996B"
+      style={
+        [
+          {
+            "color": "#4D4F4D",
+            "flex": 1,
+            "fontFamily": "Poppins",
+            "fontSize": 16,
+            "fontWeight": "500",
+          },
+          {
+            "paddingBottom": 20,
+          },
+          {
+            "fontFamily": "Poppins",
+            "fontSize": 16,
+            "fontWeight": "500",
+            "lineHeight": 20,
+          },
+        ]
+      }
+      value=""
+    />
+    <Text
+      adjustsFontSizeToFit={true}
+      style={
+        [
+          {
+            "fontFamily": "Poppins",
+          },
+          {
+            "bottom": 12,
+            "left": 8,
+            "marginBottom": 5,
+            "position": "absolute",
+            "zIndex": -1,
+          },
+          {
+            "color": "#D05151",
+            "fontSize": 12,
+            "fontWeight": "500",
+            "lineHeight": 20,
+          },
+        ]
+      }
+    >
+      Test Error
+    </Text>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "marginRight": 5,
+        "opacity": 1,
+      }
+    }
+  >
+    <svg>
+      EyeIcon
+    </svg>
+  </View>
+</View>
+`;
+
+exports[`FormInput Component renders correctly with a placeholder 1`] = `
+<View
+  style={
+    [
+      {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "borderColor": "transparent",
+        "borderRadius": 20,
+        "borderWidth": 2,
+        "elevation": 2,
+        "flexDirection": "row",
+        "height": 61,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 10,
+        "shadowColor": "rgba(0, 0, 0, 0.3)",
+        "shadowOffset": {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 0.5,
+        "shadowRadius": 1,
+      },
+      {},
+      false,
+      {
+        "marginVertical": 5,
+      },
+    ]
+  }
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "opacity": 1,
+      }
+    }
+  />
+  <View
+    style={
+      [
+        {
+          "flex": 1,
+          "flexDirection": "column",
+          "justifyContent": "center",
+          "paddingHorizontal": 10,
+          "position": "relative",
+        },
+      ]
+    }
+  >
+    <TextInput
+      autoCapitalize="none"
+      autoCorrect={true}
+      autoFocus={false}
+      editable={true}
+      keyboardType="default"
+      multiline={false}
+      numberOfLines={1}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      onSubmitEditing={[Function]}
+      placeholder="Test Placeholder"
+      placeholderTextColor="#4D4F4D"
+      returnKeyType="done"
+      secureTextEntry={true}
+      selectionColor="#72996B"
+      style={
+        [
+          {
+            "color": "#4D4F4D",
+            "flex": 1,
+            "fontFamily": "Poppins",
+            "fontSize": 16,
+            "fontWeight": "500",
+          },
+          {},
+          {
+            "fontFamily": "Poppins",
+            "fontSize": 16,
+            "fontWeight": "500",
+            "lineHeight": 20,
+          },
+        ]
+      }
+      value=""
+    />
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "marginRight": 5,
+        "opacity": 1,
+      }
+    }
+  >
+    <svg>
+      EyeIcon
+    </svg>
+  </View>
+</View>
+`;

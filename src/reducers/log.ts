@@ -1,4 +1,3 @@
-/* eslint-disable dot-notation */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import moment from 'moment';
 import { useSelector } from 'react-redux';
@@ -617,9 +616,12 @@ const logSlice = createSlice({
                 },
                 ...state.recent.data
             ];
-            state.dailyCompletedLogs['UserFood']['date'] = moment(
-                action.payload.logTime
-            ).format('DD-MM-YYYY');
+
+            if (state.dailyCompletedLogs.UserFood) {
+                state.dailyCompletedLogs.UserFood.date = moment(
+                    action.payload.logTime
+                ).format('YYYY-MM-DD');
+            }
         });
         builder.addCase(createLogMeal.rejected, (state) => {
             state.loading = false;
@@ -636,9 +638,12 @@ const logSlice = createSlice({
                 },
                 ...state.recent.data
             ];
-            state.dailyCompletedLogs['UserMedication']['date'] = moment(
-                action.payload.logTime
-            ).format('DD-MM-YYYY');
+
+            if (state.dailyCompletedLogs.UserMedication) {
+                state.dailyCompletedLogs.UserMedication.date = moment(
+                    action.payload.logTime
+                ).format('YYYY-MM-DD');
+            }
         });
         builder.addCase(logMedication.rejected, (state) => {
             state.loading = false;
@@ -699,9 +704,11 @@ const logSlice = createSlice({
                 ...state.recent.data
             ];
 
-            state.dailyCompletedLogs['UserFast']['date'] = moment(
-                action.payload.logTime
-            ).format('DD-MM-YYYY');
+            if (state.dailyCompletedLogs.UserFast) {
+                state.dailyCompletedLogs.UserFast.date = moment(
+                    action.payload.logTime
+                ).format('YYYY-MM-DD');
+            }
         });
         builder.addCase(createLogFast.rejected, (state) => {
             state.loading = false;
@@ -758,9 +765,11 @@ const logSlice = createSlice({
                 ...state.recent.data
             ];
 
-            state.dailyCompletedLogs['UserWeight']['date'] = moment(
-                action.payload.logTime
-            ).format('DD-MM-YYYY');
+            if (state.dailyCompletedLogs.UserWeight) {
+                state.dailyCompletedLogs.UserWeight.date = moment(
+                    action.payload.logTime
+                ).format('YYYY-MM-DD');
+            }
         });
         builder.addCase(createLogWeight.rejected, (state) => {
             state.loading = false;
@@ -794,9 +803,12 @@ const logSlice = createSlice({
                 },
                 ...state.recent.data
             ];
-            state.dailyCompletedLogs['UserGlucose']['date'] = moment(
-                action.payload.logTime
-            ).format('DD-MM-YYYY');
+
+            if (state.dailyCompletedLogs.UserGlucose) {
+                state.dailyCompletedLogs.UserGlucose.date = moment(
+                    action.payload.logTime
+                ).format('YYYY-MM-DD');
+            }
         });
         builder.addCase(createLogBlood.rejected, (state) => {
             state.loading = false;
@@ -830,9 +842,12 @@ const logSlice = createSlice({
                 },
                 ...state.recent.data
             ];
-            state.dailyCompletedLogs['UserDrink']['date'] = moment(
-                action.payload.logTime
-            ).format('DD-MM-YYYY');
+
+            if (state.dailyCompletedLogs.UserDrink) {
+                state.dailyCompletedLogs.UserDrink.date = moment(
+                    action.payload.logTime
+                ).format('YYYY-MM-DD');
+            }
         });
         builder.addCase(createLogWaterIntake.rejected, (state) => {
             state.loading = false;
@@ -883,9 +898,12 @@ const logSlice = createSlice({
                 },
                 ...state.recent.data
             ];
-            state.dailyCompletedLogs['UserExercise']['date'] = moment(
-                action.payload.logTime
-            ).format('DD-MM-YYYY');
+
+            if (state.dailyCompletedLogs.UserExercise) {
+                state.dailyCompletedLogs.UserExercise.date = moment(
+                    action.payload.logTime
+                ).format('YYYY-MM-DD');
+            }
         });
         builder.addCase(logActivity.rejected, (state) => {
             state.loading = false;
@@ -988,9 +1006,12 @@ const logSlice = createSlice({
                 },
                 ...state.recent.data
             ];
-            state.dailyCompletedLogs['UserInsulin']['date'] = moment(
-                action.payload.logTime
-            ).format('DD-MM-YYYY');
+
+            if (state.dailyCompletedLogs.UserInsulin) {
+                state.dailyCompletedLogs.UserInsulin.date = moment(
+                    action.payload.logTime
+                ).format('YYYY-MM-DD');
+            }
         });
         builder.addCase(createLogInsulin.rejected, (state) => {
             state.loading = false;

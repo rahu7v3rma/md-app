@@ -1,0 +1,282 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageContent matches snapshot 1`] = `
+Array [
+  <Modal
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    supportedOrientations={
+      Array [
+        "portrait",
+        "landscape",
+      ]
+    }
+    transparent={true}
+    visible={false}
+  />,
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "width": "83%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={false}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignSelf": "flex-start",
+          "backgroundColor": "#ECF8E6",
+          "borderBottomEndRadius": 16,
+          "borderBottomStartRadius": 16,
+          "borderColor": "#000000",
+          "borderStyle": "solid",
+          "borderTopEndRadius": 16,
+          "borderTopLeftRadius": 0,
+          "flexDirection": "row",
+          "marginVertical": 8,
+          "opacity": 1,
+          "padding": 8,
+          "shadowColor": "#000000",
+          "shadowOffset": Object {
+            "height": 1,
+            "width": 0,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 1,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "width": "15%",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "justifyContent": "center",
+              },
+              undefined,
+            ]
+          }
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../src/assets/images/default_avatar.jpg",
+              }
+            }
+            style={
+              Object {
+                "borderRadius": 20,
+                "height": 40,
+                "width": 40,
+              }
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "marginLeft": 10,
+            "width": "80%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <Text
+            adjustsFontSizeToFit={true}
+            style={
+              Array [
+                Object {
+                  "fontFamily": "Poppins",
+                },
+                Object {
+                  "width": "80%",
+                },
+                Object {
+                  "color": "#4D4F4D",
+                  "fontSize": 16,
+                  "fontWeight": "600",
+                  "lineHeight": 24,
+                },
+              ]
+            }
+            testID="user-name"
+          >
+            John Doe
+          </Text>
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "position": "relative",
+                "top": 5,
+              }
+            }
+          >
+            <Text
+              adjustsFontSizeToFit={true}
+              style={
+                Array [
+                  Object {
+                    "fontFamily": "Poppins",
+                  },
+                  Object {
+                    "marginRight": 2,
+                  },
+                  Object {
+                    "color": "#A4AAAF",
+                    "fontSize": 12,
+                    "fontWeight": undefined,
+                    "lineHeight": 20,
+                  },
+                ]
+              }
+            >
+              18:04
+            </Text>
+          </View>
+        </View>
+        <Text
+          adjustsFontSizeToFit={true}
+          style={
+            Array [
+              Object {
+                "fontFamily": "Poppins",
+              },
+              Object {
+                "textAlign": "left",
+              },
+              Object {
+                "color": "#271A51",
+                "fontSize": 14,
+                "fontWeight": "400",
+                "lineHeight": 22,
+              },
+            ]
+          }
+          testID="message-text"
+        >
+          <Text
+            adjustsFontSizeToFit={true}
+            onPress={[Function]}
+            style={
+              Array [
+                Object {
+                  "fontFamily": "Poppins",
+                },
+                Object {
+                  "textDecorationColor": "#3ED1FF",
+                  "textDecorationLine": "underline",
+                },
+                Object {
+                  "color": "#3ED1FF",
+                  "fontSize": undefined,
+                  "fontWeight": undefined,
+                  "lineHeight": undefined,
+                },
+              ]
+            }
+            testID="message-link"
+          >
+            https://example.com
+          </Text>
+           This is a test message
+        </Text>
+      </View>
+    </View>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#ececec",
+          "borderRadius": 20,
+          "bottom": 0,
+          "display": "flex",
+          "flexDirection": "row",
+          "opacity": 1,
+          "paddingHorizontal": 7,
+          "paddingVertical": 2,
+          "position": "absolute",
+          "right": -10,
+          "zIndex": 1,
+        }
+      }
+      testID="like-icon"
+    >
+      <Text
+        adjustsFontSizeToFit={true}
+        style={
+          Array [
+            Object {
+              "fontFamily": "Poppins",
+            },
+            Object {
+              "marginLeft": 1,
+              "marginTop": 2,
+            },
+            Object {
+              "color": "#271A51",
+              "fontSize": 12,
+              "fontWeight": "500",
+              "lineHeight": 20,
+            },
+          ]
+        }
+        testID="like-count"
+      >
+        2
+      </Text>
+    </View>
+  </View>,
+  <Modal
+    animationType="fade"
+    hardwareAccelerated={false}
+    onRequestClose={[Function]}
+    supportedOrientations={
+      Array [
+        "portrait",
+        "portrait-upside-down",
+        "landscape",
+        "landscape-left",
+        "landscape-right",
+      ]
+    }
+    transparent={true}
+    visible={false}
+  />,
+]
+`;

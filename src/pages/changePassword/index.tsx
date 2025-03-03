@@ -5,6 +5,7 @@ import Toast from 'react-native-toast-message';
 
 import { BackIcon } from '@/assets/svgs';
 import { useAppDispatch } from '@/hooks';
+import useAccessibility from '@/hooks/useAccessibility';
 import { RootNavigationProp, RootStackParamList } from '@/navigation';
 import { changePassword, firstChangePassword } from '@/reducers/user';
 import { Button, CustomStatusBar, Header, Text } from '@/shared';
@@ -26,6 +27,7 @@ type ContentRouteProp = RouteProp<RootStackParamList, 'ChangePassword'>;
 const ChangePassword: FunctionComponent = () => {
     const navigation = useNavigation<RootNavigationProp>();
     const route = useRoute<ContentRouteProp>();
+    const { fontScale, windowHeight } = useAccessibility();
 
     const dispatch = useAppDispatch();
 
@@ -37,6 +39,8 @@ const ChangePassword: FunctionComponent = () => {
 
     const [passwordSuccess, setPasswordSuccess] = useState(false);
     const [isButtonEnable, setIsButtonEnable] = useState(false);
+    const accessibleLayout =
+        fontScale != null && fontScale > 1.2 && windowHeight < 700;
 
     const onUpdatePasswordState = useCallback(
         (passwordStateData: IPasswordState) => {
@@ -132,7 +136,11 @@ const ChangePassword: FunctionComponent = () => {
                         />
                         <View style={changePasswordStyles.innerContainer}>
                             <Text
-                                style={changePasswordStyles.titleText}
+                                style={[
+                                    changePasswordStyles.titleText,
+                                    accessibleLayout &&
+                                        changePasswordStyles.titleTextAccessible
+                                ]}
                                 size={Size.Large}
                                 color={Colors.text.black_gray}
                                 fontWeight="700"

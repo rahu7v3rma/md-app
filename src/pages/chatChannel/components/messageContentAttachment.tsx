@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, RefObject } from 'react';
 import {
     Image,
     Linking,
@@ -11,22 +11,33 @@ import {
     Attachment,
     FileAttachmentGroup,
     Gallery,
-    Giphy
+    Giphy,
+    PDF
 } from 'stream-chat-react-native';
 
 import { Text } from '@/shared';
+import { PdfViewerHandle } from '@/shared/pdfViewer';
+import { Size } from '@/shared/text';
 
 type Props = {
     messageId: string;
     attachment: AttachmentType;
+    pdfViewerRef: RefObject<PdfViewerHandle>;
+};
+
+type GroupProps = {
+    messageId: string;
+    attachments: AttachmentType[];
+    pdfViewerRef: RefObject<PdfViewerHandle>;
 };
 
 const MessageContentAttachment: FunctionComponent<Props> = ({
     messageId,
-    attachment
+    attachment,
+    pdfViewerRef
 }: Props) => {
     if (attachment.type === 'giphy') {
-        return <Giphy attachment={attachment} />;
+        return <Giphy attachment={attachment} preventPress={true} />;
     } else if (attachment.title_link) {
         // return link preview attachment component
         return (
@@ -57,19 +68,92 @@ const MessageContentAttachment: FunctionComponent<Props> = ({
         return (
             <FileAttachmentGroup messageId={messageId} files={[attachment]} />
         );
-    } else if (attachment.type === 'image') {
+    } else if (attachment.type === 'image' || attachment.type === 'video') {
         const attachmentArray = [];
         attachmentArray.push(attachment);
-        return <Gallery images={attachmentArray} />;
+        return <Gallery images={attachmentArray} preventPress={true} />;
+    } else if (
+        attachment.type === 'file' &&
+        attachment.mime_type === 'application/pdf'
+    ) {
+        const onPressPdfContainer = () => {
+            if (attachment.asset_url && attachment.title) {
+                pdfViewerRef.current?.open(
+                    attachment.asset_url,
+                    attachment.title
+                );
+            }
+        };
+        const attachmentFileSize = !isNaN(Number(attachment.file_size))
+            ? Math.floor(Number(attachment.file_size) / 1000)
+            : 0;
+        return (
+            <TouchableOpacity
+                style={styles.pdfContainer}
+                onPress={onPressPdfContainer}
+            >
+                <PDF />
+                <View style={styles.pdfTextContainer}>
+                    <Text fontWeight="700" size={Size.XXSmall}>
+                        {attachment.title}
+                    </Text>
+                    {attachmentFileSize > 0 && (
+                        <Text size={Size.XXXSmall}>
+                            {attachmentFileSize} KB
+                        </Text>
+                    )}
+                </View>
+            </TouchableOpacity>
+        );
     } else {
         // return the stream builtin attachment component
         return <Attachment attachment={attachment} />;
     }
 };
 
-export default MessageContentAttachment;
+const MessageContentAttachmentGroup: FunctionComponent<GroupProps> = ({
+    messageId,
+    attachments,
+    pdfViewerRef
+}: GroupProps) => {
+    return (
+        <View style={styles.attachments}>
+            {attachments
+                .filter(
+                    (attachment: AttachmentType) =>
+                        attachment.type !== 'image' &&
+                        attachment.type !== 'video'
+                )
+                .map((attachment: AttachmentType, ind: number) => (
+                    <View
+                        key={`message-${messageId}-attachment-${ind}`}
+                        style={styles.attachmentItem}
+                    >
+                        <MessageContentAttachment
+                            messageId={messageId}
+                            attachment={attachment}
+                            pdfViewerRef={pdfViewerRef}
+                        />
+                    </View>
+                ))}
+            <View key={`message-${messageId}`} style={styles.attachmentItem}>
+                <Gallery />
+            </View>
+        </View>
+    );
+};
+
+export default MessageContentAttachmentGroup;
 
 const styles = StyleSheet.create({
+    attachments: {
+        flexDirection: 'column',
+        marginTop: 5,
+        justifyContent: 'flex-start'
+    },
+    attachmentItem: {
+        marginVertical: 5
+    },
     linkPreviewContainer: {
         flex: 1,
         flexDirection: 'row',
@@ -91,5 +175,15 @@ const styles = StyleSheet.create({
         width: '90%',
         height: 150,
         marginTop: 5
+    },
+    pdfContainer: {
+        backgroundColor: 'white',
+        borderRadius: 10,
+        padding: 10,
+        flexDirection: 'row',
+        gap: 15
+    },
+    pdfTextContainer: {
+        flexDirection: 'column'
     }
 });

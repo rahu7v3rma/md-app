@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 import { Colors } from '@/theme/colors';
+import { Constants } from '@/utils/constants';
 
 export enum Size {
     XXXSmall = 12,
@@ -21,7 +22,10 @@ export enum Size {
     XLarge = 28,
     XXLarge = 30,
     XXXLarge = 32,
-    X4Large = 34
+    X4Large = 34,
+    X5Large = 36,
+    X6Large = 38,
+    X7Large = 40
 }
 
 type FontWeight =
@@ -80,6 +84,7 @@ const TextComponent: FunctionComponent<Props> = ({
                 }
             ]}
             testID={testID}
+            maxFontSizeMultiplier={Constants.maxFontSizeMultiplier}
         >
             {children}
         </Text>

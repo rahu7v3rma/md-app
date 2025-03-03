@@ -14,6 +14,7 @@ import Toast from 'react-native-toast-message';
 
 import { BackIcon, CrossIcon } from '@/assets/svgs';
 import { useAppDispatch } from '@/hooks';
+import useAccessibility from '@/hooks/useAccessibility';
 import { RootNavigationProp } from '@/navigation';
 import { resetPassword } from '@/reducers/user';
 import { Button, CustomStatusBar, Header, Input, Text } from '@/shared';
@@ -29,10 +30,16 @@ const { height: windowHeight } = Dimensions.get('window');
 
 const ResetPassword: FunctionComponent<Props> = ({}: Props) => {
     const navigation = useNavigation<RootNavigationProp>();
+    const { fontScale } = useAccessibility();
+
     const [email, setEmail] = useState<string>('');
     const [emailSentSuccess, setEmailSentSuccess] = useState<boolean>(false);
     const [emailError, setEmailError] = useState<string>('');
     const dispatch = useAppDispatch();
+
+    const accessibleLayout =
+        fontScale != null && fontScale > 1.2 && windowHeight < 700;
+
     const onBackPress = useCallback(() => {
         if (emailSentSuccess) {
             setEmailSentSuccess(false);
@@ -89,7 +96,11 @@ const ResetPassword: FunctionComponent<Props> = ({}: Props) => {
                         {!emailSentSuccess ? (
                             <View style={resetPasswordStyles.innerContainer}>
                                 <Text
-                                    style={resetPasswordStyles.titleText}
+                                    style={[
+                                        resetPasswordStyles.titleText,
+                                        accessibleLayout &&
+                                            resetPasswordStyles.titleTextAccessible
+                                    ]}
                                     size={Size.Large}
                                     fontWeight="700"
                                     color={Colors.text.text_gray_black}
@@ -164,6 +175,9 @@ const resetPasswordStyles = StyleSheet.create({
     titleText: {
         marginTop: 40,
         width: COMMON.responsiveSize(COMMON.isIos ? 225 : 245)
+    },
+    titleTextAccessible: {
+        width: '100%'
     },
     submitBtn: {
         bottom: 10,

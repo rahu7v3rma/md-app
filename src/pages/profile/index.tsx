@@ -11,12 +11,17 @@ import { useAppDispatch } from '@/hooks';
 import { RootNavigationProp } from '@/navigation';
 import { updateProfile, UserSelectors } from '@/reducers/user';
 import { uploadImage } from '@/services/image';
-import { Button, CustomStatusBar, Header, ProfileImage, Text } from '@/shared';
+import {
+    Button,
+    CustomStatusBar,
+    Header,
+    ImageChooser,
+    ProfileImage,
+    Text
+} from '@/shared';
 import { Size } from '@/shared/text';
 import { Colors } from '@/theme/colors';
 import { logoutAction } from '@/utils/auth';
-
-import ImageChooser from './components/ImageChooser';
 
 type Props = Record<string, never>;
 
@@ -191,7 +196,7 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     profileImageView: {
-        marginTop: 45
+        marginTop: 15
     },
     profileImage: {
         height: 110,

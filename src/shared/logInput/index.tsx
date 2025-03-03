@@ -84,7 +84,6 @@ const styles = StyleSheet.create({
         paddingRight: 10
     },
     titleText: {
-        flex: 1,
         lineHeight: 20
     },
     valueButton: {
