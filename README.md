@@ -1,7 +1,4 @@
-<img src="https://github.com/user-attachments/assets/7e3b7107-aa47-4fd7-babd-8900c378601b" width="300" height="600"/>
-
 # Mastering Diabetes App
-https://www.masteringdiabetes.org
 
 ## Launching the development environment
 
